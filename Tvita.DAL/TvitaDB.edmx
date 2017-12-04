@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Tvita_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Card">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Order" Type="int" />
+          <Property Name="Card_TotalPrice" Type="float" />
+          <Property Name="Card_TotalPriceSelloff" Type="float" />
+          <Property Name="Card_TraveliingFee" Type="float" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="IsConfirmSucess" Type="bit" />
+          <Property Name="ID_Payments" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_CardDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Card" Type="int" />
+          <Property Name="ID_Product" Type="int" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Emoloyee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Employee_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_Address" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_Function">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Function_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Function_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Group" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Group_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Menu_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Menu_Link" Type="nvarchar" MaxLength="50" />
+          <Property Name="Menu_ParentID" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Order">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Customer_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer_Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Customer_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Card" Type="int" />
+          <Property Name="Customer_Note" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsDelete" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tbl_Payments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Payment_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Post">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_SubSubject" Type="int" />
+          <Property Name="Post_Name" Type="ntext" />
+          <Property Name="Post_Description" Type="ntext" />
+          <Property Name="Post_Content" Type="ntext" />
+          <Property Name="Post_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Video" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post_Keyword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_ProductList" Type="int" />
+          <Property Name="Product_Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Product_Description" Type="ntext" />
+          <Property Name="Product_Quantity" Type="int" />
+          <Property Name="Product_Price" Type="float" />
+          <Property Name="Product_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product_Price_Saleoff" Type="float" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="Product_Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_ProductList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PL_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="PL_Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="PL_Picture" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectName" Type="ntext" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="NumberPosts" Type="int" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="Keyword" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_SubSubject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Subject" Type="int" />
+          <Property Name="Sub_SubjectName" Type="ntext" />
+          <Property Name="Sub_Description" Type="ntext" />
+          <Property Name="Sub_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sub_Keyword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sub_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sub_IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Employee" Type="int" />
+          <Property Name="User_Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_Group" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="Tvita_TestModelStoreContainer">
+          <EntitySet Name="tbl_Card" EntityType="Self.tbl_Card" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_CardDetails" EntityType="Self.tbl_CardDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Emoloyee" EntityType="Self.tbl_Emoloyee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Function" EntityType="Self.tbl_Function" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Group" EntityType="Self.tbl_Group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Payments" EntityType="Self.tbl_Payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Post" EntityType="Self.tbl_Post" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Product" EntityType="Self.tbl_Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ProductList" EntityType="Self.tbl_ProductList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Tvita_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Card">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Order" Type="Int32" />
+          <Property Name="Card_TotalPrice" Type="Double" />
+          <Property Name="Card_TotalPriceSelloff" Type="Double" />
+          <Property Name="Card_TraveliingFee" Type="Double" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="IsConfirmSucess" Type="Boolean" />
+          <Property Name="ID_Payments" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_CardDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Card" Type="Int32" />
+          <Property Name="ID_Product" Type="Int32" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Emoloyee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbl_Function">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Function_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Function_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Group" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Group_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Menu_Link" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Menu_ParentID" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Order">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Card" Type="Int32" />
+          <Property Name="Customer_Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Payments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Payment_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Post">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_SubSubject" Type="Int32" />
+          <Property Name="Post_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Video" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_ProductList" Type="Int32" />
+          <Property Name="Product_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Quantity" Type="Int32" />
+          <Property Name="Product_Price" Type="Double" />
+          <Property Name="Product_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Price_Saleoff" Type="Double" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Product_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_ProductList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PL_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PL_Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PL_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumberPosts" Type="Int32" />
+          <Property Name="Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_SubSubject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Subject" Type="Int32" />
+          <Property Name="Sub_SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Employee" Type="Int32" />
+          <Property Name="User_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Group" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="Tvita_TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Card" EntityType="Self.tbl_Card" />
+          <EntitySet Name="tbl_CardDetails" EntityType="Self.tbl_CardDetails" />
+          <EntitySet Name="tbl_Emoloyee" EntityType="Self.tbl_Emoloyee" />
+          <EntitySet Name="tbl_Function" EntityType="Self.tbl_Function" />
+          <EntitySet Name="tbl_Group" EntityType="Self.tbl_Group" />
+          <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" />
+          <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" />
+          <EntitySet Name="tbl_Payments" EntityType="Self.tbl_Payments" />
+          <EntitySet Name="tbl_Post" EntityType="Self.tbl_Post" />
+          <EntitySet Name="tbl_Product" EntityType="Self.tbl_Product" />
+          <EntitySet Name="tbl_ProductList" EntityType="Self.tbl_ProductList" />
+          <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" />
+          <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" />
+          <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Tvita_TestModelStoreContainer" CdmEntityContainer="Tvita_TestEntities">
+          <EntitySetMapping Name="tbl_Card">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Card">
+              <MappingFragment StoreEntitySet="tbl_Card">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Order" ColumnName="ID_Order" />
+                <ScalarProperty Name="Card_TotalPrice" ColumnName="Card_TotalPrice" />
+                <ScalarProperty Name="Card_TotalPriceSelloff" ColumnName="Card_TotalPriceSelloff" />
+                <ScalarProperty Name="Card_TraveliingFee" ColumnName="Card_TraveliingFee" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsConfirmSucess" ColumnName="IsConfirmSucess" />
+                <ScalarProperty Name="ID_Payments" ColumnName="ID_Payments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CardDetails">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_CardDetails">
+              <MappingFragment StoreEntitySet="tbl_CardDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Card" ColumnName="ID_Card" />
+                <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Emoloyee">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Emoloyee">
+              <MappingFragment StoreEntitySet="tbl_Emoloyee">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+                <ScalarProperty Name="Employee_Phone" ColumnName="Employee_Phone" />
+                <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+                <ScalarProperty Name="Employee_Code" ColumnName="Employee_Code" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Function">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Function">
+              <MappingFragment StoreEntitySet="tbl_Function">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Function_Name" ColumnName="Function_Name" />
+                <ScalarProperty Name="Function_Url" ColumnName="Function_Url" />
+                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Group">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Group">
+              <MappingFragment StoreEntitySet="tbl_Group">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+                <ScalarProperty Name="Group_Description" ColumnName="Group_Description" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Menu">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Menu">
+              <MappingFragment StoreEntitySet="tbl_Menu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+                <ScalarProperty Name="Menu_Link" ColumnName="Menu_Link" />
+                <ScalarProperty Name="Menu_ParentID" ColumnName="Menu_ParentID" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Order">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Order">
+              <MappingFragment StoreEntitySet="tbl_Order">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Customer_Phone" ColumnName="Customer_Phone" />
+                <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
+                <ScalarProperty Name="ID_Card" ColumnName="ID_Card" />
+                <ScalarProperty Name="Customer_Note" ColumnName="Customer_Note" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Payments">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Payments">
+              <MappingFragment StoreEntitySet="tbl_Payments">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Payment_Name" ColumnName="Payment_Name" />
+                <ScalarProperty Name="Payment_Description" ColumnName="Payment_Description" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Post">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Post">
+              <MappingFragment StoreEntitySet="tbl_Post">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_SubSubject" ColumnName="ID_SubSubject" />
+                <ScalarProperty Name="Post_Name" ColumnName="Post_Name" />
+                <ScalarProperty Name="Post_Description" ColumnName="Post_Description" />
+                <ScalarProperty Name="Post_Content" ColumnName="Post_Content" />
+                <ScalarProperty Name="Post_Picture" ColumnName="Post_Picture" />
+                <ScalarProperty Name="Post_Video" ColumnName="Post_Video" />
+                <ScalarProperty Name="Post_Keyword" ColumnName="Post_Keyword" />
+                <ScalarProperty Name="Post_Url" ColumnName="Post_Url" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Product">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Product">
+              <MappingFragment StoreEntitySet="tbl_Product">
+                <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_ProductList" ColumnName="ID_ProductList" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+                <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+                <ScalarProperty Name="Product_Quantity" ColumnName="Product_Quantity" />
+                <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+                <ScalarProperty Name="Product_Picture" ColumnName="Product_Picture" />
+                <ScalarProperty Name="Product_Price_Saleoff" ColumnName="Product_Price_Saleoff" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ProductList">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_ProductList">
+              <MappingFragment StoreEntitySet="tbl_ProductList">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PL_Name" ColumnName="PL_Name" />
+                <ScalarProperty Name="PL_Description" ColumnName="PL_Description" />
+                <ScalarProperty Name="PL_Picture" ColumnName="PL_Picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Subject">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Subject">
+              <MappingFragment StoreEntitySet="tbl_Subject">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="NumberPosts" ColumnName="NumberPosts" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_SubSubject">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_SubSubject">
+              <MappingFragment StoreEntitySet="tbl_SubSubject">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Subject" ColumnName="ID_Subject" />
+                <ScalarProperty Name="Sub_SubjectName" ColumnName="Sub_SubjectName" />
+                <ScalarProperty Name="Sub_Description" ColumnName="Sub_Description" />
+                <ScalarProperty Name="Sub_Url" ColumnName="Sub_Url" />
+                <ScalarProperty Name="Sub_Keyword" ColumnName="Sub_Keyword" />
+                <ScalarProperty Name="Sub_Picture" ColumnName="Sub_Picture" />
+                <ScalarProperty Name="Sub_IsDelete" ColumnName="Sub_IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_User">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_User">
+              <MappingFragment StoreEntitySet="tbl_User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
