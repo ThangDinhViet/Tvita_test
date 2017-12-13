@@ -32,7 +32,6 @@ namespace Tvita.BAL.Implement
             using (IUnitOfWork uOW = new UnitOfWork())
             {
                 uOW.IEmployeeRepository.AddEmployee(model);
-                
             }
             return true;
         }

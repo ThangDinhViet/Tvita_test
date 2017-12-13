@@ -119,6 +119,7 @@
           <Property Name="Product_Price_Saleoff" Type="float" />
           <Property Name="IsDelete" Type="bit" />
           <Property Name="Product_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product_Code" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbl_ProductList">
           <Key>
@@ -300,6 +301,7 @@
           <Property Name="Product_Price_Saleoff" Type="Double" />
           <Property Name="IsDelete" Type="Boolean" />
           <Property Name="Product_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_ProductList">
           <Key>
@@ -481,6 +483,7 @@
           <EntitySetMapping Name="tbl_Product">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Product">
               <MappingFragment StoreEntitySet="tbl_Product">
+                <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
                 <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ID_ProductList" ColumnName="ID_ProductList" />

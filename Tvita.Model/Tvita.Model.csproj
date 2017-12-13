@@ -53,6 +53,7 @@
     <Compile Include="Table\CardDetailsModel.cs" />
     <Compile Include="Table\CardModel.cs" />
     <Compile Include="Table\EmployeeModel.cs" />
+    <Compile Include="Table\ProductModel.cs" />
     <Compile Include="tbl_Card.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>

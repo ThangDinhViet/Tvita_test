@@ -60,6 +60,8 @@
     <Compile Include="Repository\EmployeeRepository.cs" />
     <Compile Include="Repository\ICardRepository.cs" />
     <Compile Include="Repository\IEmployeeRepository.cs" />
+    <Compile Include="Repository\IProductRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="tbl_Card.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>

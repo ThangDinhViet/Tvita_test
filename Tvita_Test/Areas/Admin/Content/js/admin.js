@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#dataTables-example').DataTable({
+    $('.dataTables').DataTable({
         responsive: true
     });
     var date_input = $('.date');
@@ -10,7 +10,7 @@
         todayHighlight: true,
         autoclose: true,
     })
-    $(".btn-save").on("click", function () {
+    $("#saveNewEmployee").on("click", function () {
         var AddEmployeeModel = {
             Employee_Code: $('#employeeCode').val(),
             Employee_Name: $('#employeeName').val(),
@@ -19,14 +19,14 @@
             CreatedDate: $('#employeeDateCreated').val(),
         };
         $.ajax({
-            url: 'http://192.168.1.31:8008/Admin/Employee/Create',
+            url: window.location.href + '/Create',
             type: 'POST',
             contentType: 'application/json',
             dataType: 'jsonp',
             data: JSON.stringify(AddEmployeeModel),
             success: function (result) {
                 if (result == true) {
-                    window.location = "/Dashboard";
+                    window.location.href
                 } else {
                     $QuickLoginErrors.text(result);
                 }

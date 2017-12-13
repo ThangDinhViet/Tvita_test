@@ -24,5 +24,6 @@ namespace Tvita.DAL
         public Nullable<double> Product_Price_Saleoff { get; set; }
         public Nullable<bool> IsDelete { get; set; }
         public string Product_Type { get; set; }
+        public string Product_Code { get; set; }
     }
 }

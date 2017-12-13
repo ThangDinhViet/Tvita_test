@@ -14,6 +14,8 @@ namespace Tvita.DAL.Common
         IRepository<tbl_Card, int> CardRepository { get; }
         IRepository<tbl_Emoloyee, int> EmployeeRepository { get; }
         IEmployeeRepository IEmployeeRepository { get; }
+        IRepository<tbl_Product, int> ProductRepository { get; }
+        //IRepository<tbl_ProductList, int> ProductListRepository { get; }
         void SaveChanges();
     }
 }

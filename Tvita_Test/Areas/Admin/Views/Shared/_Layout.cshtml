@@ -277,7 +277,10 @@
 
 
                         <li>
-                            <a href=""><i class="fa fa-user fa-fw"></i> Nhân Viên</a>
+                            <a href="@Url.Action("Index", null, new { area = "Admin", controller = "Employee" })"> <i class="fa fa-user fa-fw" aria-hidden="true"></i>Nhân Viên</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", null, new { area = "Admin", controller = "Product" })"> <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>Sản phẩm</a>
                         </li>
                     </ul>
                 </div>
@@ -291,52 +294,7 @@
         <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
-    <!--Modal-->
-    <div class="modal fade" id="addModal" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content panel panel-primary">
-                <div class="modal-header panel-heading">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Thêm mới nhân viên</h4>
-                </div>
-                <div class="modal-body panel-body">
-                    <div class="form-group">
-                        <div>
-                            <label>Mã nhân viên</label>
-                            <input id="employeeCode" class="form-control">
-                        </div>
-                        <div class="lineInput">
-                            <label>Tên nhân viên</label>
-                            <input id="employeeName" class="form-control">
-                        </div>
-                        <div class="lineInput">
-                            <label>SĐT</label>
-                            <input id="employeePhone" class="form-control">
-                        </div>
-                        <div class="lineInput">
-                            <label>Địa chỉ</label>
-                            <input id="employeeAddress" class="form-control">
-                        </div>
-                        <div class="lineInput">
-                            <label>Ngày vào</label>
-                            <div class='input-group date'>
-                                <input id="employeeDateCreated" type='text' class="form-control" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer panel-footer">
-                    <button type="button" class="btn btn-default btn-save" data-dismiss="modal">Lưu</button>
-                    <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Hủy</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    
     <!-- jQuery -->
     <script src="/Assets/admin/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/moment.min.js"></script>

@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="Implement\CardManager.cs" />
     <Compile Include="Implement\EmployeeManager.cs" />
+    <Compile Include="Implement\ProductManager.cs" />
     <Compile Include="Interface\ICardManager.cs" />
     <Compile Include="Interface\IEmployeeManager.cs" />
+    <Compile Include="Interface\IProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

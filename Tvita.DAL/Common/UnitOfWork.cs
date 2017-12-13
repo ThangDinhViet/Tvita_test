@@ -67,6 +67,27 @@ namespace Tvita.DAL.Common
             }
         }
 
+        private IRepository<tbl_Product, int> _productRepository;
+        public IRepository<tbl_Product, int> ProductRepository
+        {
+            get
+            {
+                if (this._productRepository == null)
+                    this._productRepository = new ProductRepository(_context);
+                return _productRepository;
+            }
+        }
+
+        //private IRepository<tbl_ProductList, int> _productListRepository;
+        //public IRepository<tbl_ProductList, int> ProductListRepository
+        //{
+        //    get
+        //    {
+        //        if (this._productListRepository == null)
+        //            this._productListRepository = new ProductListRepository(_context);
+        //        return _productListRepository;
+        //    }
+        //}
         public void SaveChanges()
         {
             try
