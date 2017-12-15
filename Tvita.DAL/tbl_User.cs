@@ -14,7 +14,7 @@ namespace Tvita.DAL
     
     public partial class tbl_User
     {
-        public int ID { get; set; }
+        public int User_ID { get; set; }
         public Nullable<int> ID_Employee { get; set; }
         public string User_Name { get; set; }
         public string User_Password { get; set; }

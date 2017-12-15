@@ -33,15 +33,15 @@
                         @foreach (var item in ViewBag.ListEmployee)
                         {
                             <tr class="odd">
-                                <td>@item.ID</td>
+                                <td>@item.Employee_ID</td>
                                 <td>@item.Employee_Code</td>
                                 <td>@item.Employee_Name</td>
                                 <td class="center">@item.Employee_Phone</td>
                                 <td class="center">@item.Employee_Address</td>
-                                <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                <td>@item.Employee_CreatedDate.ToString("dd/MM/yyyy")</td>
                                 <td>
-                                    <button class="btn btn-danger btn-edit" data-id="@item.ID">Sửa</button>
-                                    <button class="btn btn-warning btn-delete" data-id="@item.ID">Xóa</button>
+                                    <button class="btn btn-danger btn-edit" data-id="@item.Employee_ID">Sửa</button>
+                                    <button class="btn btn-warning btn-delete" data-id="@item.Employee_ID">Xóa</button>
                                 </td>
                             </tr>
                         }

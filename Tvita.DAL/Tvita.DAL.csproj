@@ -62,6 +62,9 @@
     <Compile Include="Repository\IEmployeeRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="tbl_Branch.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Card.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
@@ -71,10 +74,16 @@
     <Compile Include="tbl_Emoloyee.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_Farm.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Function.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Group.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_GroupProduct.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Menu.cs">
@@ -86,13 +95,16 @@
     <Compile Include="tbl_Payments.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_Picture.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Post.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Product.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbl_ProductList.cs">
+    <Compile Include="tbl_ProductionUnit.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Subject.cs">

@@ -8,7 +8,7 @@ namespace Tvita.Model.Table
 {
     public class CardModel
     {
-        public int ID { get; set; }
+        public int Card_ID { get; set; }
         public Nullable<int> ID_Order { get; set; }
         public Nullable<double> Card_TotalPrice { get; set; }
         public Nullable<double> Card_TotalPriceSelloff { get; set; }

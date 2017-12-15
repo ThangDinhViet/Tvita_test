@@ -8,8 +8,8 @@ namespace Tvita.Model.Table
 {
     public class ProductModel
     {
-        public int ID { get; set; }
-        public Nullable<int> ID_ProductList { get; set; }
+        public int Product_ID { get; set; }
+        public Nullable<int> ID_GroupProduct { get; set; }
         public string Product_Name { get; set; }
         public string Product_Description { get; set; }
         public Nullable<int> Product_Quantity { get; set; }

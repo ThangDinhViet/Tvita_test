@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tvita.DAL
+namespace Tvita.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_Emoloyee
+    public partial class tbl_GroupProduct
     {
-        public int Employee_ID { get; set; }
-        public string Employee_Name { get; set; }
-        public string Employee_Phone { get; set; }
-        public string Employee_Address { get; set; }
-        public string Employee_Code { get; set; }
+        public int GroupProduct_ID { get; set; }
+        public string GroupProduct_Code { get; set; }
+        public string GroupProduct_Name { get; set; }
         public Nullable<bool> IsDelete { get; set; }
-        public Nullable<System.DateTime> Employee_CreatedDate { get; set; }
+        public string GroupProduct_Description { get; set; }
+        public string GroupProduct_Picture { get; set; }
+        public Nullable<int> ID_Branch { get; set; }
     }
 }

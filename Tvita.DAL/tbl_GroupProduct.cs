@@ -12,11 +12,14 @@ namespace Tvita.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_ProductList
+    public partial class tbl_GroupProduct
     {
-        public int ID { get; set; }
-        public string PL_Name { get; set; }
-        public string PL_Description { get; set; }
-        public string PL_Picture { get; set; }
+        public int GroupProduct_ID { get; set; }
+        public string GroupProduct_Code { get; set; }
+        public string GroupProduct_Name { get; set; }
+        public Nullable<bool> IsDelete { get; set; }
+        public string GroupProduct_Description { get; set; }
+        public string GroupProduct_Picture { get; set; }
+        public Nullable<int> ID_Branch { get; set; }
     }
 }

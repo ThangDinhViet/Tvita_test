@@ -37,7 +37,7 @@ namespace Tvita.DAL.Repository
             tbl_Emoloyee employee = new tbl_Emoloyee();
             try
             {
-                employee.CreatedDate = model.CreatedDate;
+                employee.Employee_CreatedDate = model.Employee_CreatedDate;
                 employee.Employee_Address = model.Employee_Address;
                 employee.Employee_Code = model.Employee_Code;
                 employee.Employee_Name = model.Employee_Name;

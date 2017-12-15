@@ -14,7 +14,7 @@ namespace Tvita.Model
     
     public partial class tbl_Order
     {
-        public int ID { get; set; }
+        public int Order_ID { get; set; }
         public string Customer_Name { get; set; }
         public string Customer_Phone { get; set; }
         public string Customer_Address { get; set; }

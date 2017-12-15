@@ -18,5 +18,7 @@ namespace Tvita.DAL
         public string Group_Name { get; set; }
         public string Group_Description { get; set; }
         public Nullable<bool> IsDelete { get; set; }
+        public string Group_Code { get; set; }
+        public string Group_Picture { get; set; }
     }
 }

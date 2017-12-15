@@ -21,8 +21,8 @@ namespace Tvita.BAL.Implement
                     Employee_Address = x.Employee_Address,
                     Employee_Code = x.Employee_Code,
                     Employee_Phone = x.Employee_Phone,
-                    ID = x.ID,
-                    CreatedDate = x.CreatedDate
+                    Employee_ID = x.Employee_ID,
+                    Employee_CreatedDate = x.Employee_CreatedDate
                 }).ToList();
             }
             return listEmployee;

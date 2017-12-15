@@ -78,16 +78,7 @@ namespace Tvita.DAL.Common
             }
         }
 
-        //private IRepository<tbl_ProductList, int> _productListRepository;
-        //public IRepository<tbl_ProductList, int> ProductListRepository
-        //{
-        //    get
-        //    {
-        //        if (this._productListRepository == null)
-        //            this._productListRepository = new ProductListRepository(_context);
-        //        return _productListRepository;
-        //    }
-        //}
+       
         public void SaveChanges()
         {
             try

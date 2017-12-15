@@ -54,6 +54,9 @@
     <Compile Include="Table\CardModel.cs" />
     <Compile Include="Table\EmployeeModel.cs" />
     <Compile Include="Table\ProductModel.cs" />
+    <Compile Include="tbl_Branch.cs">
+      <DependentUpon>TvitaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Card.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
@@ -63,10 +66,16 @@
     <Compile Include="tbl_Emoloyee.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_Farm.cs">
+      <DependentUpon>TvitaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Function.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Group.cs">
+      <DependentUpon>TvitaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_GroupProduct.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Menu.cs">
@@ -78,13 +87,16 @@
     <Compile Include="tbl_Payments.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_Picture.cs">
+      <DependentUpon>TvitaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Post.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Product.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbl_ProductList.cs">
+    <Compile Include="tbl_ProductionUnit.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Subject.cs">

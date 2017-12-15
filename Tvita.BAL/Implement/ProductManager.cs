@@ -18,8 +18,8 @@ namespace Tvita.BAL.Implement
             {
                 result = uOW.ProductRepository.QueryAll().Select(x => new ProductModel
                 {
-                    ID = x.ID,
-                    ID_ProductList = x.ID_ProductList,
+                    Product_ID = x.Product_ID,
+                    ID_GroupProduct = x.ID_GroupProduct,
                     Product_Description = x.Product_Description,
                     IsDelete = x.IsDelete,
                     Product_Name = x.Product_Name,

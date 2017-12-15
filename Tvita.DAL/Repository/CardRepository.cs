@@ -34,7 +34,7 @@ namespace Tvita.DAL.Repository
                          ID_Payments = c.ID_Payments,
                          IsConfirmSucess = c.IsConfirmSucess,
                          IsDelete = c.IsDelete,
-                         ID = c.ID
+                         Card_ID = c.Card_ID
                      }).ToList();
             return result;
         }

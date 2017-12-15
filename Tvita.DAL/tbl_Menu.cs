@@ -14,7 +14,7 @@ namespace Tvita.DAL
     
     public partial class tbl_Menu
     {
-        public int ID { get; set; }
+        public int Menu_ID { get; set; }
         public string Menu_Name { get; set; }
         public string Menu_Link { get; set; }
         public Nullable<int> Menu_ParentID { get; set; }

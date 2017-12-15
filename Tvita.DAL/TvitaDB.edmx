@@ -5,11 +5,20 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Tvita_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Branch">
+          <Key>
+            <PropertyRef Name="Branch_ID" />
+          </Key>
+          <Property Name="Branch_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Branch_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Branch_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
         <EntityType Name="tbl_Card">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Card_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Card_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_Order" Type="int" />
           <Property Name="Card_TotalPrice" Type="float" />
           <Property Name="Card_TotalPriceSelloff" Type="float" />
@@ -20,25 +29,38 @@
         </EntityType>
         <EntityType Name="tbl_CardDetails">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="CardDetails_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CardDetails_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_Card" Type="int" />
           <Property Name="ID_Product" Type="int" />
-          <Property Name="Amount" Type="int" />
+          <Property Name="CardDetails_Amount" Type="int" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Emoloyee">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Employee_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Employee_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Employee_Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Employee_Address" Type="nvarchar" MaxLength="20" />
           <Property Name="Employee_Code" Type="nvarchar" MaxLength="20" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Employee_CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_Farm">
+          <Key>
+            <PropertyRef Name="Farm_ID" />
+          </Key>
+          <Property Name="Farm_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Farm_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Farm_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Farm_Area" Type="float" />
+          <Property Name="Farm_Info" Type="nvarchar" MaxLength="100" />
+          <Property Name="Farm_Distance" Type="float" />
+          <Property Name="Farm_Territory" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Function">
           <Key>
@@ -58,12 +80,26 @@
           <Property Name="Group_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Group_Description" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDelete" Type="bit" />
+          <Property Name="Group_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group_Picture" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_GroupProduct">
+          <Key>
+            <PropertyRef Name="GroupProduct_ID" />
+          </Key>
+          <Property Name="GroupProduct_ID" Type="int" Nullable="false" />
+          <Property Name="GroupProduct_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="GroupProduct_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="GroupProduct_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="GroupProduct_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Branch" Type="int" />
         </EntityType>
         <EntityType Name="tbl_Menu">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Menu_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Menu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Menu_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Menu_Link" Type="nvarchar" MaxLength="50" />
           <Property Name="Menu_ParentID" Type="int" />
@@ -71,9 +107,9 @@
         </EntityType>
         <EntityType Name="tbl_Order">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Order_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Customer_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Customer_Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Customer_Address" Type="nvarchar" MaxLength="50" />
@@ -83,18 +119,27 @@
         </EntityType>
         <EntityType Name="tbl_Payments">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Payment_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Payment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Payment_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Payment_Description" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
+        <EntityType Name="tbl_Picture">
+          <Key>
+            <PropertyRef Name="Picture_ID" />
+          </Key>
+          <Property Name="Picture_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Picture_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
         <EntityType Name="tbl_Post">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Post_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Post_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_SubSubject" Type="int" />
           <Property Name="Post_Name" Type="ntext" />
           <Property Name="Post_Description" Type="ntext" />
@@ -107,10 +152,10 @@
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Product_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_ProductList" Type="int" />
+          <Property Name="Product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_GroupProduct" Type="int" />
           <Property Name="Product_Name" Type="nvarchar" MaxLength="500" />
           <Property Name="Product_Description" Type="ntext" />
           <Property Name="Product_Quantity" Type="int" />
@@ -121,46 +166,59 @@
           <Property Name="Product_Type" Type="nvarchar" MaxLength="50" />
           <Property Name="Product_Code" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="tbl_ProductList">
+        <EntityType Name="tbl_ProductionUnit">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="ProductionUnit_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PL_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="PL_Description" Type="nvarchar" MaxLength="200" />
-          <Property Name="PL_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Farm" Type="int" />
+          <Property Name="ProductionUnit_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductionUnit_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_Area" Type="float" />
+          <Property Name="ProductionUnit_Info" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_Capacity" Type="float" />
+          <Property Name="ProductionUnit_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_QualityStandard" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_Unit" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProductionUnit_Price" Type="float" />
+          <Property Name="ProductionUnit_PreviousPrice" Type="float" />
+          <Property Name="ProductionUnit_AveragePrice" Type="float" />
+          <Property Name="ProductionUnit_TransportFee" Type="float" />
+          <Property Name="ProductionUnit_Distance" Type="float" />
+          <Property Name="ProductionUnit_Contract" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Subject">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Subject_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SubjectName" Type="ntext" />
-          <Property Name="Description" Type="ntext" />
-          <Property Name="NumberPosts" Type="int" />
-          <Property Name="Picture" Type="nvarchar" MaxLength="50" />
-          <Property Name="Url" Type="nvarchar" MaxLength="50" />
-          <Property Name="Keyword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Subject_Name" Type="ntext" />
+          <Property Name="Subject_Description" Type="ntext" />
+          <Property Name="Subject_NumberPosts" Type="int" />
+          <Property Name="Subject_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject_Keyword" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_SubSubject">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Sub_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sub_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_Subject" Type="int" />
           <Property Name="Sub_SubjectName" Type="ntext" />
           <Property Name="Sub_Description" Type="ntext" />
           <Property Name="Sub_Url" Type="nvarchar" MaxLength="50" />
           <Property Name="Sub_Keyword" Type="nvarchar" MaxLength="50" />
           <Property Name="Sub_Picture" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sub_IsDelete" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_User">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="User_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_Employee" Type="int" />
           <Property Name="User_Name" Type="nvarchar" MaxLength="20" />
           <Property Name="User_Password" Type="nvarchar" MaxLength="20" />
@@ -168,17 +226,21 @@
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityContainer Name="Tvita_TestModelStoreContainer">
+          <EntitySet Name="tbl_Branch" EntityType="Self.tbl_Branch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Card" EntityType="Self.tbl_Card" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_CardDetails" EntityType="Self.tbl_CardDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Emoloyee" EntityType="Self.tbl_Emoloyee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Farm" EntityType="Self.tbl_Farm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Function" EntityType="Self.tbl_Function" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Group" EntityType="Self.tbl_Group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_GroupProduct" EntityType="Self.tbl_GroupProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Payments" EntityType="Self.tbl_Payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Picture" EntityType="Self.tbl_Picture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Post" EntityType="Self.tbl_Post" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Product" EntityType="Self.tbl_Product" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tbl_ProductList" EntityType="Self.tbl_ProductList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ProductionUnit" EntityType="Self.tbl_ProductionUnit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
@@ -187,11 +249,40 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Tvita_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Tvita_TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Branch" EntityType="Tvita_TestModel.tbl_Branch" />
+          <EntitySet Name="tbl_Card" EntityType="Tvita_TestModel.tbl_Card" />
+          <EntitySet Name="tbl_CardDetails" EntityType="Tvita_TestModel.tbl_CardDetails" />
+          <EntitySet Name="tbl_Emoloyee" EntityType="Tvita_TestModel.tbl_Emoloyee" />
+          <EntitySet Name="tbl_Farm" EntityType="Tvita_TestModel.tbl_Farm" />
+          <EntitySet Name="tbl_Function" EntityType="Tvita_TestModel.tbl_Function" />
+          <EntitySet Name="tbl_Group" EntityType="Tvita_TestModel.tbl_Group" />
+          <EntitySet Name="tbl_GroupProduct" EntityType="Tvita_TestModel.tbl_GroupProduct" />
+          <EntitySet Name="tbl_Menu" EntityType="Tvita_TestModel.tbl_Menu" />
+          <EntitySet Name="tbl_Order" EntityType="Tvita_TestModel.tbl_Order" />
+          <EntitySet Name="tbl_Payments" EntityType="Tvita_TestModel.tbl_Payments" />
+          <EntitySet Name="tbl_Picture" EntityType="Tvita_TestModel.tbl_Picture" />
+          <EntitySet Name="tbl_Post" EntityType="Tvita_TestModel.tbl_Post" />
+          <EntitySet Name="tbl_Product" EntityType="Tvita_TestModel.tbl_Product" />
+          <EntitySet Name="tbl_ProductionUnit" EntityType="Tvita_TestModel.tbl_ProductionUnit" />
+          <EntitySet Name="tbl_Subject" EntityType="Tvita_TestModel.tbl_Subject" />
+          <EntitySet Name="tbl_SubSubject" EntityType="Tvita_TestModel.tbl_SubSubject" />
+          <EntitySet Name="tbl_User" EntityType="Tvita_TestModel.tbl_User" />
+        </EntityContainer>
+        <EntityType Name="tbl_Branch">
+          <Key>
+            <PropertyRef Name="Branch_ID" />
+          </Key>
+          <Property Name="Branch_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Branch_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Branch_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
         <EntityType Name="tbl_Card">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Card_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Card_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_Order" Type="Int32" />
           <Property Name="Card_TotalPrice" Type="Double" />
           <Property Name="Card_TotalPriceSelloff" Type="Double" />
@@ -202,25 +293,38 @@
         </EntityType>
         <EntityType Name="tbl_CardDetails">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="CardDetails_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CardDetails_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_Card" Type="Int32" />
           <Property Name="ID_Product" Type="Int32" />
-          <Property Name="Amount" Type="Int32" />
+          <Property Name="CardDetails_Amount" Type="Int32" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Emoloyee">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Employee_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Employee_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Employee_Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Employee_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Employee_CreatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbl_Farm">
+          <Key>
+            <PropertyRef Name="Farm_ID" />
+          </Key>
+          <Property Name="Farm_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Farm_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Farm_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Farm_Area" Type="Double" />
+          <Property Name="Farm_Info" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Farm_Distance" Type="Double" />
+          <Property Name="Farm_Territory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Function">
           <Key>
@@ -240,12 +344,26 @@
           <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Group_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Group_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Group_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_GroupProduct">
+          <Key>
+            <PropertyRef Name="GroupProduct_ID" />
+          </Key>
+          <Property Name="GroupProduct_ID" Type="Int32" Nullable="false" />
+          <Property Name="GroupProduct_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GroupProduct_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="GroupProduct_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GroupProduct_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Branch" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_Menu">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Menu_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Menu_Link" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Menu_ParentID" Type="Int32" />
@@ -253,9 +371,9 @@
         </EntityType>
         <EntityType Name="tbl_Order">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Order_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Customer_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Customer_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -265,18 +383,27 @@
         </EntityType>
         <EntityType Name="tbl_Payments">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Payment_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Payment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Payment_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Payment_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
+        <EntityType Name="tbl_Picture">
+          <Key>
+            <PropertyRef Name="Picture_ID" />
+          </Key>
+          <Property Name="Picture_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Picture_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
         <EntityType Name="tbl_Post">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Post_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Post_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_SubSubject" Type="Int32" />
           <Property Name="Post_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Post_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -289,10 +416,10 @@
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Product_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_ProductList" Type="Int32" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_GroupProduct" Type="Int32" />
           <Property Name="Product_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Product_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Product_Quantity" Type="Int32" />
@@ -303,180 +430,226 @@
           <Property Name="Product_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Product_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="tbl_ProductList">
+        <EntityType Name="tbl_ProductionUnit">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="ProductionUnit_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PL_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PL_Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PL_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Farm" Type="Int32" />
+          <Property Name="ProductionUnit_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Area" Type="Double" />
+          <Property Name="ProductionUnit_Info" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Capacity" Type="Double" />
+          <Property Name="ProductionUnit_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_QualityStandard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Price" Type="Double" />
+          <Property Name="ProductionUnit_PreviousPrice" Type="Double" />
+          <Property Name="ProductionUnit_AveragePrice" Type="Double" />
+          <Property Name="ProductionUnit_TransportFee" Type="Double" />
+          <Property Name="ProductionUnit_Distance" Type="Double" />
+          <Property Name="ProductionUnit_Contract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Subject">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Subject_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NumberPosts" Type="Int32" />
-          <Property Name="Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_NumberPosts" Type="Int32" />
+          <Property Name="Subject_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_SubSubject">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Sub_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sub_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_Subject" Type="Int32" />
           <Property Name="Sub_SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Sub_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Sub_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sub_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sub_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_IsDelete" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_User">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="User_ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_Employee" Type="Int32" />
           <Property Name="User_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="User_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ID_Group" Type="Int32" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
-        <EntityContainer Name="Tvita_TestEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbl_Card" EntityType="Self.tbl_Card" />
-          <EntitySet Name="tbl_CardDetails" EntityType="Self.tbl_CardDetails" />
-          <EntitySet Name="tbl_Emoloyee" EntityType="Self.tbl_Emoloyee" />
-          <EntitySet Name="tbl_Function" EntityType="Self.tbl_Function" />
-          <EntitySet Name="tbl_Group" EntityType="Self.tbl_Group" />
-          <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" />
-          <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" />
-          <EntitySet Name="tbl_Payments" EntityType="Self.tbl_Payments" />
-          <EntitySet Name="tbl_Post" EntityType="Self.tbl_Post" />
-          <EntitySet Name="tbl_Product" EntityType="Self.tbl_Product" />
-          <EntitySet Name="tbl_ProductList" EntityType="Self.tbl_ProductList" />
-          <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" />
-          <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" />
-          <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Tvita_TestModelStoreContainer" CdmEntityContainer="Tvita_TestEntities">
+          <EntitySetMapping Name="tbl_Branch">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Branch">
+              <MappingFragment StoreEntitySet="tbl_Branch">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Branch_Code" ColumnName="Branch_Code" />
+                <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+                <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbl_Card">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Card">
               <MappingFragment StoreEntitySet="tbl_Card">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_Order" ColumnName="ID_Order" />
-                <ScalarProperty Name="Card_TotalPrice" ColumnName="Card_TotalPrice" />
-                <ScalarProperty Name="Card_TotalPriceSelloff" ColumnName="Card_TotalPriceSelloff" />
-                <ScalarProperty Name="Card_TraveliingFee" ColumnName="Card_TraveliingFee" />
-                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
-                <ScalarProperty Name="IsConfirmSucess" ColumnName="IsConfirmSucess" />
                 <ScalarProperty Name="ID_Payments" ColumnName="ID_Payments" />
+                <ScalarProperty Name="IsConfirmSucess" ColumnName="IsConfirmSucess" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Card_TraveliingFee" ColumnName="Card_TraveliingFee" />
+                <ScalarProperty Name="Card_TotalPriceSelloff" ColumnName="Card_TotalPriceSelloff" />
+                <ScalarProperty Name="Card_TotalPrice" ColumnName="Card_TotalPrice" />
+                <ScalarProperty Name="ID_Order" ColumnName="ID_Order" />
+                <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_CardDetails">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_CardDetails">
               <MappingFragment StoreEntitySet="tbl_CardDetails">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_Card" ColumnName="ID_Card" />
-                <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CardDetails_Amount" ColumnName="CardDetails_Amount" />
+                <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+                <ScalarProperty Name="ID_Card" ColumnName="ID_Card" />
+                <ScalarProperty Name="CardDetails_ID" ColumnName="CardDetails_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Emoloyee">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Emoloyee">
               <MappingFragment StoreEntitySet="tbl_Emoloyee">
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
-                <ScalarProperty Name="Employee_Phone" ColumnName="Employee_Phone" />
-                <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
-                <ScalarProperty Name="Employee_Code" ColumnName="Employee_Code" />
+                <ScalarProperty Name="Employee_CreatedDate" ColumnName="Employee_CreatedDate" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Employee_Code" ColumnName="Employee_Code" />
+                <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+                <ScalarProperty Name="Employee_Phone" ColumnName="Employee_Phone" />
+                <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Farm">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Farm">
+              <MappingFragment StoreEntitySet="tbl_Farm">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Farm_Territory" ColumnName="Farm_Territory" />
+                <ScalarProperty Name="Farm_Distance" ColumnName="Farm_Distance" />
+                <ScalarProperty Name="Farm_Info" ColumnName="Farm_Info" />
+                <ScalarProperty Name="Farm_Area" ColumnName="Farm_Area" />
+                <ScalarProperty Name="Farm_Address" ColumnName="Farm_Address" />
+                <ScalarProperty Name="Farm_Code" ColumnName="Farm_Code" />
+                <ScalarProperty Name="Farm_ID" ColumnName="Farm_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Function">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Function">
               <MappingFragment StoreEntitySet="tbl_Function">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Function_Name" ColumnName="Function_Name" />
-                <ScalarProperty Name="Function_Url" ColumnName="Function_Url" />
-                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
+                <ScalarProperty Name="Function_Url" ColumnName="Function_Url" />
+                <ScalarProperty Name="Function_Name" ColumnName="Function_Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Group">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Group">
               <MappingFragment StoreEntitySet="tbl_Group">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
-                <ScalarProperty Name="Group_Description" ColumnName="Group_Description" />
+                <ScalarProperty Name="Group_Picture" ColumnName="Group_Picture" />
+                <ScalarProperty Name="Group_Code" ColumnName="Group_Code" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Group_Description" ColumnName="Group_Description" />
+                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_GroupProduct">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_GroupProduct">
+              <MappingFragment StoreEntitySet="tbl_GroupProduct">
+                <ScalarProperty Name="ID_Branch" ColumnName="ID_Branch" />
+                <ScalarProperty Name="GroupProduct_Picture" ColumnName="GroupProduct_Picture" />
+                <ScalarProperty Name="GroupProduct_Description" ColumnName="GroupProduct_Description" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="GroupProduct_Name" ColumnName="GroupProduct_Name" />
+                <ScalarProperty Name="GroupProduct_Code" ColumnName="GroupProduct_Code" />
+                <ScalarProperty Name="GroupProduct_ID" ColumnName="GroupProduct_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Menu">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Menu">
               <MappingFragment StoreEntitySet="tbl_Menu">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
-                <ScalarProperty Name="Menu_Link" ColumnName="Menu_Link" />
-                <ScalarProperty Name="Menu_ParentID" ColumnName="Menu_ParentID" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Menu_ParentID" ColumnName="Menu_ParentID" />
+                <ScalarProperty Name="Menu_Link" ColumnName="Menu_Link" />
+                <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+                <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Order">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Order">
               <MappingFragment StoreEntitySet="tbl_Order">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
-                <ScalarProperty Name="Customer_Phone" ColumnName="Customer_Phone" />
-                <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
-                <ScalarProperty Name="ID_Card" ColumnName="ID_Card" />
-                <ScalarProperty Name="Customer_Note" ColumnName="Customer_Note" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Customer_Note" ColumnName="Customer_Note" />
+                <ScalarProperty Name="ID_Card" ColumnName="ID_Card" />
+                <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
+                <ScalarProperty Name="Customer_Phone" ColumnName="Customer_Phone" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Payments">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Payments">
               <MappingFragment StoreEntitySet="tbl_Payments">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Payment_Name" ColumnName="Payment_Name" />
-                <ScalarProperty Name="Payment_Description" ColumnName="Payment_Description" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Payment_Description" ColumnName="Payment_Description" />
+                <ScalarProperty Name="Payment_Name" ColumnName="Payment_Name" />
+                <ScalarProperty Name="Payment_ID" ColumnName="Payment_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Picture">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Picture">
+              <MappingFragment StoreEntitySet="tbl_Picture">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Picture_Description" ColumnName="Picture_Description" />
+                <ScalarProperty Name="Picture_Name" ColumnName="Picture_Name" />
+                <ScalarProperty Name="Picture_ID" ColumnName="Picture_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Post">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Post">
               <MappingFragment StoreEntitySet="tbl_Post">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_SubSubject" ColumnName="ID_SubSubject" />
-                <ScalarProperty Name="Post_Name" ColumnName="Post_Name" />
-                <ScalarProperty Name="Post_Description" ColumnName="Post_Description" />
-                <ScalarProperty Name="Post_Content" ColumnName="Post_Content" />
-                <ScalarProperty Name="Post_Picture" ColumnName="Post_Picture" />
-                <ScalarProperty Name="Post_Video" ColumnName="Post_Video" />
-                <ScalarProperty Name="Post_Keyword" ColumnName="Post_Keyword" />
-                <ScalarProperty Name="Post_Url" ColumnName="Post_Url" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Post_Url" ColumnName="Post_Url" />
+                <ScalarProperty Name="Post_Keyword" ColumnName="Post_Keyword" />
+                <ScalarProperty Name="Post_Video" ColumnName="Post_Video" />
+                <ScalarProperty Name="Post_Picture" ColumnName="Post_Picture" />
+                <ScalarProperty Name="Post_Content" ColumnName="Post_Content" />
+                <ScalarProperty Name="Post_Description" ColumnName="Post_Description" />
+                <ScalarProperty Name="Post_Name" ColumnName="Post_Name" />
+                <ScalarProperty Name="ID_SubSubject" ColumnName="ID_SubSubject" />
+                <ScalarProperty Name="Post_ID" ColumnName="Post_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -485,65 +658,78 @@
               <MappingFragment StoreEntitySet="tbl_Product">
                 <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
                 <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_ProductList" ColumnName="ID_ProductList" />
-                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
-                <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
-                <ScalarProperty Name="Product_Quantity" ColumnName="Product_Quantity" />
-                <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
-                <ScalarProperty Name="Product_Picture" ColumnName="Product_Picture" />
-                <ScalarProperty Name="Product_Price_Saleoff" ColumnName="Product_Price_Saleoff" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Product_Price_Saleoff" ColumnName="Product_Price_Saleoff" />
+                <ScalarProperty Name="Product_Picture" ColumnName="Product_Picture" />
+                <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+                <ScalarProperty Name="Product_Quantity" ColumnName="Product_Quantity" />
+                <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+                <ScalarProperty Name="ID_GroupProduct" ColumnName="ID_GroupProduct" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_ProductList">
-            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_ProductList">
-              <MappingFragment StoreEntitySet="tbl_ProductList">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="PL_Name" ColumnName="PL_Name" />
-                <ScalarProperty Name="PL_Description" ColumnName="PL_Description" />
-                <ScalarProperty Name="PL_Picture" ColumnName="PL_Picture" />
+          <EntitySetMapping Name="tbl_ProductionUnit">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_ProductionUnit">
+              <MappingFragment StoreEntitySet="tbl_ProductionUnit">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ProductionUnit_Contract" ColumnName="ProductionUnit_Contract" />
+                <ScalarProperty Name="ProductionUnit_Distance" ColumnName="ProductionUnit_Distance" />
+                <ScalarProperty Name="ProductionUnit_TransportFee" ColumnName="ProductionUnit_TransportFee" />
+                <ScalarProperty Name="ProductionUnit_AveragePrice" ColumnName="ProductionUnit_AveragePrice" />
+                <ScalarProperty Name="ProductionUnit_PreviousPrice" ColumnName="ProductionUnit_PreviousPrice" />
+                <ScalarProperty Name="ProductionUnit_Price" ColumnName="ProductionUnit_Price" />
+                <ScalarProperty Name="ProductionUnit_Unit" ColumnName="ProductionUnit_Unit" />
+                <ScalarProperty Name="ProductionUnit_QualityStandard" ColumnName="ProductionUnit_QualityStandard" />
+                <ScalarProperty Name="ProductionUnit_Address" ColumnName="ProductionUnit_Address" />
+                <ScalarProperty Name="ProductionUnit_Capacity" ColumnName="ProductionUnit_Capacity" />
+                <ScalarProperty Name="ProductionUnit_Info" ColumnName="ProductionUnit_Info" />
+                <ScalarProperty Name="ProductionUnit_Area" ColumnName="ProductionUnit_Area" />
+                <ScalarProperty Name="ProductionUnit_Name" ColumnName="ProductionUnit_Name" />
+                <ScalarProperty Name="ProductionUnit_Code" ColumnName="ProductionUnit_Code" />
+                <ScalarProperty Name="ID_Farm" ColumnName="ID_Farm" />
+                <ScalarProperty Name="ProductionUnit_ID" ColumnName="ProductionUnit_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Subject">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Subject">
               <MappingFragment StoreEntitySet="tbl_Subject">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="NumberPosts" ColumnName="NumberPosts" />
-                <ScalarProperty Name="Picture" ColumnName="Picture" />
-                <ScalarProperty Name="Url" ColumnName="Url" />
-                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Subject_Keyword" ColumnName="Subject_Keyword" />
+                <ScalarProperty Name="Subject_Url" ColumnName="Subject_Url" />
+                <ScalarProperty Name="Subject_Picture" ColumnName="Subject_Picture" />
+                <ScalarProperty Name="Subject_NumberPosts" ColumnName="Subject_NumberPosts" />
+                <ScalarProperty Name="Subject_Description" ColumnName="Subject_Description" />
+                <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+                <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_SubSubject">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_SubSubject">
               <MappingFragment StoreEntitySet="tbl_SubSubject">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_Subject" ColumnName="ID_Subject" />
-                <ScalarProperty Name="Sub_SubjectName" ColumnName="Sub_SubjectName" />
-                <ScalarProperty Name="Sub_Description" ColumnName="Sub_Description" />
-                <ScalarProperty Name="Sub_Url" ColumnName="Sub_Url" />
-                <ScalarProperty Name="Sub_Keyword" ColumnName="Sub_Keyword" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
                 <ScalarProperty Name="Sub_Picture" ColumnName="Sub_Picture" />
-                <ScalarProperty Name="Sub_IsDelete" ColumnName="Sub_IsDelete" />
+                <ScalarProperty Name="Sub_Keyword" ColumnName="Sub_Keyword" />
+                <ScalarProperty Name="Sub_Url" ColumnName="Sub_Url" />
+                <ScalarProperty Name="Sub_Description" ColumnName="Sub_Description" />
+                <ScalarProperty Name="Sub_SubjectName" ColumnName="Sub_SubjectName" />
+                <ScalarProperty Name="ID_Subject" ColumnName="ID_Subject" />
+                <ScalarProperty Name="Sub_ID" ColumnName="Sub_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_User">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_User">
               <MappingFragment StoreEntitySet="tbl_User">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
-                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
-                <ScalarProperty Name="User_Password" ColumnName="User_Password" />
-                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
+                <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -14,13 +14,13 @@ namespace Tvita.DAL
     
     public partial class tbl_SubSubject
     {
-        public int ID { get; set; }
+        public int Sub_ID { get; set; }
         public Nullable<int> ID_Subject { get; set; }
         public string Sub_SubjectName { get; set; }
         public string Sub_Description { get; set; }
         public string Sub_Url { get; set; }
         public string Sub_Keyword { get; set; }
         public string Sub_Picture { get; set; }
-        public Nullable<bool> Sub_IsDelete { get; set; }
+        public Nullable<bool> IsDelete { get; set; }
     }
 }

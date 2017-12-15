@@ -14,7 +14,7 @@ namespace Tvita.DAL
     
     public partial class tbl_Payments
     {
-        public int ID { get; set; }
+        public int Payment_ID { get; set; }
         public string Payment_Name { get; set; }
         public string Payment_Description { get; set; }
         public Nullable<bool> IsDelete { get; set; }
