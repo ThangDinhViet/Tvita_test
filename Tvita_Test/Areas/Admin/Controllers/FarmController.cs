@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Tvita.BAL.Implement;
 using Tvita.Model.ExcelModel;
 using Tvita.Model.Table;
 
@@ -98,6 +99,12 @@ namespace Tvita_Test.Areas.Admin.Controllers
                 HttpPostedFileBase file = Request.Files["UploadedFile"];
                 if ((file != null) && (file.ContentLength > 0) && !string.IsNullOrEmpty(file.FileName))
                 {
+                    BranchManager branchManager = new BranchManager();
+                    GroupProductManager groupProductManager = new GroupProductManager();
+                    ProductManager productManager = new ProductManager();
+                    FarmManager farmManager = new FarmManager();
+                    ProductionUnitManager productionUnitManager = new ProductionUnitManager();
+
                     string fileName = file.FileName;
                     string fileContentType = file.ContentType;
                     byte[] fileBytes = new byte[file.ContentLength];
@@ -129,11 +136,16 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.Branch_Name = workSheet.Cells[rowIterator, 3].Value.ToString();
                             branch.Branch_Name = productionUnitExcel.Branch_Name;
 
+                            //branchManager.AddBranch(branch);
+
                             productionUnitExcel.GroupProduct_Code = workSheet.Cells[rowIterator, 4].Value.ToString();
                             groupProduct.GroupProduct_Code = productionUnitExcel.GroupProduct_Code;
 
                             productionUnitExcel.GroupProduct_Name = workSheet.Cells[rowIterator, 5].Value.ToString();
                             groupProduct.GroupProduct_Name = productionUnitExcel.GroupProduct_Name;
+
+                            groupProduct.ID_Branch = branchManager.GetBranchByCode(productionUnitExcel.Branch_Code).Branch_ID;
+                            groupProductManager.AddGroupProduct(groupProduct);
 
                             productionUnitExcel.Product_Code = workSheet.Cells[rowIterator, 6].Value.ToString();
                             product.Product_Code = productionUnitExcel.Product_Code;
@@ -141,11 +153,15 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.Product_Name = workSheet.Cells[rowIterator, 7].Value.ToString();
                             product.Product_Name = productionUnitExcel.Product_Name;
 
+                            productManager.AddProduct(product);
+
                             productionUnitExcel.Farm_Code = workSheet.Cells[rowIterator, 8].Value.ToString();
                             farm.Farm_Code = productionUnitExcel.Farm_Code;
 
                             productionUnitExcel.Farm_Name = workSheet.Cells[rowIterator, 9].Value.ToString();
                             farm.Farm_Name = productionUnitExcel.Farm_Name;
+
+                            farmManager.AddFarm(farm);
 
                             productionUnitExcel.ProductionUnit_Code = workSheet.Cells[rowIterator, 10].Value.ToString();
                             productionUnit.ProductionUnit_Code = productionUnitExcel.ProductionUnit_Code;
@@ -179,6 +195,8 @@ namespace Tvita_Test.Areas.Admin.Controllers
 
                             //productionUnitExcel.ProductionUnit_PreviousPrice = Convert.ToDouble(workSheet.Cells[rowIterator, 20].Value);
                             //productionUnit.ProductionUnit_PreviousPrice = productionUnitExcel.ProductionUnit_PreviousPrice;
+
+                            productionUnitManager.AddProductionUnit(productionUnit);
 
                             productionUnitExcel.ProductHistory_Price = Convert.ToDouble(workSheet.Cells[rowIterator, 21].Value);
                             productHistory.ProductHistory_Price = productionUnitExcel.ProductHistory_Price;

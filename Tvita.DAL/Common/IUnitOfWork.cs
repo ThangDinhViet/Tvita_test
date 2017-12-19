@@ -15,6 +15,15 @@ namespace Tvita.DAL.Common
         IRepository<tbl_Emoloyee, int> EmployeeRepository { get; }
         IEmployeeRepository IEmployeeRepository { get; }
         IRepository<tbl_Product, int> ProductRepository { get; }
+        IProductRepository IProductRepository { get; }
+        IRepository<tbl_Branch, int> BranchRepository { get; }
+        IBranchRepository IBranchRepository { get; }
+        IRepository<tbl_GroupProduct, int> GroupProductRepository { get; }
+        IGroupProductRepository IGroupProductRepository { get; }
+        IRepository<tbl_Farm, int> FarmRepository { get; }
+        IFarmRepository IFarmRepository { get; }
+        IRepository<tbl_ProductionUnit, int> ProductionUnitRepository { get; }
+        IProductionUnitRepository IProductionUnitRepository { get; }
         void SaveChanges();
     }
 }

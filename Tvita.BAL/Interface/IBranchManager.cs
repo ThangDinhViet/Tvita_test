@@ -7,9 +7,9 @@ using Tvita.Model.Table;
 
 namespace Tvita.BAL.Interface
 {
-    public interface IProductManager
+    interface IBranchManager
     {
-        List<ProductModel> GetAllProduct();
-        ProductModel GetProductByCode(string code);
+        List<BranchModel> GetAllBranch();
+        BranchModel GetBranchByCode(string code);
     }
 }

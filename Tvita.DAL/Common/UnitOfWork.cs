@@ -77,8 +77,106 @@ namespace Tvita.DAL.Common
                 return _productRepository;
             }
         }
+        private IProductRepository _iproductRepository;
+        public IProductRepository IProductRepository
+        {
+            get
+            {
+                if (this._iproductRepository == null)
+                    this._iproductRepository = new ProductRepository(_context);
+                return _iproductRepository;
+            }
+        }
 
-       
+        private IRepository<tbl_Branch, int> _branchRepository;
+        public IRepository<tbl_Branch, int> BranchRepository
+        {
+            get
+            {
+                if (this._branchRepository == null)
+                    this._branchRepository = new BranchRepository(_context);
+                return _branchRepository;
+            }
+        }
+
+        private IBranchRepository _ibranchRepository;
+        public IBranchRepository IBranchRepository
+        {
+            get
+            {
+                if (this._ibranchRepository == null)
+                    this._ibranchRepository = new BranchRepository(_context);
+                return _ibranchRepository;
+            }
+        }
+
+        private IRepository<tbl_GroupProduct, int> _groupProductRepository;
+        public IRepository<tbl_GroupProduct, int> GroupProductRepository
+        {
+            get
+            {
+                if (this._groupProductRepository == null)
+                    this._groupProductRepository = new GroupProductRepository(_context);
+                return _groupProductRepository;
+            }
+        }
+
+        private IGroupProductRepository _igroupProductRepository;
+        public IGroupProductRepository IGroupProductRepository
+        {
+            get
+            {
+                if (this._igroupProductRepository == null)
+                    this._igroupProductRepository = new GroupProductRepository(_context);
+                return _igroupProductRepository;
+            }
+        }
+
+        private IRepository<tbl_Farm, int> _farmRepository;
+        public IRepository<tbl_Farm, int> FarmRepository
+        {
+            get
+            {
+                if (this._farmRepository == null)
+                    this._farmRepository = new FarmRepository(_context);
+                return _farmRepository;
+            }
+        }
+
+        private IFarmRepository _ifarmRepository;
+        public IFarmRepository IFarmRepository
+        {
+            get
+            {
+                if (this._ifarmRepository == null)
+                    this._ifarmRepository = new FarmRepository(_context);
+                return _ifarmRepository;
+            }
+        }
+
+        private IProductionUnitRepository _iproductionUnitRepository;
+        public IProductionUnitRepository IProductionUnitRepository
+        {
+            get
+            {
+                if (this._iproductionUnitRepository == null)
+                    this._iproductionUnitRepository = new ProductionUnitRepository(_context);
+                return _iproductionUnitRepository;
+            }
+        }
+
+        private IRepository<tbl_ProductionUnit, int> _productionUnitRepository;
+        public IRepository<tbl_ProductionUnit, int> ProductionUnitRepository
+        {
+            get
+            {
+                if (this._productionUnitRepository == null)
+                    this._productionUnitRepository = new ProductionUnitRepository(_context);
+                return _productionUnitRepository;
+            }
+        }
+
+
         public void SaveChanges()
         {
             try

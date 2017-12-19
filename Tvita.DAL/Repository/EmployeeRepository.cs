@@ -42,6 +42,7 @@ namespace Tvita.DAL.Repository
                 employee.Employee_Code = model.Employee_Code;
                 employee.Employee_Name = model.Employee_Name;
                 employee.Employee_Phone = model.Employee_Phone;
+
                 _dbContext.tbl_Emoloyee.Add(employee);
                 Save();
                 return true;

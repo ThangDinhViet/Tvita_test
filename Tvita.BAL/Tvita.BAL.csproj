@@ -40,11 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implement\BranchManager.cs" />
     <Compile Include="Implement\CardManager.cs" />
     <Compile Include="Implement\EmployeeManager.cs" />
+    <Compile Include="Implement\FarmManager.cs" />
+    <Compile Include="Implement\GroupProductManager.cs" />
+    <Compile Include="Implement\ProductionUnitManager.cs" />
     <Compile Include="Implement\ProductManager.cs" />
+    <Compile Include="Interface\IBranchManager.cs" />
     <Compile Include="Interface\ICardManager.cs" />
     <Compile Include="Interface\IEmployeeManager.cs" />
+    <Compile Include="Interface\IFarmManager.cs" />
+    <Compile Include="Interface\IGroupProductManager.cs" />
+    <Compile Include="Interface\IProductionUnitManager.cs" />
     <Compile Include="Interface\IProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

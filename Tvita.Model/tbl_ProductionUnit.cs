@@ -20,7 +20,7 @@ namespace Tvita.Model
         public string ProductionUnit_Name { get; set; }
         public Nullable<double> ProductionUnit_Area { get; set; }
         public string ProductionUnit_Info { get; set; }
-        public Nullable<double> ProductionUnit_Capacity { get; set; }
+        public string ProductionUnit_Capacity { get; set; }
         public string ProductionUnit_Address { get; set; }
         public string ProductionUnit_QualityStandard { get; set; }
         public string ProductionUnit_Unit { get; set; }

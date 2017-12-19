@@ -56,11 +56,19 @@
     <Compile Include="Common\Repository.cs" />
     <Compile Include="Common\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BranchRepository.cs" />
     <Compile Include="Repository\CardRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
+    <Compile Include="Repository\FarmRepository.cs" />
+    <Compile Include="Repository\GroupProductRepository.cs" />
+    <Compile Include="Repository\IBranchRepository.cs" />
     <Compile Include="Repository\ICardRepository.cs" />
     <Compile Include="Repository\IEmployeeRepository.cs" />
+    <Compile Include="Repository\IFarmRepository.cs" />
+    <Compile Include="Repository\IGroupProductRepository.cs" />
+    <Compile Include="Repository\IProductionUnitRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
+    <Compile Include="Repository\ProductionUnitRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="tbl_Branch.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
@@ -143,17 +151,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="TvitaDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TvitaDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="TvitaDB.edmx.diagram">
       <DependentUpon>TvitaDB.edmx</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TvitaDB.Context.tt">
@@ -166,9 +175,6 @@
       <DependentUpon>TvitaDB.edmx</DependentUpon>
       <LastGenOutput>TvitaDB.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

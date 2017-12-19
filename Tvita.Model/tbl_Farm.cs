@@ -22,5 +22,6 @@ namespace Tvita.Model
         public Nullable<double> Farm_Distance { get; set; }
         public string Farm_Territory { get; set; }
         public Nullable<bool> IsDelete { get; set; }
+        public string Farm_Name { get; set; }
     }
 }

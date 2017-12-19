@@ -21,15 +21,30 @@ namespace Tvita.DAL.Repository
             _productRepository = new Repository<tbl_Product, int>(_dbContext);
             this._dbSet = _dbContext.Set<tbl_Product>();
         }
-        public List<ProductModel> GetAllProduct()
+        public bool AddProduct(ProductModel model)
         {
-            List<ProductModel> result = new List<ProductModel>();
-            result = (from c in _dbContext.tbl_Product
-                      select new ProductModel
-                      {
-                          
-                      }).ToList();
-            return result;
+            tbl_Product product = new tbl_Product();
+            try
+            {
+                product.ID_GroupProduct = model.ID_GroupProduct;
+                product.IsDelete = false;
+                product.Product_Code = model.Product_Code;
+                product.Product_Description = model.Product_Description;
+                product.Product_Name = model.Product_Name;
+                product.Product_Picture = model.Product_Picture;
+                product.Product_Price = model.Product_Price;
+                product.Product_Price_Saleoff = model.Product_Price_Saleoff;
+                product.Product_Quantity = model.Product_Quantity;
+                product.Product_Type = model.Product_Type;
+
+                _dbContext.tbl_Product.Add(product);
+                Save();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }

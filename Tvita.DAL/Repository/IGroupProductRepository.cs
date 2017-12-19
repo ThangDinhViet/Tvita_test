@@ -7,9 +7,8 @@ using Tvita.Model.Table;
 
 namespace Tvita.DAL.Repository
 {
-    public interface IProductRepository
+    public interface IGroupProductRepository
     {
-        bool AddProduct(ProductModel model);
+        bool AddGroupProduct(GroupProductModel model);
     }
 }
-
