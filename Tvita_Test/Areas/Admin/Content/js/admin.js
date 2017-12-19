@@ -10,6 +10,8 @@
         todayHighlight: true,
         autoclose: true,
     })
+    
+
     $("#saveNewEmployee").on("click", function () {
         var AddEmployeeModel = {
             Employee_Code: $('#employeeCode').val(),
@@ -34,3 +36,19 @@
         });
     });
 });
+
+function validate_fileupload(fileName)
+{
+    var allowed_extensions = new Array("xlsx","xls");
+    var file_extension = fileName.split('.').pop().toLowerCase(); 
+
+    for(var i = 0; i <= allowed_extensions.length; i++)
+    {
+        if(allowed_extensions[i]==file_extension)
+        {
+            return true; 
+        }
+    }
+    alert("File không hợp lệ. Chỉ được import file excel")
+    return false;
+}

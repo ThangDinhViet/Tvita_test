@@ -14,7 +14,7 @@ namespace Tvita.Model
     
     public partial class tbl_Group
     {
-        public int ID { get; set; }
+        public int Group_ID { get; set; }
         public string Group_Name { get; set; }
         public string Group_Description { get; set; }
         public Nullable<bool> IsDelete { get; set; }

@@ -9,16 +9,16 @@
           <Key>
             <PropertyRef Name="Branch_ID" />
           </Key>
-          <Property Name="Branch_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Branch_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Branch_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Branch_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Branch_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Branch_Code" MaxLength="20" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Card">
           <Key>
             <PropertyRef Name="Card_ID" />
           </Key>
-          <Property Name="Card_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Card_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_Order" Type="int" />
           <Property Name="Card_TotalPrice" Type="float" />
           <Property Name="Card_TotalPriceSelloff" Type="float" />
@@ -31,7 +31,7 @@
           <Key>
             <PropertyRef Name="CardDetails_ID" />
           </Key>
-          <Property Name="CardDetails_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CardDetails_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_Card" Type="int" />
           <Property Name="ID_Product" Type="int" />
           <Property Name="CardDetails_Amount" Type="int" />
@@ -41,11 +41,11 @@
           <Key>
             <PropertyRef Name="Employee_ID" />
           </Key>
-          <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Employee_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Employee_Phone" Type="nvarchar" MaxLength="20" />
-          <Property Name="Employee_Address" Type="nvarchar" MaxLength="20" />
-          <Property Name="Employee_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Employee_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Employee_Phone" MaxLength="20" Type="nvarchar" />
+          <Property Name="Employee_Address" MaxLength="20" Type="nvarchar" />
+          <Property Name="Employee_Code" MaxLength="20" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
           <Property Name="Employee_CreatedDate" Type="datetime" />
         </EntityType>
@@ -53,55 +53,56 @@
           <Key>
             <PropertyRef Name="Farm_ID" />
           </Key>
-          <Property Name="Farm_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Farm_Code" Type="nvarchar" MaxLength="50" />
-          <Property Name="Farm_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Farm_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Farm_Code" MaxLength="50" Type="nvarchar" />
+          <Property Name="Farm_Address" MaxLength="50" Type="nvarchar" />
           <Property Name="Farm_Area" Type="float" />
-          <Property Name="Farm_Info" Type="nvarchar" MaxLength="100" />
+          <Property Name="Farm_Info" MaxLength="100" Type="nvarchar" />
           <Property Name="Farm_Distance" Type="float" />
-          <Property Name="Farm_Territory" Type="nvarchar" MaxLength="50" />
+          <Property Name="Farm_Territory" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
+          <Property Name="Farm_Name" MaxLength="50" Type="nvarchar" />
         </EntityType>
         <EntityType Name="tbl_Function">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Function_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Function_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Function_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Function_Url" MaxLength="50" Type="nvarchar" />
           <Property Name="ID_Group" Type="int" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Group">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Group_ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Group_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Group_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Group_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Group_Description" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="Group_Code" Type="nvarchar" MaxLength="50" />
-          <Property Name="Group_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group_Code" MaxLength="50" Type="nvarchar" />
+          <Property Name="Group_Picture" MaxLength="50" Type="nvarchar" />
         </EntityType>
         <EntityType Name="tbl_GroupProduct">
           <Key>
             <PropertyRef Name="GroupProduct_ID" />
           </Key>
-          <Property Name="GroupProduct_ID" Type="int" Nullable="false" />
-          <Property Name="GroupProduct_Code" Type="nvarchar" MaxLength="20" />
-          <Property Name="GroupProduct_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="GroupProduct_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="GroupProduct_Code" MaxLength="20" Type="nvarchar" />
+          <Property Name="GroupProduct_Name" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="GroupProduct_Description" Type="nvarchar" MaxLength="50" />
-          <Property Name="GroupProduct_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="GroupProduct_Description" MaxLength="50" Type="nvarchar" />
+          <Property Name="GroupProduct_Picture" MaxLength="50" Type="nvarchar" />
           <Property Name="ID_Branch" Type="int" />
         </EntityType>
         <EntityType Name="tbl_Menu">
           <Key>
             <PropertyRef Name="Menu_ID" />
           </Key>
-          <Property Name="Menu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Menu_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Menu_Link" Type="nvarchar" MaxLength="50" />
+          <Property Name="Menu_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Menu_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Menu_Link" MaxLength="50" Type="nvarchar" />
           <Property Name="Menu_ParentID" Type="int" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
@@ -109,119 +110,130 @@
           <Key>
             <PropertyRef Name="Order_ID" />
           </Key>
-          <Property Name="Order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Customer_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Customer_Phone" Type="nvarchar" MaxLength="20" />
-          <Property Name="Customer_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Order_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Customer_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Customer_Phone" MaxLength="20" Type="nvarchar" />
+          <Property Name="Customer_Address" MaxLength="50" Type="nvarchar" />
           <Property Name="ID_Card" Type="int" />
-          <Property Name="Customer_Note" Type="nvarchar" MaxLength="200" />
-          <Property Name="IsDelete" Type="nchar" MaxLength="10" />
+          <Property Name="Customer_Note" MaxLength="200" Type="nvarchar" />
+          <Property Name="IsDelete" MaxLength="10" Type="nchar" />
         </EntityType>
         <EntityType Name="tbl_Payments">
           <Key>
             <PropertyRef Name="Payment_ID" />
           </Key>
-          <Property Name="Payment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Payment_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Payment_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Payment_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Payment_Description" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Picture">
           <Key>
             <PropertyRef Name="Picture_ID" />
           </Key>
-          <Property Name="Picture_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Picture_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Picture_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Picture_Name" MaxLength="50" Type="nvarchar" />
+          <Property Name="Picture_Description" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Post">
           <Key>
             <PropertyRef Name="Post_ID" />
           </Key>
-          <Property Name="Post_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Post_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_SubSubject" Type="int" />
           <Property Name="Post_Name" Type="ntext" />
           <Property Name="Post_Description" Type="ntext" />
           <Property Name="Post_Content" Type="ntext" />
-          <Property Name="Post_Picture" Type="nvarchar" MaxLength="50" />
-          <Property Name="Post_Video" Type="nvarchar" MaxLength="200" />
-          <Property Name="Post_Keyword" Type="nvarchar" MaxLength="50" />
-          <Property Name="Post_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Picture" MaxLength="50" Type="nvarchar" />
+          <Property Name="Post_Video" MaxLength="200" Type="nvarchar" />
+          <Property Name="Post_Keyword" MaxLength="50" Type="nvarchar" />
+          <Property Name="Post_Url" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
             <PropertyRef Name="Product_ID" />
           </Key>
-          <Property Name="Product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_GroupProduct" Type="int" />
-          <Property Name="Product_Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Product_Name" MaxLength="500" Type="nvarchar" />
           <Property Name="Product_Description" Type="ntext" />
           <Property Name="Product_Quantity" Type="int" />
           <Property Name="Product_Price" Type="float" />
-          <Property Name="Product_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product_Picture" MaxLength="50" Type="nvarchar" />
           <Property Name="Product_Price_Saleoff" Type="float" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="Product_Type" Type="nvarchar" MaxLength="50" />
-          <Property Name="Product_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product_Type" MaxLength="50" Type="nvarchar" />
+          <Property Name="Product_Code" MaxLength="50" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="tbl_ProductHistory">
+          <Key>
+            <PropertyRef Name="ProductHistory_ID" />
+          </Key>
+          <Property Name="ProductHistory_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="ProductHistory_Date" Type="datetime" />
+          <Property Name="ID_Product" Type="int" />
+          <Property Name="ID_ProductionUnit" Type="int" />
+          <Property Name="ProductHistory_Price" Type="float" />
+          <Property Name="IsDelete" MaxLength="10" Type="nchar" />
         </EntityType>
         <EntityType Name="tbl_ProductionUnit">
           <Key>
             <PropertyRef Name="ProductionUnit_ID" />
           </Key>
-          <Property Name="ProductionUnit_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductionUnit_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_Farm" Type="int" />
-          <Property Name="ProductionUnit_Code" Type="nvarchar" MaxLength="20" />
-          <Property Name="ProductionUnit_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_Code" MaxLength="20" Type="nvarchar" />
+          <Property Name="ProductionUnit_Name" MaxLength="50" Type="nvarchar" />
           <Property Name="ProductionUnit_Area" Type="float" />
-          <Property Name="ProductionUnit_Info" Type="nvarchar" MaxLength="50" />
-          <Property Name="ProductionUnit_Capacity" Type="float" />
-          <Property Name="ProductionUnit_Address" Type="nvarchar" MaxLength="50" />
-          <Property Name="ProductionUnit_QualityStandard" Type="nvarchar" MaxLength="50" />
-          <Property Name="ProductionUnit_Unit" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProductionUnit_Info" MaxLength="50" Type="nvarchar" />
+          <Property Name="ProductionUnit_Capacity" MaxLength="50" Type="nvarchar" />
+          <Property Name="ProductionUnit_Address" MaxLength="50" Type="nvarchar" />
+          <Property Name="ProductionUnit_QualityStandard" MaxLength="50" Type="nvarchar" />
+          <Property Name="ProductionUnit_Unit" MaxLength="10" Type="nvarchar" />
           <Property Name="ProductionUnit_Price" Type="float" />
           <Property Name="ProductionUnit_PreviousPrice" Type="float" />
           <Property Name="ProductionUnit_AveragePrice" Type="float" />
           <Property Name="ProductionUnit_TransportFee" Type="float" />
           <Property Name="ProductionUnit_Distance" Type="float" />
-          <Property Name="ProductionUnit_Contract" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductionUnit_Contract" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Subject">
           <Key>
             <PropertyRef Name="Subject_ID" />
           </Key>
-          <Property Name="Subject_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Subject_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="Subject_Name" Type="ntext" />
           <Property Name="Subject_Description" Type="ntext" />
           <Property Name="Subject_NumberPosts" Type="int" />
-          <Property Name="Subject_Picture" Type="nvarchar" MaxLength="50" />
-          <Property Name="Subject_Url" Type="nvarchar" MaxLength="50" />
-          <Property Name="Subject_Keyword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject_Picture" MaxLength="50" Type="nvarchar" />
+          <Property Name="Subject_Url" MaxLength="50" Type="nvarchar" />
+          <Property Name="Subject_Keyword" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_SubSubject">
           <Key>
             <PropertyRef Name="Sub_ID" />
           </Key>
-          <Property Name="Sub_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sub_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_Subject" Type="int" />
           <Property Name="Sub_SubjectName" Type="ntext" />
           <Property Name="Sub_Description" Type="ntext" />
-          <Property Name="Sub_Url" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sub_Keyword" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sub_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sub_Url" MaxLength="50" Type="nvarchar" />
+          <Property Name="Sub_Keyword" MaxLength="50" Type="nvarchar" />
+          <Property Name="Sub_Picture" MaxLength="50" Type="nvarchar" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_User">
           <Key>
             <PropertyRef Name="User_ID" />
           </Key>
-          <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ID_Employee" Type="int" />
-          <Property Name="User_Name" Type="nvarchar" MaxLength="20" />
-          <Property Name="User_Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_Name" MaxLength="20" Type="nvarchar" />
+          <Property Name="User_Password" MaxLength="20" Type="nvarchar" />
           <Property Name="ID_Group" Type="int" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
@@ -240,6 +252,7 @@
           <EntitySet Name="tbl_Picture" EntityType="Self.tbl_Picture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Post" EntityType="Self.tbl_Post" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Product" EntityType="Self.tbl_Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ProductHistory" EntityType="Self.tbl_ProductHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ProductionUnit" EntityType="Self.tbl_ProductionUnit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" Schema="dbo" store:Type="Tables" />
@@ -256,7 +269,6 @@
           <EntitySet Name="tbl_Emoloyee" EntityType="Tvita_TestModel.tbl_Emoloyee" />
           <EntitySet Name="tbl_Farm" EntityType="Tvita_TestModel.tbl_Farm" />
           <EntitySet Name="tbl_Function" EntityType="Tvita_TestModel.tbl_Function" />
-          <EntitySet Name="tbl_Group" EntityType="Tvita_TestModel.tbl_Group" />
           <EntitySet Name="tbl_GroupProduct" EntityType="Tvita_TestModel.tbl_GroupProduct" />
           <EntitySet Name="tbl_Menu" EntityType="Tvita_TestModel.tbl_Menu" />
           <EntitySet Name="tbl_Order" EntityType="Tvita_TestModel.tbl_Order" />
@@ -268,21 +280,23 @@
           <EntitySet Name="tbl_Subject" EntityType="Tvita_TestModel.tbl_Subject" />
           <EntitySet Name="tbl_SubSubject" EntityType="Tvita_TestModel.tbl_SubSubject" />
           <EntitySet Name="tbl_User" EntityType="Tvita_TestModel.tbl_User" />
+          <EntitySet Name="tbl_ProductHistory" EntityType="Tvita_TestModel.tbl_ProductHistory" />
+          <EntitySet Name="tbl_Group" EntityType="Tvita_TestModel.tbl_Group" />
         </EntityContainer>
         <EntityType Name="tbl_Branch">
           <Key>
             <PropertyRef Name="Branch_ID" />
           </Key>
-          <Property Name="Branch_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Branch_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Branch_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Branch_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Branch_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Branch_Code" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Card">
           <Key>
             <PropertyRef Name="Card_ID" />
           </Key>
-          <Property Name="Card_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Card_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_Order" Type="Int32" />
           <Property Name="Card_TotalPrice" Type="Double" />
           <Property Name="Card_TotalPriceSelloff" Type="Double" />
@@ -295,7 +309,7 @@
           <Key>
             <PropertyRef Name="CardDetails_ID" />
           </Key>
-          <Property Name="CardDetails_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CardDetails_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_Card" Type="Int32" />
           <Property Name="ID_Product" Type="Int32" />
           <Property Name="CardDetails_Amount" Type="Int32" />
@@ -305,67 +319,57 @@
           <Key>
             <PropertyRef Name="Employee_ID" />
           </Key>
-          <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Employee_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Employee_Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Employee_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Employee_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Employee_Phone" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Employee_Address" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Employee_Code" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="Employee_CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Employee_CreatedDate" Precision="3" Type="DateTime" />
         </EntityType>
         <EntityType Name="tbl_Farm">
           <Key>
             <PropertyRef Name="Farm_ID" />
           </Key>
-          <Property Name="Farm_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Farm_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Farm_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Farm_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Farm_Code" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Farm_Address" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Farm_Area" Type="Double" />
-          <Property Name="Farm_Info" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Farm_Info" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Farm_Distance" Type="Double" />
-          <Property Name="Farm_Territory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Farm_Territory" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Farm_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
         </EntityType>
         <EntityType Name="tbl_Function">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Function_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Function_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Function_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Function_Url" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="ID_Group" Type="Int32" />
           <Property Name="IsDelete" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="tbl_Group">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Group_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="Group_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Group_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_GroupProduct">
           <Key>
             <PropertyRef Name="GroupProduct_ID" />
           </Key>
-          <Property Name="GroupProduct_ID" Type="Int32" Nullable="false" />
-          <Property Name="GroupProduct_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="GroupProduct_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GroupProduct_ID" Nullable="false" Type="Int32" />
+          <Property Name="GroupProduct_Code" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="GroupProduct_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="GroupProduct_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="GroupProduct_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GroupProduct_Description" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="GroupProduct_Picture" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="ID_Branch" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_Menu">
           <Key>
             <PropertyRef Name="Menu_ID" />
           </Key>
-          <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Menu_Link" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Menu_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Menu_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Menu_Link" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Menu_ParentID" Type="Int32" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
@@ -373,121 +377,143 @@
           <Key>
             <PropertyRef Name="Order_ID" />
           </Key>
-          <Property Name="Order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Customer_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Customer_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Order_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Customer_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Customer_Phone" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Customer_Address" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="ID_Card" Type="Int32" />
-          <Property Name="Customer_Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="IsDelete" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Customer_Note" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="IsDelete" MaxLength="10" FixedLength="true" Unicode="true" Type="String" />
         </EntityType>
         <EntityType Name="tbl_Payments">
           <Key>
             <PropertyRef Name="Payment_ID" />
           </Key>
-          <Property Name="Payment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Payment_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Payment_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Payment_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Payment_Description" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Picture">
           <Key>
             <PropertyRef Name="Picture_ID" />
           </Key>
-          <Property Name="Picture_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Picture_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Picture_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Picture_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Picture_Description" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Post">
           <Key>
             <PropertyRef Name="Post_ID" />
           </Key>
-          <Property Name="Post_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Post_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_SubSubject" Type="Int32" />
-          <Property Name="Post_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Video" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Name" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Post_Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Post_Content" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Post_Picture" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Post_Video" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Post_Keyword" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Post_Url" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
             <PropertyRef Name="Product_ID" />
           </Key>
-          <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_GroupProduct" Type="Int32" />
-          <Property Name="Product_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Product_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Name" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Product_Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Product_Quantity" Type="Int32" />
           <Property Name="Product_Price" Type="Double" />
-          <Property Name="Product_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Picture" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Product_Price_Saleoff" Type="Double" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="Product_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Product_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Type" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Product_Code" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
         </EntityType>
         <EntityType Name="tbl_ProductionUnit">
           <Key>
             <PropertyRef Name="ProductionUnit_ID" />
           </Key>
-          <Property Name="ProductionUnit_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductionUnit_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_Farm" Type="Int32" />
-          <Property Name="ProductionUnit_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="ProductionUnit_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Code" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ProductionUnit_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="ProductionUnit_Area" Type="Double" />
-          <Property Name="ProductionUnit_Info" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ProductionUnit_Capacity" Type="Double" />
-          <Property Name="ProductionUnit_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ProductionUnit_QualityStandard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ProductionUnit_Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Info" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ProductionUnit_Capacity" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ProductionUnit_Address" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ProductionUnit_QualityStandard" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ProductionUnit_Unit" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="ProductionUnit_Price" Type="Double" />
           <Property Name="ProductionUnit_PreviousPrice" Type="Double" />
           <Property Name="ProductionUnit_AveragePrice" Type="Double" />
           <Property Name="ProductionUnit_TransportFee" Type="Double" />
           <Property Name="ProductionUnit_Distance" Type="Double" />
-          <Property Name="ProductionUnit_Contract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUnit_Contract" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_Subject">
           <Key>
             <PropertyRef Name="Subject_ID" />
           </Key>
-          <Property Name="Subject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Subject_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Subject_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Subject_Name" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Subject_Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Subject_NumberPosts" Type="Int32" />
-          <Property Name="Subject_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Subject_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Subject_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Picture" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Subject_Url" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Subject_Keyword" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_SubSubject">
           <Key>
             <PropertyRef Name="Sub_ID" />
           </Key>
-          <Property Name="Sub_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sub_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_Subject" Type="Int32" />
-          <Property Name="Sub_SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_SubjectName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Sub_Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Sub_Url" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Sub_Keyword" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Sub_Picture" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_User">
           <Key>
             <PropertyRef Name="User_ID" />
           </Key>
-          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ID_Employee" Type="Int32" />
-          <Property Name="User_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="User_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_Name" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="User_Password" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="ID_Group" Type="Int32" />
           <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_ProductHistory">
+          <Key>
+            <PropertyRef Name="ProductHistory_ID" />
+          </Key>
+          <Property Name="ProductHistory_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="ProductHistory_Date" Precision="3" Type="DateTime" />
+          <Property Name="ID_Product" Type="Int32" />
+          <Property Name="ID_ProductionUnit" Type="Int32" />
+          <Property Name="ProductHistory_Price" Type="Double" />
+          <Property Name="IsDelete" MaxLength="10" FixedLength="true" Unicode="true" Type="String" />
+        </EntityType>
+        <EntityType Name="tbl_Group">
+          <Key>
+            <PropertyRef Name="Group_ID" />
+          </Key>
+          <Property Name="Group_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Group_Name" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Group_Description" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Group_Code" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Group_Picture" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -546,6 +572,7 @@
           <EntitySetMapping Name="tbl_Farm">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Farm">
               <MappingFragment StoreEntitySet="tbl_Farm">
+                <ScalarProperty Name="Farm_Name" ColumnName="Farm_Name" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
                 <ScalarProperty Name="Farm_Territory" ColumnName="Farm_Territory" />
                 <ScalarProperty Name="Farm_Distance" ColumnName="Farm_Distance" />
@@ -564,18 +591,6 @@
                 <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
                 <ScalarProperty Name="Function_Url" ColumnName="Function_Url" />
                 <ScalarProperty Name="Function_Name" ColumnName="Function_Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Group">
-            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Group">
-              <MappingFragment StoreEntitySet="tbl_Group">
-                <ScalarProperty Name="Group_Picture" ColumnName="Group_Picture" />
-                <ScalarProperty Name="Group_Code" ColumnName="Group_Code" />
-                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
-                <ScalarProperty Name="Group_Description" ColumnName="Group_Description" />
-                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -730,6 +745,30 @@
                 <ScalarProperty Name="User_Name" ColumnName="User_Name" />
                 <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
                 <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ProductHistory">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_ProductHistory">
+              <MappingFragment StoreEntitySet="tbl_ProductHistory">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ProductHistory_Price" ColumnName="ProductHistory_Price" />
+                <ScalarProperty Name="ID_ProductionUnit" ColumnName="ID_ProductionUnit" />
+                <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+                <ScalarProperty Name="ProductHistory_Date" ColumnName="ProductHistory_Date" />
+                <ScalarProperty Name="ProductHistory_ID" ColumnName="ProductHistory_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Group">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Group">
+              <MappingFragment StoreEntitySet="tbl_Group">
+                <ScalarProperty Name="Group_Picture" ColumnName="Group_Picture" />
+                <ScalarProperty Name="Group_Code" ColumnName="Group_Code" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Group_Description" ColumnName="Group_Description" />
+                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+                <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

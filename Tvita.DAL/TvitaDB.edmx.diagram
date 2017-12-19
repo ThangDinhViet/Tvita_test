@@ -5,24 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="48d3a8f3427741eaa8f2d496ccabad3b" Name="Diagram1">
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Branch" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Card" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_CardDetails" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Emoloyee" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Farm" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Function" Width="1.5" PointX="4.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Group" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_GroupProduct" Width="1.5" PointX="6.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Menu" Width="1.5" PointX="4.75" PointY="7.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Order" Width="1.5" PointX="6.75" PointY="7.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Payments" Width="1.5" PointX="8.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Picture" Width="1.5" PointX="0.75" PointY="8.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Post" Width="1.5" PointX="8.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Product" Width="1.5" PointX="8.75" PointY="7.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_ProductionUnit" Width="1.5" PointX="10.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Subject" Width="1.5" PointX="2.75" PointY="10.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_SubSubject" Width="1.5" PointX="10.75" PointY="6.75" />
-        <EntityTypeShape EntityType="Tvita_TestModel.tbl_User" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Branch" PointX="2.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Card" PointX="6.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_CardDetails" PointX="2.75" PointY="11.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Emoloyee" PointX="10.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Farm" PointX="10.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Function" PointX="4.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_GroupProduct" PointX="0.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Menu" PointX="0.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Order" PointX="6.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Payments" PointX="8.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Picture" PointX="0.75" PointY="10.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Post" PointX="8.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Product" PointX="10.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_ProductionUnit" PointX="6.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Subject" PointX="8.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_SubSubject" PointX="2.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_User" PointX="4.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_ProductHistory" PointX="2.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_Group" PointX="4.75" PointY="3.75" Width="1.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

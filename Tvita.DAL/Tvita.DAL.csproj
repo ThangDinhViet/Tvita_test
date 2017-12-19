@@ -104,6 +104,9 @@
     <Compile Include="tbl_Product.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_ProductHistory.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_ProductionUnit.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>

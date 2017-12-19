@@ -31,7 +31,6 @@ namespace Tvita.DAL
         public virtual DbSet<tbl_Emoloyee> tbl_Emoloyee { get; set; }
         public virtual DbSet<tbl_Farm> tbl_Farm { get; set; }
         public virtual DbSet<tbl_Function> tbl_Function { get; set; }
-        public virtual DbSet<tbl_Group> tbl_Group { get; set; }
         public virtual DbSet<tbl_GroupProduct> tbl_GroupProduct { get; set; }
         public virtual DbSet<tbl_Menu> tbl_Menu { get; set; }
         public virtual DbSet<tbl_Order> tbl_Order { get; set; }
@@ -43,5 +42,7 @@ namespace Tvita.DAL
         public virtual DbSet<tbl_Subject> tbl_Subject { get; set; }
         public virtual DbSet<tbl_SubSubject> tbl_SubSubject { get; set; }
         public virtual DbSet<tbl_User> tbl_User { get; set; }
+        public virtual DbSet<tbl_ProductHistory> tbl_ProductHistory { get; set; }
+        public virtual DbSet<tbl_Group> tbl_Group { get; set; }
     }
 }

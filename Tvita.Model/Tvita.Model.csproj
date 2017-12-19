@@ -49,10 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelModel\ProductionUnitExcelModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Table\BranchModel.cs" />
     <Compile Include="Table\CardDetailsModel.cs" />
     <Compile Include="Table\CardModel.cs" />
     <Compile Include="Table\EmployeeModel.cs" />
+    <Compile Include="Table\FarmModel.cs" />
+    <Compile Include="Table\GroupProductModel.cs" />
+    <Compile Include="Table\ProductHistoryModel.cs" />
+    <Compile Include="Table\ProductionUnitModel.cs" />
     <Compile Include="Table\ProductModel.cs" />
     <Compile Include="tbl_Branch.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
@@ -94,6 +100,9 @@
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Product.cs">
+      <DependentUpon>TvitaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ProductHistory.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_ProductionUnit.cs">
