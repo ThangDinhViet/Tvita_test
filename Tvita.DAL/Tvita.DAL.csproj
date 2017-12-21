@@ -66,10 +66,14 @@
     <Compile Include="Repository\IEmployeeRepository.cs" />
     <Compile Include="Repository\IFarmRepository.cs" />
     <Compile Include="Repository\IGroupProductRepository.cs" />
+    <Compile Include="Repository\IProductHistoryRepository.cs" />
     <Compile Include="Repository\IProductionUnitRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
+    <Compile Include="Repository\IProductsInFarmRepository.cs" />
+    <Compile Include="Repository\ProductHistoryRepository.cs" />
     <Compile Include="Repository\ProductionUnitRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\ProductsInFarmRepository.cs" />
     <Compile Include="tbl_Branch.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
@@ -116,6 +120,9 @@
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_ProductionUnit.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ProductsInFarm.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Subject.cs">

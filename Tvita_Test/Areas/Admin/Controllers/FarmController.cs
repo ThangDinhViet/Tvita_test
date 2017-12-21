@@ -16,6 +16,45 @@ namespace Tvita_Test.Areas.Admin.Controllers
         // GET: Admin/Farm
         public ActionResult Index()
         {
+            var productExcelList = new List<ProductionUnitExcelModel>();
+            BranchManager branchManager = new BranchManager();
+            GroupProductManager groupProductManager = new GroupProductManager();
+            ProductManager productManager = new ProductManager();
+            FarmManager farmManager = new FarmManager();
+            ProductionUnitManager productionUnitManager = new ProductionUnitManager();
+            ProductHistoryManager productHistoryManager = new ProductHistoryManager();
+            ProductsInFarmManager pifManager = new ProductsInFarmManager();
+
+            var lst = productHistoryManager.GetAllProductHistory();
+            foreach (var item in lst)
+            {
+                ProductionUnitExcelModel pue = new ProductionUnitExcelModel();
+                pue.ID = item.ProductHistory_ID;
+                var pr = productManager.GetProductByID(item.ID_Product.Value);
+                if (pr != null)
+                {
+                    pue.Product_Code = pr.Product_Code;
+                    pue.Product_Name = pr.Product_Name;
+                }
+                var pu = productionUnitManager.GetProductionUnitByID(item.ID_ProductionUnit.Value);
+                if (pu != null)
+                {
+                    pue.ProductionUnit_Name = pu.ProductionUnit_Name;
+                    var fr = farmManager.GetFarmByID(pu.ID_Farm.Value);
+                    pue.Farm_Name = fr.Farm_Name;
+                }
+                pue.ProductHistory_Date = item.ProductHistory_Date.Value;
+                var nearestDate = pue.ProductHistory_Date.AddDays(-7);
+                pue.ProductsInFarm_AveragePrice = pifManager.GetAveragePrice(pr.Product_ID, pu.ProductionUnit_ID);
+                pue.ProductHistory_Price = item.ProductHistory_Price;
+                var nearest = productHistoryManager.GetProductHistoryByDate(nearestDate, pr.Product_ID, pu.ProductionUnit_ID);
+                if (nearest != null)
+                    pue.ProductionUnit_PreviousPrice = nearest.ProductHistory_Price;
+                else
+                    pue.ProductionUnit_PreviousPrice = 0;
+                productExcelList.Add(pue);
+            }
+            ViewBag.ProductExcelList = productExcelList;
             return View();
         }
 
@@ -104,6 +143,8 @@ namespace Tvita_Test.Areas.Admin.Controllers
                     ProductManager productManager = new ProductManager();
                     FarmManager farmManager = new FarmManager();
                     ProductionUnitManager productionUnitManager = new ProductionUnitManager();
+                    ProductHistoryManager productHistoryManager = new ProductHistoryManager();
+                    ProductsInFarmManager pifManager = new ProductsInFarmManager();
 
                     string fileName = file.FileName;
                     string fileContentType = file.ContentType;
@@ -129,6 +170,7 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             var farm = new FarmModel();
                             var productionUnit = new ProductionUnitModel();
                             var productHistory = new ProductHistoryModel();
+                            var pif = new ProductsInFarmModel();
 
                             productionUnitExcel.Branch_Code = workSheet.Cells[rowIterator, 2].Value.ToString();
                             branch.Branch_Code = productionUnitExcel.Branch_Code;
@@ -144,7 +186,9 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.GroupProduct_Name = workSheet.Cells[rowIterator, 5].Value.ToString();
                             groupProduct.GroupProduct_Name = productionUnitExcel.GroupProduct_Name;
 
-                            groupProduct.ID_Branch = branchManager.GetBranchByCode(productionUnitExcel.Branch_Code).Branch_ID;
+                            var br = branchManager.GetBranchByCode(productionUnitExcel.Branch_Code);
+                            if (br != null)
+                                groupProduct.ID_Branch = br.Branch_ID;
                             groupProductManager.AddGroupProduct(groupProduct);
 
                             productionUnitExcel.Product_Code = workSheet.Cells[rowIterator, 6].Value.ToString();
@@ -153,6 +197,9 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.Product_Name = workSheet.Cells[rowIterator, 7].Value.ToString();
                             product.Product_Name = productionUnitExcel.Product_Name;
 
+                            var gr = groupProductManager.GetGroupProductByCode(productionUnitExcel.GroupProduct_Code);
+                            if (gr != null)
+                                product.ID_GroupProduct = gr.GroupProduct_ID;
                             productManager.AddProduct(product);
 
                             productionUnitExcel.Farm_Code = workSheet.Cells[rowIterator, 8].Value.ToString();
@@ -160,6 +207,12 @@ namespace Tvita_Test.Areas.Admin.Controllers
 
                             productionUnitExcel.Farm_Name = workSheet.Cells[rowIterator, 9].Value.ToString();
                             farm.Farm_Name = productionUnitExcel.Farm_Name;
+
+                            productionUnitExcel.Farm_Address = workSheet.Cells[rowIterator, 16].Value.ToString();
+                            farm.Farm_Address = productionUnitExcel.Farm_Address;
+
+                            productionUnitExcel.Farm_Territory = workSheet.Cells[rowIterator, 17].Value.ToString();
+                            farm.Farm_Territory = productionUnitExcel.Farm_Territory;
 
                             farmManager.AddFarm(farm);
 
@@ -181,11 +234,6 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.ProductionUnit_Address = workSheet.Cells[rowIterator, 15].Value.ToString();
                             productionUnit.ProductionUnit_Address = productionUnitExcel.ProductionUnit_Address;
 
-                            productionUnitExcel.Farm_Address = workSheet.Cells[rowIterator, 16].Value.ToString();
-                            farm.Farm_Address = productionUnitExcel.Farm_Address;
-
-                            productionUnitExcel.Farm_Territory = workSheet.Cells[rowIterator, 17].Value.ToString();
-                            farm.Farm_Territory = productionUnitExcel.Farm_Territory;
 
                             productionUnitExcel.ProductionUnit_QualityStandard = workSheet.Cells[rowIterator, 18].Value.ToString();
                             productionUnit.ProductionUnit_QualityStandard = productionUnitExcel.ProductionUnit_QualityStandard;
@@ -193,9 +241,9 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.ProductionUnit_Unit = workSheet.Cells[rowIterator, 19].Value.ToString();
                             productionUnit.ProductionUnit_Unit = productionUnitExcel.ProductionUnit_Unit;
 
-                            //productionUnitExcel.ProductionUnit_PreviousPrice = Convert.ToDouble(workSheet.Cells[rowIterator, 20].Value);
-                            //productionUnit.ProductionUnit_PreviousPrice = productionUnitExcel.ProductionUnit_PreviousPrice;
-
+                            var fr = farmManager.GetFarmByCode(productionUnitExcel.Farm_Code);
+                            if (fr != null)
+                                productionUnit.ID_Farm = fr.Farm_ID;
                             productionUnitManager.AddProductionUnit(productionUnit);
 
                             productionUnitExcel.ProductHistory_Price = Convert.ToDouble(workSheet.Cells[rowIterator, 21].Value);
@@ -204,14 +252,37 @@ namespace Tvita_Test.Areas.Admin.Controllers
                             productionUnitExcel.ProductHistory_Date = Convert.ToDateTime(dateView);
                             productHistory.ProductHistory_Date = productionUnitExcel.ProductHistory_Date;
 
+                            var pu = productionUnitManager.GetProductionUnitByCode(productionUnitExcel.ProductionUnit_Code);
+                            if (pu != null)
+                            {
+                                productHistory.ID_ProductionUnit = pu.ProductionUnit_ID;
+                                pif.ID_ProductionUnit = pu.ProductionUnit_ID;
+                            }
+                            var pr = productManager.GetProductByCode(productionUnitExcel.Product_Code);
+                            if (pr != null)
+                            {
+                                productHistory.ID_Product = pr.Product_ID;
+                                pif.ID_Product = pr.Product_ID;
+                            }
+                            productHistoryManager.AddProductHistory(productHistory);
+                            pifManager.AddProductsInFarm(pif);
                             productExcelList.Add(productionUnitExcel);
                         }
                         ViewBag.ProductExcelList = productExcelList;
                     }
                     file.SaveAs(Server.MapPath(@"~\Upload\" + file.FileName));
+
+                    var lstPif = pifManager.GetAllProductsInFarm();
+                    foreach(var item in lstPif)
+                    {
+                        var lstPrHistory = productHistoryManager.GetProductHistoryByPIF(item.ID_Product.Value, item.ID_ProductionUnit.Value);
+                        var averagePrice = lstPrHistory.Average(x => x.ProductHistory_Price).Value;
+                        pifManager.UpdateAverageById(item.PIF_ID, averagePrice);
+                    }
                 }
             }
-            return View();
+            //return View();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Tvita_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Tvita_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_Branch">
           <Key>
             <PropertyRef Name="Branch_ID" />
@@ -176,7 +176,7 @@
           <Property Name="ID_Product" Type="int" />
           <Property Name="ID_ProductionUnit" Type="int" />
           <Property Name="ProductHistory_Price" Type="float" />
-          <Property Name="IsDelete" Type="nchar" MaxLength="10" />
+          <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_ProductionUnit">
           <Key>
@@ -198,6 +198,16 @@
           <Property Name="ProductionUnit_TransportFee" Type="float" />
           <Property Name="ProductionUnit_Distance" Type="float" />
           <Property Name="ProductionUnit_Contract" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_ProductsInFarm">
+          <Key>
+            <PropertyRef Name="PIF_ID" />
+          </Key>
+          <Property Name="PIF_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_ProductionUnit" Type="int" />
+          <Property Name="ID_Product" Type="int" />
+          <Property Name="PIF_AveragePrice" Type="float" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_Subject">
@@ -254,12 +264,12 @@
           <EntitySet Name="tbl_Product" EntityType="Self.tbl_Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ProductHistory" EntityType="Self.tbl_ProductHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ProductionUnit" EntityType="Self.tbl_ProductionUnit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ProductsInFarm" EntityType="Self.tbl_ProductsInFarm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Tvita_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -434,7 +444,7 @@
           <Property Name="ID_Product" Type="Int32" />
           <Property Name="ID_ProductionUnit" Type="Int32" />
           <Property Name="ProductHistory_Price" Type="Double" />
-          <Property Name="IsDelete" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_ProductionUnit">
           <Key>
@@ -515,7 +525,18 @@
           <EntitySet Name="tbl_Subject" EntityType="Self.tbl_Subject" />
           <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" />
           <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
+          <EntitySet Name="tbl_ProductsInFarm" EntityType="Tvita_TestModel.tbl_ProductsInFarm" />
         </EntityContainer>
+        <EntityType Name="tbl_ProductsInFarm">
+          <Key>
+            <PropertyRef Name="PIF_ID" />
+          </Key>
+          <Property Name="PIF_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_ProductionUnit" Type="Int32" />
+          <Property Name="ID_Product" Type="Int32" />
+          <Property Name="PIF_AveragePrice" Type="Double" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -770,6 +791,17 @@
                 <ScalarProperty Name="User_Password" ColumnName="User_Password" />
                 <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ProductsInFarm">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_ProductsInFarm">
+              <MappingFragment StoreEntitySet="tbl_ProductsInFarm">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="PIF_AveragePrice" ColumnName="PIF_AveragePrice" />
+                <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+                <ScalarProperty Name="ID_ProductionUnit" ColumnName="ID_ProductionUnit" />
+                <ScalarProperty Name="PIF_ID" ColumnName="PIF_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

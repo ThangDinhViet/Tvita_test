@@ -20,7 +20,7 @@
                     <tr>
                         <td>File:</td>
                         <td>
-                            <input type="file" name="UploadedFile" onchange="validate_fileupload(this.value);"/>
+                            <input type="file" name="UploadedFile" onchange="validate_fileupload(this.value);" />
                         </td>
                     </tr>
                     <tr>
@@ -37,7 +37,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
-            
+
             <div class="panel-heading">
                 Danh sách hộ sản xuất liên kết
             </div>
@@ -60,27 +60,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if (ViewBag.ListProduct != null)
+                        @if (ViewBag.ProductExcelList != null)
                         {
-                            foreach (var item in ViewBag.ListProduct)
+                            foreach (var item in ViewBag.ProductExcelList)
                             {
                                 <tr class="odd">
-                                    <td>@item.Product_ID</td>
+                                    <td>@item.ID</td>
+                                    <td>@item.Product_Code</td>
                                     <td>@item.Product_Name</td>
-                                    <td>@item.ProductUnit_Name</td>
+                                    <td>@item.ProductionUnit_Name</td>
                                     <td>@item.Farm_Name</td>
-                                    <td>@item.ProductUnit_Date</td>
-                                    <td>@item.Product_Price</td>
-                                    <td>@item.Product_Price_Saleoff</td>
-                                    <td>@item.Product_Type</td>
-                                    <td>@item.Product_Type</td>
+                                    <td>@item.ProductHistory_Date</td>
+                                    <td>@item.ProductionUnit_PreviousPrice</td>
+                                    <td>@item.ProductHistory_Price</td>
+                                    <td>@item.ProductsInFarm_AveragePrice</td>
                                     <td>
-                                        <button class="btn btn-danger btn-edit" data-id="@item.Product_ID">Sửa</button>
-                                        <button class="btn btn-warning btn-delete" data-id="@item.Product_ID">Xóa</button>
+                                        <button class="btn btn-danger btn-edit" data-id="@item.ID">Sửa</button>
+                                        <button class="btn btn-warning btn-delete" data-id="@item.ID">Xóa</button>
                                     </td>
                                 </tr>
                             }
-                        }    
+                        }
                     </tbody>
                 </table>
                 <!-- /.table-responsive -->

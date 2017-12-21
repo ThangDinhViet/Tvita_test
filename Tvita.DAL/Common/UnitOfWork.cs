@@ -176,7 +176,49 @@ namespace Tvita.DAL.Common
             }
         }
 
+        private IProductHistoryRepository _iproductHistoryRepository;
+        public IProductHistoryRepository IProductHistoryRepository
+        {
+            get
+            {
+                if (this._iproductHistoryRepository == null)
+                    this._iproductHistoryRepository = new ProductHistoryRepository(_context);
+                return _iproductHistoryRepository;
+            }
+        }
 
+        private IRepository<tbl_ProductHistory, int> _productHistoryRepository;
+        public IRepository<tbl_ProductHistory, int> ProductHistoryRepository
+        {
+            get
+            {
+                if (this._productHistoryRepository == null)
+                    this._productHistoryRepository = new ProductHistoryRepository(_context);
+                return _productHistoryRepository;
+            }
+        }
+
+        private IProductsInFarmRepository _iproductsInFarmRepository;
+        public IProductsInFarmRepository IProductsInFarmRepository
+        {
+            get
+            {
+                if (this._iproductsInFarmRepository == null)
+                    this._iproductsInFarmRepository = new ProductsInFarmRepository(_context);
+                return _iproductsInFarmRepository;
+            }
+        }
+
+        private IRepository<tbl_ProductsInFarm, int> _productsInFarmRepository;
+        public IRepository<tbl_ProductsInFarm, int> ProductsInFarmRepository
+        {
+            get
+            {
+                if (this._productsInFarmRepository == null)
+                    this._productsInFarmRepository = new ProductsInFarmRepository(_context);
+                return _productsInFarmRepository;
+            }
+        }
         public void SaveChanges()
         {
             try

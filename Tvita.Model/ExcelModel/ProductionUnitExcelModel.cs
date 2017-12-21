@@ -37,5 +37,6 @@ namespace Tvita.Model.ExcelModel
         public bool IsDelete { get; set; }
         public DateTime ProductHistory_Date { get; set; }
         public Nullable<double> ProductHistory_Price { get; set; }
+        public Nullable<double> ProductsInFarm_AveragePrice { get; set; }
     }
 }

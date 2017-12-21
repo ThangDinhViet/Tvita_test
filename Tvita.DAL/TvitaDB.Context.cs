@@ -44,5 +44,6 @@ namespace Tvita.DAL
         public virtual DbSet<tbl_Subject> tbl_Subject { get; set; }
         public virtual DbSet<tbl_SubSubject> tbl_SubSubject { get; set; }
         public virtual DbSet<tbl_User> tbl_User { get; set; }
+        public virtual DbSet<tbl_ProductsInFarm> tbl_ProductsInFarm { get; set; }
     }
 }

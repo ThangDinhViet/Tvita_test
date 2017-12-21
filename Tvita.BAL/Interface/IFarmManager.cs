@@ -11,5 +11,6 @@ namespace Tvita.BAL.Interface
     {
         List<FarmModel> GetAllFarm();
         FarmModel GetFarmByCode(string code);
+        FarmModel GetFarmByID(int id);
     }
 }

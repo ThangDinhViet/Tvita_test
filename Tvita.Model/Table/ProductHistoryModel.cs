@@ -13,6 +13,6 @@ namespace Tvita.Model.Table
         public Nullable<int> ID_Product { get; set; }
         public Nullable<int> ID_ProductionUnit { get; set; }
         public Nullable<double> ProductHistory_Price { get; set; }
-        public string IsDelete { get; set; }
+        public Nullable<bool> IsDelete { get; set; }
     }
 }

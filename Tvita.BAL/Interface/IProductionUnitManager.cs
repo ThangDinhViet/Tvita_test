@@ -11,5 +11,6 @@ namespace Tvita.BAL.Interface
     {
         List<ProductionUnitModel> GetAllProductionUnit();
         ProductionUnitModel GetProductionUnitByCode(string code);
+        ProductionUnitModel GetProductionUnitByID(int id);
     }
 }

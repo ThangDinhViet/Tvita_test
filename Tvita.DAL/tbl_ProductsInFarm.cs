@@ -12,13 +12,12 @@ namespace Tvita.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_ProductHistory
+    public partial class tbl_ProductsInFarm
     {
-        public int ProductHistory_ID { get; set; }
-        public Nullable<System.DateTime> ProductHistory_Date { get; set; }
-        public Nullable<int> ID_Product { get; set; }
+        public int PIF_ID { get; set; }
         public Nullable<int> ID_ProductionUnit { get; set; }
-        public Nullable<double> ProductHistory_Price { get; set; }
+        public Nullable<int> ID_Product { get; set; }
+        public Nullable<double> PIF_AveragePrice { get; set; }
         public Nullable<bool> IsDelete { get; set; }
     }
 }

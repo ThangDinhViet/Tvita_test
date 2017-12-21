@@ -24,6 +24,10 @@ namespace Tvita.DAL.Common
         IFarmRepository IFarmRepository { get; }
         IRepository<tbl_ProductionUnit, int> ProductionUnitRepository { get; }
         IProductionUnitRepository IProductionUnitRepository { get; }
+        IRepository<tbl_ProductHistory, int> ProductHistoryRepository { get; }
+        IProductHistoryRepository IProductHistoryRepository { get; }
+        IRepository<tbl_ProductsInFarm, int> ProductsInFarmRepository { get; }
+        IProductsInFarmRepository IProductsInFarmRepository { get; }
         void SaveChanges();
     }
 }

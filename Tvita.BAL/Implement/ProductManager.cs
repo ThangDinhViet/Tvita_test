@@ -28,7 +28,7 @@ namespace Tvita.BAL.Implement
                     Product_Price_Saleoff = x.Product_Price_Saleoff,
                     Product_Quantity = x.Product_Quantity,
                     Product_Code = x.Product_Code,
-                    Product_Type = x.Product_Type
+                    Product_Type = x.Product_Type,
                 }).ToList();
             }
             return result;
@@ -50,7 +50,29 @@ namespace Tvita.BAL.Implement
                     Product_Price_Saleoff = x.Product_Price_Saleoff,
                     Product_Quantity = x.Product_Quantity,
                     Product_Code = x.Product_Code,
-                    Product_Type = x.Product_Type
+                    Product_Type = x.Product_Type,
+                }).FirstOrDefault();
+            }
+            return result;
+        }
+        public ProductModel GetProductByID(int id)
+        {
+            ProductModel result = new ProductModel();
+            using (IUnitOfWork uOW = new UnitOfWork())
+            {
+                result = uOW.ProductRepository.GetWhere(x => x.Product_ID == id).Select(x => new ProductModel
+                {
+                    Product_ID = x.Product_ID,
+                    ID_GroupProduct = x.ID_GroupProduct,
+                    Product_Description = x.Product_Description,
+                    IsDelete = x.IsDelete,
+                    Product_Name = x.Product_Name,
+                    Product_Picture = x.Product_Picture,
+                    Product_Price = x.Product_Price,
+                    Product_Price_Saleoff = x.Product_Price_Saleoff,
+                    Product_Quantity = x.Product_Quantity,
+                    Product_Code = x.Product_Code,
+                    Product_Type = x.Product_Type,
                 }).FirstOrDefault();
             }
             return result;

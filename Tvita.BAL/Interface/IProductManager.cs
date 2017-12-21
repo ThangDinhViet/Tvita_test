@@ -11,5 +11,6 @@ namespace Tvita.BAL.Interface
     {
         List<ProductModel> GetAllProduct();
         ProductModel GetProductByCode(string code);
+        ProductModel GetProductByID(int id);
     }
 }

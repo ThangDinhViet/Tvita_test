@@ -60,6 +60,7 @@
     <Compile Include="Table\ProductHistoryModel.cs" />
     <Compile Include="Table\ProductionUnitModel.cs" />
     <Compile Include="Table\ProductModel.cs" />
+    <Compile Include="Table\ProductsInFarmModel.cs" />
     <Compile Include="tbl_Branch.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
@@ -106,6 +107,9 @@
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_ProductionUnit.cs">
+      <DependentUpon>TvitaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ProductsInFarm.cs">
       <DependentUpon>TvitaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Subject.cs">
