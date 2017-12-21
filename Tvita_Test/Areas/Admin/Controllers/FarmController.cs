@@ -1,6 +1,7 @@
 ﻿using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -40,6 +41,7 @@ namespace Tvita_Test.Areas.Admin.Controllers
                 if (pu != null)
                 {
                     pue.ProductionUnit_Name = pu.ProductionUnit_Name;
+                    pue.ProductionUnit_Unit = pu.ProductionUnit_Unit;
                     var fr = farmManager.GetFarmByID(pu.ID_Farm.Value);
                     pue.Farm_Name = fr.Farm_Name;
                 }
@@ -246,10 +248,10 @@ namespace Tvita_Test.Areas.Admin.Controllers
                                 productionUnit.ID_Farm = fr.Farm_ID;
                             productionUnitManager.AddProductionUnit(productionUnit);
 
-                            productionUnitExcel.ProductHistory_Price = Convert.ToDouble(workSheet.Cells[rowIterator, 21].Value);
+                            productionUnitExcel.ProductHistory_Price = Convert.ToDouble(workSheet.Cells[rowIterator, 20].Value);
                             productHistory.ProductHistory_Price = productionUnitExcel.ProductHistory_Price;
 
-                            productionUnitExcel.ProductHistory_Date = Convert.ToDateTime(dateView);
+                            productionUnitExcel.ProductHistory_Date = DateTime.ParseExact(dateView, "dd/M/yyyy", CultureInfo.InvariantCulture);
                             productHistory.ProductHistory_Date = productionUnitExcel.ProductHistory_Date;
 
                             var pu = productionUnitManager.GetProductionUnitByCode(productionUnitExcel.ProductionUnit_Code);

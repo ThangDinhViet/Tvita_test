@@ -8,3 +8,10 @@
 .lineInput{
     margin-top: 15px;
 }
+.formImport{
+    max-width: 350px;
+}
+
+.searchKey{
+    max-width: 200px;
+}
