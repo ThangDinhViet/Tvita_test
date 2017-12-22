@@ -1,31 +1,244 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Trang chủ";
 }
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<link href="@Url.Content("~/Content/css/home.css")" rel="stylesheet">
+<div class="container">
+    <div class="row farm-tech">
+        <div class="col-sm-4 col-md-4 col-lg-4 r-item">
+            <a href="#" class="item-container col-sm-12 col-md-12 col-lg-12">
+                <div class="item">
+                    <div class="over-grey"></div>
+                    <div class="over-green"></div>
+                    <img class="img-responsive" src="@Url.Content("~/Content/images/photos/map.png")">
+                    <div class="title-item">Nông trường</div>
+                </div>
+            </a>
+            <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 r-item">
+            <a href="#" class="item-container col-sm-12 col-md-12 col-lg-12">
+                <div class="item">
+                    <div class="over-grey"></div>
+                    <div class="over-green"></div>
+                    <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech.png")">
+                    <div class="title-item">Công nghệ</div>
+                </div>
+            </a>
+            <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 r-item">
+            <a href="#" class="item-container col-sm-12 col-md-12 col-lg-12">
+                <div class="item">
+                    <div class="over-grey"></div>
+                    <div class="over-green"></div>
+                    <img class="img-responsive" src="@Url.Content("~/Content/images/photos/value.png")">
+                    <div class="title-item">Chuỗi giá trị</div>
+                </div>
+            </a>
+            <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
+        </div>
+    </div>
+</div>
+<div class="container-fluid product">
+    <div class="product-gradient"></div>
+    <div class="product-title">Sản phẩm</div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div class="container">
+    <div class="row">
+        <ul class="tab-control">
+            <li class="active"><a data-toggle="tab" href="#all">Tất cả</a></li>|
+            <li><a data-toggle="tab" href="#vegetable">Rau</a></li>|
+            <li><a data-toggle="tab" href="#fruit1">Củ quả</a></li>|
+            <li><a data-toggle="tab" href="#fruit2">Trái cây</a></li>
+        </ul>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="row">
+        <div class="tab-content">
+            <div id="all" class="tab-pane fade in active">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm A
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/ernest-porzi-19106.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm B
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm C
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm D
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm E
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm F
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vegetable" class="tab-pane fade">
+                <h3>Rau</h3>
+
+            </div>
+            <div id="fruit1" class="tab-pane fade">
+                <h3>Củ quả</h3>
+
+            </div>
+            <div id="fruit2" class="tab-pane fade">
+                <h3>Trái cây</h3>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
+            <button class="btn btn-default js-load-more">
+                Nhiều sản phẩm hơn
+            </button>
+        </div>
     </div>
 </div>
+</div>
+
+<div class="container-fluid gt-kitchen">
+    <div class="kitchen-gradient"></div>
+    <div class="kitchen-title">Vào bếp cùng T.Vita</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="k-container">
+                <div class="k-image" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
+
+                </div>
+                <div class="k-content col-sm-12 col-md-12 col-lg-12">
+                    <div class="k-title">
+                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                    </div>
+                    <div class="k-c-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    </div>
+
+                </div>
+                <div class="more-info"><a href="#">Xem thêm</a></div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="k-container">
+                <div class="k-image" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
+
+                </div>
+                <div class="k-content col-sm-12 col-md-12 col-lg-12">
+                    <div class="k-title">
+                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                    </div>
+                    <div class="k-c-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    </div>
+
+                </div>
+                <div class="more-info"><a href="#">Xem thêm</a></div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="k-container">
+                <div class="k-image" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
+
+                </div>
+                <div class="k-content col-sm-12 col-md-12 col-lg-12">
+                    <div class="k-title">
+                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                    </div>
+                    <div class="k-c-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    </div>
+
+                </div>
+                <div class="more-info"><a href="#">Xem thêm</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid gap-group">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="gap-container">
+                <div class="gap">
+                    <span>vietgap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+                    <span>global gap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+                    <span>vietgap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+                    <span>vietgap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+                    <span>global gap</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/tvita/home.js")" type="text/javascript"></script>
+}
