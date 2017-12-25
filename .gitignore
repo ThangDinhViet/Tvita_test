@@ -630,3 +630,8 @@ Tvita_Test/obj/Release/Package/PackageTmp/Content/bootstrap/component-animations
 Tvita_Test/obj/Release/Package/PackageTmp/Content/bootstrap/code.less
 packages/WebGrease.1.6.0/WebGrease.1.6.0.nupkg
 Tvita_Test/Upload/20122017.xlsx
+Tvita_Test/Upload/26122017.xlsx
+packages/WebGrease.1.5.2/tools/uninstall.ps1
+packages/WebGrease.1.5.2/tools/install.ps1
+packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml
+packages/Newtonsoft.Json.6.0.4/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml

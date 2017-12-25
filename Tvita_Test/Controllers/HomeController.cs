@@ -25,8 +25,6 @@ namespace Tvita_Test.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
