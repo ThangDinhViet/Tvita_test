@@ -1,0 +1,191 @@
+.slide-show-container {
+    height: 500px;
+}
+
+.ss-caption-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ss-content {
+    background-color: #FFFFFF;
+    color: #333;
+    border-left: 14px solid #498F22;
+    padding-left: 30px;
+    opacity: .9;
+    font-size: 20px;
+    line-height: initial;
+    float: right;
+    position: relative;
+    padding-right: 10px;
+}
+
+.ss-caption-container>div {
+    height: 100%;
+}
+
+.ss-content {
+    padding-bottom: 25px;
+}
+
+.btn-view-more {
+    color: #fff;
+    background-color: #498F22;
+    text-decoration: none;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn-view-more:hover,
+.btn-view-more:active,
+.btn-view-more:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.view-more {
+    position: relative;
+}
+
+.ss-content {
+    padding-top: 25px;
+    top: calc(100% - 145px - 50px);
+    text-align: justify;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.ss-title {
+    font-size: 25px;
+}
+
+.btn-view-more {
+    width: 114px;
+    height: 32px;
+}
+
+.breadcrumb {
+    height: 110px;
+    line-height: 100px;
+    margin-bottom: 0;
+    background-color: transparent;
+    color: #808080;
+    font-size: 22px;
+}
+
+.breadcrumb a {
+    color: #808080;
+}
+
+.n-cover img {
+    width: 100%;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.n-content {
+    background-color: #F2F2F2;
+    color: #4E9D2D;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.n-view-more {
+    background-color: #CCCCCC;
+    text-align: right;
+    color: #4E9D2D;
+    font-size: 20px;
+    height: 37px;
+    line-height: 37px;
+    padding-right: 30px;
+}
+
+.n-view-more a {
+    color: #4E9D2D;
+}
+
+.n-item {
+    margin-bottom: 45px;
+}
+
+.load-more-container {
+    text-align: center;
+}
+
+.js-load-more {
+    background-image: url(./../images/icons/plus-circle.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: transparent;
+    height: 74px;
+    margin-bottom: 75px;
+    border: none;
+    width: 116px;
+    box-shadow: none;
+    font-size: 13.23px;
+    padding: 0;
+    color: #ccc;
+    padding-top: 53px;
+}
+
+.js-load-more:hover,
+.js-load-more:focus,
+.js-load-more:active {
+    background-color: transparent;
+    color: #ccc;
+    background-image: url(./../images/icons/plus-circle.png);
+    outline: none;
+}
+
+.n-item {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1919px) {
+    .slide-show-container {
+        height: 600px;
+    }
+    .ss-content {
+        width: 660px;
+        height: 145px;
+        padding-top: 25px;
+        padding-bottom: 120px;
+        top: calc(100% - 145px - 50px);
+        overflow: initial;
+    }
+    .view-more {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+    .ss-title {
+        color: #fff;
+        font-size: 47.5px;
+        position: absolute;
+        top: -110px;
+        text-transform: uppercase;
+    }
+    .ss-title label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: initial;
+        margin-left: -30px;
+        text-align: left;
+        height: 110px;
+    }
+    .n-content {
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+    .n-item:hover {
+        transform: scale(1.005);
+        margin-top: -10px;
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+}

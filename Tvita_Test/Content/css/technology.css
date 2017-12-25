@@ -1,0 +1,243 @@
+.tech-cover img {
+    width: 100%;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.tech-cover-title {
+    height: 0;
+    position: relative;
+}
+
+.tech-cover-title .t-label {
+    position: absolute;
+    margin-top: 0;
+    top: -110px;
+    height: 110px;
+    background-color: #fff;
+    color: #4E9D2D;
+    font-size: 35px;
+    border-left: 14px solid #498F22;
+    text-transform: uppercase;
+    line-height: initial;
+    padding: 8px 15px;
+}
+
+.tech-cover-title .t-label>span {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.article-created-date {
+    color: #fff;
+    font-size: 20px;
+    height: 150px;
+    top: -150px;
+    padding: 5px 30px;
+    position: absolute;
+}
+
+.content-container {
+    width: 100%;
+}
+
+.content {
+    font-size: 20px;
+    text-align: justify;
+    padding: 15px;
+}
+
+span.illustration {
+    width: 100%;
+}
+
+span.illustration img {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.img-tilte {
+    display: block;
+    color: #808080;
+    font-size: 20px;
+    border-left: 5px solid #498F22;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.separate {
+    border: none;
+    border-top: 1px solid #686868;
+    height: 0;
+    margin-bottom: 60px;
+}
+
+.n-cover img {
+    width: 100%;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.n-content {
+    background-color: #F2F2F2;
+    color: #4E9D2D;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.n-view-more {
+    background-color: #CCCCCC;
+    text-align: right;
+    color: #4E9D2D;
+    font-size: 20px;
+    height: 37px;
+    line-height: 37px;
+    padding-right: 30px;
+}
+
+.n-view-more a {
+    color: #4E9D2D;
+}
+
+.n-item {
+    margin-bottom: 45px;
+}
+
+.load-more-container {
+    text-align: center;
+}
+
+.js-load-more {
+    background-image: url(./../images/icons/plus-circle.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: transparent;
+    height: 74px;
+    margin-bottom: 50px;
+    border: none;
+    width: 116px;
+    box-shadow: none;
+    font-size: 13.23px;
+    padding: 0;
+    color: #ccc;
+    padding-top: 53px;
+}
+
+.js-load-more:hover,
+.js-load-more:focus,
+.js-load-more:active {
+    background-color: transparent;
+    color: #ccc;
+    background-image: url(./../images/icons/plus-circle.png);
+    outline: none;
+}
+
+.content::after {
+    clear: both;
+}
+
+.related-articles {
+    padding: 15px;
+    font-size: 22px;
+}
+
+.list-title {
+    color: #4E9D2D;
+    font-size: 24px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.list-title>span::after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 87px;
+    border-bottom: 6px solid;
+    margin-top: -2px;
+}
+
+.related-list-item {
+    font-size: 22px;
+}
+
+.related-list-item ul {
+    list-style: none;
+    padding-left: 0;
+    column-count: 2;
+}
+
+.related-list-item ul li {
+    margin-bottom: 10px;
+}
+
+.related-list-item ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.related-list-item ul li a {
+    color: #808080;
+}
+
+.n-item {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.n-item:hover {
+    transform: scale(1.005);
+    margin-top: -10px;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1919px) {
+    .tech-cover-title .t-label {
+        width: 882px;
+        padding: 8px 30px;
+        margin-left: 95px;
+        font-size: 47.5px;
+    }
+    .article-created-date {
+        padding: 8px 30px;
+        margin-left: 115px;
+        padding-bottom: 10px;
+    }
+    .content-container .content {
+        padding-right: 140px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 0;
+        float: left;
+        width: 977px;
+    }
+    span.illustration img {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    .img-tilte {
+        margin-left: 85px;
+    }
+    .n-content {
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+    .related-articles {
+        width: calc(100% - 977px);
+        padding-top: 60px;
+        float: left;
+        padding-left: 10px;
+    }
+    .related-list-item ul {
+        column-count: initial;
+    }
+}
