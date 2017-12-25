@@ -167,28 +167,6 @@ span.illustration img {
     margin-top: -2px;
 }
 
-.related-list-item {
-    font-size: 22px;
-}
-
-.related-list-item ul {
-    list-style: none;
-    padding-left: 0;
-    column-count: 2;
-}
-
-.related-list-item ul li {
-    margin-bottom: 10px;
-}
-
-.related-list-item ul li i {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-.related-list-item ul li a {
-    color: #808080;
-}
 
 .n-item {
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);

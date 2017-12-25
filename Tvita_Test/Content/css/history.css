@@ -154,9 +154,17 @@ span.illustration img {
     color: #4E9D2D;
     font-size: 24px;
     white-space: nowrap;
-    text-decoration: underline;
     margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+.list-title>span::after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 87px;
+    border-bottom: 6px solid;
+    margin-top: -2px;
 }
 
 .related-list-item {
@@ -182,6 +190,9 @@ span.illustration img {
     color: #808080;
 }
 
+.related-list-item ul li.active i, .related-list-item ul li.active a{
+    color: #4E9D2D;
+}
 @media (min-width: 1919px) {
     .tech-cover-title .t-label {
         width: 882px;

@@ -6,6 +6,9 @@ $(function() {
     $('#home-slideshow').slideShow({
         auto: true,
         interval: 10000,
-        parent: '.slide-show-container'
-    })
+        parent: '.slide-show-container',
+        autoPlayVideo: true
+    });
+
+
 })

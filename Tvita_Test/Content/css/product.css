@@ -85,25 +85,6 @@
         margin-top: -2px;
     }
     
-    .related-list-item ul {
-        list-style: none;
-        padding-left: 0;
-        column-count: 2;
-    }
-    
-    .related-list-item ul li {
-        margin-bottom: 10px;
-    }
-    
-    .related-list-item ul li a {
-        color: #808080;
-    }
-    
-    .related-list-item ul li i {
-        margin-right: 10px;
-        font-size: 18px;
-    }
-    
     .product-type {
         text-align: center;
         color: #4E9D2D;

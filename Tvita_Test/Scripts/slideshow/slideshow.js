@@ -19,7 +19,7 @@ $.fn.slideShow = function(_options) {
 
     var player;
 
-    var Interval;
+    var Interval, IntervalInit;
 
     var handleNext = $('<div class="ss-handle-next"></div>');
     var handlePrevious = $('<div class="ss-handle-previous"></div>');
@@ -84,7 +84,6 @@ $.fn.slideShow = function(_options) {
 
     if (count > 0) {
         handlePlay.hide();
-        _handleGotoSlide(0);
 
         handlePrevious.on('click', function() {
             handlePlay.fadeOut();
@@ -129,6 +128,17 @@ $.fn.slideShow = function(_options) {
         })
         container.append(handlePrevious).append(handleNext).append(handlePlay);
 
+        _handleGotoSlide(0);
+
+        if (options.autoPlayVideo && $(elements[0]).hasClass('ss-video')) {
+            IntervalInit = setInterval(function () {
+                try{
+                    handlePlay.trigger('click');
+                } catch (ex) {
+                }
+            }, 1000)
+            
+        }
         $.each(elements, function(k, item) {
 
         })
@@ -176,6 +186,9 @@ $.fn.slideShow = function(_options) {
 
     function initialize() {
         player.playVideo();
+        if (options.autoPlayVideo) {
+            clearInterval(IntervalInit);
+        }
     }
 
     function stateChange(evt) {

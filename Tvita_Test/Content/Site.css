@@ -635,6 +635,70 @@ a.btn-more-info {
     width: 200px;
 }
 
+.related-list-item ul {
+        list-style: none;
+        padding-left: 0;
+        column-count: 2;
+    }
+    
+    .related-list-item ul li.list-group-item {
+        margin-bottom: 10px;
+    }
+    
+    .related-list-item ul li.list-group-item a {
+        color: #808080;
+    }
+    
+    .related-list-item ul li.list-group-item i {
+        margin-right: 10px;
+        font-size: 18px;
+        color: #808080;
+        margin-left: 20px;
+        opacity: .2;
+    }
+
+.related-articles .panel-group{
+        margin: 0;
+    }
+
+    .related-articles .panel-group .panel{
+        margin: 0;
+        border-radius: 0;
+        border: 0;
+        background-color:transparent;
+        box-shadow: none;
+    }
+
+    .related-articles .panel-default > .panel-heading {
+        color: #333;
+        background-color: transparent;
+        border: none;
+    }
+
+    .related-articles .panel-group .panel-heading + .panel-collapse > .list-group{
+        border-bottom: 0;
+    }
+
+    .related-articles .panel-default > .panel-heading .panel-title{
+        font-size: 23px;
+        color: #4E9D2D;
+        text-decoration: none;
+    }
+
+    .related-articles .panel-default > .panel-heading .panel-title [data-toggle="collapse"].collapsed .fa-angle-double-down,
+    .related-articles .panel-default > .panel-heading .panel-title [data-toggle="collapse"]:not(.collapsed) .fa-angle-double-right{
+        display: none
+    }
+
+    .related-articles .panel-default > .panel-heading .panel-title a:hover, .related-articles .panel-default > .panel-heading .panel-title a:active, .related-articles .panel-default > .panel-heading .panel-title a:focus{
+        text-decoration: none;
+    }
+     .related-articles .panel-default .list-group-item{
+        margin: 0;
+        border: 0;
+        padding: 0 0 10px 0;
+     }
+
 @media (min-width: 640px) {
     .container {
         width: calc(100vw - 40px);
