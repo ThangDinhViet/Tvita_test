@@ -8,7 +8,7 @@
     <input type="hidden" id="displayname" />
     <ul id="discussion"></ul>
 </div>
-@section scripts {
+@*@section scripts {
     <!--Script references. -->
     <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
     <!--Reference the SignalR library. -->
@@ -21,9 +21,9 @@
             // Reference the auto-generated proxy for the hub.
             var chat = $.connection.chatHub;
             // Create a function that the hub can call back to display messages.
-            chat.client.addNewMessageToPage = function (name, message) {
+            chat.client.addNewMessageToPage = function (name, message, clientId) {
                 // Add the message to the page.
-                $('#discussion').append('<li><strong>' + htmlEncode(name)
+                $('#discussion').append('<li class="' + (clientId == chat.connection.id ? 'me': '') + '"><strong>' + htmlEncode(name)
                     + '</strong>: ' + htmlEncode(message) + '</li>');
             };
             // Get the user name and store it to prepend to messages.
@@ -34,7 +34,7 @@
             $.connection.hub.start().done(function () {
                 $('#sendmessage').click(function () {
                     // Call the Send method on the hub.
-                    chat.server.send($('#displayname').val(), $('#message').val());
+                    chat.server.send($('#displayname').val(), $('#message').val(), chat.connection.id);
                     // Clear text box and reset focus for next comment.
                     $('#message').val('').focus();
                 });
@@ -46,4 +46,4 @@
             return encodedValue;
         }
     </script>
-}
+}*@

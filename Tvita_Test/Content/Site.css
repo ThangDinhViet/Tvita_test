@@ -560,6 +560,7 @@ a.btn-more-info {
     border-right: 1px solid lightgrey;
     background-color: #fff;
     display: none;
+    overflow-y: auto;
 }
 
 .twm-input {
@@ -568,7 +569,8 @@ a.btn-more-info {
 
 .twm-input>.input-group,
 .twm-input>.input-group input,
-.twm-input>.input-group .handle-send {
+.twm-input>.input-group .handle-send,
+.twm-input>.input-group .handle-name  {
     border-radius: 0;
     outline: none;
     border-color: #ccc;
@@ -580,7 +582,7 @@ a.btn-more-info {
     outline: none;
 }
 
-.twm-input>.input-group .handle-send {
+.twm-input>.input-group .handle-send, .twm-input>.input-group .handle-name {
     color: #333;
 }
 
@@ -588,6 +590,46 @@ a.btn-more-info {
 .talk-with-me.open .twm-input {
     display: block;
 }
+
+.talk-with-me.open .twm-content #discussion{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333;
+    list-style: none;
+}
+
+.talk-with-me.open .twm-content #discussion li{
+    text-align: left;
+    max-width: calc(100% -15px);
+}
+
+.talk-with-me.open .twm-content #discussion li .m-content{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.talk-with-me.open .twm-content #discussion li .m-content > span{
+    padding: 5px;
+    border: 1px solid #754c24;
+    border-radius: 5px;
+    color:#fff;
+    background-color: #754c24;
+    display: inline-block;
+}
+
+.talk-with-me.open .twm-content #discussion li.me .m-content > span {
+    border: 1px solid #478D19;
+    border-radius: 5px;
+    color:#fff;
+    background-color: #478D19;
+}
+
 
 #slidemenu .navbar-form .input-group>.form-control {
     width: 200px;

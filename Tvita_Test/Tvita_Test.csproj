@@ -369,7 +369,6 @@
     <Content Include="Content\images\photos\tech.png" />
     <Content Include="Content\images\photos\thomas-martinsen-105809.jpg" />
     <Content Include="Content\images\photos\value.png" />
-    <Content Include="Content\Site.css" />
     <Content Include="Content\slideshow\images\next.png" />
     <Content Include="Content\slideshow\images\play.png" />
     <Content Include="Content\slideshow\images\previous.png" />
