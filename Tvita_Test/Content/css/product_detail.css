@@ -422,6 +422,7 @@
         float: left;
         width: 977px;
     }
+
     .social-action {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -436,13 +437,17 @@
     .n-cover-title>span {
         font-size: 40px;
     }
+
+    .related-articles {
+    width: calc(100% - 977px);
+    padding-top: 60px;
+    float: left;
+    padding-left: 10px;
+    }
     .related-list-item ul {
         column-count: initial;
     }
-    .info-price {
-        margin-left: 977px;
-        margin-top: 60px;
-    }
+
     .list-title {
         margin-top: 40px;
     }

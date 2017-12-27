@@ -17,7 +17,7 @@
     <AssemblyName>Tvita_Test</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -569,6 +569,7 @@
     <Content Include="Scripts\tvita\layout.js" />
     <Content Include="Scripts\tvita\news.js" />
     <Content Include="Scripts\tvita\product.js" />
+    <Content Include="Scripts\tvita\product_detail.js" />
     <Content Include="Scripts\tvita\technology.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -631,7 +632,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>5794</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:5794/</IISUrl>
+          <IISUrl>http://localhost/Tvita_Test</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

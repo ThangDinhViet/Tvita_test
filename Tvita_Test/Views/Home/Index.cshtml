@@ -64,15 +64,13 @@
 <div class="container">
 <div class="row">
         <ul class="tab-control">
-            <li class="active"><a data-toggle="tab" href="#all">Tất cả</a></li>|
-            <li><a data-toggle="tab" href="#vegetable">Rau</a></li>|
-            <li><a data-toggle="tab" href="#fruit1">Củ quả</a></li>|
-            <li><a data-toggle="tab" href="#fruit2">Trái cây</a></li>
+            <li class="active"><a data-toggle="tab" href="#fresh">Sản phẩm tươi</a></li>|
+            <li><a data-toggle="tab" href="#processed">Sản phẩm chế biến</a></li>
         </ul>
     </div>
     <div class="row">
         <div class="tab-content">
-            <div id="all" class="tab-pane fade in active">
+            <div id="fresh" class="tab-pane fade in active">
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="s-item-container">
                     <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
@@ -139,16 +137,9 @@
                 </div>
             </div>
             </div>
-            <div id="vegetable" class="tab-pane fade">
-            <h3>Rau</h3>
+            <div id="processed" class="tab-pane fade">
+            <h3>Sản phẩm chế biến</h3>
             
-            </div>
-            <div id="fruit1" class="tab-pane fade">
-            <h3>Củ quả</h3>
-
-            </div>
-            <div id="fruit2" class="tab-pane fade">
-            <h3>Trái cây</h3>
             </div>
         </div>
     </div>
@@ -161,9 +152,8 @@
         </div>
     </div>
 </div>
-</div>
 
-<div class="container-fluid gt-kitchen">
+<div class="container-fluid gt-kitchen" id="Goto-Kitchen">
     <div class="kitchen-gradient"></div>
     <div class="kitchen-title">Vào bếp cùng T.Vita</div>
 </div>
