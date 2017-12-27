@@ -1,4 +1,4 @@
-$(document).ready(function() {
+﻿$(document).ready(function() {
 
     $('#slide-nav').after($('<div class="inverse" id="navbar-height-col"></div>'));
 
@@ -104,6 +104,74 @@ $(document).ready(function() {
     }
 
     checkChatInView();
+    var nickName = 'No name';
+    $('#myName').on('keyup', function (e) {
+        if (e.keyCode == 13) {
+            $('.handle-name').trigger('click');
+        }
+    })
+    $('.handle-name').unbind().bind('click', function () {
+        if ($.trim($('#myName').val()) != '') {
+            nickName = $.trim($('#myName').val());
+        }
+        $('#message').val('').focus();
+        $('.name-input').hide();
+        $('.message-input').show();
+        $('#message').val('').focus();
+    })
+    // Reference the auto-generated proxy for the hub.
+    var chat = $.connection.chatHub;
+
+    // Create a function that the hub can call back to display messages.
+    chat.client.addNewMessageToPage = function (name, message, clientId) {
+        // Add the message to the page.
+        $('#discussion').append('<li class="' + (clientId == chat.connection.id ? 'me' : '') + '"><strong>' + htmlEncode(name)
+            + '</strong class="nick-name">' + '<span class="m-content"><span>' + htmlEncode(message) + '<span></span></li>');
+
+        var $target = $('.twm-content');
+        $target.animate({ scrollTop: $('#discussion').height() }, 10);
+    };
+
+    // Start the connection.
+    $.connection.hub.start().done(function () {
+        $('.handle-send').click(function () {
+            // Call the Send method on the hub.
+            if ($.trim($('#message').val()) != '') {
+                chat.server.send(nickName, $('#message').val(), chat.connection.id);
+                $.ajax({
+                    url: 'https://api.wit.ai/message',
+                    data: {
+                        'q': $('#message').val(),
+                        'access_token': 'YVHFIVLW3E3UA3ZQAA3B7ECUCN7SIN6K'
+                    },
+                    dataType: 'jsonp',
+                    method: 'GET',
+                    success: function (response) {
+                        if (Object.keys(response.entities).length > 0) {
+                            $('#discussion').append('<li><strong>' + 'Tư vấn khách hàng TVITA'
+            + '</strong class="nick-name">' + '<span class="m-content"><span>' + response.entities.intent[0].value + '<span></span></li>');
+                        }
+                        else {
+                            $('#discussion').append('<li><strong>' + 'Tư vấn khách hàng TVITA'
+           + '</strong class="nick-name">' + '<span class="m-content"><span>' + 'Thắc mắc của quí khách đã được gửi tới bộ phận chăm sóc khách hàng, xin vui lòng đợi phản hồi ...' + '<span></span></li>');
+                        }
+                        var $target = $('.twm-content');
+                        $target.animate({ scrollTop: $('#discussion').height() }, 10);
+                    }
+                });
+            }
+            
+            // Clear text box and reset focus for next comment.
+            $('#message').val('').focus();
+            
+        });
+    });
+
+    $('#message').on('keyup', function (e) {
+        if (e.keyCode == 13) {
+            $('.handle-send').trigger('click');
+        }
+    })
 
 });
 
@@ -133,3 +201,9 @@ $.fn.isInViewport = function(_type) {
             break;
     }
 };
+
+// This optional function html-encodes messages for display in the page.
+function htmlEncode(value) {
+    var encodedValue = $('<div />').text(value).html();
+    return encodedValue;
+}

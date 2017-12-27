@@ -330,6 +330,7 @@
     <Content Include="Assets\admin\vendor\morrisjs\morris.min.js" />
     <Content Include="Assets\admin\vendor\raphael\raphael.js" />
     <Content Include="Assets\admin\vendor\raphael\raphael.min.js" />
+    <Content Include="Content\ajax-loader.gif" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -371,10 +372,12 @@
     <Content Include="Content\images\photos\tech.png" />
     <Content Include="Content\images\photos\thomas-martinsen-105809.jpg" />
     <Content Include="Content\images\photos\value.png" />
+    <Content Include="Content\slick.css" />
     <Content Include="Content\slideshow\images\next.png" />
     <Content Include="Content\slideshow\images\play.png" />
     <Content Include="Content\slideshow\images\previous.png" />
     <Content Include="Content\slideshow\slideshow.css" />
+    <Content Include="Content\sprite.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -558,6 +561,8 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\slick.js" />
+    <Content Include="Scripts\slideshow\slideshow.js" />
     <Content Include="Scripts\tvita\community.js" />
     <Content Include="Scripts\tvita\history.js" />
     <Content Include="Scripts\tvita\home.js" />

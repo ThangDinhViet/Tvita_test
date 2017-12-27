@@ -13,5 +13,11 @@ namespace Tvita_Test
             // Call the addNewMessageToPage method to update clients.
             Clients.All.addNewMessageToPage(name, message, clientId);
         }
+        public void UserTyping(string groupName)
+        {
+            var userName = "Get current user's name";
+            //client method here
+            Clients.OthersInGroup(groupName).OtherUserIsTyping(userName);
+        }
     }
 }
