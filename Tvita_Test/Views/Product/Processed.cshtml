@@ -1,0 +1,304 @@
+﻿
+@{
+    ViewBag.Title = "Sản phẩm chế biến";
+}
+<link href="@Url.Content("~/Content/css/product.css")" rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="product-cover">
+            <img src="@Url.Content("~/Content/images/photos/transparent-1919x594.png")" style="background-image: url(@Url.Content("~/Content/images/photos/agence-producteurs-locaux-damien-kuhn.jpg"))">
+            <div class="product-cover-title">
+                <span>Sản phẩm</span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active">Sản phẩm chế biến</li>
+</ol>
+<div class="row">
+    <div class="content-container">
+            <div class="content">
+                <div class="row">
+                    <div class="product-type">
+                        <span>Sản phẩm chế biến</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm A</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm B</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm C</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm A</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm B</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm C</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
+                        <button class="btn btn-default js-load-more">
+                            <span>Nhiều sản phẩm hơn</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row"><div class="separate"></div></div>
+
+                <div class="row" id="processed">
+                    <div class="product-type">
+                        <span>Sản phẩm chế biến</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm A</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm B</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm C</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="#">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm A</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm B</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <a href="@(Url.Action("Detail", "Product",  new { id = "1" }))">
+                            <div class="product-item">
+                                <div class="product-item-cover">
+                                    <img src="@Url.Content("~/Content/images/photos/transparent-282-product.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
+                                </div>
+                                <div class="product-item-content">
+                                    <span>Sản phẩm C</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
+                        <button class="btn btn-default js-load-more">
+                            <span>Nhiều sản phẩm hơn</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="related-articles">
+                <div class="list-title">
+                    <span>Sản phẩm</span>
+                </div>
+                <div class="related-list-item">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sản phẩm tươi</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                 <ul class="list-group">
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau ăn lá</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau ăn củ</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau ăn quả</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Trái cây</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau gia vị</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau baby</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Salad</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Sản phẩm chế biến</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Nước ép</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Sấy khô</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Đông lạnh</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapse2"> <i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sản phẩm chế biến</a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse in">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau ăn lá</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau ăn củ</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau ăn quả</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Trái cây</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau gia vị</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Rau baby</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Salad</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Sản phẩm chế biến</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Nước ép</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Sấy khô</a></li>
+                                    <li class="list-group-item"><i class="fa fa-circle" aria-hidden="true"></i><a href="#">Đông lạnh</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid">
+    
+    <div class="row certificate">
+        <div class="container">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="gap-container">
+                <div class="gap">
+<span>vietgap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+<span>global gap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+<span>vietgap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+<span>vietgap</span>
+                </div>
+            </div>
+            <div class="gap-container">
+                <div class="gap">
+<span>global gap</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/tvita/product.js")" type="text/javascript"></script>
+}
+

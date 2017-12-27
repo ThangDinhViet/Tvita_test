@@ -22,21 +22,21 @@
                     <li class="dropdown @(Utilities.menuIsActive("Home", "About") ? "active" : "")">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Giới thiệu</a>
                         <ul class="dropdown-menu">
-                            <li><a href="@(Url.Action("Index", "History"))"class="@(Utilities.menuIsActive("History", "Index") ? "active" : "")">Lịch sử hình thành</a></li>
+                            <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">Lịch sử hình thành</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Tầm nhìn - Sứ mệnh</a></li>
+                            <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">Tầm nhìn - Sứ mệnh</a></li>
+                            @*<li class="divider"></li>
+                            <li><a href="#">Chuỗi giá trị</a></li>*@
                             <li class="divider"></li>
-                            <li><a href="#">Chuỗi giá trị</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Tiêu chuẩn chất lượng</a></li>
+                            <li><a href="@(Url.Action("Quality", "About"))" class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")">Tiêu chuẩn chất lượng</a></li>
                         </ul>
                     </li>
                     <li class="dropdown @(Utilities.menuIsActive("Home", "Product") ? "active" : "")">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
                         <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("Index", "Product")#fresh">Sản phẩm tươi</a></li>
+                            <li><a href="@Url.Action("Fresh", "Product")" class="@(Utilities.menuIsActive("Product", "Fresh") ? "active" : "")">Sản phẩm tươi</a></li>
                             <li class="divider"></li>
-                            <li><a href="@Url.Action("Index", "Product")#processed">Sản phẩm chế biến</a></li>
+                            <li><a href="@Url.Action("Processed", "Product")" class="@(Utilities.menuIsActive("Product", "Processed") ? "active" : "")">Sản phẩm chế biến</a></li>
                         </ul>
                     </li>
                     <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink("Tin tức", "Index", "News")</li>

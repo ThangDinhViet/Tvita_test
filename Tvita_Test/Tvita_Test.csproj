@@ -213,8 +213,8 @@
     <Compile Include="Areas\Admin\Controllers\FarmController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CommunityDevelopmentController.cs" />
-    <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="ChatHub.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -336,11 +336,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\community.css" />
+    <Content Include="Content\css\farm.css" />
     <Content Include="Content\css\history.css" />
     <Content Include="Content\css\home.css" />
     <Content Include="Content\css\news.css" />
     <Content Include="Content\css\product.css" />
+    <Content Include="Content\css\product_detail.css" />
     <Content Include="Content\css\technology.css" />
+    <Content Include="Content\css\value.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -564,6 +567,7 @@
     <Content Include="Scripts\slick.js" />
     <Content Include="Scripts\slideshow\slideshow.js" />
     <Content Include="Scripts\tvita\community.js" />
+    <Content Include="Scripts\tvita\farm.js" />
     <Content Include="Scripts\tvita\history.js" />
     <Content Include="Scripts\tvita\home.js" />
     <Content Include="Scripts\tvita\layout.js" />
@@ -571,6 +575,7 @@
     <Content Include="Scripts\tvita\product.js" />
     <Content Include="Scripts\tvita\product_detail.js" />
     <Content Include="Scripts\tvita\technology.js" />
+    <Content Include="Scripts\tvita\value.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -580,17 +585,21 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Technology\Index.cshtml" />
-    <Content Include="Views\History\Index.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Processed.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\CommunityDevelopment\Index.cshtml" />
+    <Content Include="Views\Home\Farm.cshtml" />
+    <Content Include="Views\Home\Value.cshtml" />
+    <Content Include="Views\About\History.cshtml" />
+    <Content Include="Views\About\VisionAndMission.cshtml" />
+    <Content Include="Views\About\Quality.cshtml" />
+    <Content Include="Views\Product\Fresh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

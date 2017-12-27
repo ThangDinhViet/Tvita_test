@@ -33,10 +33,10 @@
                 </div>
                 <div class="related-list-item">
                     <ul>
-                        <li class="@(Utilities.menuIsActive("History", "Index") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Lịch sử hình thành</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Tầm nhìn - sứ mệnh</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Chuỗi giá trị</a></li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Tiêu chuẩn chất lượng</a></li>
+                        <li class="@(Utilities.menuIsActive("About", "History") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("History", "About")">Lịch sử hình thành</a></li>
+                        <li class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("VisionAndMission", "About")">Tầm nhìn - sứ mệnh</a></li>
+                        @*<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Chuỗi giá trị</a></li>*@
+                        <li class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("Quality", "About")">Tiêu chuẩn chất lượng</a></li>
                     </ul>
                 </div>
             </div>

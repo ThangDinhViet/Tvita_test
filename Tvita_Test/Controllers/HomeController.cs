@@ -16,10 +16,13 @@ namespace Tvita_Test.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Farm()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
 
+        public ActionResult Value()
+        {
             return View();
         }
 

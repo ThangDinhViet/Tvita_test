@@ -296,6 +296,7 @@ form.navbar-form {
     background-repeat: no-repeat;
     height: 390px;
     line-height: initial;
+    background-size: 100%;
     /*background-size: cover;*/
 }
 
