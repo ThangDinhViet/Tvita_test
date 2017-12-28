@@ -96,6 +96,23 @@
           <Property Name="GroupProduct_Picture" Type="nvarchar" MaxLength="50" />
           <Property Name="ID_Branch" Type="int" />
         </EntityType>
+        <EntityType Name="tbl_LanguageDescription">
+          <Key>
+            <PropertyRef Name="LD_ID" />
+          </Key>
+          <Property Name="LD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_LanguageTable" Type="int" />
+          <Property Name="LD_VI" Type="nvarchar(max)" />
+          <Property Name="LD_EN" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_LanguageTable">
+          <Key>
+            <PropertyRef Name="LT_ID" />
+          </Key>
+          <Property Name="LT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LT_TableName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LT_IdItem" Type="int" />
+        </EntityType>
         <EntityType Name="tbl_Menu">
           <Key>
             <PropertyRef Name="Menu_ID" />
@@ -256,6 +273,8 @@
           <EntitySet Name="tbl_Function" EntityType="Self.tbl_Function" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Group" EntityType="Self.tbl_Group" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_GroupProduct" EntityType="Self.tbl_GroupProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_LanguageDescription" EntityType="Self.tbl_LanguageDescription" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_LanguageTable" EntityType="Self.tbl_LanguageTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Payments" EntityType="Self.tbl_Payments" Schema="dbo" store:Type="Tables" />
@@ -526,6 +545,8 @@
           <EntitySet Name="tbl_SubSubject" EntityType="Self.tbl_SubSubject" />
           <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
           <EntitySet Name="tbl_ProductsInFarm" EntityType="Tvita_TestModel.tbl_ProductsInFarm" />
+          <EntitySet Name="tbl_LanguageDescription" EntityType="Tvita_TestModel.tbl_LanguageDescription" />
+          <EntitySet Name="tbl_LanguageTable" EntityType="Tvita_TestModel.tbl_LanguageTable" />
         </EntityContainer>
         <EntityType Name="tbl_ProductsInFarm">
           <Key>
@@ -536,6 +557,23 @@
           <Property Name="ID_Product" Type="Int32" />
           <Property Name="PIF_AveragePrice" Type="Double" />
           <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_LanguageDescription">
+          <Key>
+            <PropertyRef Name="LD_ID" />
+          </Key>
+          <Property Name="LD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_LanguageTable" Type="Int32" />
+          <Property Name="LD_VI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LD_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_LanguageTable">
+          <Key>
+            <PropertyRef Name="LT_ID" />
+          </Key>
+          <Property Name="LT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LT_TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LT_IdItem" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -802,6 +840,25 @@
                 <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
                 <ScalarProperty Name="ID_ProductionUnit" ColumnName="ID_ProductionUnit" />
                 <ScalarProperty Name="PIF_ID" ColumnName="PIF_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LanguageDescription">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_LanguageDescription">
+              <MappingFragment StoreEntitySet="tbl_LanguageDescription">
+                <ScalarProperty Name="LD_EN" ColumnName="LD_EN" />
+                <ScalarProperty Name="LD_VI" ColumnName="LD_VI" />
+                <ScalarProperty Name="ID_LanguageTable" ColumnName="ID_LanguageTable" />
+                <ScalarProperty Name="LD_ID" ColumnName="LD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LanguageTable">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_LanguageTable">
+              <MappingFragment StoreEntitySet="tbl_LanguageTable">
+                <ScalarProperty Name="LT_IdItem" ColumnName="LT_IdItem" />
+                <ScalarProperty Name="LT_TableName" ColumnName="LT_TableName" />
+                <ScalarProperty Name="LT_ID" ColumnName="LT_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

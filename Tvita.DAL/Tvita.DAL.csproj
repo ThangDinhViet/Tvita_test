@@ -110,6 +110,12 @@
     <Compile Include="tbl_GroupProduct.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_LanguageDescription.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_LanguageTable.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Menu.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>

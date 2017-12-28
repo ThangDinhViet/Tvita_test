@@ -25,6 +25,8 @@
         <EntityTypeShape EntityType="Tvita_TestModel.tbl_SubSubject" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Tvita_TestModel.tbl_User" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Tvita_TestModel.tbl_ProductsInFarm" Width="1.5" PointX="11.375" PointY="11.75" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_LanguageDescription" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="Tvita_TestModel.tbl_LanguageTable" Width="1.5" PointX="13.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
