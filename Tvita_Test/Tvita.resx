@@ -144,7 +144,13 @@
   <data name="HotNews" xml:space="preserve">
     <value>Tin tức nổi bật</value>
   </data>
-  <data name="LoadMore" xml:space="preserve">
+  <data name="LoadMoreArticles" xml:space="preserve">
+    <value>Nhiều bài viết hơn</value>
+  </data>
+  <data name="LoadMoreNew" xml:space="preserve">
+    <value>Nhiều tin tức hơn</value>
+  </data>
+  <data name="LoadMoreProduct" xml:space="preserve">
     <value>Nhiều sản phẩm hơn</value>
   </data>
   <data name="News" xml:space="preserve">

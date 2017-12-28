@@ -126,8 +126,11 @@
     margin-top: 30px;
 }
 
+.product-item:hover{
+    transform: scale(1.1);
+}
 .product-item:hover img {
-    transform: scale(.9);
+    transform: scale(1.1);
     box-shadow: inset 5px 5px 13px #040404;
 }
 
@@ -380,10 +383,14 @@
     margin-top: -2px;
 }
 
+.slick-slider .slick-list{
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
 @media (min-width: 767px) {
     .g-item:hover {
         transform: scale(1.1);
-        box-shadow: 3px 3px 5px #0000005e;
+        box-shadow: 3px 3px 5px #00005e;
     }
     .g-item:hover .video-mark {
         opacity: .8;

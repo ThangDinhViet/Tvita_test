@@ -142,11 +142,29 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nhiều bài viết hơn.
+        /// </summary>
+        public static string LoadMoreArticles {
+            get {
+                return ResourceManager.GetString("LoadMoreArticles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nhiều tin tức hơn.
+        /// </summary>
+        public static string LoadMoreNew {
+            get {
+                return ResourceManager.GetString("LoadMoreNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nhiều sản phẩm hơn.
         /// </summary>
-        public static string LoadMore {
+        public static string LoadMoreProduct {
             get {
-                return ResourceManager.GetString("LoadMore", resourceCulture);
+                return ResourceManager.GetString("LoadMoreProduct", resourceCulture);
             }
         }
         

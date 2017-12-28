@@ -992,3 +992,9 @@ body.slide-active {
 .breadcrumb-item.active {
     font-weight: 520;
 }
+
+.js-load-more[disabled]{
+    cursor: not-allowed;
+    opacity: .5;
+    background-color: transparent;
+}

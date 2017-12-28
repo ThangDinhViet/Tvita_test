@@ -1,5 +1,5 @@
 ﻿var products = function (_type) {
-    self = this;
+    var self = this;
 
     var paramPage = {
         total: 0,
