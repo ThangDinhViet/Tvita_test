@@ -41,8 +41,8 @@
                     </li>
                     <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("News"), "Index", "News")</li>
                     <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("Technology"), "Index", "Technology")</li>
-                    <li class="@(Utilities.menuIsActive("Home", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "Home"))#Goto-Kitchen"><span>@(Utilities.Translate("GotoKitchen"))</span><br /><span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
-                    <li class="@(Utilities.menuIsActive("Home", "CommunityDevelopment") ? "active" : "")"><a href="@(Url.Action("CommunityDevelopment", "Home"))"><span>@(Utilities.Translate("Development"))</span><br /><span class="nav-subtitle">@(Utilities.Translate("Community"))</span></a></li>
+                    <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "GotoKitchen"))"><span>@(Utilities.Translate("GotoKitchen"))</span><br /><span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
+                    <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "CommunityDevelopment"))"><span>@(Utilities.Translate("Development"))</span><br /><span class="nav-subtitle">@(Utilities.Translate("Community"))</span></a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="form">
                     <div class="form-group">

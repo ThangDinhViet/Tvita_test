@@ -153,9 +153,9 @@ namespace Tvita_Test {
         /// <summary>
         ///   Looks up a localized string similar to Nhiều tin tức hơn.
         /// </summary>
-        public static string LoadMoreNew {
+        public static string LoadMoreNews {
             get {
-                return ResourceManager.GetString("LoadMoreNew", resourceCulture);
+                return ResourceManager.GetString("LoadMoreNews", resourceCulture);
             }
         }
         

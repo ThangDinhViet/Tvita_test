@@ -13,5 +13,10 @@ namespace Tvita_Test.Controllers
         {
             return View();
         }
+        public ActionResult Details()
+        {
+            return View("_details");
+        }
+
     }
 }

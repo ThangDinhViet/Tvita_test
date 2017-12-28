@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Tvita_Test.Controllers
 {
-    public class NewsController : TvitaController
+    public class GotoKitchenController : Controller
     {
-        // GET: News
+        // GET: GotoKitchen
         public ActionResult Index()
         {
             return View();
@@ -16,7 +16,7 @@ namespace Tvita_Test.Controllers
 
         public ActionResult Details()
         {
-            return View("_detail");
+            return View("_details");
         }
     }
 }

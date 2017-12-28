@@ -216,6 +216,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CommunityDevelopmentController.cs" />
     <Compile Include="ChatHub.cs" />
+    <Compile Include="Controllers\GotoKitchenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -350,7 +351,7 @@
     <Content Include="Content\css\news.css" />
     <Content Include="Content\css\product.css" />
     <Content Include="Content\css\product_detail.css" />
-    <Content Include="Content\css\technology.css" />
+    <Content Include="Content\css\details.css" />
     <Content Include="Content\css\value.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -598,7 +599,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\Technology\Index.cshtml" />
+    <Content Include="Views\Shared\_detail.cshtml" />
     <Content Include="Views\Product\Processed.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\CommunityDevelopment\Index.cshtml" />
@@ -608,6 +609,8 @@
     <Content Include="Views\About\VisionAndMission.cshtml" />
     <Content Include="Views\About\Quality.cshtml" />
     <Content Include="Views\Product\Fresh.cshtml" />
+    <Content Include="Views\Technology\Index.cshtml" />
+    <Content Include="Views\GotoKitchen\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
