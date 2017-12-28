@@ -226,6 +226,7 @@
     <Compile Include="LanguageMang.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoadMoreParam.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="TvitaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -635,6 +636,7 @@
     <EmbeddedResource Include="Tvita.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Tvita.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
