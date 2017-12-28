@@ -1,4 +1,8 @@
-﻿$(document).ready(function() {
+﻿Config = {
+    AppUrl : '/Tvita_Test'
+}
+
+$(document).ready(function () {
 
     $('#slide-nav').after($('<div class="inverse" id="navbar-height-col"></div>'));
 
@@ -173,6 +177,11 @@
         }
     })
 
+    $('.btn-control-language').unbind().bind('click', function () {
+        var lang = $(this).attr('data-lang');
+        changeLaguage(lang);
+    })
+
 });
 
 
@@ -206,4 +215,20 @@ $.fn.isInViewport = function(_type) {
 function htmlEncode(value) {
     var encodedValue = $('<div />').text(value).html();
     return encodedValue;
+}
+
+function changeLaguage(_lang) {
+    $.ajax({
+        type: "GET",
+        dataType: 'json',
+        traditional: true,
+        url: Config.AppUrl + "/Home/ChangeLanguage/",
+        contentType: 'application/json',
+        data: {lang: _lang},
+        success: function (data) {
+            if (data.success) {
+                window.location.reload();
+            }
+        }
+    });
 }

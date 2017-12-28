@@ -324,6 +324,11 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .r-item .caption-item{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 @media (min-width: 1919px) {

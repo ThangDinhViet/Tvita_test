@@ -223,10 +223,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LanguageMang.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="TvitaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tvita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tvita.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utility\WebUltility.cs" />
@@ -622,6 +629,13 @@
       <Project>{cad22a5d-0365-4f0f-a537-ea54ee3b628f}</Project>
       <Name>Tvita.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TVita.en.resx" />
+    <EmbeddedResource Include="Tvita.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Tvita.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

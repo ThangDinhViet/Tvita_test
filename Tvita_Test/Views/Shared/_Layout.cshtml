@@ -15,34 +15,34 @@
                 <button class="navbar-toggle">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
-                <a class="navbar-brand" href="~/"><img src="~/Content/images/logos/nav-logo-vi.png"></a>
+                <a class="navbar-brand" href="~/"><img src="~/Content/images/logos/nav-logo-@(Utilities.languageIsActive()).png"></a>
             </div>
             <div id="slidemenu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown @(Utilities.menuIsActive("Home", "About") ? "active" : "")">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Giới thiệu</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("About"))</a>
                         <ul class="dropdown-menu">
-                            <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">Lịch sử hình thành</a></li>
+                            <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
                             <li class="divider"></li>
-                            <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">Tầm nhìn - Sứ mệnh</a></li>
+                            <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">@(Utilities.Translate("VisionAndMission"))</a></li>
                             @*<li class="divider"></li>
-                            <li><a href="#">Chuỗi giá trị</a></li>*@
+                                <li><a href="#">Chuỗi giá trị</a></li>*@
                             <li class="divider"></li>
-                            <li><a href="@(Url.Action("Quality", "About"))" class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")">Tiêu chuẩn chất lượng</a></li>
+                            <li><a href="@(Url.Action("Quality", "About"))" class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")">@(Utilities.Translate("Quality"))</a></li>
                         </ul>
                     </li>
                     <li class="dropdown @(Utilities.menuIsActive("Home", "Product") ? "active" : "")">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("Products"))</a>
                         <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("Fresh", "Product")" class="@(Utilities.menuIsActive("Product", "Fresh") ? "active" : "")">Sản phẩm tươi</a></li>
+                            <li><a href="@Url.Action("Fresh", "Product")" class="@(Utilities.menuIsActive("Product", "Fresh") ? "active" : "")">@(Utilities.Translate("FreshProducts"))</a></li>
                             <li class="divider"></li>
-                            <li><a href="@Url.Action("Processed", "Product")" class="@(Utilities.menuIsActive("Product", "Processed") ? "active" : "")">Sản phẩm chế biến</a></li>
+                            <li><a href="@Url.Action("Processed", "Product")" class="@(Utilities.menuIsActive("Product", "Processed") ? "active" : "")">@(Utilities.Translate("ProcessedProducts"))</a></li>
                         </ul>
                     </li>
-                    <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink("Tin tức", "Index", "News")</li>
-                    <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">@Html.ActionLink("Công nghệ", "Index", "Technology")</li>
-                    <li class="@(Utilities.menuIsActive("Home", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "Home"))#Goto-Kitchen"><span>Vào bếp</span><br /><span class="nav-subtitle">cùng T.Vita</span></a></li>
-                    <li class="@(Utilities.menuIsActive("Home", "CommunityDevelopment") ? "active" : "")"><a href="@(Url.Action("CommunityDevelopment", "Home"))"><span>Phát triển</span><br /><span class="nav-subtitle">cộng đồng</span></a></li>
+                    <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("News"), "Index", "News")</li>
+                    <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("Technology"), "Index", "Technology")</li>
+                    <li class="@(Utilities.menuIsActive("Home", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "Home"))#Goto-Kitchen"><span>@(Utilities.Translate("GotoKitchen"))</span><br /><span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
+                    <li class="@(Utilities.menuIsActive("Home", "CommunityDevelopment") ? "active" : "")"><a href="@(Url.Action("CommunityDevelopment", "Home"))"><span>@(Utilities.Translate("Development"))</span><br /><span class="nav-subtitle">@(Utilities.Translate("Community"))</span></a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="form">
                     <div class="form-group">
@@ -53,8 +53,8 @@
                     </div>
                     <span class="input-group-btn btn-grp-lang">
                         <span class="btn-group custom-btn">
-                            <button type="button" class="btn btn-primary @(Utilities.languageIsActive() == "VI" ? "active": "")">VI</button>
-                            <button type="button" class="btn btn-primary">EN</button>
+                            <button type="button" data-lang="vi" class="btn btn-primary btn-control-language @(Utilities.languageIsActive().ToUpper() == "VI" ? "active": "")">VI</button>
+                            <button type="button" data-lang="en" class="btn btn-primary btn-control-language @(Utilities.languageIsActive().ToUpper() == "EN" ? "active": "")">EN</button>
                         </span>
                     </span>
                 </form>
@@ -63,9 +63,10 @@
         </div>
     </div>
     @{
-        if (ViewBag.HotNew == true){
+        if (ViewBag.HotNew == true)
+        {
             <div class="hot-news">
-                Tin tức nổi bật
+                @(Utilities.Translate("HotNews"))
             </div>
         }
     }
@@ -160,7 +161,7 @@
     </div>
     <div class="talk-with-me">
         <div class="twm-title">
-            Nói chuyện với chúng tôi
+            @(Utilities.Translate("TalkWithMe"))
         </div>
         <div class="twm-content">
             <ul id="discussion"></ul>
@@ -195,9 +196,9 @@
     <script src="~/signalr/hubs" type="text/javascript"></script>
     <!--SignalR script to update the chat page and send messages.-->
     <script>
-        
 
-        
+
+
     </script>
 </body>
 </html>

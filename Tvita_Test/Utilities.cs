@@ -22,7 +22,13 @@ namespace Tvita_Test
 
         public static string languageIsActive()
         {
-            return "VI";
+            var userLanguage = HttpContext.Current.Request.Cookies["culture"];
+            return userLanguage.Value;
+        }
+
+        public static string Translate(string key)
+        {
+            return Tvita.ResourceManager.GetString(key);
         }
     }
 }

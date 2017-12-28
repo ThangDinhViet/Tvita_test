@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Tvita_Test.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : TvitaController
     {
         // GET: Product
         public ActionResult Fresh()

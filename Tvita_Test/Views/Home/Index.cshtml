@@ -24,10 +24,10 @@
         <div class="col-sm-4 col-md-4 col-lg-4 r-item">
             <a href="@Url.Action("Farm", "Home")" class="item-container col-sm-12 col-md-12 col-lg-12">
                 <div class="item">
-                <div class="over-grey"></div>
-                <div class="over-green"></div>
-                <img class="img-responsive" src="@Url.Content("~/Content/images/photos/map.png")">
-                <div class="title-item">Nông trường</div>
+                    <div class="over-grey"></div>
+                    <div class="over-green"></div>
+                    <img class="img-responsive" src="@Url.Content("~/Content/images/photos/map.png")">
+                    <div class="title-item">@(Utilities.Translate("Farms"))</div>
                 </div>
             </a>
             <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
@@ -35,21 +35,21 @@
         <div class="col-sm-4 col-md-4 col-lg-4 r-item">
             <a href="@Url.Action("Index", "Technology")" class="item-container col-sm-12 col-md-12 col-lg-12">
                 <div class="item">
-                <div class="over-grey"></div>
-                <div class="over-green"></div>
-                <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech.png")">
-                <div class="title-item">Công nghệ</div>
+                    <div class="over-grey"></div>
+                    <div class="over-green"></div>
+                    <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech.png")">
+                    <div class="title-item">@(Utilities.Translate("Technology"))</div>
                 </div>
             </a>
-             <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
+            <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4 r-item">
             <a href="@Url.Action("Value", "Home")" class="item-container col-sm-12 col-md-12 col-lg-12">
                 <div class="item">
-                <div class="over-grey"></div>
-                <div class="over-green"></div>
-                <img class="img-responsive" src="@Url.Content("~/Content/images/photos/value.png")">
-                <div class="title-item">Chuỗi giá trị</div>
+                    <div class="over-grey"></div>
+                    <div class="over-green"></div>
+                    <img class="img-responsive" src="@Url.Content("~/Content/images/photos/value.png")">
+                    <div class="title-item">@(Utilities.Translate("Value"))</div>
                 </div>
             </a>
             <label class="caption-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</label>
@@ -58,88 +58,88 @@
 </div>
 <div class="container-fluid product">
     <div class="product-gradient"></div>
-    <div class="product-title">Sản phẩm</div>
+    <div class="product-title">@(Utilities.Translate("Products"))</div>
 </div>
 
 <div class="container">
-<div class="row">
+    <div class="row">
         <ul class="tab-control">
-            <li class="active"><a data-toggle="tab" href="#fresh">Sản phẩm tươi</a></li>|
-            <li><a data-toggle="tab" href="#processed">Sản phẩm chế biến</a></li>
+            <li class="active"><a data-toggle="tab" href="#fresh">@(Utilities.Translate("FreshProducts"))</a></li>|
+            <li><a data-toggle="tab" href="#processed">@(Utilities.Translate("ProcessedProducts"))</a></li>
         </ul>
     </div>
     <div class="row">
         <div class="tab-content">
             <div id="fresh" class="tab-pane fade in active">
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="s-item-container">
-                    <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
 
-                    </div>
-                    <div class="s-item-title">
-                        Sản phẩm A
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm A
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="s-item-container">
-                    <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/ernest-porzi-19106.jpg"))">
 
-                    </div>
-                    <div class="s-item-title">
-                        Sản phẩm B
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/ernest-porzi-19106.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm B
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="s-item-container">
-                    <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
 
-                    </div>
-                    <div class="s-item-title">
-                        Sản phẩm C
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="s-item-container">
-                    <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
-
-                    </div>
-                    <div class="s-item-title">
-                        Sản phẩm D
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm C
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="s-item-container">
-                    <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
 
-                    </div>
-                    <div class="s-item-title">
-                        Sản phẩm E
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="s-item-container">
-                    <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
-
-                    </div>
-                    <div class="s-item-title">
-                        Sản phẩm F
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm D
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/harshal-s-hirve-44494.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm E
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="s-item-container">
+                        <div class="s-item" style="background-image:url(@Url.Content("~/Content/images/photos/thomas-martinsen-105809.jpg"))">
+
+                        </div>
+                        <div class="s-item-title">
+                            Sản phẩm F
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="processed" class="tab-pane fade">
-            <h3>Sản phẩm chế biến</h3>
-            
+                <h3>@(Utilities.Translate("ProcessedProducts"))</h3>
+
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
             <button class="btn btn-default js-load-more">
-<span>Nhiều sản phẩm hơn</span>
+                <span>@(Utilities.Translate("LoadMore"))</span>
             </button>
         </div>
     </div>
@@ -155,7 +155,7 @@
 
 <div class="container-fluid gt-kitchen" id="Goto-Kitchen">
     <div class="kitchen-gradient"></div>
-    <div class="kitchen-title">Vào bếp cùng T.Vita</div>
+    <div class="kitchen-title">@(Utilities.Translate("GotoKitchen")) @(Utilities.Translate("WithTvita"))</div>
 </div>
 
 <div class="container">
@@ -166,15 +166,15 @@
 
                 </div>
                 <div class="k-content col-sm-12 col-md-12 col-lg-12">
-<div class="k-title">
-    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh 
-</div>
-<div class="k-c-content">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-</div>
+                    <div class="k-title">
+                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                    </div>
+                    <div class="k-c-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    </div>
 
                 </div>
-                <div class="more-info"><a href="#">Xem thêm</a></div>
+                <div class="more-info"><a href="#">@(Utilities.Translate("ViewMore"))</a></div>
             </div>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
@@ -183,15 +183,15 @@
 
                 </div>
                 <div class="k-content col-sm-12 col-md-12 col-lg-12">
-<div class="k-title">
-    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh 
-</div>
-<div class="k-c-content">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-</div>
+                    <div class="k-title">
+                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                    </div>
+                    <div class="k-c-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    </div>
 
                 </div>
-                <div class="more-info"><a href="#">Xem thêm</a></div>
+                <div class="more-info"><a href="#">@(Utilities.Translate("ViewMore"))</a></div>
             </div>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
@@ -200,15 +200,15 @@
 
                 </div>
                 <div class="k-content col-sm-12 col-md-12 col-lg-12">
-<div class="k-title">
-    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh 
-</div>
-<div class="k-c-content">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-</div>
+                    <div class="k-title">
+                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                    </div>
+                    <div class="k-c-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    </div>
 
                 </div>
-                <div class="more-info"><a href="#">Xem thêm</a></div>
+                <div class="more-info"><a href="#">@(Utilities.Translate("ViewMore"))</a></div>
             </div>
         </div>
     </div>
@@ -219,27 +219,27 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="gap-container">
                 <div class="gap">
-<span>vietgap</span>
+                    <span>vietgap</span>
                 </div>
             </div>
             <div class="gap-container">
                 <div class="gap">
-<span>global gap</span>
+                    <span>global gap</span>
                 </div>
             </div>
             <div class="gap-container">
                 <div class="gap">
-<span>vietgap</span>
+                    <span>vietgap</span>
                 </div>
             </div>
             <div class="gap-container">
                 <div class="gap">
-<span>vietgap</span>
+                    <span>vietgap</span>
                 </div>
             </div>
             <div class="gap-container">
                 <div class="gap">
-<span>global gap</span>
+                    <span>global gap</span>
                 </div>
             </div>
         </div>

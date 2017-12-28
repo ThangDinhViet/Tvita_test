@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Tvita_Test.Controllers
 {
-    public class AboutController : Controller
+    public class AboutController : TvitaController
     {
         // GET: About
         public ActionResult History()

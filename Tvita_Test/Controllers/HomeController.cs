@@ -8,7 +8,7 @@ using Tvita.BAL.Interface;
 
 namespace Tvita_Test.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : TvitaController
     {
         
         public ActionResult Index()
@@ -26,9 +26,16 @@ namespace Tvita_Test.Controllers
             return View();
         }
 
+        public ActionResult ChangeLanguage(string lang)
+        {
+            new LanguageMang().SetLanguage(lang);
+            return Json(new { success = true }, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Contact()
         {
             return View();
         }
-    }
 }
+    }
+
