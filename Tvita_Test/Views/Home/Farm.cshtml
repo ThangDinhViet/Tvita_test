@@ -5,14 +5,10 @@
 
 <link href="@Url.Content("~/Content/css/farm.css")" rel="stylesheet">
 
-<div class="container">
+<div class="container" id="img-container">
     <div class="row">
-        <img src="@Url.Content("~/Content/images/photos/farm.png")" usemap="#workmap"/>
-        @*<map name="workmap">
-            <area shape="rect" coords="34,44,270,350" alt="f1" href="f1.htm">
-            <area shape="rect" coords="290,172,333,250" alt="f2" href="f2.htm">
-            <area shape="circle" coords="337,300,44" alt="f3" href="f3.htm">
-        </map>*@
+        <canvas id="farm_map"></canvas>
+        <img src="@Url.Content("~/Content/images/photos/farm.png")" class="farm-map" />
     </div>
 </div>
 
