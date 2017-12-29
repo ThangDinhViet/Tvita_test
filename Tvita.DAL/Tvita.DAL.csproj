@@ -78,22 +78,14 @@
     <Compile Include="Repository\IEmployeeRepository.cs" />
     <Compile Include="Repository\IFarmRepository.cs" />
     <Compile Include="Repository\IGroupProductRepository.cs" />
-    <Compile Include="Repository\IPictureRepository.cs" />
-    <Compile Include="Repository\IPostRepository.cs" />
     <Compile Include="Repository\IProductHistoryRepository.cs" />
     <Compile Include="Repository\IProductionUnitRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\IProductsInFarmRepository.cs" />
-    <Compile Include="Repository\ISubjectRepository.cs" />
-    <Compile Include="Repository\ISubSubjectRepository.cs" />
-    <Compile Include="Repository\PictureRepository.cs" />
-    <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\ProductHistoryRepository.cs" />
     <Compile Include="Repository\ProductionUnitRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\ProductsInFarmRepository.cs" />
-    <Compile Include="Repository\SubjectRepository.cs" />
-    <Compile Include="Repository\SubSubjectRepository.cs" />
     <Compile Include="tbl_Branch.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>

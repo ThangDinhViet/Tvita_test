@@ -152,7 +152,6 @@
           <Property Name="Picture_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Picture_Description" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="Picture_Url" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="tbl_Post">
           <Key>
@@ -168,7 +167,6 @@
           <Property Name="Post_Keyword" Type="nvarchar" MaxLength="50" />
           <Property Name="Post_Url" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="Post_DateCreated" Type="datetime" />
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
@@ -424,7 +422,6 @@
           <Property Name="Picture_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Picture_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="Picture_Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_Post">
           <Key>
@@ -440,7 +437,6 @@
           <Property Name="Post_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Post_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="Post_DateCreated" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
@@ -721,7 +717,6 @@
           <EntitySetMapping Name="tbl_Picture">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Picture">
               <MappingFragment StoreEntitySet="tbl_Picture">
-                <ScalarProperty Name="Picture_Url" ColumnName="Picture_Url" />
                 <ScalarProperty Name="Picture_ID" ColumnName="Picture_ID" />
                 <ScalarProperty Name="Picture_Name" ColumnName="Picture_Name" />
                 <ScalarProperty Name="Picture_Description" ColumnName="Picture_Description" />
@@ -732,7 +727,6 @@
           <EntitySetMapping Name="tbl_Post">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Post">
               <MappingFragment StoreEntitySet="tbl_Post">
-                <ScalarProperty Name="Post_DateCreated" ColumnName="Post_DateCreated" />
                 <ScalarProperty Name="Post_ID" ColumnName="Post_ID" />
                 <ScalarProperty Name="ID_SubSubject" ColumnName="ID_SubSubject" />
                 <ScalarProperty Name="Post_Name" ColumnName="Post_Name" />

@@ -24,6 +24,5 @@ namespace Tvita.DAL
         public string Post_Keyword { get; set; }
         public string Post_Url { get; set; }
         public Nullable<bool> IsDelete { get; set; }
-        public Nullable<System.DateTime> Post_DateCreated { get; set; }
     }
 }
