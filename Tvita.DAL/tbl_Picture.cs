@@ -18,5 +18,6 @@ namespace Tvita.DAL
         public string Picture_Name { get; set; }
         public string Picture_Description { get; set; }
         public Nullable<bool> IsDelete { get; set; }
+        public string Picture_Url { get; set; }
     }
 }
