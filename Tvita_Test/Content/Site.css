@@ -1319,6 +1319,38 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
     margin: 0;
 }
 
+
+.product-item {
+        margin-top: 60px;
+    }
+    
+    .product-item:hover>.product-item-cover>img {
+        transform: scale(1.1);
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-item-cover{
+        text-align: center;
+    }
+    
+    .product-item img {
+        width: 100%;
+        max-width: 300px;
+        background-size: cover;
+        background-position-y: center;
+        border-radius: 50%;
+        border: 8px solid #ccc;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .product-item-content {
+        color: #808080;
+        font-size: 28.16px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 40px;
+    }
+
 @media(min-width: 991px) {
     .gap-group {
         display: table;
