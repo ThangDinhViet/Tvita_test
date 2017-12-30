@@ -106,7 +106,8 @@ textarea {
 }
 
 .navbar .nav.navbar-nav>li>a span.nav-subtitle {
-    font-size: 16.35px;
+    font-size: 20.35px;
+    display: initial;
 }
 
 .navbar.navbar-fixed-top .navbar-nav {
@@ -123,6 +124,7 @@ textarea {
     margin-top: 32px;
     width: 42px;
     height: 42px;
+    margin-right: 50px;
 }
 
 .navbar .navbar-header button i {
@@ -335,9 +337,8 @@ button.navbar-toggle {
     } */
     .navbar .nav.navbar-nav>li a {
         font-size: 20.35px;
-    }
-    .navbar .nav.navbar-nav>li>a span.nav-subtitle {
-        font-size: 16.35px;
+        text-align: left;
+        padding-left: 30px;
     }
 }
 
@@ -761,6 +762,10 @@ a.btn-more-info {
     }
     .navbar-form .input-group-btn.btn-grp-lang {
         padding-left: 0;
+    }
+    .navbar .nav.navbar-nav>li>a span.nav-subtitle{
+        display: block;
+        font-size: 16.35px;
     }
 }
 
