@@ -1013,3 +1013,33 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
 }
   
 /*.modal-backdrop {background: #f7f7f7;}*/
+
+.vietgap{
+    background-image: url(./images/certificate/VIETGAP.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.globalgap{
+    background-image: url(./images/certificate/GLOBALGAP.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.food-safe{
+    background-image: url(./images/certificate/FOODSAFE.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.usda{
+    background-image: url(./images/certificate/USDA.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.iso-2000{
+    background-image: url(./images/certificate/ISO22000.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
