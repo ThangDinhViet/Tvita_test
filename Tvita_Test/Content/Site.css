@@ -63,13 +63,6 @@ body.slide-active {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
 .navbar,
 #navbar-height-col.inverse {
     background-color: #72BE44;
@@ -540,7 +533,7 @@ a.btn-more-info {
     bottom: 0;
     right: 0;
     z-index: 99;
-    display: none;
+    /*display: none;*/
 }
 
 .twm-title {
@@ -901,7 +894,7 @@ body.slide-active {
         background: #f7f7f7;
     }
     #navbar-height-col.inverse {
-        z-index: 1;
+        z-index: 11;
         border: 0;
     }
     #slide-nav .navbar-form {

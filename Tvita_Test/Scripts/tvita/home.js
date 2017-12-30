@@ -80,17 +80,17 @@ var productsHome = function (container, _type) {
                 }
 
                 $.each(data.data, function (k, v) {
-                    var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
-                                '<div class="col-sm-4 col-md-4 col-lg-4">' +
+                    var link = $('<div class="col-sm-4 col-md-4 col-lg-4">' +
                                 '<div class="s-item-container">' +
-                                    '<div class="s-item" style="background-image:url(' + Config.AppUrl + v.Product_Picture + ')">' +
+                                '<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
+                                    '<div class="s-item" style="background-image:url(' + Config.AppUrl + v.Product_Picture + ')"></a>' +
                                     '</div>' +
                                     '<div class="s-item-title">' +
-                                        v.Product_Name +
+                                        '<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' + v.Product_Name + '</a>' +
                                     '</div>' +
                                 '</div>' +
-                            '</div>' +
-                            '</a>');
+                            '</div>'
+                            );
                     listContainer.append(link)
                 })
             },

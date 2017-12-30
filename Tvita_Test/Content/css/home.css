@@ -246,6 +246,12 @@
     border-radius: 50%;
     border: 10px solid #CCCCCC;
     margin: auto;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.s-item-container .s-item:hover, .s-item-container .s-item:focus{
+    transform: scale(1.1);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
 
 .s-item-container .s-item image {}
@@ -274,7 +280,8 @@
     box-shadow: none;
     font-size: 13.23px;
     padding: 0;
-    color: #ccc;
+    /*color: #ccc;*/
+    color: #72be44;
     padding-top: 53px;
 }
 
@@ -282,7 +289,7 @@
 .js-load-more:focus,
 .js-load-more:active {
     background-color: transparent;
-    color: #ccc;
+    color: #72be44;
     background-image: url(./../images/icons/plus-circle.png);
     outline: none;
 }
@@ -352,4 +359,9 @@
     .slide-show-container {
         height: 900px;
     }
+}
+
+#fresh a, #fresh a:hover, #fresh a:focus,#processed a, #processed a:hover, #processed a:focus{
+    text-decoration: none;
+    color: inherit;
 }
