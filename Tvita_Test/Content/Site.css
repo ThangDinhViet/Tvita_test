@@ -743,6 +743,10 @@ a.btn-more-info {
     .container {
         width: calc(100vw - 40px);
     }
+    .navbar .nav.navbar-nav>li>a span.nav-subtitle{
+        display: block;
+        font-size: 16.35px;
+    }
 }
 
 
@@ -873,6 +877,12 @@ body.slide-active {
         min-width: 0;
         width: 400px;
         white-space: normal;
+        padding-left: 60px;
+    }
+
+    .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+        background-color: #588142;
+        outline: none;
     }
     #slide-nav {
         border-top: 0;
