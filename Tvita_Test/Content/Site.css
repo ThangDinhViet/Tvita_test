@@ -1152,3 +1152,8 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
 .modal-header .close:hover, .modal-header .close:focus{
     opacity: 1;
 }
+
+#hot-news-content a{
+    color: inherit;
+    margin-right: 30px;
+}

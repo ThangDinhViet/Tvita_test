@@ -1,0 +1,11 @@
+﻿<link href="@Url.Content("~/Content/css/iframe.css")" rel="stylesheet">
+
+<div class="container">
+    <input type="hidden" id="post_id" value="@ViewBag.id"/>
+    <iframe id="iframe" src="" style="width: 100%"></iframe>
+</div>
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/tvita/getContent.js")" type="text/javascript"></script>
+}

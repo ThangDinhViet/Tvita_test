@@ -112,7 +112,7 @@ namespace Tvita.BAL.Implement
                 }).ToList();
                 if (res.Any())
                 {
-                    result = res.GetRange(0, 5);
+                    result = res.Take(5).ToList();
                 }
             }
 

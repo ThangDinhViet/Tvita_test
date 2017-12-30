@@ -66,7 +66,7 @@
         if (ViewBag.HotNew == true)
         {
             <div class="hot-news">
-                <marquee id="hot-news-content"></marquee>
+                <marquee id="hot-news-content" onmouseover="this.stop();" onmouseout="this.start();"></marquee>
             </div>
         }
     }
