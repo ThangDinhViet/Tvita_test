@@ -16,7 +16,7 @@
                 <span>28.10.2017</span>
             </div>
             <div class="t-label">
-                <span>Chuối</span>
+                <span class="js-product-name"></span>
             </div>
         </div>
     </div>
@@ -77,7 +77,7 @@
 <span>Thông tin sản phẩm</span>
                         </div>
                         <div class="price-container">
-                            <span class="keep-inline"><span class="price">500.000</span><span class="unit">VND/Kg</span></span>
+                            <span class="keep-inline"><span class="price js-price">500.000</span><span class="unit">VND/Kg</span></span>
                         </div>
                         <div class="separate"></div>
                         <div class="item-info">
@@ -304,6 +304,9 @@ Bảo quản mát, tránh ánh nắng trực tiếp
 {
     <script src="@Url.Content("~/Scripts/slick.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/tvita/product_detail.js")" type="text/javascript"></script>
+    <script>
+        getProductDetail('@ViewBag.productId');
+    </script>
     <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;

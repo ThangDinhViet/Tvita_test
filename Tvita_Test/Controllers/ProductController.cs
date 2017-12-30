@@ -11,6 +11,7 @@ namespace Tvita_Test.Controllers
 {
     public class ProductController : TvitaController
     {
+        ProductManager productManager = new ProductManager();
         // GET: Product
         public ActionResult Fresh()
         {
@@ -22,8 +23,9 @@ namespace Tvita_Test.Controllers
             return View();
         }
 
-        public ActionResult Detail()
+        public ActionResult Detail(int id)
         {
+            ViewBag.productId = id;
             return View();
         }
 
@@ -32,7 +34,6 @@ namespace Tvita_Test.Controllers
         {
             try
             {
-                ProductManager productManager = new ProductManager();
                 List<ProductModel> result = new List<ProductModel>();
                 int count = productManager.GetAllProduct().Count();
                 result = productManager.GetAllProduct().Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
@@ -41,6 +42,21 @@ namespace Tvita_Test.Controllers
                 res.data = result;
                 res.pageInfo = new LoadMoreParam() { recordsDisplayed = displayed, total = count, recordsInPage = _param.recordsInPage };
                 return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public ActionResult GetProductDetail(int id)
+        {
+            try
+            {
+                var res = productManager.GetProductByID(id);
+                return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)
             {

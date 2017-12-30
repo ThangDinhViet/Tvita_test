@@ -390,7 +390,7 @@
 @media (min-width: 767px) {
     .g-item:hover {
         transform: scale(1.1);
-        box-shadow: 3px 3px 5px #00005e;
+        box-shadow: 3px 3px 5px #ababab;
     }
     .g-item:hover .video-mark {
         opacity: .8;
