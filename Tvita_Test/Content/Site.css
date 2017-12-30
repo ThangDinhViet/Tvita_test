@@ -701,6 +701,13 @@ a.btn-more-info {
         padding: 0 0 10px 50px;
      }
 
+
+
+.footer-top{
+    display: none;
+}
+
+
 @media (min-width: 640px) {
     .container {
         width: calc(100vw - 40px);
@@ -725,6 +732,10 @@ a.btn-more-info {
     }
     .twm-content {
         height: 380px;
+    }
+
+    .footer-top{
+        display: block;
     }
 }
 
