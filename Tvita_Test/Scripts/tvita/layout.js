@@ -108,20 +108,6 @@ $(document).ready(function () {
         checkPositionMenu(e);
     })
 
-    function checkChatInView() {
-        if ($('.footer-bottom').isInViewport('horizontal') && $('.talk-with-me').hasClass('open') == false) {
-            $('.talk-with-me').css({
-                position: 'absolute',
-                top: $('.footer-bottom').offset().top - $('.twm-title').outerHeight()
-            })
-        } else {
-            $('.talk-with-me').css({
-                position: 'fixed',
-                top: 'inherit'
-            })
-        }
-    }
-
     checkChatInView();
     var nickName = 'No name';
     $('#myName').on('keyup', function (e) {
@@ -223,6 +209,19 @@ $(document).ready(function () {
 
 });
 
+function checkChatInView() {
+    if ($('.footer-bottom').isInViewport('horizontal') && $('.talk-with-me').hasClass('open') == false) {
+        $('.talk-with-me').css({
+            position: 'absolute',
+            top: $('.footer-bottom').offset().top - $('.twm-title').outerHeight()
+        })
+    } else {
+        $('.talk-with-me').css({
+            position: 'fixed',
+            top: 'inherit'
+        })
+    }
+}
 
 $.fn.isInViewport = function (_type) {
     var elementLeft = $(this).offset().left;

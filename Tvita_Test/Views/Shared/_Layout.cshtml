@@ -66,7 +66,7 @@
         if (ViewBag.HotNew == true)
         {
             <div class="hot-news">
-                <marquee id="hot-news-content"></marquee>
+                <marquee id="hot-news-content" onmouseover="this.stop();" onmouseout="this.start();"></marquee>
             </div>
         }
     }
@@ -130,8 +130,8 @@
                                 <div class="t-footer-col">
                                     <h6 class="about-title">Phân phối</h6>
                                     <p class="links">
-                                        <a href="#">Nội địa</a>
-                                        <a href="#">Quốc tế</a>
+                                        <a href="@(Url.Action("Index", "Distribution"))">Nội địa</a>
+                                        <a href="@(Url.Action("Index", "Distribution"))">Quốc tế</a>
                                     </p>
                                 </div>
                             </div>
@@ -201,11 +201,11 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Modal Header</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body remote-modal-content">
                     <p>Some text in the modal.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                 </div>
             </div>
 

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <button class="btn btn-success" id="save">Lưu bài soạn</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="adjoined-bottom">
+                <div class="grid-container">
+                    <div class="grid-width-100">
+                        <div id="editor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/editor/ckeditor.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/editor/tvitaEditor.js")" type="text/javascript"></script>
+}

@@ -209,6 +209,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Controllers\EditorController.cs" />
     <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Admin\Controllers\FarmController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
@@ -216,6 +217,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CommunityDevelopmentController.cs" />
     <Compile Include="ChatHub.cs" />
+    <Compile Include="Controllers\DistributionController.cs" />
     <Compile Include="Controllers\GotoKitchenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -345,9 +347,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\community.css" />
+    <Content Include="Content\css\distribution.css" />
     <Content Include="Content\css\farm.css" />
     <Content Include="Content\css\history.css" />
     <Content Include="Content\css\home.css" />
+    <Content Include="Content\css\iframe.css" />
     <Content Include="Content\css\news.css" />
     <Content Include="Content\css\product.css" />
     <Content Include="Content\css\product_detail.css" />
@@ -553,6 +557,10 @@
     <Content Include="Content\tvita_font\VLAMPLESOFT-THIN.OTF" />
     <Content Include="Content\tvita_font\VLAMPLESOFT.OTF" />
     <Content Include="Content\tvita_font\VLAMPLESOFTBOLD-BOLD.OTF" />
+    <Content Include="Scripts\editor\config.js" />
+    <Content Include="Scripts\editor\tvitaEditor.js" />
+    <Content Include="Scripts\tvita\getContent.js" />
+    <Content Include="Views\Editor\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Tvita_Test.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\iframe_api.js" />
@@ -576,6 +584,7 @@
     <Content Include="Scripts\slick.js" />
     <Content Include="Scripts\slideshow\slideshow.js" />
     <Content Include="Scripts\tvita\community.js" />
+    <Content Include="Scripts\tvita\distribution.js" />
     <Content Include="Scripts\tvita\farm.js" />
     <Content Include="Scripts\tvita\history.js" />
     <Content Include="Scripts\tvita\home.js" />
@@ -597,7 +606,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Shared\_detail.cshtml" />
     <Content Include="Views\Product\Processed.cshtml" />
@@ -611,6 +619,10 @@
     <Content Include="Views\Product\Fresh.cshtml" />
     <Content Include="Views\Technology\Index.cshtml" />
     <Content Include="Views\GotoKitchen\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Distribution\Index.cshtml" />
+    <Content Include="Views\Shared\_iframe.cshtml" />
+    <Content Include="Views\Technology\getContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

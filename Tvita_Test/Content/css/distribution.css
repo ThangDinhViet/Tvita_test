@@ -1,0 +1,11 @@
+﻿img{
+    width: 100%;
+    /*visibility: hidden;*/
+}
+
+canvas{
+    width: 100%;
+}
+canvas.on-focus{
+    cursor: pointer;
+}
