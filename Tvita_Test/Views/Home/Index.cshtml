@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Trang chủ";
     ViewBag.HotNew = true;
+    ViewBag.showCertificate = true;
 }
 <link href="@Url.Content("~/Content/css/home.css")" rel="stylesheet">
 <div class="container-fluid">
@@ -213,30 +214,6 @@
     </div>
 </div>
 
-
-<div class="container-fluid gap-group">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="container gap-group">
-                <div class="block">
-                    <img src="@Url.Content("~/Content/images/certificate/VIETGAP.png")" />
-                </div>
-                <div class="block">
-                    <img src="@Url.Content("~/Content/images/certificate/USDA.png")" />
-                </div>
-                <div class="block">
-                    <img src="@Url.Content("~/Content/images/certificate/ISO22000.png")" />
-                </div>
-                <div class="block">
-                    <img src="@Url.Content("~/Content/images/certificate/GMP.png")" />
-                </div>
-                <div class="block">
-                    <img src="@Url.Content("~/Content/images/certificate/GLOBALGAP.png")" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @section Scripts
 {
     <script src="@Url.Content("~/Scripts/tvita/home.js")" type="text/javascript"></script>

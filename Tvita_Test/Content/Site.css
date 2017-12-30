@@ -1058,37 +1058,6 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
 
 /*.modal-backdrop {background: #f7f7f7;}*/
 
-
-.vietgap {
-    background-image: url(./images/certificate/VIETGAP.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.globalgap {
-    background-image: url(./images/certificate/GLOBALGAP.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.food-safe {
-    background-image: url(./images/certificate/FOODSAFE.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.usda {
-    background-image: url(./images/certificate/USDA.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.iso-2000 {
-    background-image: url(./images/certificate/ISO22000.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 .modal-content {
     /*border-top-left-radius: 45px;*/
     /*border-bottom-right-radius: 45px;*/
@@ -1322,5 +1291,50 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
         transform: scale(1.005);
         margin-top: -10px;
         box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.gap-group {
+    background: #eee;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+}
+
+    .gap-group .block {
+        background: transparent;
+        height: 100px;
+        max-width: 160px;
+        min-height: 160px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+        .gap-group .block img {
+            width: 100%;
+        }
+
+.container-fluid.gap-group {
+    width: 100%;
+    margin: 0;
+}
+
+@media(min-width: 991px) {
+    .gap-group {
+        display: table;
+    }
+
+        .gap-group .block {
+            display: table-cell;
+        }
+}
+
+@media(min-width: 1919px) {
+    .gap-group .block img {
+        max-width: 180px;
+    }
+
+    .container-fluid.gap-group {
+        padding: 15px;
     }
 }

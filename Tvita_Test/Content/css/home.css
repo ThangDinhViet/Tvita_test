@@ -329,51 +329,6 @@
     color: inherit;
 }
 
-.gap-group {
-    background: #eee;
-    margin: 10px auto;
-    position: relative;
-    text-align: center;
-}
-
-    .gap-group .block {
-        background: transparent;
-        height: 100px;
-        max-width: 160px;
-        min-height: 160px;
-        display: inline-block;
-        margin: 10px;
-    }
-
-        .gap-group .block img {
-            width: 100%;
-        }
-
-.container-fluid.gap-group {
-    width: 100%;
-    margin: 0;
-}
-
-@media(min-width: 991px) {
-    .gap-group {
-        display: table;
-    }
-
-        .gap-group .block {
-            display: table-cell;
-        }
-}
-
-@media(min-width: 1919px) {
-    .gap-group .block img {
-        max-width: 180px;
-    }
-
-    .container-fluid.gap-group {
-        padding: 15px;
-    }
-}
-
 .list-thumb{
     background-color: #fff;
     padding-top: 60px;
