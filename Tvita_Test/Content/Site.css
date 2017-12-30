@@ -1180,9 +1180,9 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
         padding-left: 0;
     }
 
-    .tvita .menu-list ul li{
-        margin-bottom: 8px;
-    }
+        .tvita .menu-list ul li {
+            margin-bottom: 8px;
+        }
 
         .tvita .menu-list ul a {
             color: #8CC63F;
@@ -1200,7 +1200,7 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
     background-position: center;
 }
 
-.ttgroup{
+.ttgroup {
     background-size: 180px auto;
 }
 
@@ -1210,6 +1210,58 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
     padding-left: 15px;
     padding-right: 15px;
 }
+
+
+
+
+.n-cover img {
+    width: 100%;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.n-content {
+    background-color: #F2F2F2;
+    color: #4E9D2D;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.n-detail-content{
+    background-color: #F2F2F2;
+}
+
+.n-view-more {
+    background-color: #CCCCCC;
+    text-align: right;
+    color: #4E9D2D;
+    font-size: 20px;
+    height: 37px;
+    line-height: 37px;
+    padding-right: 30px;
+}
+
+    .n-view-more a {
+        color: #4E9D2D;
+    }
+
+.n-item {
+    margin-bottom: 45px;
+}
+
+.n-item {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.n-detail-content {
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+}
+
+
+
 @media (min-width:376px) {
     .ttgroup {
         background-size: 200px auto;
@@ -1248,12 +1300,27 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
 }
 
 @media (min-width:1919px) {
-    .f-row{
+    .f-row {
         width: calc(100vw - 640px);
         margin-left: 320px;
     }
 
-    .ttgroup .about{
+    .ttgroup .about {
         padding-left: 66px;
+    }
+
+    .n-content {
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+
+    .n-detail-content {
+        padding: 10px 30px;
+    }
+
+    .n-item:hover {
+        transform: scale(1.005);
+        margin-top: -10px;
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     }
 }
