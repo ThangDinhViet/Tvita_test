@@ -97,7 +97,7 @@ $(document).ready(function () {
             })
         } else {
             $('ul.navbar-nav').css({
-                'margin-top': 0
+                'margin-top': 20
             })
         }
     }
