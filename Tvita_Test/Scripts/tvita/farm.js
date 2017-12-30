@@ -1,6 +1,7 @@
 ﻿$(function () {
     var target = undefined;
     var canvas = $('#farm_map')[0];
+    $(canvas).hide();
     var provine_position = {
         Hoa_Binh: { x1: 295, y1: 400, x2: 430, y2: 445 },
         Lao_Cai: { x1: 295, y1: 478, x2: 412, y2: 515 },
@@ -13,7 +14,6 @@
     var scale = 1;
     function draw() {
         $('#farm_map').show();
-        
 
         var img_natural_width = $('.farm-map')[0].naturalWidth;
         var img_natural_height = $('.farm-map')[0].naturalHeight;
@@ -35,9 +35,12 @@
         ctx.rect(0, 0, img_screen_size.width, img_screen_size.height);
         ctx.drawImage($('.farm-map')[0], 0, 0, img_screen_size.width, img_screen_size.height);
         $('.farm-map').hide();
+        $(canvas).show();
     }
 
-    draw();
+    setTimeout(function () {
+        draw();
+    }, 500)
 
     function _handleMousemove(evt) {
         var bb, x, y;
@@ -56,7 +59,35 @@
 
     function _handleClick(evt) {
         if (target) {
-            console.log(target)
+            var modal = $('#remoteModal');
+            var content = modal.find('.remote-modal-content').empty();
+            var provine_name = '';
+            switch (target) {
+                case 'Hoa_Binh':
+                    provine_name = 'Hòa Bình'
+                    break;
+                case 'Lao_Cai':
+                    provine_name = 'Lào Cai'
+                    break;
+                case 'Tay_Nguyen':
+                    provine_name = 'Tây Nguyên'
+                    break;
+                case 'DB_Song_Cuu_Long':
+                    provine_name = 'Đồng bằng Sông Cửu Long'
+                    break;
+                case 'Bac_Giang':
+                    provine_name = 'Bắc Giang'
+                    break;
+                case 'Hung_Yen':
+                    provine_name = 'Hưng Yên'
+                    break;
+                case 'DB_Song_Hong':
+                    provine_name = 'Đồng bằng Sông Hồng'
+                    break;
+            }
+            content.append($('<h1></h1>').html(provine_name));
+            modal.modal('show');
+            
         }
     }
 
