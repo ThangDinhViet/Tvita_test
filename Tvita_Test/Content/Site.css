@@ -1058,28 +1058,6 @@ body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk
 
 /*.modal-backdrop {background: #f7f7f7;}*/
 
-.gap-container {
-    /*width: 33.3333%;*/
-    padding-left: 30px;
-    padding-right: 30px;
-    float: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.gap {
-    /*background-color: #4E9D2D;*/
-    /*border-radius: 50%;*/
-    height: 140px;
-    width: 140px;
-    line-height: 140px;
-    margin: auto;
-    text-transform: uppercase;
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-    background-size: contain;
-}
 
 .vietgap {
     background-image: url(./images/certificate/VIETGAP.png);
