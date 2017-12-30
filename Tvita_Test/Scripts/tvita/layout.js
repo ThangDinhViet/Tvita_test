@@ -89,8 +89,23 @@ $(document).ready(function () {
     })
 
 
-    $(window).on('scroll resize', function () {
+    function checkPositionMenu(e) {
+        var showSlide = !$('.navbar-toggle').is(':hidden');
+        if (showSlide) {
+            $('ul.navbar-nav').css({
+                'margin-top': $('html')[0].scrollTop
+            })
+        } else {
+            $('ul.navbar-nav').css({
+                'margin-top': 0
+            })
+        }
+    }
+
+
+    $(window).on('scroll resize', function (e) {
         checkChatInView();
+        checkPositionMenu(e);
     })
 
     function checkChatInView() {
