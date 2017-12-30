@@ -64,5 +64,21 @@ namespace Tvita_Test.Controllers
                 throw;
             }
         }
+
+
+        [HttpGet]
+        public ActionResult GetRelatedProducts(int idGroup)
+        {
+            try
+            {
+                var res = productManager.GetRelatedProducts(idGroup);
+                return Json(new { data = res }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
