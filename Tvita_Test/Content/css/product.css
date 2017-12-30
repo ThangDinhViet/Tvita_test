@@ -167,14 +167,14 @@
         background-color: #F2F2F2;
     }
     
-    .gap-container {
+    /*.gap-container {
         width: 33.3333%;
         float: left;
         padding-top: 30px;
         padding-bottom: 30px;
-    }
+    }*/
     
-    .gap {
+    /*.gap {
         background-color: #4E9D2D;
         border-radius: 50%;
         height: 140px;
@@ -185,13 +185,13 @@
         font-size: 25px;
         color: #fff;
         text-align: center;
-    }
+    }*/
     
-    .gap span {
+    /*.gap span {
         display: inline-block;
         vertical-align: middle;
         line-height: normal;
-    }
+    }*/
     
     @media (min-width: 867px) {
         .gap-container {

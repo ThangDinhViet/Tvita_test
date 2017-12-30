@@ -173,20 +173,6 @@
     padding-bottom: 30px;
 }
 
-.gap {
-    /*background-color: #4E9D2D;*/
-    /*border-radius: 50%;*/
-    height: 140px;
-    width: 140px;
-    line-height: 140px;
-    margin: auto;
-    text-transform: uppercase;
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-    background-size: contain;
-}
-
 .gap span {
     display: inline-block;
     vertical-align: middle;
