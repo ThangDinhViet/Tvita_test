@@ -10,7 +10,7 @@ namespace Tvita_Test.Controllers
 {
     public class HomeController : TvitaController
     {
-        
+        PostManager postManager = new PostManager();
         public ActionResult Index()
         {
             return View();
@@ -36,6 +36,21 @@ namespace Tvita_Test.Controllers
         {
             return View();
         }
-}
+
+
+        public ActionResult getHotNews()
+        {
+            try
+            {
+                var res = postManager.GetListNewPost();
+                return Json(new { data = res }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
+}
 

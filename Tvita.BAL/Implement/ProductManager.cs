@@ -77,7 +77,6 @@ namespace Tvita.BAL.Implement
             }
             return result;
         }
-
         public List<ProductModel> GetRelatedProducts(int idGroup)
         {
             List<ProductModel> result = new List<ProductModel>();
@@ -100,7 +99,6 @@ namespace Tvita.BAL.Implement
             }
             return result;
         }
-
         public bool AddProduct(ProductModel model)
         {
             try
