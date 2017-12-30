@@ -1,5 +1,5 @@
 ﻿Config = {
-    AppUrl : '/Tvita_Test'
+    AppUrl: '/Tvita_Test'
 }
 
 $(document).ready(function () {
@@ -16,7 +16,7 @@ $(document).ready(function () {
     var slideneg = '-400px';
 
 
-    $("#slide-nav").on("click", toggler, function(e) {
+    $("#slide-nav").on("click", toggler, function (e) {
         toggleSlideMenu();
     });
 
@@ -24,7 +24,7 @@ $(document).ready(function () {
         var selected = $(toggler).hasClass('slide-active');
         $('#slidemenu').stop().animate({
             left: selected ? menuneg : '0px'
-        }, function() {
+        }, function () {
             if ($(toggler).isInViewport('vertical')) {
                 $(toggler).fadeIn();
                 $(toggler).removeClass('outView');
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
     var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header, .navbar-toggle';
 
-    $(window).on("resize", function() {
+    $(window).on("resize", function () {
         // if ($(window).width() > 1279 && $('.navbar-toggle').is(':hidden')) {
         //     $(selected).removeClass('slide-active');
         // } else {
@@ -74,7 +74,7 @@ $(document).ready(function () {
     });
 
     //for talk with me
-    $('.twm-title').unbind().bind('click', function() {
+    $('.twm-title').unbind().bind('click', function () {
         $('.talk-with-me').toggleClass('open');
         if ($('.talk-with-me').hasClass('open')) {
             if ($('.footer-bottom').isInViewport('horizontal')) {
@@ -89,7 +89,7 @@ $(document).ready(function () {
     })
 
 
-    $(window).on('scroll resize', function() {
+    $(window).on('scroll resize', function () {
         checkChatInView();
     })
 
@@ -164,10 +164,10 @@ $(document).ready(function () {
                     }
                 });
             }
-            
+
             // Clear text box and reset focus for next comment.
             $('#message').val('').focus();
-            
+
         });
     });
 
@@ -182,10 +182,34 @@ $(document).ready(function () {
         changeLaguage(lang);
     })
 
+
+    $('#hot-news-content').empty();
+    $.ajax({
+        type: "GET",
+        dataType: 'json',
+        url: Config.AppUrl + "/Home/getHotNews/",
+        contentType: 'application/json',
+        data: {},
+        success: function (resp) {
+            if (resp.data.length != 0) {
+                $.each(resp.data, function (k, v) {
+                    var a = $('<a href="' + Config.Url + '/' + v.Post_Url + '" >' + v.Post_Name + '</a>');
+                    $('#hot-news-content').append(a)
+                });
+            } else {
+                $('#hot-news-content').text('Chưa có tin')
+            }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+
+        }
+    });
+
+
 });
 
 
-$.fn.isInViewport = function(_type) {
+$.fn.isInViewport = function (_type) {
     var elementLeft = $(this).offset().left;
     var elementRight = elementLeft + $(this).outerWidth();
 
@@ -224,7 +248,7 @@ function changeLaguage(_lang) {
         traditional: true,
         url: Config.AppUrl + "/Home/ChangeLanguage/",
         contentType: 'application/json',
-        data: {lang: _lang},
+        data: { lang: _lang },
         success: function (data) {
             if (data.success) {
                 window.location.reload();

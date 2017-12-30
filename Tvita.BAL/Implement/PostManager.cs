@@ -92,6 +92,33 @@ namespace Tvita.BAL.Implement
             }
             return result.GetRange(0,5);
         }
+
+        public List<PostModel> GetHotNewPost()
+        {
+            List<PostModel> result = new List<PostModel>();
+            using (IUnitOfWork uOW = new UnitOfWork())
+            {
+                var res = uOW.PostRepository.GetAll().OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                {
+                    Post_Content = x.Post_Content,
+                    Post_Description = x.Post_Description,
+                    Post_Keyword = x.Post_Keyword,
+                    Post_Picture = x.Post_Picture,
+                    Post_Url = x.Post_Url,
+                    Post_Video = x.Post_Video,
+                    Post_ID = x.Post_ID,
+                    Post_Name = x.Post_Name,
+                    IsDelete = x.IsDelete
+                }).ToList();
+                if (res.Any())
+                {
+                    result = res.GetRange(0, 5);
+                }
+            }
+
+            return result;
+        }
+
         public bool AddPost(PostModel model)
         {
             try

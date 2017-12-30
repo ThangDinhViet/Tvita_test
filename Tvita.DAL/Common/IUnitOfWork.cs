@@ -28,6 +28,14 @@ namespace Tvita.DAL.Common
         IProductHistoryRepository IProductHistoryRepository { get; }
         IRepository<tbl_ProductsInFarm, int> ProductsInFarmRepository { get; }
         IProductsInFarmRepository IProductsInFarmRepository { get; }
+        IRepository<tbl_Picture, int> PictureRepository { get; }
+        IPictureRepository IPictureRepository { get; }
+        IRepository<tbl_Subject, int> SubjectRepository { get; }
+        ISubjectRepository ISubjectRepository { get; }
+        IRepository<tbl_SubSubject, int> SubSubjectRepository { get; }
+        ISubSubjectRepository ISubSubjectRepository { get; }
+        IRepository<tbl_Post, int> PostRepository { get; }
+        IPostRepository IPostRepository { get; }
         void SaveChanges();
     }
 }

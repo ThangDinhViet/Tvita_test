@@ -38,11 +38,12 @@ namespace Tvita_Test.Controllers
         }
 
 
+        [HttpGet]
         public ActionResult getHotNews()
         {
             try
             {
-                var res = postManager.GetListNewPost();
+                var res = postManager.GetHotNewPost();
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)

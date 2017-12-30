@@ -57,19 +57,27 @@
     <Compile Include="Implement\EmployeeManager.cs" />
     <Compile Include="Implement\FarmManager.cs" />
     <Compile Include="Implement\GroupProductManager.cs" />
+    <Compile Include="Implement\PictureManager.cs" />
+    <Compile Include="Implement\PostManager.cs" />
     <Compile Include="Implement\ProductHistoryManager.cs" />
     <Compile Include="Implement\ProductionUnitManager.cs" />
     <Compile Include="Implement\ProductManager.cs" />
     <Compile Include="Implement\ProductsInFarmManager.cs" />
+    <Compile Include="Implement\SubjectManager.cs" />
+    <Compile Include="Implement\SubSubjectManager.cs" />
     <Compile Include="Interface\IBranchManager.cs" />
     <Compile Include="Interface\ICardManager.cs" />
     <Compile Include="Interface\IEmployeeManager.cs" />
     <Compile Include="Interface\IFarmManager.cs" />
     <Compile Include="Interface\IGroupProductManager.cs" />
+    <Compile Include="Interface\IPictureManager.cs" />
+    <Compile Include="Interface\IPostManager.cs" />
     <Compile Include="Interface\IProductHistoryManager.cs" />
     <Compile Include="Interface\IProductionUnitManager.cs" />
     <Compile Include="Interface\IProductManager.cs" />
     <Compile Include="Interface\IProductsInFarmManager.cs" />
+    <Compile Include="Interface\ISubjectManager.cs" />
+    <Compile Include="Interface\ISubSubjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
