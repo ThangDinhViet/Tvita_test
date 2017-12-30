@@ -43,7 +43,7 @@
         bb = canvas.getBoundingClientRect();
         x = (event.clientX - bb.left) * (canvas.width / bb.width);
         y = (event.clientY - bb.top) * (canvas.height / bb.height);
-        console.log(x, y)
+        //console.log(x, y)
         target = undefined;
         $(canvas).removeClass('on-focus');
         $.each(provine_position, function (k, v) {

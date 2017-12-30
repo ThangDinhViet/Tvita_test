@@ -72,74 +72,84 @@
     }
     <div class="container-fluid body-content" id="page-content">
         @RenderBody()
-        <div class="row footer">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <div class="container">
-                        <div class="ttgroup-container">
-                            <div class="ttgroup">
-                                <div class="about-tt-grp">
-                                    <h6 class="about-title">Tập đoàn T&T</h6>
-                                    <label class="short-content">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-                                    </label>
-                                    <a href="#" class="btn-more-info">Xem thêm</a>
-                                </div>
-                            </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer-top col-lg-12">
+                <div class="row f-row">
+                    <div class="col-xs-6 col-md-6 col-lg-3 ttgroup">
+                        <div class="about">
+                            <h6 class="about-title">Tập đoàn T&T</h6>
+                            <label class="short-content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                            </label>
+                            <a href="http://ttgroup.com.vn" class="btn-more-info">Xem thêm</a>
                         </div>
-                        <div class="tvita-container">
-                            <div class="tvita">
-                                <div class="t-footer-col">
+                    </div>
+                    <div class="col-xs-6 col-md-6 col-lg-9 tvita">
+                        <div class="menu-list row">
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
                                     <h6 class="about-title">Về T.Vita</h6>
-                                    <p class="links">
-                                        <a href="#">Lịch sử hình thành</a>
-                                        <a href="#">Tầm nhìn - sứ mệnh</a>
-                                        <a href="#">Chuỗi giá trị</a>
-                                        <a href="#">Tiêu chuẩn chất lượng</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Nông trường</h6>
-                                    <p class="links">
-                                        <a href="#">Lào Cai</a>
-                                        <a href="#">Bắc Giang</a>
-                                        <a href="#">Mộc châu</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Công nghệ</h6>
-                                    <p class="links">
-                                        <a href="#">Chế biến</a>
-                                        <a href="#">Thu hoạch</a>
-                                        <a href="#">Bảo quản</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Sản phẩm</h6>
-                                    <p class="links">
-                                        <a href="#">Rau</a>
-                                        <a href="#">Củ</a>
-                                        <a href="#">Quả</a>
-                                        <a href="#">Trái cây</a>
-                                        <a href="#">Rau gia vị</a>
-                                        <a href="#">Rau baby</a>
-                                        <a href="#">Salad</a>
-                                        <a href="#">Nước ép</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Phân phối</h6>
-                                    <p class="links">
-                                        <a href="@(Url.Action("Index", "Distribution"))">Nội địa</a>
-                                        <a href="@(Url.Action("Index", "Distribution"))">Quốc tế</a>
-                                    </p>
+                                    <ul>
+                                        <li><a href="#">Lịch sử hình thành</a></li>
+                                        <li><a href="#">Tầm nhìn - sứ mệnh</a></li>
+                                        <li><a href="#">Chuỗi giá trị</a></li>
+                                        <li><a href="#">Tiêu chuẩn chất lượng</a></li>
+                                    </ul>
                                 </div>
                             </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Nông trường</h6>
+                                    <ul>
+                                        <li><a href="#">Lào Cai</a></li>
+                                        <li><a href="#">Bắc Giang</a></li>
+                                        <li><a href="#">Mộc Châu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Công nghệ</h6>
+                                    <ul>
+                                        <li><a href="#">Chế biến</a></li>
+                                        <li><a href="#">Thu hoạch</a></li>
+                                        <li><a href="#">Bảo quản</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Sản phẩm</h6>
+                                    <ul>
+                                        <li><a href="#">Rau</a></li>
+                                        <li><a href="#">Củ</a></li>
+                                        <li><a href="#">Quả</a></li>
+                                        <li><a href="#">Trái cây</a></li>
+                                        <li><a href="#">Rau gia vị</a></li>
+                                        <li><a href="#">Rau baby</a></li>
+                                        <li><a href="#">Salad</a></li>
+                                        <li><a href="#">Nước ép</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Phân phối</h6>
+                                    <ul>
+                                        <li><a href="#">Nội địa</a></li>
+                                        <li><a href="#">Quốc tế</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom col-lg-12">
                 <div class="social-container">
                     <div class="container-fluid">
                         <div class="row">
