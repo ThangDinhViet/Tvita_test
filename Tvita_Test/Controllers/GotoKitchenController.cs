@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Tvita_Test.Controllers
 {
-    public class GotoKitchenController : Controller
+    public class GotoKitchenController : TvitaController
     {
         // GET: GotoKitchen
         public ActionResult Index()

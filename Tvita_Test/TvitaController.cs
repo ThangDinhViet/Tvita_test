@@ -18,7 +18,8 @@ namespace Tvita_Test
             }
             else
             {
-                var userLanguage = Request.UserLanguages;
+                //auto get userLanguage
+                /*var userLanguage = Request.UserLanguages;
                 var userLang = userLanguage != null ? userLanguage[0] : "";
                 if (userLang != "")
                 {
@@ -27,7 +28,10 @@ namespace Tvita_Test
                 else
                 {
                     lang = LanguageMang.GetDefaultLanguage();
-                }
+                }*/
+
+
+                lang = LanguageMang.GetDefaultLanguage();
             }
             new LanguageMang().SetLanguage(lang);
             return base.BeginExecuteCore(callback, state);
