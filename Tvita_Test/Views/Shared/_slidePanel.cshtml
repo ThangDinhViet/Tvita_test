@@ -47,20 +47,20 @@
                             <li class="@(Utilities.menuIsActive("Product", "Processed") ? "active" : "")"><a href="@Url.Action("Processed", "Product")">@(Utilities.Translate("ProcessedProducts"))</a></li>
                         </ul>
 
-                        <li>
-                            <a href="#"> Tin tức </a>
+                        <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "News")"> @Utilities.Translate("News") </a>
                         </li>
 
-                        <li>
-                            <a href="#"> Công nghệ </a>
+                        <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "Technology")"> @Utilities.Translate("Technology") </a>
                         </li>
 
-                        <li>
-                            <a href="#"> Vào bếp cùng T.Vita </a>
+                        <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "GotoKitchen")"> @Utilities.Translate("GotoKitchen") @Utilities.Translate("WithTvita") </a>
                         </li>
 
-                        <li>
-                            <a href="#"> Phát triển cộng đông</a>
+                        <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "CommunityDevelopment")"> @Utilities.Translate("Development")</a>
                         </li>
                     </ul>
                 </div>
