@@ -5,6 +5,7 @@
 
 .ss-container {
     overflow: hidden;
+    position: relative
 }
 
 .ss-item {
@@ -46,6 +47,9 @@
 
 .ss-item-cover {
     width: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 @media (min-width: 420px) {}
