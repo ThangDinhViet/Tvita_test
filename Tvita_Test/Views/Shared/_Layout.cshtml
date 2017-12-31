@@ -9,16 +9,20 @@
 
 </head>
 <body>
-    <div class="navbar navbar-fixed-top" role="navigation" id="slide-nav">
+    @RenderPage("~/Views/Shared/_slidePanel.cshtml")
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
+
             <div class="navbar-header">
-                <button class="navbar-toggle">
+                <button type="button" class="navbar-toggle cd-btn">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
                 <a class="navbar-brand" href="~/"><img src="~/Content/images/logos/nav-logo-@(Utilities.languageIsActive()).png"></a>
             </div>
-            <div id="slidemenu">
-                <ul class="nav navbar-nav">
+
+            <div class="navbar-collapse collapse" id="navbar-collapsible">
+                <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown @(Utilities.menuIsActive("Home", "About") ? "active" : "")">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("About"))</a>
                         <ul class="dropdown-menu">
@@ -26,7 +30,7 @@
                             <li class="divider"></li>
                             <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">@(Utilities.Translate("VisionAndMission"))</a></li>
                             @*<li class="divider"></li>
-                                <li><a href="#">Chuỗi giá trị</a></li>*@
+                <li><a href="#">Chuỗi giá trị</a></li>*@
                             <li class="divider"></li>
                             <li><a href="@(Url.Action("Quality", "About"))" class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")">@(Utilities.Translate("Quality"))</a></li>
                         </ul>
@@ -44,24 +48,25 @@
                     <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "GotoKitchen"))"><span>@(Utilities.Translate("GotoKitchen"))</span> <span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
                     <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "CommunityDevelopment"))"><span>@(Utilities.Translate("Development"))</span> <span class="nav-subtitle">@(Utilities.Translate("Community"))</span></a></li>
                 </ul>
-                <form class="navbar-form navbar-right" role="form">
-                    <div class="form-group">
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group" style="display:inline;">
                         <div class="input-group">
-                            <input type="search" class="form-control" placeholder="Tìm kiếm">
-                            <span class="input-group-addon glyphicon-search-custom">&nbsp;</span>
+                            <input type="text" class="form-control" placeholder="Tìm kiếm">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                            <span class="input-group-addon span-separate"></span>
+                            <span class="input-group-addon btn-control-language @(Utilities.languageIsActive().ToUpper() == "VI" ? "active": "")" data-lang="vi">VI</span>
+                            <span class="input-group-addon span-separate-line">|</span>
+                            <span class="input-group-addon btn-control-language @(Utilities.languageIsActive().ToUpper() == "EN" ? "active": "")" data-lang="en">EN</span>
                         </div>
                     </div>
-                    <span class="input-group-btn btn-grp-lang">
-                        <span class="btn-group custom-btn">
-                            <button type="button" data-lang="vi" class="btn btn-primary btn-control-language @(Utilities.languageIsActive().ToUpper() == "VI" ? "active": "")">VI</button>
-                            <button type="button" data-lang="en" class="btn btn-primary btn-control-language @(Utilities.languageIsActive().ToUpper() == "EN" ? "active": "")">EN</button>
-                        </span>
-                    </span>
                 </form>
+
             </div>
 
         </div>
-    </div>
+    </nav>
+    
     @{
         if (ViewBag.HotNew == true)
         {
@@ -70,76 +75,118 @@
             </div>
         }
     }
-    <div class="container-fluid body-content" id="page-content">
-        @RenderBody()
-        <div class="row footer">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <div class="container">
-                        <div class="ttgroup-container">
-                            <div class="ttgroup">
-                                <div class="about-tt-grp">
-                                    <h6 class="about-title">Tập đoàn T&T</h6>
-                                    <label class="short-content">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-                                    </label>
-                                    <a href="#" class="btn-more-info">Xem thêm</a>
-                                </div>
+
+    <div class="container-fluid body-content">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+
+    @{
+        if (ViewBag.showCertificate == true)
+        {
+            <div class="container-fluid gap-group">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="container gap-group">
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/VIETGAP.png")" />
                             </div>
-                        </div>
-                        <div class="tvita-container">
-                            <div class="tvita">
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Về T.Vita</h6>
-                                    <p class="links">
-                                        <a href="#">Lịch sử hình thành</a>
-                                        <a href="#">Tầm nhìn - sứ mệnh</a>
-                                        <a href="#">Chuỗi giá trị</a>
-                                        <a href="#">Tiêu chuẩn chất lượng</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Nông trường</h6>
-                                    <p class="links">
-                                        <a href="#">Lào Cai</a>
-                                        <a href="#">Bắc Giang</a>
-                                        <a href="#">Mộc châu</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Công nghệ</h6>
-                                    <p class="links">
-                                        <a href="#">Chế biến</a>
-                                        <a href="#">Thu hoạch</a>
-                                        <a href="#">Bảo quản</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Sản phẩm</h6>
-                                    <p class="links">
-                                        <a href="#">Rau</a>
-                                        <a href="#">Củ</a>
-                                        <a href="#">Quả</a>
-                                        <a href="#">Trái cây</a>
-                                        <a href="#">Rau gia vị</a>
-                                        <a href="#">Rau baby</a>
-                                        <a href="#">Salad</a>
-                                        <a href="#">Nước ép</a>
-                                    </p>
-                                </div>
-                                <div class="t-footer-col">
-                                    <h6 class="about-title">Phân phối</h6>
-                                    <p class="links">
-                                        <a href="@(Url.Action("Index", "Distribution"))">Nội địa</a>
-                                        <a href="@(Url.Action("Index", "Distribution"))">Quốc tế</a>
-                                    </p>
-                                </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/USDA.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/ISO22000.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/GMP.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/GLOBALGAP.png")" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+        }
+    }
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer-top col-lg-12">
+                <div class="row f-row">
+                    <div class="col-xs-6 col-md-6 col-lg-3 ttgroup">
+                        <div class="about">
+                            <h6 class="about-title">Tập đoàn T&T</h6>
+                            <label class="short-content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                            </label>
+                            <a href="http://ttgroup.com.vn" class="btn-more-info">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 col-lg-9 tvita">
+                        <div class="menu-list row">
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Về T.Vita</h6>
+                                    <ul>
+                                        <li><a href="#">Lịch sử hình thành</a></li>
+                                        <li><a href="#">Tầm nhìn - sứ mệnh</a></li>
+                                        <li><a href="#">Chuỗi giá trị</a></li>
+                                        <li><a href="#">Tiêu chuẩn chất lượng</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Nông trường</h6>
+                                    <ul>
+                                        <li><a href="#">Lào Cai</a></li>
+                                        <li><a href="#">Bắc Giang</a></li>
+                                        <li><a href="#">Mộc Châu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Công nghệ</h6>
+                                    <ul>
+                                        <li><a href="#">Chế biến</a></li>
+                                        <li><a href="#">Thu hoạch</a></li>
+                                        <li><a href="#">Bảo quản</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Sản phẩm</h6>
+                                    <ul>
+                                        <li><a href="#">Rau</a></li>
+                                        <li><a href="#">Củ</a></li>
+                                        <li><a href="#">Quả</a></li>
+                                        <li><a href="#">Trái cây</a></li>
+                                        <li><a href="#">Rau gia vị</a></li>
+                                        <li><a href="#">Rau baby</a></li>
+                                        <li><a href="#">Salad</a></li>
+                                        <li><a href="#">Nước ép</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">Phân phối</h6>
+                                    <ul>
+                                        <li><a href="#">Nội địa</a></li>
+                                        <li><a href="#">Quốc tế</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom col-lg-12">
                 <div class="social-container">
                     <div class="container-fluid">
                         <div class="row">

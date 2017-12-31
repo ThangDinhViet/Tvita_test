@@ -26,12 +26,14 @@ namespace Tvita_Test
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Content/slide_panel/js/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
                       "~/Content/site.css",
+                      "~/Content/css/tvita_navbar.css",
                       "~/Content/slideshow/slideshow.css"));
         }
     }

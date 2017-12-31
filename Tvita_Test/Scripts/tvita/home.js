@@ -71,6 +71,8 @@ var productsHome = function (container, _type) {
             contentType: 'application/json',
             data: paramPage,
             success: function (data) {
+                var indexCol = 0;
+                var row;
                 paramPage.total = data.pageInfo.total;
                 paramPage.recordsDisplayed = data.pageInfo.recordsDisplayed;
 
@@ -80,18 +82,24 @@ var productsHome = function (container, _type) {
                 }
 
                 $.each(data.data, function (k, v) {
-                    var link = $('<div class="col-sm-4 col-md-4 col-lg-4">' +
-                                '<div class="s-item-container">' +
-                                '<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
-                                    '<div class="s-item" style="background-image:url(' + Config.AppUrl + v.Product_Picture + ')"></a>' +
+                    if (indexCol % 3 == 0) {
+                        row = $('<div></div>').addClass('row');
+                        listContainer.append(row)
+                    }
+                    var item_container = $('<div class="col-sm-4 col-md-4 col-lg-4"></div>');
+                    var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
+                                '<div class="product-item">' +
+                                    '<div class="product-item-cover">' +
+                                        '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: ' + Config.AppUrl + v.Product_Picture + '"))">' +
                                     '</div>' +
-                                    '<div class="s-item-title">' +
-                                        '<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' + v.Product_Name + '</a>' +
+                                    '<div class="product-item-content">' +
+                                        '<span>' + v.Product_Name + '</span>' +
                                     '</div>' +
                                 '</div>' +
-                            '</div>'
-                            );
-                    listContainer.append(link)
+                            '</a>');
+                    item_container.append(link);
+                    row.append(item_container);
+                    indexCol++;
                 })
             },
             error: function (jqXHR, textStatus, errorThrown) {
