@@ -301,7 +301,7 @@ a.btn-more-info {
 .related-articles .panel-default .list-group-item {
     margin: 0;
     border: 0;
-    padding: 0 0 10px 50px;
+    padding: 0 0 10px 30px;
 }
 
 @media (min-width: 480px) {
@@ -350,6 +350,9 @@ a.btn-more-info {
 @media (min-width: 1919px) {
     .container {
         width: calc(100vw - 640px);
+    }
+    .related-articles .panel-default .list-group-item {
+        padding: 0 0 10px 40px;
     }
 }
 

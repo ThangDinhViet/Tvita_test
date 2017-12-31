@@ -216,3 +216,19 @@ nav.navbar {
     background-color: #619f3b;
     color: #fff;
 }
+
+.navbar-form.navbar-right .input-group input{
+    outline: none;
+    border-right: none;
+    box-shadow: none;
+}
+
+.navbar-form.navbar-right .input-group input:focus, .navbar-form.navbar-right .input-group input:active{
+    border: 1px solid #ccc;
+    border-right: none;
+}
+
+.navbar-form.navbar-right .input-group input + span.input-group-addon{
+    border-left: none;
+    background-color: #fff;
+}
