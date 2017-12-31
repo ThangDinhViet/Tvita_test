@@ -625,12 +625,15 @@
     <Content Include="Views\Shared\_iframe.cshtml" />
     <Content Include="Views\Technology\getContent.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="Views\Shared\_slidePanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\AdminUltility\" />
     <Folder Include="Areas\Admin\Content\picture\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Content\slide_panel\css\" />
+    <Folder Include="Content\slide_panel\js\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>

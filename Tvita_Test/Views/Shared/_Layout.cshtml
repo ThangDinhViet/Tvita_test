@@ -9,16 +9,14 @@
 
 </head>
 <body>
-
+    @RenderPage("~/Views/Shared/_slidePanel.cshtml")
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
 
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle cd-btn">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
                 <a class="navbar-brand" href="~/"><img src="~/Content/images/logos/nav-logo-@(Utilities.languageIsActive()).png"></a>
             </div>

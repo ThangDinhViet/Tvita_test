@@ -1,6 +1,5 @@
 ﻿nav.navbar {
     margin: 0;
-    height: 100px;
     background-color: #72BE44;
 }
 
@@ -40,19 +39,20 @@
     box-shadow: none;
 }
 
-.span-separate-line{
+.span-separate-line {
     border: none;
     width: 0;
     border-radius: 0 !important;
     padding: 0;
     background-color: transparent;
 }
-.span-separate-line::after{
-    content: " ";
-    /*background-color: #754C24;*/
-    display: block;
-    border-right: 0 solid;
-}
+
+    .span-separate-line::after {
+        content: " ";
+        /*background-color: #754C24;*/
+        display: block;
+        border-right: 0 solid;
+    }
 
 
 .navbar-form span.input-group-addon {
@@ -75,18 +75,81 @@
     line-height: 21px;
 }
 
-.btn-control-language:not(.active){
-    color:#754C24;
-    font-weight: 400;
-    line-height: 20px;
+    .btn-control-language:not(.active) {
+        color: #754C24;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+.navbar-collapse.collapse {
+    display: none !important;
 }
 
-@media (min-width:1919px) {
+nav.navbar {
+    height: 50px;
+}
+
+.navbar-brand > img {
+    height: 40px;
+}
+
+.navbar-header {
+    margin: 0;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+}
+
+.navbar-toggle{
+    float: left;
+    margin-top: 4px;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    border-radius: 0;
+    font-size: 22px;
+    padding-top: 8px;
+    display: block;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background-color: transparent;
+}
+@media (min-width:991px) {
     .nav-subtitle {
         display: block;
         font-size: 16.35px;
         margin-top: 8px;
     }
+}
+
+@media (min-width:1279px) {
+    body{
+        padding-top: 100px;
+    }
+
+    .navbar-collapse.collapse {
+        display: block !important;
+    }
+
+    .navbar-header {
+        margin-top: 8px;
+    }
+
+    nav.navbar {
+        height: 100px;
+    }
+
+    .navbar-brand {
+        padding-top: 15px;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+
+}
+
+@media (min-width:1919px) {
 
     .navbar-left {
         display: table;

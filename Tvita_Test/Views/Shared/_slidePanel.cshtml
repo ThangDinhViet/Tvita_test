@@ -1,0 +1,57 @@
+﻿<link href="@Url.Content("~/Content/slide_panel/css/reset.css")" rel="stylesheet">
+<link href="@Url.Content("~/Content/slide_panel/css/style.css")" rel="stylesheet">
+<div class="cd-panel from-left">
+    <header class="cd-panel-header">
+        <h1>Menu</h1>
+        @*<a href="#0" class="cd-panel-close">Close</a>*@
+    </header>
+    <div class="cd-panel-container">
+        <div class="cd-panel-content">
+           @*****************************************************@
+            <div class="nav-side-menu">
+                <div class="menu-list">
+                    <ul id="menu-content" class="menu-content out">
+                        @*<li>
+                            <a href="#">
+                                <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                            </a>
+                        </li>*@
+                        <li data-toggle="collapse" data-target="#products" class="collapsed">
+                            <a href="#"> Giới thiệu <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="products">
+                            <li class="active"><a href="#">Lịch sử hình thành</a></li>
+                            <li><a href="#">Tầm nhìn - sứ mệnh</a></li>
+                            <li><a href="#">Tiêu chuẩn chất lượng</a></li>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#service" class="collapsed">
+                            <a href="#"> Sản phẩm <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="service">
+                            <li><a href="#">Sản phẩm tươi</a></li>
+                            <li><a href="#">Sản phẩm chế biến</a></li>
+                        </ul>
+
+                        <li>
+                            <a href="#"> Tin tức </a>
+                        </li>
+
+                        <li>
+                            <a href="#"> Công nghệ </a>
+                        </li>
+
+                        <li>
+                            <a href="#"> Vào bếp cùng T.Vita </a>
+                        </li>
+
+                        <li>
+                            <a href="#"> Phát triển cộng đông</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @************************************************************************@
+        </div>
+    </div>
+</div>
