@@ -224,28 +224,34 @@ function checkChatInView() {
 }
 
 $.fn.isInViewport = function (_type) {
-    var elementLeft = $(this).offset().left;
-    var elementRight = elementLeft + $(this).outerWidth();
+    try {
+        if (!$(this).offset()) return;
+        var elementLeft = $(this).offset().left;
+        var elementRight = elementLeft + $(this).outerWidth();
 
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
 
-    var viewportLeft = $(window).scrollLeft();
-    var viewportRight = viewportLeft + $(window).width();
+        var viewportLeft = $(window).scrollLeft();
+        var viewportRight = viewportLeft + $(window).width();
 
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
 
-    switch (_type) {
-        case 'horizontal':
-            return (elementBottom > viewportTop && elementTop < viewportBottom)
-            break;
-        case 'vertical':
-            return (elementRight > viewportLeft && elementLeft < viewportRight)
-            break;
-        default:
-            return (elementRight > viewportLeft && elementLeft < viewportRight && elementBottom > viewportTop && elementTop < viewportBottom)
-            break;
+        switch (_type) {
+            case 'horizontal':
+                return (elementBottom > viewportTop && elementTop < viewportBottom)
+                break;
+            case 'vertical':
+                return (elementRight > viewportLeft && elementLeft < viewportRight)
+                break;
+            default:
+                return (elementRight > viewportLeft && elementLeft < viewportRight && elementBottom > viewportTop && elementTop < viewportBottom)
+                break;
+        }
+    } catch (e) {
+        console.error(e);
+        return false;
     }
 };
 

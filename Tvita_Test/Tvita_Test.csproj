@@ -356,6 +356,7 @@
     <Content Include="Content\css\product.css" />
     <Content Include="Content\css\product_detail.css" />
     <Content Include="Content\css\details.css" />
+    <Content Include="Content\css\tvita_navbar.css" />
     <Content Include="Content\css\value.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -623,6 +624,7 @@
     <Content Include="Views\Distribution\Index.cshtml" />
     <Content Include="Views\Shared\_iframe.cshtml" />
     <Content Include="Views\Technology\getContent.cshtml" />
+    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
