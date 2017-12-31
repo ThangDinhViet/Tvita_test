@@ -9,6 +9,65 @@
 
 </head>
 <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="~/"><img src="~/Content/images/logos/nav-logo-@(Utilities.languageIsActive()).png"></a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-collapsible">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown @(Utilities.menuIsActive("Home", "About") ? "active" : "")">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("About"))</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">@(Utilities.Translate("VisionAndMission"))</a></li>
+                            @*<li class="divider"></li>
+                <li><a href="#">Chuỗi giá trị</a></li>*@
+                            <li class="divider"></li>
+                            <li><a href="@(Url.Action("Quality", "About"))" class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")">@(Utilities.Translate("Quality"))</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown @(Utilities.menuIsActive("Home", "Product") ? "active" : "")">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("Products"))</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Fresh", "Product")" class="@(Utilities.menuIsActive("Product", "Fresh") ? "active" : "")">@(Utilities.Translate("FreshProducts"))</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("Processed", "Product")" class="@(Utilities.menuIsActive("Product", "Processed") ? "active" : "")">@(Utilities.Translate("ProcessedProducts"))</a></li>
+                        </ul>
+                    </li>
+                    <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("News"), "Index", "News")</li>
+                    <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("Technology"), "Index", "Technology")</li>
+                    <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "GotoKitchen"))"><span>@(Utilities.Translate("GotoKitchen"))</span> <span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
+                    <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "CommunityDevelopment"))"><span>@(Utilities.Translate("Development"))</span> <span class="nav-subtitle">@(Utilities.Translate("Community"))</span></a></li>
+                </ul>
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group" style="display:inline;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Tìm kiếm">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                            <span class="input-group-addon span-separate"></span>
+                            <span class="input-group-addon btn-control-language @(Utilities.languageIsActive().ToUpper() == "VI" ? "active": "")" data-lang="vi">VI</span>
+                            <span class="input-group-addon span-separate-line">|</span>
+                            <span class="input-group-addon btn-control-language @(Utilities.languageIsActive().ToUpper() == "EN" ? "active": "")" data-lang="en">EN</span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </nav>
     
     @{
         if (ViewBag.HotNew == true)
@@ -18,6 +77,7 @@
             </div>
         }
     }
+
     <div class="container-fluid body-content">
         <div class="row">
             @RenderBody()

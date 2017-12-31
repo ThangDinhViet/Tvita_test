@@ -32,6 +32,7 @@ namespace Tvita_Test
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
                       "~/Content/site.css",
+                      "~/Content/css/tvita_navbar.css",
                       "~/Content/slideshow/slideshow.css"));
         }
     }

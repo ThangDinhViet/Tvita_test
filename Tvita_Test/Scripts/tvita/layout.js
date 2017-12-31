@@ -89,23 +89,8 @@ $(document).ready(function () {
     })
 
 
-    function checkPositionMenu(e) {
-        var showSlide = !$('.navbar-toggle').is(':hidden');
-        if (showSlide) {
-            $('ul.navbar-nav').css({
-                'margin-top': $('html')[0].scrollTop
-            })
-        } else {
-            $('ul.navbar-nav').css({
-                'margin-top': 20
-            })
-        }
-    }
-
-
     $(window).on('scroll resize', function (e) {
         checkChatInView();
-        checkPositionMenu(e);
     })
 
     checkChatInView();
