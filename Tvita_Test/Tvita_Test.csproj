@@ -394,6 +394,8 @@
     <Content Include="Content\slideshow\images\play.png" />
     <Content Include="Content\slideshow\images\previous.png" />
     <Content Include="Content\slideshow\slideshow.css" />
+    <Content Include="Content\slide_panel\css\style.css" />
+    <Content Include="Content\slide_panel\js\main.js" />
     <Content Include="Content\sprite.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -632,8 +634,6 @@
     <Folder Include="Areas\Admin\AdminUltility\" />
     <Folder Include="Areas\Admin\Content\picture\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Content\slide_panel\css\" />
-    <Folder Include="Content\slide_panel\js\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
