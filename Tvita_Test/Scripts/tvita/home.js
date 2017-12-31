@@ -4,7 +4,7 @@
     })
 
     $('#home-slideshow').slideShow({
-        auto: false,
+        auto: true,
         interval: 10000,
         parent: '.slide-show-container',
         autoPlayVideo: true

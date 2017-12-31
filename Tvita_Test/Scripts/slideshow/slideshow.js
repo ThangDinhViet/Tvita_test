@@ -1,11 +1,11 @@
 /*Author: nguyennngocson.it@gmail.com */
 $.fn.slideShow = function (_options) {
-    const standard = { width: 1920, height: 899 };
+    const min_height = 170;
     var options = {};
     if (_options) {
         $.extend(options, _options);
     }
-
+    const standard = options.containerDimension || { width: 1920, height: 899 };
     var handle_play_dimension = {},
         handle_previous_dimension = {},
         handle_next_dimension = {};
@@ -34,6 +34,9 @@ $.fn.slideShow = function (_options) {
     function _calcDimention(callback) {
         var scale = $(window).width() / standard.width;
         var height = scale * standard.height;
+        if (height < min_height) {
+            height = min_height;
+        }
         var width = $(window).width();
         container = self.find('.ss-container').length > 0 ? self.find('.ss-container') : self;
         container.height(height);
@@ -178,9 +181,6 @@ $.fn.slideShow = function (_options) {
         }
         $(elements[_index]).find('img').hide();
         $(elements[_index]).fadeIn(function () {
-            if ($(elements[_index]).find('img').height() < $(elements[_index]).height()) {
-                $(elements[_index]).find('img').height($(elements[_index]).height())
-            }
             $(elements[_index]).find('img').fadeIn();
             if ($(elements[_index]).hasClass('ss-video')) {
                 handlePlay.fadeIn();
