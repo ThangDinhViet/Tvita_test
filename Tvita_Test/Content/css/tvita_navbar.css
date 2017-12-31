@@ -111,6 +111,7 @@ nav.navbar {
     font-size: 22px;
     padding-top: 8px;
     display: block;
+    margin-left: 5px;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
