@@ -387,7 +387,7 @@ a.btn-more-info {
     background-color: transparent;
 }
 
-body.modal-open #page-content, body.modal-open #slide-nav, body.modal-open .talk-with-me {
+body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-with-me {
     -webkit-filter: blur(7px);
     -moz-filter: blur(15px);
     -o-filter: blur(15px);
