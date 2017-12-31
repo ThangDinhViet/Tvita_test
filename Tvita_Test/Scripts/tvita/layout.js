@@ -163,7 +163,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.btn-control-language').unbind().bind('click', function () {
+    $('.btn-control-language, .btn-language').unbind().bind('click', function () {
         var lang = $(this).attr('data-lang');
         changeLaguage(lang);
     })

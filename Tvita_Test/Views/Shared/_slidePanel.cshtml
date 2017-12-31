@@ -1,5 +1,4 @@
-﻿<link href="@Url.Content("~/Content/slide_panel/css/reset.css")" rel="stylesheet">
-<link href="@Url.Content("~/Content/slide_panel/css/style.css")" rel="stylesheet">
+﻿<link href="@Url.Content("~/Content/slide_panel/css/style.css")" rel="stylesheet">
 <div class="cd-panel from-left">
     <header class="cd-panel-header">
         <div class="input-group">
@@ -11,10 +10,10 @@
 
             </span>
             <span class="input-group-btn btn-language-c1">
-                <button class="btn btn-default btn-language" type="button">VI</button>
+                <button class="btn btn-default btn-language" data-lang="vi" type="button">VI</button>
             </span>
             <span class="input-group-btn btn-language-c2">
-                <button class="btn btn-default btn-language" type="button">EN</button>
+                <button class="btn btn-default btn-language" data-lang="en" type="button">EN</button>
             </span>
         </div>
         @*<a href="#0" class="cd-panel-close">Close</a>*@
@@ -31,7 +30,7 @@
                                 </a>
                             </li>*@
                         <li data-toggle="collapse" data-target="#products" class="collapsed">
-                            <a href="#"> Giới thiệu <span class="arrow"></span></a>
+                            <a href="#"> @Utilities.Translate("About") <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="products">
                             <li class="@(Utilities.menuIsActive("About", "History") ? "active" : "")"><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>
@@ -40,27 +39,27 @@
                         </ul>
 
                         <li data-toggle="collapse" data-target="#service" class="collapsed">
-                            <a href="#"> Sản phẩm <span class="arrow"></span></a>
+                            <a href="#"> @Utilities.Translate("Products") <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="service">
                             <li class="@(Utilities.menuIsActive("Product", "Fresh") ? "active" : "")"><a href="@Url.Action("Fresh", "Product")">@(Utilities.Translate("FreshProducts"))</a></li>
                             <li class="@(Utilities.menuIsActive("Product", "Processed") ? "active" : "")"><a href="@Url.Action("Processed", "Product")">@(Utilities.Translate("ProcessedProducts"))</a></li>
                         </ul>
 
-                        <li>
-                            <a href="#"> Tin tức </a>
+                        <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "News")"> @Utilities.Translate("News") </a>
                         </li>
 
-                        <li>
-                            <a href="#"> Công nghệ </a>
+                        <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "Technology")"> @Utilities.Translate("Technology") </a>
                         </li>
 
-                        <li>
-                            <a href="#"> Vào bếp cùng T.Vita </a>
+                        <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "GotoKitchen")"> @Utilities.Translate("GotoKitchen") @Utilities.Translate("WithTvita") </a>
                         </li>
 
-                        <li>
-                            <a href="#"> Phát triển cộng đông</a>
+                        <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")">
+                            <a href="@Url.Action("Index", "CommunityDevelopment")"> @Utilities.Translate("Development")</a>
                         </li>
                     </ul>
                 </div>
