@@ -192,6 +192,20 @@ $(document).ready(function () {
     });
 
 
+    $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').on('keyup', function (e) {
+        var searchtext = $(this).val();
+        $('.gg-search').find('input[type="text"]').val(searchtext);
+        if (e.keyCode == 13) {
+            $('.gg-search').find('input.gsc-search-button').trigger('click');
+            $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').val('');
+        }
+    })
+
+    $('.cd-panel-header button[type="button"], .navbar-form.navbar-right input.form-control + span.input-group-addon').on('click', function () {
+        $('.gg-search').find('input.gsc-search-button').trigger('click');
+        $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').val('');
+    })
+
 });
 
 function checkChatInView() {

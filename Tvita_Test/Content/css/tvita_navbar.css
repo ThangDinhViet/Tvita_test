@@ -232,4 +232,5 @@ nav.navbar {
     .navbar-form.navbar-right .input-group input + span.input-group-addon {
         border-left: none;
         background-color: #fff;
+        cursor: pointer;
     }

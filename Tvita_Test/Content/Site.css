@@ -710,3 +710,9 @@ body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-wi
         padding: 15px;
     }
 }
+
+.gg-search{
+    position: absolute;
+    top: 0;
+    height: 0px;
+}
