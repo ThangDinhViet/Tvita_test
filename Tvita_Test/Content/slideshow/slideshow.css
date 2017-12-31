@@ -5,10 +5,12 @@
 
 .ss-container {
     overflow: hidden;
+    position: relative
 }
 
 .ss-item {
     height: 100%;
+    min-height: 170px;
 }
 
 .ss-handle-play,
@@ -46,6 +48,9 @@
 
 .ss-item-cover {
     width: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 @media (min-width: 420px) {}

@@ -1,6 +1,6 @@
-.slide-show-container {
-    height: 500px;
-}
+/*.slide-show-container {
+    min-height: 300px;
+}*/
 
 .ss-caption-container {
     position: absolute;

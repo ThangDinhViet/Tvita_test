@@ -1,10 +1,11 @@
 /*Author: nguyennngocson.it@gmail.com */
-$.fn.slideShow = function(_options) {
+$.fn.slideShow = function (_options) {
+    const min_height = 170;
     var options = {};
     if (_options) {
         $.extend(options, _options);
     }
-
+    const standard = options.containerDimension || { width: 1920, height: 899 };
     var handle_play_dimension = {},
         handle_previous_dimension = {},
         handle_next_dimension = {};
@@ -31,9 +32,15 @@ $.fn.slideShow = function(_options) {
 
 
     function _calcDimention(callback) {
+        var scale = $(window).width() / standard.width;
+        var height = scale * standard.height;
+        if (height < min_height) {
+            height = min_height;
+        }
+        var width = $(window).width();
         container = self.find('.ss-container').length > 0 ? self.find('.ss-container') : self;
-        container.height($(options.parent).height());
-        self.find('.ss-caption-container').height($(options.parent).height());
+        container.height(height);
+        self.find('.ss-caption-container').height(height);
 
         let hP = $('<div class="ss-handle-play"></div>').css({ display: 'none' });
         $('body').append(hP);
@@ -63,18 +70,18 @@ $.fn.slideShow = function(_options) {
         hN.remove();
 
         handlePrevious.css({
-            top: (container.outerHeight() / 2) - (handle_previous_dimension.height / 2),
+            top: (height / 2) - (handle_previous_dimension.height / 2),
             left: 70
         });
 
         handleNext.css({
-            top: (container.outerHeight() / 2) - (handle_next_dimension.height / 2),
+            top: (height / 2) - (handle_next_dimension.height / 2),
             right: 70
         })
 
         handlePlay.css({
-            top: (container.outerHeight() / 2) - (handle_play_dimension.height / 2),
-            left: (container.outerWidth() / 2) - (handle_play_dimension.width / 2)
+            top: (height / 2) - (handle_play_dimension.height / 2),
+            left: (width / 2) - (handle_play_dimension.width / 2)
         })
 
         if (callback) callback();
@@ -85,7 +92,7 @@ $.fn.slideShow = function(_options) {
     if (count > 0) {
         handlePlay.hide();
 
-        handlePrevious.on('click', function() {
+        handlePrevious.on('click', function () {
             handlePlay.fadeOut();
             $(elements[slideSelected]).fadeOut();
             slideSelected -= 1;
@@ -95,13 +102,13 @@ $.fn.slideShow = function(_options) {
             _handleGotoSlide(slideSelected)
         })
 
-        handleNext.on('click', function() {
+        handleNext.on('click', function () {
             _next();
         })
 
         var videoFrame = $('<div id="ss-video-placeholder"></div>');
         self.append(videoFrame);
-        handlePlay.on('click', function() {
+        handlePlay.on('click', function () {
             clearInterval(Interval);
             var item = elements[slideSelected];
             var videoId = $(item).attr('data-url').split('/')[$(item).attr('data-url').split('/').length - 1];
@@ -132,20 +139,20 @@ $.fn.slideShow = function(_options) {
 
         if (options.autoPlayVideo && $(elements[0]).hasClass('ss-video')) {
             IntervalInit = setInterval(function () {
-                try{
+                try {
                     handlePlay.trigger('click');
                 } catch (ex) {
                 }
             }, 1000)
-            
+
         }
-        $.each(elements, function(k, item) {
+        $.each(elements, function (k, item) {
 
         })
 
         clearInterval(Interval);
         if (options.auto == true) {
-            Interval = setInterval(function() {
+            Interval = setInterval(function () {
                 _next();
             }, options.interval)
         }
@@ -164,7 +171,7 @@ $.fn.slideShow = function(_options) {
     function _handleGotoSlide(_index) {
         clearInterval(Interval);
         if (options.auto == true) {
-            Interval = setInterval(function() {
+            Interval = setInterval(function () {
                 _next();
             }, options.interval)
         }
@@ -173,10 +180,7 @@ $.fn.slideShow = function(_options) {
             $(player.a).hide();
         }
         $(elements[_index]).find('img').hide();
-        $(elements[_index]).fadeIn(function() {
-            if ($(elements[_index]).find('img').height() < $(elements[_index]).height()) {
-                $(elements[_index]).find('img').height($(elements[_index]).height())
-            }
+        $(elements[_index]).fadeIn(function () {
             $(elements[_index]).find('img').fadeIn();
             if ($(elements[_index]).hasClass('ss-video')) {
                 handlePlay.fadeIn();
@@ -194,12 +198,12 @@ $.fn.slideShow = function(_options) {
     function stateChange(evt) {
         videoPlaying = evt.data == 1;
         if (!videoPlaying) {
-            setTimeout(function() {
+            setTimeout(function () {
                 handlePrevious.fadeIn();
                 handleNext.fadeIn();
             }, 300);
         } else {
-            setTimeout(function() {
+            setTimeout(function () {
                 handlePrevious.fadeOut();
                 handleNext.fadeOut();
             }, 1500);
@@ -207,14 +211,7 @@ $.fn.slideShow = function(_options) {
     }
 
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         _calcDimention();
-        setTimeout(function() {
-            if ($(elements[slideSelected]).find('img').height() <= $(elements[slideSelected]).height()) {
-                $(elements[slideSelected]).find('img').height($(elements[slideSelected]).height())
-            } else {
-                $(elements[slideSelected]).find('img').height('initial')
-            }
-        }, 0)
     })
 }

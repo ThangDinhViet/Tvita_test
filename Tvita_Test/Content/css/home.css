@@ -268,9 +268,9 @@
         outline: none;
     }
 
-.slide-show-container {
+/*.slide-show-container {
     height: 500px;
-}
+}*/
 
 @media (min-width: 420px) {
     .product .product-title,
