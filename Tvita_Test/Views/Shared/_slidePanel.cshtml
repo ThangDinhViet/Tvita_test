@@ -10,10 +10,10 @@
 
             </span>
             <span class="input-group-btn btn-language-c1">
-                <button class="btn btn-default btn-language" data-lang="vi" type="button">VI</button>
+                <button class="btn btn-default btn-language@(Utilities.languageIsActive().ToUpper() == "VI" ? " active": "")" data-lang="vi" type="button">VI</button>
             </span>
             <span class="input-group-btn btn-language-c2">
-                <button class="btn btn-default btn-language" data-lang="en" type="button">EN</button>
+                <button class="btn btn-default btn-language@(Utilities.languageIsActive().ToUpper() == "EN" ? " active": "")" data-lang="en" type="button">EN</button>
             </span>
         </div>
         @*<a href="#0" class="cd-panel-close">Close</a>*@

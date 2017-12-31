@@ -143,6 +143,7 @@ a.btn-more-info {
     bottom: 0;
     right: 0;
     z-index: 99;
+    width: 100%;
     /*display: none;*/
 }
 
@@ -303,6 +304,11 @@ a.btn-more-info {
     padding: 0 0 10px 50px;
 }
 
+@media (min-width: 480px) {
+    .talk-with-me {
+        width: 300px;
+    }
+}
 
 @media (min-width: 640px) {
     .container {
@@ -317,10 +323,6 @@ a.btn-more-info {
 
     .talk-with-me {
         display: block;
-    }
-
-    .talk-with-me {
-        width: 300px;
     }
 }
 

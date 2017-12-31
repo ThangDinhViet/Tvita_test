@@ -471,3 +471,9 @@
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
+.cd-panel-header .input-group .btn-language.active{
+    color: #fff;
+    font-weight: bold;
+    background-color: #64b036;
+
+}
