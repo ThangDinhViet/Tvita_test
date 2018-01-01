@@ -3,16 +3,11 @@
 }
 
 .farm-tech {
-    min-height: 560px;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-    .farm-tech .r-item {
-        min-height: 400px;
-    }
-
     .farm-tech .item-container {
-        height: 275px;
         width: 100%;
         overflow: hidden;
         display: inline-block;
@@ -20,7 +15,7 @@
     }
 
         .farm-tech .item-container .item {
-            height: 275px;
+            /*height: 275px;*/
             overflow: hidden;
             color: #333;
             font-weight: 100;
@@ -49,26 +44,28 @@
         .farm-tech .item-container img {
             z-index: 4;
             width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
         }
 
     .farm-tech .caption-item {
         z-index: 10;
-        position: absolute;
-        top: 300px;
+        padding-top: 20px;
         width: 100%;
         text-align: center;
-        left: 0;
         font-weight: initial;
         font-size: 20px;
+        padding-bottom: 40px;
     }
 
     .farm-tech .item-container .title-item {
         font-size: 40px;
         color: #fff;
-        line-height: 275px;
+        /* line-height: 275px; */
         z-index: 10;
         position: absolute;
-        top: 0;
+        /* top: 0; */
         text-align: center;
         width: 100%;
         left: 0;
@@ -76,6 +73,10 @@
         font-weight: 900;
         letter-spacing: 1px;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+        margin-left: auto;
+        margin-right: auto;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
 .product {
@@ -279,6 +280,11 @@
     }
 }
 
+@media (min-width: 767px){
+    .farm-tech .caption-item{
+        padding-bottom: 0;
+    }
+}
 
 @media (min-width: 867px) {
     .product .product-title,
@@ -329,7 +335,7 @@
     color: inherit;
 }
 
-.list-thumb{
+.list-thumb {
     background-color: #fff;
     padding-top: 60px;
 }
