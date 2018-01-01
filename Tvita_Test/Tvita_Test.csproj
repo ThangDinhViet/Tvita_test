@@ -565,6 +565,8 @@
     <Content Include="Scripts\tvita\getContent.js" />
     <Content Include="Views\Editor\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Tvita_Test.pubxml" />
+    <Content Include="Scripts\i18n\lang\tvita-en.json" />
+    <Content Include="Scripts\i18n\lang\tvita-vi.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\iframe_api.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -634,6 +636,8 @@
     <Folder Include="Areas\Admin\AdminUltility\" />
     <Folder Include="Areas\Admin\Content\picture\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Scripts\i18n\libs\" />
+    <Folder Include="Scripts\i18n\src\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>

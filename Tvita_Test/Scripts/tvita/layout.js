@@ -206,6 +206,8 @@ $(document).ready(function () {
         $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').val('');
     })
 
+    updateLanguage($('[data-lang].active').attr('data-lang'));
+
 });
 
 function checkChatInView() {
@@ -274,4 +276,12 @@ function changeLaguage(_lang) {
             }
         }
     });
+}
+
+function updateLanguage(_language) {
+    'use strict';
+    var i18n = $.i18n();
+    i18n.locale = _language;
+    i18n.load(Config.AppUrl + '/Scripts/i18n/lang/tvita-' + i18n.locale + '.json', i18n.locale);
+    //how to use?: $.i18n('welcome')
 }
