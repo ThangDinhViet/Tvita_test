@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Lịch sử hình thành";
+    ViewBag.Title = "Tầm nhìn sứ mệnh";
 }
 
 <link href="@Url.Content("~/Content/css/history.css")" rel="stylesheet">
@@ -21,11 +21,7 @@
     <div class="row">
         <div class="content-container">
             <div class="content">
-                <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nos Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                <span class="illustration">
-                    <img src="@Url.Content("~/Content/images/photos/grapes.png")">
-                </span>
-                <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nos Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
+                <img class="" src="@Url.Content("~/Content/images/photos/VisionAndMission.png")" style="width: 100%;">
             </div>
             <div class="related-articles">
                 <div class="list-title">
@@ -35,7 +31,7 @@
                     <ul>
                         <li class="@(Utilities.menuIsActive("History", "About") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("History", "About")">Lịch sử hình thành</a></li>
                         <li class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("VisionAndMission", "About")">Tầm nhìn - sứ mệnh</a></li>
-                        @*<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Chuỗi giá trị</a></li>*@
+                        <li class="@(Utilities.menuIsActive("Home", "Value") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("Value", "Home")">Chuỗi giá trị</a></li>
                         <li class="@(Utilities.menuIsActive("Quality", "About") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("Quality", "About")">Tiêu chuẩn chất lượng</a></li>
                     </ul>
                 </div>
