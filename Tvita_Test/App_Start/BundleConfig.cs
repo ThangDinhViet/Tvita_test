@@ -19,6 +19,15 @@ namespace Tvita_Test
                         "~/Scripts/tvita/layout.js",
                         "~/Scripts/slideshow/slideshow.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/multilanguage").Include(
+                        "~/Scripts/i18n/libs/CLDRPluralRuleParser/src/CLDRPluralRuleParser.js",
+                        "~/Scripts/i18n/src/jquery.i18n.js",
+                        "~/Scripts/i18n/src/jquery.i18n.messagestore.js",
+                        "~/Scripts/i18n/src/jquery.i18n.fallbacks.js",
+                        "~/Scripts/i18n/src/jquery.i18n.parser.js",
+                        "~/Scripts/i18n/src/jquery.i18n.emitter.js",
+                        "~/Scripts/i18n/src/jquery.i18n.language.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
