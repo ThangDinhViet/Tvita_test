@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body data-language="@Utilities.languageIsActive()">
     <script>
         (function () {
             var cx = '000660179539483022890:7nz0y2enf0u';
@@ -38,7 +38,7 @@
             <div class="navbar-collapse collapse" id="navbar-collapsible">
                 <ul class="nav navbar-nav navbar-left">
                     <li class="dropdown @(Utilities.menuIsActive("Home", "About") ? "active" : "")">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("About"))</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("Introduction"))</a>
                         <ul class="dropdown-menu">
                             <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
                             <li class="divider"></li>
@@ -66,7 +66,7 @@
                 <div class="navbar-form navbar-right">
                     <div class="form-group" style="display:inline;">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Tìm kiếm">
+                            <input type="text" class="form-control" placeholder="@Utilities.Translate("Find")">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
                             <span class="input-group-addon span-separate"></span>
                             <span class="input-group-addon btn-control-language @(Utilities.languageIsActive().ToUpper() == "VI" ? "active": "")" data-lang="vi">VI</span>
@@ -131,18 +131,18 @@
                 <div class="row f-row">
                     <div class="col-xs-6 col-md-6 col-lg-3 ttgroup">
                         <div class="about">
-                            <h6 class="about-title">Tập đoàn T&T</h6>
+                            <h6 class="about-title">@(Utilities.Translate("TTGroup"))</h6>
                             <label class="short-content">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
                             </label>
-                            <a href="http://ttgroup.com.vn" class="btn-more-info">Xem thêm</a>
+                            <a href="http://ttgroup.com.vn" class="btn-more-info">@(Utilities.Translate("ViewMore"))</a>
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-6 col-lg-9 tvita">
                         <div class="menu-list row">
                             <div class="col-lg-20">
                                 <div class="list-mnu">
-                                    <h6 class="about-title">Về T.Vita</h6>
+                                    <h6 class="about-title">@(Utilities.Translate("AboutTVita"))</h6>
                                     <ul>
                                         <li><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>
                                         <li><a href="@(Url.Action("VisionAndMission", "About"))">@(Utilities.Translate("VisionAndMission"))</a></li>
@@ -182,7 +182,7 @@
                             </div>
                             <div class="col-lg-20">
                                 <div class="list-mnu">
-                                    <h6 class="about-title">Phân phối</h6>
+                                    <h6 class="about-title">@Utilities.Translate("Distribution")</h6>
                                     <ul>
                                         <li><a href="@Url.Action("Index", "Distribution")">Nội địa</a></li>
                                         <li><a href="@Url.Action("Index", "Distribution")">Quốc tế</a></li>
@@ -229,7 +229,7 @@
                 </span>
             </div>
             <div class="input-group name-input">
-                <input id="myName" type="text" class="form-control" placeholder="Nhập tên của bạn">
+                <input id="myName" type="text" class="form-control" placeholder="@Utilities.Translate("InputYourName")">
                 <span class="input-group-btn">
                     <button class="btn btn-secondary handle-name" type="button">OK</button>
                 </span>

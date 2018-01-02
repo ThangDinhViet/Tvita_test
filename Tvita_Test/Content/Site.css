@@ -465,6 +465,13 @@ body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-wi
     background-position: center;
     min-height: 60px;
 }
+body[data-language="en"] .ttgroup{
+    background-image: url(./images/footer/t&t-group-logo-en.png);
+}
+
+body[data-language="en"] .tvita{
+     background-image: url(./images/footer/tvita-logo-footer-en.png);
+}
 
     .ttgroup .about {
         text-align: justify;

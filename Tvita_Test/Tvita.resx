@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>Giới thiệu</value>
+  <data name="AboutTVita" xml:space="preserve">
+    <value>Về T.Vita</value>
   </data>
   <data name="Community" xml:space="preserve">
     <value>Cộng đồng</value>
@@ -143,6 +143,12 @@
   </data>
   <data name="HotNews" xml:space="preserve">
     <value>Tin tức nổi bật</value>
+  </data>
+  <data name="InputYourName" xml:space="preserve">
+    <value>Nhập tên của bạn</value>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>Giới thiệu</value>
   </data>
   <data name="LoadMoreArticles" xml:space="preserve">
     <value>Nhiều bài viết hơn</value>
@@ -171,6 +177,9 @@
   <data name="Technology" xml:space="preserve">
     <value>Công nghệ</value>
   </data>
+  <data name="TTGroup" xml:space="preserve">
+    <value>Tập đoàn T&amp;T</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Chuỗi giá trị</value>
   </data>
@@ -182,5 +191,11 @@
   </data>
   <data name="WithTvita" xml:space="preserve">
     <value>Cùng T.vita</value>
+  </data>
+  <data name="Distribution" xml:space="preserve">
+    <value>Phân phối</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Tìm kiếm</value>
   </data>
 </root>

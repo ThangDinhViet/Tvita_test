@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Sản phẩm tươi";
+    ViewBag.Title = Utilities.Translate("FreshProducts");
     ViewBag.showCertificate = true;
 }
 <link href="@Url.Content("~/Content/css/product.css")" rel="stylesheet">
@@ -10,7 +10,7 @@
         <div class="product-cover">
             <img src="@Url.Content("~/Content/images/photos/transparent-1919x594.png")" style="background-image: url(@Url.Content("~/Content/images/photos/agence-producteurs-locaux-damien-kuhn.jpg"))">
             <div class="product-cover-title">
-                <span>Sản phẩm</span>
+                <span>@Utilities.Translate("Products")</span>
             </div>
         </div>
     </div>
@@ -18,15 +18,15 @@
 
 <div class="container">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Sản phẩm tươi</li>
+        <li class="breadcrumb-item"><a href="#">@Utilities.Translate("HomePage")</a></li>
+        <li class="breadcrumb-item active">@Utilities.Translate("FreshProducts")</li>
     </ol>
     <div class="row">
         <div class="content-container">
             <div class="content">
                 <div class="row">
                     <div class="product-type">
-                        <span>Sản phẩm tươi</span>
+                        <span>@Utilities.Translate("FreshProducts")</span>
                     </div>
                 </div>
                 <div class="list-product">
@@ -118,14 +118,14 @@
             </div>
             <div class="related-articles">
                 <div class="list-title">
-                    <span>Sản phẩm</span>
+                    <span>@Utilities.Translate("Products")</span>
                 </div>
                 <div class="related-list-item">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sản phẩm tươi</a>
+                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @Utilities.Translate("FreshProducts")</a>
                                 </h4>
                             </div>
                             <div id="collapse1" class="panel-collapse collapse in">
@@ -149,7 +149,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse2"> <i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sản phẩm chế biến</a>
+                                    <a data-toggle="collapse" href="#collapse2"> <i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @Utilities.Translate("ProcessedProducts")</a>
                                 </h4>
                             </div>
                             <div id="collapse2" class="panel-collapse collapse in">

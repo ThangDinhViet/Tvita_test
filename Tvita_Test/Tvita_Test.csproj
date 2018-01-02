@@ -628,7 +628,6 @@
     <Content Include="Views\Distribution\Index.cshtml" />
     <Content Include="Views\Shared\_iframe.cshtml" />
     <Content Include="Views\Technology\getContent.cshtml" />
-    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Shared\_slidePanel.cshtml" />
   </ItemGroup>
   <ItemGroup>

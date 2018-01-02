@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Trang chủ";
+    ViewBag.Title = Utilities.Translate("HomePage");
     ViewBag.HotNew = true;
     ViewBag.showCertificate = true;
 }
@@ -174,7 +174,7 @@
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
                     </div>
                     <div class="n-view-more">
-                        <a href="@(Url.Action("Details", "News"))">Xem thêm</a>
+                        <a href="@(Url.Action("Details", "News"))"> @Utilities.Translate("ViewMore")</a>
                     </div>
                 </div>
             </div>
@@ -190,7 +190,7 @@
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
                     </div>
                     <div class="n-view-more">
-                        <a href="@(Url.Action("Details", "News"))">Xem thêm</a>
+                        <a href="@(Url.Action("Details", "News"))">@Utilities.Translate("ViewMore")</a>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
                     </div>
                     <div class="n-view-more">
-                        <a href="@(Url.Action("Details", "News"))">Xem thêm</a>
+                        <a href="@(Url.Action("Details", "News"))">@Utilities.Translate("ViewMore")</a>
                     </div>
                 </div>
             </div>

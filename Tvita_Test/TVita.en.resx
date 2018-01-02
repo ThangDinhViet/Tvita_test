@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
+  <data name="AboutTVita" xml:space="preserve">
+    <value>About T.Vita</value>
   </data>
   <data name="Community" xml:space="preserve">
     <value>Community</value>
@@ -143,6 +143,12 @@
   </data>
   <data name="HotNews" xml:space="preserve">
     <value>Hot News</value>
+  </data>
+  <data name="InputYourName" xml:space="preserve">
+    <value>Input your name</value>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>About</value>
   </data>
   <data name="LoadMoreArticles" xml:space="preserve">
     <value>Load more</value>
@@ -171,6 +177,9 @@
   <data name="Technology" xml:space="preserve">
     <value>Technology</value>
   </data>
+  <data name="TTGroup" xml:space="preserve">
+    <value>T&amp;T Group</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Value</value>
   </data>
@@ -182,5 +191,11 @@
   </data>
   <data name="WithTvita" xml:space="preserve">
     <value>With T.vita</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="Distribution" xml:space="preserve">
+    <value>Distribution</value>
   </data>
 </root>

@@ -75,6 +75,10 @@
     line-height: 21px;
 }
 
+.btn-control-language:hover, .btn-control-language:focus{
+    transform: scale(1.1);
+}
+
     .btn-control-language:not(.active) {
         color: #754C24;
         font-weight: 400;
@@ -166,6 +170,7 @@ nav.navbar {
         .navbar-left > li {
             display: table-cell;
         }
+
 }
 
 .nav .open .dropdown-menu {

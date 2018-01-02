@@ -61,11 +61,11 @@ namespace Tvita_Test {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Giới thiệu.
+        ///   Looks up a localized string similar to Về T.Vita.
         /// </summary>
-        public static string About {
+        public static string AboutTVita {
             get {
-                return ResourceManager.GetString("About", resourceCulture);
+                return ResourceManager.GetString("AboutTVita", resourceCulture);
             }
         }
         
@@ -88,11 +88,29 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Phân phối.
+        /// </summary>
+        public static string Distribution {
+            get {
+                return ResourceManager.GetString("Distribution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nông trường.
         /// </summary>
         public static string Farms {
             get {
                 return ResourceManager.GetString("Farms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tìm kiếm.
+        /// </summary>
+        public static string Find {
+            get {
+                return ResourceManager.GetString("Find", resourceCulture);
             }
         }
         
@@ -138,6 +156,24 @@ namespace Tvita_Test {
         public static string HotNews {
             get {
                 return ResourceManager.GetString("HotNews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nhập tên của bạn.
+        /// </summary>
+        public static string InputYourName {
+            get {
+                return ResourceManager.GetString("InputYourName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Giới thiệu.
+        /// </summary>
+        public static string Introduction {
+            get {
+                return ResourceManager.GetString("Introduction", resourceCulture);
             }
         }
         
@@ -219,6 +255,15 @@ namespace Tvita_Test {
         public static string Technology {
             get {
                 return ResourceManager.GetString("Technology", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tập đoàn T&amp;T.
+        /// </summary>
+        public static string TTGroup {
+            get {
+                return ResourceManager.GetString("TTGroup", resourceCulture);
             }
         }
         

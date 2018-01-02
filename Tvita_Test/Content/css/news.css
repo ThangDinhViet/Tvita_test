@@ -107,7 +107,7 @@
     box-shadow: none;
     font-size: 13.23px;
     padding: 0;
-    color: #ccc;
+    color: #72be44;
     padding-top: 53px;
 }
 
@@ -115,7 +115,7 @@
     .js-load-more:focus,
     .js-load-more:active {
         background-color: transparent;
-        color: #ccc;
+        color: #72be44;
         background-image: url(./../images/icons/plus-circle.png);
         outline: none;
     }

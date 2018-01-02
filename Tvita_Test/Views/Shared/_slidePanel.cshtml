@@ -2,7 +2,7 @@
 <div class="cd-panel from-left">
     <header class="cd-panel-header">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Tìm kiếm">
+            <input type="text" class="form-control" placeholder="@Utilities.Translate("Find")">
             <span class="input-group-btn">
                 <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
@@ -30,11 +30,12 @@
                                 </a>
                             </li>*@
                         <li data-toggle="collapse" data-target="#products" class="collapsed">
-                            <a href="#"> @Utilities.Translate("About") <span class="arrow"></span></a>
+                            <a href="#"> @Utilities.Translate("Introduction") <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="products">
                             <li class="@(Utilities.menuIsActive("About", "History") ? "active" : "")"><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>
                             <li class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")"><a href="@(Url.Action("VisionAndMission", "About"))">@(Utilities.Translate("VisionAndMission"))</a></li>
+                            <li class="@(Utilities.menuIsActive("Home", "Value") ? "active" : "")"><a href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
                             <li class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")"><a href="@(Url.Action("Quality", "About"))">@(Utilities.Translate("Quality"))</a></li>
                         </ul>
 
