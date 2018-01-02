@@ -162,7 +162,7 @@ a.btn-more-info {
     color: #fff;
 }
 
-.talk-with-me:not(.open) .twm-title{
+.talk-with-me:not(.open) .twm-title {
     border-bottom: 1px solid #333;
 }
 
@@ -355,6 +355,7 @@ a.btn-more-info {
     .container {
         width: calc(100vw - 640px);
     }
+
     .related-articles .panel-default .list-group-item {
         padding: 0 0 10px 40px;
     }
@@ -465,19 +466,20 @@ body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-wi
     background-position: center;
     min-height: 60px;
 }
-body[data-language="en"] .ttgroup{
+
+body[data-language="en"] .ttgroup {
     background-image: url(./images/footer/t&t-group-logo-en.png);
 }
 
-body[data-language="en"] .tvita{
-     background-image: url(./images/footer/tvita-logo-footer-en.png);
+body[data-language="en"] .tvita {
+    background-image: url(./images/footer/tvita-logo-footer-en.png);
 }
 
-    .ttgroup .about {
-        text-align: justify;
-        margin-top: 80px;
-        display: none;
-    }
+.ttgroup .about {
+    text-align: justify;
+    margin-top: 80px;
+    display: none;
+}
 
 .about-title {
     font-size: 18.28px;
@@ -579,7 +581,15 @@ body[data-language="en"] .tvita{
     padding: 10px;
 }
 
+@media (max-width: 480px) {
+    .ttgroup {
+        width: 60%;
+    }
 
+    .tvita {
+        width: 40%;
+    }
+}
 
 @media (min-width:376px) {
     .ttgroup {
@@ -722,7 +732,7 @@ body[data-language="en"] .tvita{
     }
 }
 
-.gg-search{
+.gg-search {
     position: absolute;
     top: 0;
     height: 0px;
