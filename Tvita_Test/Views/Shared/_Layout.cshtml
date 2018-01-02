@@ -43,8 +43,8 @@
                             <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
                             <li class="divider"></li>
                             <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">@(Utilities.Translate("VisionAndMission"))</a></li>
-                            @*<li class="divider"></li>
-                                <li><a href="#">Chuỗi giá trị</a></li>*@
+                            <li class="divider"></li>
+                            <li><a class="@(Utilities.menuIsActive("Home", "Value") ? "active" : "")" href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
                             <li class="divider"></li>
                             <li><a href="@(Url.Action("Quality", "About"))" class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")">@(Utilities.Translate("Quality"))</a></li>
                         </ul>
@@ -144,16 +144,16 @@
                                 <div class="list-mnu">
                                     <h6 class="about-title">Về T.Vita</h6>
                                     <ul>
-                                        <li><a href="#">Lịch sử hình thành</a></li>
-                                        <li><a href="#">Tầm nhìn - sứ mệnh</a></li>
-                                        <li><a href="#">Chuỗi giá trị</a></li>
-                                        <li><a href="#">Tiêu chuẩn chất lượng</a></li>
+                                        <li><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>
+                                        <li><a href="@(Url.Action("VisionAndMission", "About"))">@(Utilities.Translate("VisionAndMission"))</a></li>
+                                        <li><a href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
+                                        <li><a href="@(Url.Action("Quality", "About"))">@(Utilities.Translate("Quality"))</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-lg-20">
                                 <div class="list-mnu">
-                                    <h6 class="about-title">Nông trường</h6>
+                                    <h6 class="about-title">@(Utilities.Translate("Farms"))</h6>
                                     <ul>
                                         <li><a href="@Url.Action("Farm", "Home")">Lào Cai</a></li>
                                         <li><a href="@Url.Action("Farm", "Home")">Bắc Giang</a></li>
@@ -163,7 +163,7 @@
                             </div>
                             <div class="col-lg-20">
                                 <div class="list-mnu">
-                                    <h6 class="about-title">Công nghệ</h6>
+                                    <h6 class="about-title">@(Utilities.Translate("Technology"))</h6>
                                     <ul>
                                         <li><a href="#">Chế biến</a></li>
                                         <li><a href="#">Thu hoạch</a></li>
@@ -173,16 +173,10 @@
                             </div>
                             <div class="col-lg-20">
                                 <div class="list-mnu">
-                                    <h6 class="about-title">Sản phẩm</h6>
+                                    <h6 class="about-title">@(Utilities.Translate("Products"))</h6>
                                     <ul>
-                                        <li><a href="#">Rau</a></li>
-                                        <li><a href="#">Củ</a></li>
-                                        <li><a href="#">Quả</a></li>
-                                        <li><a href="#">Trái cây</a></li>
-                                        <li><a href="#">Rau gia vị</a></li>
-                                        <li><a href="#">Rau baby</a></li>
-                                        <li><a href="#">Salad</a></li>
-                                        <li><a href="#">Nước ép</a></li>
+                                        <li><a href="@Url.Action("Fresh", "Product")">@(Utilities.Translate("FreshProducts"))</a></li>
+                                        <li><a href="@Url.Action("Processed", "Product")">@(Utilities.Translate("ProcessedProducts"))</a></li>
                                     </ul>
                                 </div>
                             </div>

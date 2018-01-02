@@ -187,6 +187,10 @@ nav.navbar {
     font-size: 20.35px;
 }
 
+.navbar .nav.navbar-nav > li a.active{
+    background-color: #663b10;
+}
+
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     background-color: #8a5c2f;
     outline: none;

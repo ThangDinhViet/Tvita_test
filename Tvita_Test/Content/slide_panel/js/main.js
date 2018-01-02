@@ -5,10 +5,12 @@ jQuery(document).ready(function($){
 		$('.cd-panel').toggleClass('is-visible');
 		if ($('.cd-panel').hasClass('is-visible')) {
 		    $('.cd-btn').addClass('is-visible');
+
+		    $('#menu-content').find('ul.sub-menu').find('li.active').parents('ul.sub-menu.collapse').addClass('in').removeAttr('style');
 		} else {
 		    $('.cd-btn').removeClass('is-visible')
 		}
-		$('body').toggleClass('slide-active', $('.cd-panel').hasClass('is-visible'))
+		$('body').toggleClass('slide-active', $('.cd-panel').hasClass('is-visible'));
 	});
 	//clode the lateral panel
 	$('.cd-panel').on('click', function(event){

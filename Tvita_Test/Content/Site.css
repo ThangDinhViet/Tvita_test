@@ -162,6 +162,10 @@ a.btn-more-info {
     color: #fff;
 }
 
+.talk-with-me:not(.open) .twm-title{
+    border-bottom: 1px solid #333;
+}
+
 .twm-content {
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
