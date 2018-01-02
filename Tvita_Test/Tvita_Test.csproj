@@ -228,6 +228,7 @@
     </Compile>
     <Compile Include="LanguageMang.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Common.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoadMoreParam.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -629,6 +630,11 @@
     <Content Include="Views\Shared\_iframe.cshtml" />
     <Content Include="Views\Technology\getContent.cshtml" />
     <Content Include="Views\Shared\_slidePanel.cshtml" />
+    <Content Include="Views\Technology\templates\template1.cshtml" />
+    <Content Include="Views\Technology\templates\grid_2x2\_part1.cshtml" />
+    <Content Include="Views\Technology\templates\grid_2x2\_part2.cshtml" />
+    <Content Include="Views\Technology\templates\grid_2x2\_part3.cshtml" />
+    <Content Include="Views\Technology\templates\grid_2x2\_part4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -638,6 +644,7 @@
     <Folder Include="Scripts\i18n\libs\" />
     <Folder Include="Scripts\i18n\src\" />
     <Folder Include="Upload\" />
+    <Folder Include="Views\Technology\templates\grid_1x2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

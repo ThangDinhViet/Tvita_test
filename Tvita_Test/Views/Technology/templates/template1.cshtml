@@ -1,0 +1,28 @@
+﻿@model Tvita_Test.Models.Common
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            @{
+                Html.RenderPartial("~/Views/Technology/templates/grid_2x2/_part1.cshtml", Model);
+            }
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            @{
+                Html.RenderPartial("~/Views/Technology/templates/grid_2x2/_part2.cshtml", Model);
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            @{
+                Html.RenderPartial("~/Views/Technology/templates/grid_2x2/_part3.cshtml", Model);
+            }
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            @{
+                Html.RenderPartial("~/Views/Technology/templates/grid_2x2/_part4.cshtml", Model);
+            }
+        </div>
+    </div>
+</div>
+
