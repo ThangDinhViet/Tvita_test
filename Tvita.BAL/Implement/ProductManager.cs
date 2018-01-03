@@ -29,6 +29,10 @@ namespace Tvita.BAL.Implement
                     Product_Quantity = x.Product_Quantity,
                     Product_Code = x.Product_Code,
                     Product_Type = x.Product_Type,
+                    Product_Guide = x.Product_Guide,
+                    Product_Original = x.Product_Original,
+                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_Preserve = x.Product_Preserve
                 }).ToList();
             }
             return result;
@@ -51,6 +55,10 @@ namespace Tvita.BAL.Implement
                     Product_Quantity = x.Product_Quantity,
                     Product_Code = x.Product_Code,
                     Product_Type = x.Product_Type,
+                    Product_Guide = x.Product_Guide,
+                    Product_Original = x.Product_Original,
+                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_Preserve = x.Product_Preserve
                 }).FirstOrDefault();
             }
             return result;
@@ -73,6 +81,10 @@ namespace Tvita.BAL.Implement
                     Product_Quantity = x.Product_Quantity,
                     Product_Code = x.Product_Code,
                     Product_Type = x.Product_Type,
+                    Product_Guide = x.Product_Guide,
+                    Product_Original = x.Product_Original,
+                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_Preserve = x.Product_Preserve
                 }).FirstOrDefault();
             }
             return result;
@@ -95,6 +107,10 @@ namespace Tvita.BAL.Implement
                     Product_Quantity = x.Product_Quantity,
                     Product_Code = x.Product_Code,
                     Product_Type = x.Product_Type,
+                    Product_Guide = x.Product_Guide,
+                    Product_Original = x.Product_Original,
+                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_Preserve = x.Product_Preserve
                 }).ToList();
             }
             return result;
@@ -118,6 +134,16 @@ namespace Tvita.BAL.Implement
             {
                 return false;
             }
+        }
+        public List<ProductModel> GetProductByBranch(int branchID)
+        {
+            List<ProductModel> result = new List<ProductModel>();
+            
+            using (IUnitOfWork uOW = new UnitOfWork())
+            {
+                result = uOW.IProductRepository.GetProductByBranch(branchID);
+            }
+            return result;
         }
     }
 }

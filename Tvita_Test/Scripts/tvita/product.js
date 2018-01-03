@@ -4,16 +4,21 @@
     var paramPage = {
         total: 0,
         recordsInPage: 6,
-        recordsDisplayed: 0
+        recordsDisplayed: 0,
+        idBranch : 1
     }
 
     var listContainer = $('.list-product');
 
     self.init = function () {
         listContainer.empty();
+        if ($('#idBranch').val() != null)
+            paramPage.idBranch = $('#idBranch').val()
         self.getMore();
 
         $('.js-load-more').unbind().bind('click', function () {
+            if ($('#idBranch').val() != null)
+                paramPage.idBranch = $('#idBranch').val()
             self.getMore();
         })
     }

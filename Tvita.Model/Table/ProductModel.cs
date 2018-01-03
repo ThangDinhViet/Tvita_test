@@ -19,5 +19,9 @@ namespace Tvita.Model.Table
         public Nullable<bool> IsDelete { get; set; }
         public string Product_Type { get; set; }
         public string Product_Code { get; set; }
+        public string Product_Original { get; set; }
+        public string Product_PagakeStandard { get; set; }
+        public string Product_Guide { get; set; }
+        public string Product_Preserve { get; set; }
     }
 }

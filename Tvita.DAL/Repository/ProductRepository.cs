@@ -36,6 +36,10 @@ namespace Tvita.DAL.Repository
                 product.Product_Price_Saleoff = model.Product_Price_Saleoff;
                 product.Product_Quantity = model.Product_Quantity;
                 product.Product_Type = model.Product_Type;
+                product.Product_Original = model.Product_Original;
+                product.Product_PagakeStandard = model.Product_PagakeStandard;
+                product.Product_Preserve = model.Product_Preserve;
+                product.Product_Guide = model.Product_Guide;
 
                 _dbContext.tbl_Product.Add(product);
                 Save();
@@ -45,6 +49,34 @@ namespace Tvita.DAL.Repository
             {
                 return false;
             }
+        }
+        public List<ProductModel> GetProductByBranch(int branchID)
+        {
+            var result = new List<ProductModel>();
+            var query = from p in _dbContext.tbl_Product
+                        join gr in _dbContext.tbl_GroupProduct on p.ID_GroupProduct equals gr.GroupProduct_ID
+                        where gr.ID_Branch == branchID
+                        select new ProductModel
+                        {
+                            Product_ID = p.Product_ID,
+                            ID_GroupProduct = p.ID_GroupProduct,
+                            Product_Description = p.Product_Description,
+                            IsDelete = p.IsDelete,
+                            Product_Name = p.Product_Name,
+                            Product_Picture = p.Product_Picture,
+                            Product_Price = p.Product_Price,
+                            Product_Price_Saleoff = p.Product_Price_Saleoff,
+                            Product_Quantity = p.Product_Quantity,
+                            Product_Code = p.Product_Code,
+                            Product_Type = p.Product_Type,
+                            Product_Guide = p.Product_Guide,
+                            Product_Original = p.Product_Original,
+                            Product_PagakeStandard = p.Product_PagakeStandard,
+                            Product_Preserve = p.Product_Preserve
+                        };
+
+            result = query.ToList();
+            return result;
         }
     }
 }
