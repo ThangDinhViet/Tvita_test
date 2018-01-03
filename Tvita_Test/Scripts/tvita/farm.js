@@ -59,7 +59,7 @@
 
     function _handleClick(evt) {
         if (target) {
-            var modal = $('#remoteModal');
+            var modal = $('#remoteModalDialog');
             var content = modal.find('.remote-modal-content').empty();
             var provine_name = '';
             switch (target) {
@@ -85,6 +85,7 @@
                     provine_name = 'Đồng bằng Sông Hồng'
                     break;
             }
+            modal.find('.modal-title').text('Thông tin')
             content.append($('<h1></h1>').html(provine_name));
             modal.modal('show');
             

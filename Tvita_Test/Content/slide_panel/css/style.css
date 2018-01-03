@@ -336,7 +336,7 @@
 */
 }
 .nav-side-menu ul :not(collapsed) .arrow:before,
-.nav-side-menu li :not(collapsed) .arrow:before {
+.nav-side-menu li.collapsed :not(collapsed) .arrow:before {
   font-family: FontAwesome;
   content: "\f078";
   display: inline-block;
@@ -344,6 +344,11 @@
   padding-right: 10px;
   vertical-align: middle;
   float: right;
+}
+
+.nav-side-menu ul :not(collapsed) .arrow:before,
+.nav-side-menu li:not(.collapsed) :not(collapsed) .arrow:before {
+    content: "\f077";
 }
 .nav-side-menu ul .active,
 .nav-side-menu li .active {

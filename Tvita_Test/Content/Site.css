@@ -405,9 +405,10 @@ body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-wi
 .modal-content {
     /*border-top-left-radius: 45px;*/
     /*border-bottom-right-radius: 45px;*/
-    border-bottom-color: #72BE44;
+    /*border-bottom-color: #72BE44;*/
     color: #333;
     background-color: #F2F2F2;
+    border-radius: 15px;
 }
 
 .modal-header {
@@ -415,6 +416,9 @@ body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-wi
     background-color: #764c29;
     color: #fff;
     padding-top: 0;
+    padding-right: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .modal-footer {
@@ -430,9 +434,10 @@ body.modal-open .body-content, body.modal-open .navbar, body.modal-open .talk-wi
     background-color: red;
     margin-top: 0;
     outline: none;
-    height: 26px;
+    height: 30px;
     opacity: .7;
     color: #fff;
+    border-top-right-radius: 15px;
 }
 
     .modal-header .close:hover, .modal-header .close:focus {
