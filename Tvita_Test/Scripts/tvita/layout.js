@@ -1,5 +1,5 @@
 ﻿Config = {
-    AppUrl: '/Tvita_Test'
+    AppUrl: ''
 }
 
 $(document).ready(function () {

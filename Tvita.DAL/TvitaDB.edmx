@@ -185,6 +185,10 @@
           <Property Name="IsDelete" Type="bit" />
           <Property Name="Product_Type" Type="nvarchar" MaxLength="50" />
           <Property Name="Product_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product_Original" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_PagakeStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_Guide" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_Preserve" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="tbl_ProductHistory">
           <Key>
@@ -457,6 +461,10 @@
           <Property Name="IsDelete" Type="Boolean" />
           <Property Name="Product_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Product_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Original" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_PagakeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Guide" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Preserve" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_ProductHistory">
           <Key>
@@ -749,6 +757,10 @@
           <EntitySetMapping Name="tbl_Product">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Product">
               <MappingFragment StoreEntitySet="tbl_Product">
+                <ScalarProperty Name="Product_Preserve" ColumnName="Product_Preserve" />
+                <ScalarProperty Name="Product_Guide" ColumnName="Product_Guide" />
+                <ScalarProperty Name="Product_PagakeStandard" ColumnName="Product_PagakeStandard" />
+                <ScalarProperty Name="Product_Original" ColumnName="Product_Original" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
                 <ScalarProperty Name="ID_GroupProduct" ColumnName="ID_GroupProduct" />
                 <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
