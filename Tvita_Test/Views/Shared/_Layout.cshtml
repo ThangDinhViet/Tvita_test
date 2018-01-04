@@ -40,8 +40,8 @@
                     <li class="dropdown @(Utilities.menuIsActive("Home", "About") ? "active" : "")">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("Introduction"))</a>
                         <ul class="dropdown-menu">
-                            <li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
-                            <li class="divider"></li>
+                            @*<li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
+                            <li class="divider"></li>*@
                             <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">@(Utilities.Translate("VisionAndMission"))</a></li>
                             <li class="divider"></li>
                             <li><a class="@(Utilities.menuIsActive("Home", "Value") ? "active" : "")" href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
@@ -118,6 +118,9 @@
                             <div class="block">
                                 <img src="@Url.Content("~/Content/images/certificate/GLOBALGAP.png")" />
                             </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/FOODSAFE.png")" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +136,7 @@
                         <div class="about">
                             <h6 class="about-title">@(Utilities.Translate("TTGroup"))</h6>
                             <label class="short-content">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                                Tập đoàn T&T là một trong những tập đoàn kinh tế đa ngành nghề hàng đầu tại Việt Nam hiện nay. Được thành lập từ năm 1993, đến nay Tập đoàn T&T đã có hơn 60 công ty con lớn nhỏ, kinh doanh trên nhiều lĩnh vực, ngành nghề khác nhau.
                             </label>
                             <a href="http://ttgroup.com.vn" class="btn-more-info">@(Utilities.Translate("ViewMore"))</a>
                         </div>
@@ -144,7 +147,7 @@
                                 <div class="list-mnu">
                                     <h6 class="about-title">@(Utilities.Translate("AboutTVita"))</h6>
                                     <ul>
-                                        <li><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>
+                                        @*<li><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>*@
                                         <li><a href="@(Url.Action("VisionAndMission", "About"))">@(Utilities.Translate("VisionAndMission"))</a></li>
                                         <li><a href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
                                         <li><a href="@(Url.Action("Quality", "About"))">@(Utilities.Translate("Quality"))</a></li>
@@ -280,9 +283,7 @@
     <script src="~/signalr/hubs" type="text/javascript"></script>
     <!--SignalR script to update the chat page and send messages.-->
     <script>
-
-
-
+        var showHotNew = '@ViewBag.HotNew';
     </script>
 </body>
 </html>

@@ -350,8 +350,20 @@ a.btn-more-info {
     }
 }
 
+@media (min-width: 1365px) {
+    .container {
+        width: calc(100vw - 320px);
+    }
+    nav .container{
+        min-width: calc(100% - 100px);
+    }
+}
 
 @media (min-width: 1919px) {
+    nav .container{
+        min-width: inherit;
+    }
+
     .container {
         width: calc(100vw - 640px);
     }
@@ -668,9 +680,9 @@ body[data-language="en"] .tvita {
 
     .gap-group .block {
         background: transparent;
-        height: 100px;
-        max-width: 160px;
-        min-height: 160px;
+        height: 82px;
+        max-width: 82px;
+        min-height: 82px;
         display: inline-block;
         margin: 10px;
     }
@@ -725,6 +737,34 @@ body[data-language="en"] .tvita {
         .gap-group .block {
             display: table-cell;
         }
+
+        .gap-group .block {
+            height: 100px;
+            max-width: 160px;
+            min-height: 160px;
+            display: inline-block;
+            margin: 10px;
+        }
+}
+
+@media(min-width: 1023px) {
+    .gap-group .block {
+        height: 100px;
+        max-width: 130px;
+        min-height: 130px;
+        display: inline-block;
+        margin: 10px 12px;
+    }
+}
+
+@media(min-width: 1365px) {
+    .gap-group .block {
+        height: 100px;
+        max-width: 140px;
+        min-height: 140px;
+        display: inline-block;
+        margin: 10px 12px;
+    }
 }
 
 @media(min-width: 1919px) {
@@ -735,6 +775,14 @@ body[data-language="en"] .tvita {
     .container-fluid.gap-group {
         padding: 15px;
     }
+    .gap-group .block {
+        height: 100px;
+        max-width: 160px;
+        min-height: 160px;
+        display: inline-block;
+        margin: 10px 20px;
+    }
+
 }
 
 .gg-search {

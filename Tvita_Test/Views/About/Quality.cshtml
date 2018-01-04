@@ -33,7 +33,7 @@
                 </div>
                 <div class="related-list-item">
                     <ul>
-                        <li class="@(Utilities.menuIsActive("About", "History") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("History", "About")">@(Utilities.Translate("History"))</a></li>
+                        @*<li class="@(Utilities.menuIsActive("About", "History") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("History", "About")">@(Utilities.Translate("History"))</a></li>*@
                         <li class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("VisionAndMission", "About")">@(Utilities.Translate("VisionAndMission"))</a></li>
                         <li class="@(Utilities.menuIsActive("Home", "Value") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
                         <li class="@(Utilities.menuIsActive("About", "Quality") ? "active" : "")"><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="@Url.Action("Quality", "About")">@(Utilities.Translate("Quality"))</a></li>

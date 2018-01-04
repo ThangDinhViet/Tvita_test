@@ -1,5 +1,5 @@
 ﻿Config = {
-    AppUrl: ''
+    AppUrl: '/Tvita_Test/'
 }
 
 $(document).ready(function () {
@@ -170,26 +170,28 @@ $(document).ready(function () {
 
 
     $('#hot-news-content').empty();
-    $.ajax({
-        type: "GET",
-        dataType: 'json',
-        url: Config.AppUrl + "/Home/getHotNews/",
-        contentType: 'application/json',
-        data: {},
-        success: function (resp) {
-            if (resp.data.length != 0) {
-                $.each(resp.data, function (k, v) {
-                    var a = $('<a href="' + Config.Url + '/' + v.Post_Url + '" >' + v.Post_Name + '</a>');
-                    $('#hot-news-content').append(a)
-                });
-            } else {
-                $('#hot-news-content').text('Chưa có tin')
-            }
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
+    if (Boolean(showHotNew)) {
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            url: Config.AppUrl + "/Home/getHotNews/",
+            contentType: 'application/json',
+            data: {},
+            success: function (resp) {
+                if (resp.data.length != 0) {
+                    $.each(resp.data, function (k, v) {
+                        var a = $('<a href="' + Config.Url + '/' + v.Post_Url + '" >' + v.Post_Name + '</a>');
+                        $('#hot-news-content').append(a)
+                    });
+                } else {
+                    $('#hot-news-content').text('Chưa có tin')
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
 
-        }
-    });
+            }
+        });
+    }
 
 
     $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').on('keyup', function (e) {
