@@ -9,7 +9,7 @@ namespace Tvita.BAL.Interface
 {
     public interface IGroupProductManager
     {
-        List<GroupProductModel> GetGroupProductBranch();
+        List<GroupProductModel> GetAllGroupProduct();
         GroupProductModel GetGroupProductByCode(string code);
     }
 }

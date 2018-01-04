@@ -12,13 +12,15 @@ namespace Tvita_Test.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private IProductManager _productManager { get; set; }
+        private IGroupProductManager _groupProductManager { get; set; }
         // GET: Admin/Product
         public ActionResult Index()
         {
             ProductManager productManager = new ProductManager();
-            List<ProductModel> result = new List<ProductModel>();
-            result = productManager.GetAllProduct();
-            ViewBag.ListProduct = result;
+            GroupProductManager groupProductManager = new GroupProductManager();
+
+            ViewBag.GroupProduct = groupProductManager.GetAllGroupProduct();
+            ViewBag.ListProduct = productManager.GetAllProduct();
             return View();
         }
 
@@ -92,6 +94,27 @@ namespace Tvita_Test.Areas.Admin.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult Upload(FormCollection formCollection)
+        {
+            if (Request != null)
+            {
+                HttpPostedFileBase file = Request.Files["UploadedFile"];
+                if ((file != null) && (file.ContentLength > 0) && !string.IsNullOrEmpty(file.FileName))
+                {
+                    
+                    string fileName = file.FileName;
+                    string fileContentType = file.ContentType;
+                    byte[] fileBytes = new byte[file.ContentLength];
+                    var data = file.InputStream.Read(fileBytes, 0, Convert.ToInt32(file.ContentLength));
+                    file.SaveAs(Server.MapPath(@"~\Upload\" + file.FileName));
+                    
+                }
+            }
+            //return View();
+            return RedirectToAction("Index");
         }
     }
 }

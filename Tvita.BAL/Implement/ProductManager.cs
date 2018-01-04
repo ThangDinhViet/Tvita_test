@@ -31,7 +31,7 @@ namespace Tvita.BAL.Implement
                     Product_Type = x.Product_Type,
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
-                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_PakageStandard = x.Product_PakageStandard,
                     Product_Preserve = x.Product_Preserve
                 }).ToList();
             }
@@ -57,7 +57,7 @@ namespace Tvita.BAL.Implement
                     Product_Type = x.Product_Type,
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
-                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_PakageStandard = x.Product_PakageStandard,
                     Product_Preserve = x.Product_Preserve
                 }).FirstOrDefault();
             }
@@ -83,7 +83,7 @@ namespace Tvita.BAL.Implement
                     Product_Type = x.Product_Type,
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
-                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_PakageStandard = x.Product_PakageStandard,
                     Product_Preserve = x.Product_Preserve
                 }).FirstOrDefault();
             }
@@ -109,7 +109,7 @@ namespace Tvita.BAL.Implement
                     Product_Type = x.Product_Type,
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
-                    Product_PagakeStandard = x.Product_PagakeStandard,
+                    Product_PakageStandard = x.Product_PakageStandard,
                     Product_Preserve = x.Product_Preserve
                 }).ToList();
             }

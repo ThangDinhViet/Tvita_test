@@ -245,12 +245,14 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Content\css\AdminSite.css" />
     <Content Include="Areas\Admin\Content\js\admin.js" />
+    <Content Include="Areas\Admin\Content\js\productAdmin.js" />
     <Content Include="Assets\admin\data\flot-data.js" />
     <Content Include="Assets\admin\data\morris-data.js" />
     <Content Include="Assets\admin\dist\css\sb-admin-2.css" />
     <Content Include="Assets\admin\dist\css\sb-admin-2.min.css" />
     <Content Include="Assets\admin\dist\js\sb-admin-2.js" />
     <Content Include="Assets\admin\dist\js\sb-admin-2.min.js" />
+    <Content Include="Assets\admin\js\jquery.MultiFile.min.js" />
     <Content Include="Assets\admin\js\sb-admin-2.js" />
     <Content Include="Assets\admin\vendor\bootstrap-social\bootstrap-social.css" />
     <Content Include="Assets\admin\vendor\bootstrap\css\bootstrap.css" />

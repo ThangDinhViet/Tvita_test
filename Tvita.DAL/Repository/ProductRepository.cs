@@ -37,7 +37,7 @@ namespace Tvita.DAL.Repository
                 product.Product_Quantity = model.Product_Quantity;
                 product.Product_Type = model.Product_Type;
                 product.Product_Original = model.Product_Original;
-                product.Product_PagakeStandard = model.Product_PagakeStandard;
+                product.Product_PakageStandard = model.Product_PakageStandard;
                 product.Product_Preserve = model.Product_Preserve;
                 product.Product_Guide = model.Product_Guide;
 
@@ -71,7 +71,7 @@ namespace Tvita.DAL.Repository
                             Product_Type = p.Product_Type,
                             Product_Guide = p.Product_Guide,
                             Product_Original = p.Product_Original,
-                            Product_PagakeStandard = p.Product_PagakeStandard,
+                            Product_PakageStandard = p.Product_PakageStandard,
                             Product_Preserve = p.Product_Preserve
                         };
 

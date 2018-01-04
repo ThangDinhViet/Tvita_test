@@ -163,10 +163,10 @@
           <Property Name="Post_Name" Type="ntext" />
           <Property Name="Post_Description" Type="ntext" />
           <Property Name="Post_Content" Type="ntext" />
-          <Property Name="Post_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Picture" Type="nvarchar" MaxLength="200" />
           <Property Name="Post_Video" Type="nvarchar" MaxLength="200" />
-          <Property Name="Post_Keyword" Type="nvarchar" MaxLength="50" />
-          <Property Name="Post_Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Keyword" Type="nvarchar" MaxLength="500" />
+          <Property Name="Post_Url" Type="nvarchar" MaxLength="200" />
           <Property Name="IsDelete" Type="bit" />
           <Property Name="Post_DateCreated" Type="datetime" />
         </EntityType>
@@ -183,12 +183,12 @@
           <Property Name="Product_Picture" Type="nvarchar" MaxLength="50" />
           <Property Name="Product_Price_Saleoff" Type="float" />
           <Property Name="IsDelete" Type="bit" />
-          <Property Name="Product_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product_Type" Type="nvarchar" MaxLength="200" />
           <Property Name="Product_Code" Type="nvarchar" MaxLength="50" />
           <Property Name="Product_Original" Type="nvarchar" MaxLength="200" />
-          <Property Name="Product_PagakeStandard" Type="nvarchar" MaxLength="200" />
-          <Property Name="Product_Guide" Type="nvarchar" MaxLength="200" />
-          <Property Name="Product_Preserve" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_PakageStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_Guide" Type="nvarchar(max)" />
+          <Property Name="Product_Preserve" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="tbl_ProductHistory">
           <Key>
@@ -241,9 +241,9 @@
           <Property Name="Subject_Name" Type="ntext" />
           <Property Name="Subject_Description" Type="ntext" />
           <Property Name="Subject_NumberPosts" Type="int" />
-          <Property Name="Subject_Picture" Type="nvarchar" MaxLength="50" />
-          <Property Name="Subject_Url" Type="nvarchar" MaxLength="50" />
-          <Property Name="Subject_Keyword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject_Picture" Type="nvarchar" MaxLength="200" />
+          <Property Name="Subject_Url" Type="nvarchar" MaxLength="200" />
+          <Property Name="Subject_Keyword" Type="nvarchar" MaxLength="500" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_SubSubject">
@@ -254,9 +254,9 @@
           <Property Name="ID_Subject" Type="int" />
           <Property Name="Sub_SubjectName" Type="ntext" />
           <Property Name="Sub_Description" Type="ntext" />
-          <Property Name="Sub_Url" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sub_Keyword" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sub_Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sub_Url" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sub_Keyword" Type="nvarchar" MaxLength="500" />
+          <Property Name="Sub_Picture" Type="nvarchar" MaxLength="200" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_User">
@@ -439,10 +439,10 @@
           <Property Name="Post_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Post_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Post_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Picture" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Post_Video" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Post_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Keyword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
           <Property Name="Post_DateCreated" Type="DateTime" Precision="3" />
         </EntityType>
@@ -459,12 +459,12 @@
           <Property Name="Product_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Product_Price_Saleoff" Type="Double" />
           <Property Name="IsDelete" Type="Boolean" />
-          <Property Name="Product_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Product_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Product_Original" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Product_PagakeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Product_Guide" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Product_Preserve" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Guide" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Preserve" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_PakageStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_ProductHistory">
           <Key>
@@ -507,9 +507,9 @@
           <Property Name="Subject_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Subject_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Subject_NumberPosts" Type="Int32" />
-          <Property Name="Subject_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Subject_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Subject_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Picture" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Subject_Keyword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_SubSubject">
@@ -520,9 +520,9 @@
           <Property Name="ID_Subject" Type="Int32" />
           <Property Name="Sub_SubjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Sub_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sub_Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Keyword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Picture" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_User">
@@ -757,9 +757,9 @@
           <EntitySetMapping Name="tbl_Product">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Product">
               <MappingFragment StoreEntitySet="tbl_Product">
+                <ScalarProperty Name="Product_PakageStandard" ColumnName="Product_PakageStandard" />
                 <ScalarProperty Name="Product_Preserve" ColumnName="Product_Preserve" />
                 <ScalarProperty Name="Product_Guide" ColumnName="Product_Guide" />
-                <ScalarProperty Name="Product_PagakeStandard" ColumnName="Product_PagakeStandard" />
                 <ScalarProperty Name="Product_Original" ColumnName="Product_Original" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
                 <ScalarProperty Name="ID_GroupProduct" ColumnName="ID_GroupProduct" />

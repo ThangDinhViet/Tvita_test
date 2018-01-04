@@ -11,7 +11,7 @@ namespace Tvita.BAL.Implement
 {
     public class GroupProductManager : IGroupProductManager
     {
-        public List<GroupProductModel> GetGroupProductBranch()
+        public List<GroupProductModel> GetAllGroupProduct()
         {
             List<GroupProductModel> result = new List<GroupProductModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
