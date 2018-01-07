@@ -273,6 +273,14 @@
     height: 500px;
 }*/
 
+.r-item .caption-item{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical
+}
+
 @media (min-width: 420px) {
     .product .product-title,
     .gt-kitchen .kitchen-title {

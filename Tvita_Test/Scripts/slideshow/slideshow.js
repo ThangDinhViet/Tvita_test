@@ -94,12 +94,13 @@ $.fn.slideShow = function (_options) {
 
         handlePrevious.on('click', function () {
             handlePlay.fadeOut();
-            $(elements[slideSelected]).fadeOut();
-            slideSelected -= 1;
-            if (slideSelected < 0) {
-                slideSelected = elements.length - 1;
-            }
-            _handleGotoSlide(slideSelected)
+            $(elements[slideSelected]).fadeOut(0, function () {
+                slideSelected -= 1;
+                if (slideSelected < 0) {
+                    slideSelected = elements.length - 1;
+                }
+                _handleGotoSlide(slideSelected)
+            });
         })
 
         handleNext.on('click', function () {
@@ -160,12 +161,13 @@ $.fn.slideShow = function (_options) {
 
     function _next() {
         handlePlay.fadeOut();
-        $(elements[slideSelected]).fadeOut();
-        slideSelected += 1;
-        if (slideSelected > elements.length - 1) {
-            slideSelected = 0;
-        }
-        _handleGotoSlide(slideSelected)
+        $(elements[slideSelected]).fadeOut(0, function () {
+            slideSelected += 1;
+            if (slideSelected > elements.length - 1) {
+                slideSelected = 0;
+            }
+            _handleGotoSlide(slideSelected)
+        });
     }
 
     function _handleGotoSlide(_index) {
@@ -179,12 +181,13 @@ $.fn.slideShow = function (_options) {
             player.stopVideo();
             $(player.a).hide();
         }
-        $(elements[_index]).find('img').hide();
-        $(elements[_index]).fadeIn(function () {
-            $(elements[_index]).find('img').fadeIn();
-            if ($(elements[_index]).hasClass('ss-video')) {
-                handlePlay.fadeIn();
-            }
+        $(elements[_index]).find('img').hide(0, function () {
+            $(elements[_index]).fadeIn(function () {
+                $(elements[_index]).find('img').fadeIn();
+                if ($(elements[_index]).hasClass('ss-video')) {
+                    handlePlay.fadeIn();
+                }
+            });
         });
     }
 

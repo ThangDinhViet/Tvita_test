@@ -199,6 +199,13 @@
     margin-top: 10px;
 }
 
+.n-content > p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 .p-extend {
     padding-top: 100px;
     padding-bottom: 80px;
@@ -399,6 +406,45 @@
         font-size: 32px;
     }
 }
+@media (min-width: 1365px) {
+
+    .content-container .content {
+        padding-right: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 0;
+        float: left;
+        width: 792px;
+    }
+
+    .related-articles {
+    width: calc(100% - 792px);
+    padding-top: 60px;
+    float: left;
+    padding-left: 10px;
+    }
+
+    .article-created-date{
+        margin-left: 115px;
+    }
+
+    .tech-cover-title .t-label{
+        margin-left: 95px;
+        width: 710px;
+    }
+
+    .related-list-item ul {
+        column-count: initial;
+    }
+
+    .product-item img{
+        max-width: 235px;
+    }
+    
+        .btn-order {
+        width: 100%;
+    }
+}
 
 @media (min-width: 1919px) {
     .tech-cover-title .t-label {
@@ -442,17 +488,15 @@
     float: left;
     padding-left: 10px;
     }
-    .related-list-item ul {
-        column-count: initial;
-    }
 
     .list-title {
         margin-top: 40px;
     }
-    .btn-order {
-        width: 100%;
-    }
     .item-info table td {
         width: 50%;
     }
+    .product-item img{
+        max-width: 300px;
+    }
+
 }
