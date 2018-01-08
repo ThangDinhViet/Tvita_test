@@ -196,21 +196,88 @@ $(document).ready(function () {
 
     $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').on('keyup', function (e) {
         var searchtext = $(this).val();
-        $('.gg-search').find('input[type="text"]').val(searchtext);
         if (e.keyCode == 13) {
-            $('.gg-search').find('input.gsc-search-button').trigger('click');
-            $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').val('');
+            if ($.trim(searchtext) != '') {
+                executeSearch(searchtext, function (res) {
+                    showResultSearch(res)
+                });
+                $(this).val('')
+            }
         }
     })
 
     $('.cd-panel-header button[type="button"], .navbar-form.navbar-right input.form-control + span.input-group-addon').on('click', function () {
-        $('.gg-search').find('input.gsc-search-button').trigger('click');
-        $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').val('');
+        var x = $(this).parents('.input-group');
+        var searchtext = $(x).find('input').val();
+        if ($.trim(searchtext) != '') {
+            executeSearch(searchtext, function (res) {
+                showResultSearch(res)
+            })
+            $('.navbar-form.navbar-right input.form-control, .cd-panel-header input.form-control').val('');
+        }
     })
 
     updateLanguage($('[data-lang].active').attr('data-lang'));
 
+
+    function loadClient() {
+        gapi.client.setApiKey('AIzaSyCYTbYK5Y4yl01JDvX2xCVLCoXgUFDz7I0');
+        return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/customsearch/v1/rest")
+            .then(function () {
+                console.log("GAPI client loaded for API");
+            }, function (error) {
+                console.error("Error loading GAPI client for API");
+            });
+    }
+    // Make sure the client is loaded before calling this method.
+    gapi.load("client", loadClient);
+
+    function showResultSearch(result) {
+        if (result && result.result && result.result.items) {
+            var res = result.result.items;
+            var modal = $('#remoteModalDialog');
+            var content = modal.find('.remote-modal-content').empty();
+            var container = $('<div></div>').addClass('container search-results');
+            content.append(container);
+            if (res.length != 0) {
+                $.each(res, function (k, v) {
+                    if (v.formattedUrl.indexOf('/Admin/') == -1) {
+                        var row = $('<div></div>').addClass('row');
+                        container.append(row);
+                        var title = $('<h2></h2>').text(v.title);
+                        var a = $('<a></a>').attr('href', v.link).append(title)
+                        row.append(a);
+                        var snippet = $('<p></p>').html(v.htmlSnippet);
+                        row.append(snippet);
+                        console.log(v)
+                    }
+                })
+            } else {
+                container.append($('<h1></h1>').html("Không tìm được kết quả nào"));
+            }
+            modal.find('.modal-title').text($.i18n('search_results'))
+            modal.modal('show');
+        }
+    }
 });
+
+function executeSearch(_search_string, callback) {
+    try {
+        return gapi.client.search.cse.list({
+            "q": _search_string,
+            "cx": "000660179539483022890:7nz0y2enf0u"
+        })
+        .then(function (response) {
+            // Handle the results here (response.result has the parsed body).
+            if (callback) callback(response);
+        }, function (error) {
+            console.error("Execute error", error);
+        });
+    } catch (e) {
+        console.log(e)
+    }
+}
+
 
 function checkChatInView() {
     if ($('.footer-bottom').isInViewport('horizontal') && $('.talk-with-me').hasClass('open') == false) {
