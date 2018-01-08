@@ -356,13 +356,12 @@ a.btn-more-info {
     }
 
     nav .container {
-        min-width: calc(100% - 100px);
+        min-width: calc(100% - 320px);
     }
 
     .related-articles .panel-default .list-group-item {
         padding: 0 0 10px 10px;
     }
-
 }
 
 @media (min-width: 1919px) {
@@ -643,15 +642,44 @@ body[data-language="en"] .tvita {
 
     .tvita {
         background-position-x: 15px;
-        background-position-y: 0;
+        background-position-y: 6px;
     }
 
         .tvita .menu-list {
             display: block;
         }
+
+    .f-row {
+        width: calc(100vw - 320px);
+        margin-left: 160px;
+    }
+
+    .tvita .menu-list ul a {
+        padding-left: 15px;
+        background-position-x: 5px;
+    }
+
+    .col-lg-20 {
+        padding-right: 0;
+        padding-left: 10px;
+    }
+
+    .ttgroup .about{
+        padding-left: 66px;
+    }
 }
 
 @media (min-width:1919px) {
+    .tvita .menu-list ul a {
+        padding-left: 30px;
+        background-position-x: 13px;
+    }
+
+    .col-lg-20 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
     .f-row {
         width: calc(100vw - 640px);
         margin-left: 320px;
