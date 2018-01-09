@@ -75,6 +75,7 @@
     <Compile Include="Table\ProductionUnitModel.cs" />
     <Compile Include="Table\ProductModel.cs" />
     <Compile Include="Table\ProductsInFarmModel.cs" />
+    <Compile Include="Table\ProfileModel.cs" />
     <Compile Include="Table\SubjectModel.cs" />
     <Compile Include="Table\SubSubjectModel.cs" />
     <Compile Include="tbl_Branch.cs">

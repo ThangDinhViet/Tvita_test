@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="row">
+    <div class="col-md-6">
+        <h1 class="page-header">Mẫu profile in</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Thông tin
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="form-group">
+                    <div>
+                        <label>Tên sản phẩm</label>
+                        <input id="product" class="form-control">
+                    </div>
+                    <div class="lineInput">
+                        <label>Ngày sản xuất</label>
+                        <div class='input-group date'>
+                            <input id="dateCreated" type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="lineInput">
+                        <label>Hạn sử dụng</label>
+                        <div class='input-group date'>
+                            <input id="dateEnd" type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="lineInput">
+                        <label>Nhiệt độ bảo quản</label>
+                        <input id="temple" class="form-control">
+                    </div>
+                    <div class="lineInput">
+                        <label>Mã barcode</label>
+                        <input id="barcode" class="form-control">
+                    </div>
+                    <div class="lineInput">
+                        <label>Kênh bán hàng</label>
+                        <input id="chanel" class="form-control">
+                    </div>
+                    <div class="lineInput">
+                        <label>Mã trung tâm sơ chế</label>
+                        <input id="factory" class="form-control">
+                    </div>
+                    <div class="lineInput">
+                        <label>Mã hộ liên kết</label>
+                        <input id="productUnitCode" class="form-control">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-md-6 -->
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Mẫu in
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="form-group" id="addImage">
+                    <table style="max-width: 157px;max-height: 138px">
+                        <tr>
+                            <th colspan="2"><label style="font-size: 18px">Xà lách lô lô xanh</label></th>
+                        </tr>
+                        <tr>
+                            <th><label style="font-size: 11px">NSX: 20/10/2017</label></th>
+                            <td rowspan="3"><img style="max-width: 65px;max-height: 65px" src="~/Areas/Admin/Content/picture/qrcode.png" /></td>
+                        </tr>
+                        <tr>
+                            <th><label style="font-size: 11px">HSD: 20/10/2017</label></th>
+                        </tr>
+                        <tr>
+                            <th><label style="font-size: 11px">NĐBQ: 5 - 7 oC</label></th>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><label style="font-size: 11px;">Mã truy xuất : 12345AB123</label></th>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><img style="margin-left: 10px;" src="~/Areas/Admin/Content/picture/barcode.png" /></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+<button id="generate" type="button" class="btn btn-warning btn-save" data-dismiss="modal">Tạo profile</button>
+
+
+
