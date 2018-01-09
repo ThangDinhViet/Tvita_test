@@ -10,6 +10,7 @@ namespace Tvita_Test.Models
         public int total { get; set; }
         public int recordsInPage { get; set; }
         public int recordsDisplayed { get; set; }
+        public int idBranch { get; set; }
     }
 
     public class RespondResult

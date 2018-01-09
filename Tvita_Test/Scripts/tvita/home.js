@@ -48,8 +48,9 @@ var productsHome = function (container, _type) {
 
     var paramPage = {
         total: 0,
-        recordsInPage: 6,
-        recordsDisplayed: 0
+        recordsInPage: 3,
+        recordsDisplayed: 0,
+        idBranch : 1
     }
 
     var listContainer = $(container);
@@ -90,7 +91,7 @@ var productsHome = function (container, _type) {
                     var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
                                 '<div class="product-item">' +
                                     '<div class="product-item-cover">' +
-                                        '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: ' + Config.AppUrl + v.Product_Picture + '"))">' +
+                                          '<img src="' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '")" style="background-image: ' + Config.AppUrl + v.Product_Picture + '"))">' +
                                     '</div>' +
                                     '<div class="product-item-content">' +
                                         '<span>' + v.Product_Name + '</span>' +

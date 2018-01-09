@@ -1,5 +1,5 @@
 ﻿Config = {
-    AppUrl: '/Tvita_Test/'
+    AppUrl: ''
 }
 
 $(document).ready(function () {
@@ -14,6 +14,8 @@ $(document).ready(function () {
     var slidewidth = '400px';
     var menuneg = '-400px';
     var slideneg = '-400px';
+
+
 
 
     $("#slide-nav").on("click", toggler, function (e) {

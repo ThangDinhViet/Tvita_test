@@ -12,6 +12,7 @@ namespace Tvita_Test.Controllers
     public class ProductController : TvitaController
     {
         ProductManager productManager = new ProductManager();
+        PictureManager pic = new PictureManager();
         // GET: Product
         public ActionResult Fresh()
         {
@@ -35,8 +36,22 @@ namespace Tvita_Test.Controllers
             try
             {
                 List<ProductModel> result = new List<ProductModel>();
-                int count = productManager.GetAllProduct().Count();
-                result = productManager.GetAllProduct().Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
+                int count = productManager.GetProductByBranch(_param.idBranch).Count();
+                result = productManager.GetProductByBranch(_param.idBranch).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
+                foreach(var item in result)
+                {
+                    if(item.Product_Picture != null)
+                    {
+                        var appearPic = item.Product_Picture.Split(',').FirstOrDefault();
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Product_Pic_URL = p.Picture_Name;
+                        }
+                    }   
+                }
                 int displayed = _param.recordsDisplayed + result.Count();
                 var res = new RespondResult();
                 res.data = result;
