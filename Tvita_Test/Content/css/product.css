@@ -141,6 +141,28 @@
     background-color: #F2F2F2;
 }
 
+@media (min-width: 1279px) {
+    .content-container .content {
+        padding-right: 100px;
+        padding-top: 0;
+        /* padding-bottom: 60px; */
+        padding-left: 0;
+        float: left;
+        width: 702px;
+    }
+
+    .related-articles {
+        width: calc(100% - 702px);
+        padding-top: 60px;
+        float: left;
+        padding-left: 10px;
+    }
+
+    .related-list-item ul {
+        column-count: initial;
+    }
+}
+
 @media (min-width: 1365px) {
     .content-container .content {
         padding-right: 100px;

@@ -419,6 +419,46 @@
         font-size: 32px;
     }
 }
+@media (min-width: 1279px) {
+
+    .content-container .content {
+        padding-right: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 0;
+        float: left;
+        width: 702px;
+    }
+
+    .related-articles {
+        width: calc(100% - 702px);
+        padding-top: 60px;
+        float: left;
+        padding-left: 10px;
+    }
+
+    .article-created-date {
+        margin-left: 85px;
+    }
+
+    .tech-cover-title .t-label {
+        margin-left: 95px;
+        width: 620px;
+    }
+
+    .related-list-item ul {
+        column-count: initial;
+    }
+
+    .product-item img {
+        max-width: 235px;
+    }
+
+    .btn-order {
+        width: 100%;
+    }
+}
+
 
 @media (min-width: 1365px) {
 
