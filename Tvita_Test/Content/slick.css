@@ -99,7 +99,7 @@
     background-position: -50px -90px
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 240dpi) {
     .slick-slider .slick-next {
@@ -111,7 +111,7 @@ only screen and (min-resolution: 240dpi) {
         background-size: 900px 200px;
         -webkit-background-size: 900px 200px;
     }
-}
+}*/
 
 
 /* Dots */
