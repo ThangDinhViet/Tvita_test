@@ -276,9 +276,20 @@
 .r-item .caption-item {
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    display: block;
+    margin-bottom: 0;
+}
+
+.r-item .caption-item.c-collapse{
+    max-height: 106px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.c-toggle{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
 }
 
 @media (min-width: 420px) {

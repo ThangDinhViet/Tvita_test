@@ -1,5 +1,5 @@
 ﻿Config = {
-    AppUrl: ''
+    AppUrl: '/Tvita_Test'
 }
 
 $(document).ready(function () {
@@ -353,6 +353,8 @@ function updateLanguage(_language) {
     'use strict';
     var i18n = $.i18n();
     i18n.locale = _language;
-    i18n.load(Config.AppUrl + '/Scripts/i18n/lang/tvita-' + i18n.locale + '.json', i18n.locale);
+    i18n.load(Config.AppUrl + '/Scripts/i18n/lang/tvita-' + i18n.locale + '.json', i18n.locale).done(function () {
+        $('body').i18n();
+    });
     //how to use?: $.i18n('welcome')
 }

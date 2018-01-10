@@ -763,7 +763,8 @@ body[data-language="en"] .tvita {
     width: 100%;
     max-width: 300px;
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     border: 8px solid #ccc;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -866,6 +867,10 @@ body[data-language="en"] .tvita {
     .tvita .menu-list {
         margin-top: 70px;
     }
+
+    .list-thumb .c-toggle{
+        padding: 0px 10px;
+    }
 }
 
 @media(min-width: 1365px) {
@@ -887,6 +892,9 @@ body[data-language="en"] .tvita {
 
     .n-detail-content {
         padding: 10px 30px;
+    }
+    .list-thumb .c-toggle{
+        padding: 0 30px;
     }
 
     .tvita .menu-list ul a {
@@ -959,10 +967,14 @@ body[data-language="en"] .tvita {
 .n-detail-content {
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+    display: block;
+    max-height: 120px;
 }
-.p-view-more{
+
+.list-thumb .c-toggle{
+    background-color: #f2f2f2;
+}
+
+.p-view-more {
     text-align: right;
 }
