@@ -193,6 +193,88 @@ span.illustration img {
 .related-list-item ul li.active i, .related-list-item ul li.active a{
     color: #4E9D2D;
 }
+@media (min-width: 1279px) {
+    .tech-cover-title .t-label {
+        width: 616px;
+        padding: 8px 30px;
+        margin-left: 95px;
+        font-size: 47.5px;
+    }
+    .article-created-date {
+        padding: 8px 30px;
+        margin-left: 115px;
+        padding-bottom: 10px;
+    }
+    .content-container .content {
+        padding-right: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 0;
+        float: left;
+        width: 702px;
+    }
+    span.illustration img {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .img-tilte {
+        margin-left: 85px;
+    }
+    .n-content {
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+    .related-articles {
+        width: calc(100% - 702px);
+        padding-top: 60px;
+        float: left;
+        padding-left: 10px;
+    }
+    .related-list-item ul {
+        column-count: initial;
+    }
+}
+@media (min-width: 1365px) {
+    .tech-cover-title .t-label {
+        width: 732px;
+        padding: 8px 30px;
+        margin-left: 95px;
+        font-size: 47.5px;
+    }
+    .article-created-date {
+        padding: 8px 30px;
+        margin-left: 115px;
+        padding-bottom: 10px;
+    }
+    .content-container .content {
+        padding-right: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 0;
+        float: left;
+        width: 808px;
+    }
+    span.illustration img {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .img-tilte {
+        margin-left: 85px;
+    }
+    .n-content {
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+    .related-articles {
+        width: calc(100% - 808px);
+        padding-top: 60px;
+        float: left;
+        padding-left: 10px;
+    }
+    .related-list-item ul {
+        column-count: initial;
+    }
+}
 @media (min-width: 1919px) {
     .tech-cover-title .t-label {
         width: 882px;
