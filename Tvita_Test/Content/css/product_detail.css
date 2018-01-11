@@ -127,14 +127,14 @@
     margin-bottom: 0;
 }
 
-.product-item:hover img{
+.product-item:hover img {
     transform: scale(1.1);
 }
 
-    .product-item:hover img {
-        transform: scale(1.1);
-        box-shadow: inset 5px 5px 13px #040404;
-    }
+.product-item:hover img {
+    transform: scale(1.1);
+    box-shadow: inset 5px 5px 13px #040404;
+}
 
 .slick-slider .slick-prev {
     background-image: url(./../images/icons/prev-slide.png);
@@ -201,12 +201,12 @@
     margin-top: 10px;
 }
 
-    .n-content > p {
-        overflow: hidden;
+    .n-content > p.c-collapse {
+        max-height: 110px;
         text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding-bottom: 0;
+        margin-bottom: 3px;
     }
 
 .p-extend {
@@ -391,7 +391,7 @@
     margin-top: -50px;
 }
 
-.product-item{
+.product-item {
     margin-top: 20px;
 }
 
@@ -419,8 +419,11 @@
         font-size: 32px;
     }
 }
-@media (min-width: 1279px) {
 
+@media (min-width: 1279px) {
+    .item-info table tr td:first-child{
+        width: 40%;
+    }
     .content-container .content {
         padding-right: 80px;
         padding-top: 60px;
@@ -434,7 +437,7 @@
         width: calc(100% - 702px);
         padding-top: 60px;
         float: left;
-        padding-left: 10px;
+        /*padding-left: 10px;*/
     }
 
     .article-created-date {
@@ -443,7 +446,7 @@
 
     .tech-cover-title .t-label {
         margin-left: 95px;
-        width: 620px;
+        width: 607px;
     }
 
     .related-list-item ul {
@@ -545,7 +548,7 @@
         width: calc(100% - 977px);
         padding-top: 60px;
         float: left;
-        padding-left: 10px;
+        padding-left: 0;
     }
 
     .list-title {
@@ -570,7 +573,11 @@
             padding-top: 35px;
         }
 
-        .product-item{
-            margin-top: 60px;
-        }
+    .product-item {
+        margin-top: 60px;
+    }
+}
+
+.c-toggle a {
+    color: #4E9D2D;
 }

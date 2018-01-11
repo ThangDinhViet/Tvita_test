@@ -274,6 +274,10 @@ nav.navbar {
         width: 80px;
     }
 
+    body[data-language="en"] .navbar-form.navbar-right .input-group input {
+        width: 50px;
+    }
+
     .navbar-form {
         margin-top: 12px;
     }
@@ -304,6 +308,10 @@ nav.navbar {
 
     .navbar-form.navbar-right .input-group input {
         width: 100px;
+    }
+
+    body[data-language="en"] .navbar-form.navbar-right .input-group input {
+        width: 70px;
     }
 
     .navbar-form {
