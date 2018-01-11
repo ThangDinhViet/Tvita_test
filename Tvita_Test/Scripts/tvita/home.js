@@ -38,6 +38,45 @@
             })
         }
     });
+    var elementsMaxRow = $('.farm-tech [data-maxrow]');
+    if (elementsMaxRow.length != 0) {
+        $.each(elementsMaxRow, function (k, el) {
+            if ($(el).innerHeight() > 80) {
+                $(el).addClass('c-collapse');
+                var p = $('<p class="c-toggle"></p>');
+                var span = $('<span>...</span>');
+                var a = $('<a href="#" data-i18n="view_more"></a>');
+                var parent = $(el).parent();
+                a.unbind().bind('click', function (evt) {
+                    evt.preventDefault();
+                    $(el).toggleClass('c-collapse');
+                    if ($(el).hasClass('c-collapse')) {
+                        span.show();
+                        a.text($.i18n('view_more'))
+                    } else {
+                        span.hide();
+                        a.text($.i18n('view_less'))
+                    }
+                })
+                p.append(span).append(a);
+                parent.append(p);
+            }
+        })
+    }
+
+    var elementsMaxRow = $('.list-thumb [data-maxrow]');
+    if (elementsMaxRow.length != 0) {
+        $.each(elementsMaxRow, function (k, el) {
+            if ($(el).innerHeight() > 80) {
+                $(el).addClass('c-collapse');
+                var div = $('<div class="c-toggle"></div>');
+                var span = $('<span>...</span>');
+                div.append(span);
+                $(el).after(div);
+            }
+        })
+    }
+
 
 })
 
