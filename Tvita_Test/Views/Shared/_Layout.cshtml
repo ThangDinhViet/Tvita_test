@@ -44,7 +44,14 @@
                         </ul>
                     </li>
                     <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("News"), "Index", "News")</li>
-                    <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("Technology"), "Index", "Technology")</li>
+                    <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("Technology"))</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("ProductionTechnology", "Technology")" class="@(Utilities.menuIsActive("Technology", "ProductionTechnology") ? "active" : "")">@(Utilities.Translate("ProductionTechnology"))</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("PostharvestTechnology", "Technology")" class="@(Utilities.menuIsActive("Technology", "PostharvestTechnology") ? "active" : "")">@(Utilities.Translate("PostharvestTechnology"))</a></li>
+                        </ul>
+                    </li>
                     <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "GotoKitchen"))"><span>@(Utilities.Translate("GotoKitchen"))</span> <span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
                     <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "CommunityDevelopment"))"><span>@(Utilities.Translate("Development"))</span> <span class="nav-subtitle">@(Utilities.Translate("Community"))</span></a></li>
                 </ul>

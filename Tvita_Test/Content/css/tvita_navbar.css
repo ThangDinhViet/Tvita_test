@@ -353,4 +353,8 @@ nav.navbar {
     .span-separate {
         padding: 6px 12px;
     }
+
+    body[data-language="en"] .navbar-form.navbar-right .input-group input {
+        width: auto;
+    }
 }

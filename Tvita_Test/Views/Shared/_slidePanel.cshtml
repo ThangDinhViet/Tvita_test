@@ -51,9 +51,13 @@
                             <a href="@Url.Action("Index", "News")"> @Utilities.Translate("News") </a>
                         </li>
 
-                        <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")">
-                            <a href="@Url.Action("Index", "Technology")"> @Utilities.Translate("Technology") </a>
+                        <li data-toggle="collapse" data-target="#technology" class="collapsed">
+                            <a href="#"> @Utilities.Translate("Technology") <span class="arrow"></span></a>
                         </li>
+                        <ul class="sub-menu collapse" id="technology">
+                            <li class="@(Utilities.menuIsActive("Technology", "ProductionTechnology") ? "active" : "")"><a href="@Url.Action("ProductionTechnology", "Technology")">@(Utilities.Translate("ProductionTechnology"))</a></li>
+                            <li class="@(Utilities.menuIsActive("Technology", "PostharvestTechnology") ? "active" : "")"><a href="@Url.Action("PostharvestTechnology", "Technology")">@(Utilities.Translate("PostharvestTechnology"))</a></li>
+                        </ul>
 
                         <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")">
                             <a href="@Url.Action("Index", "GotoKitchen")"> @Utilities.Translate("GotoKitchen") @Utilities.Translate("WithTvita") </a>

@@ -198,4 +198,25 @@
   <data name="Find" xml:space="preserve">
     <value>Tìm kiếm</value>
   </data>
+  <data name="PostharvestTechnology" xml:space="preserve">
+    <value>Công nghệ sau thu hoạch</value>
+  </data>
+  <data name="ProductionTechnology" xml:space="preserve">
+    <value>Công nghệ sản xuất</value>
+  </data>
+  <data name="Postharvest" xml:space="preserve">
+    <value>Sau thu hoạch</value>
+  </data>
+  <data name="TechTitle1" xml:space="preserve">
+    <value>Công nghệ</value>
+  </data>
+  <data name="TechTitle2" xml:space="preserve">
+    <value>Sản xuất</value>
+  </data>
+  <data name="TechTitle3" xml:space="preserve">
+    <value>Công nghệ</value>
+  </data>
+  <data name="TechTitle4" xml:space="preserve">
+    <value>Sau thu hoạch</value>
+  </data>
 </root>

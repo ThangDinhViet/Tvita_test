@@ -198,4 +198,25 @@
   <data name="Distribution" xml:space="preserve">
     <value>Distribution</value>
   </data>
+  <data name="PostharvestTechnology" xml:space="preserve">
+    <value>Postharvest technology</value>
+  </data>
+  <data name="ProductionTechnology" xml:space="preserve">
+    <value>Production technology</value>
+  </data>
+  <data name="Postharvest" xml:space="preserve">
+    <value>Postharvest</value>
+  </data>
+  <data name="TechTitle1" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="TechTitle2" xml:space="preserve">
+    <value>Technology</value>
+  </data>
+  <data name="TechTitle3" xml:space="preserve">
+    <value>Postharvest</value>
+  </data>
+  <data name="TechTitle4" xml:space="preserve">
+    <value>Technology</value>
+  </data>
 </root>

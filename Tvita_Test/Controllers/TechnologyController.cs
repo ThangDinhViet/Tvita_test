@@ -61,5 +61,16 @@ namespace Tvita_Test.Controllers
             model.content4 = "Image here";
             return View("~/Views/Technology/templates/template1.cshtml", model);
         }
+
+        public ActionResult ProductionTechnology()
+        {
+            return View();
+        }
+
+        public ActionResult PostharvestTechnology()
+        {
+            return View();
+        }
+
     }
 }

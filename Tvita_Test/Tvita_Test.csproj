@@ -17,7 +17,7 @@
     <AssemblyName>Tvita_Test</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -355,7 +355,9 @@
     <Content Include="Content\css\home.css" />
     <Content Include="Content\css\iframe.css" />
     <Content Include="Content\css\news.css" />
+    <Content Include="Content\css\postharvest_technology.css" />
     <Content Include="Content\css\product.css" />
+    <Content Include="Content\css\production_technology.css" />
     <Content Include="Content\css\product_detail.css" />
     <Content Include="Content\css\details.css" />
     <Content Include="Content\css\tvita_navbar.css" />
@@ -1041,6 +1043,7 @@
     <Content Include="Scripts\tvita\layout.js" />
     <Content Include="Scripts\tvita\news.js" />
     <Content Include="Scripts\tvita\product.js" />
+    <Content Include="Scripts\tvita\production_technology.js" />
     <Content Include="Scripts\tvita\product_detail.js" />
     <Content Include="Scripts\tvita\technology.js" />
     <Content Include="Scripts\tvita\value.js" />
@@ -1079,6 +1082,8 @@
     <Content Include="Views\Technology\templates\grid_2x2\_part2.cshtml" />
     <Content Include="Views\Technology\templates\grid_2x2\_part3.cshtml" />
     <Content Include="Views\Technology\templates\grid_2x2\_part4.cshtml" />
+    <Content Include="Views\Technology\ProductionTechnology.cshtml" />
+    <Content Include="Views\Technology\PostharvestTechnology.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
