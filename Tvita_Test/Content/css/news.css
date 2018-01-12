@@ -126,6 +126,11 @@
     display: block;
 }
 
+.news-page .n-item .n-content{
+    height: 120px;
+    overflow: hidden;
+}
+
 @media (min-width: 1279px) {
     .ss-content {
         width: 660px;
@@ -162,6 +167,7 @@
         margin-left: -30px;
         text-align: left;
         height: 110px;
+        overflow: hidden;
     }
 }
 
@@ -201,6 +207,7 @@
         margin-left: -30px;
         text-align: left;
         height: 110px;
+        overflow: hidden;
     }
 }
 
@@ -240,5 +247,6 @@
             margin-left: -30px;
             text-align: left;
             height: 110px;
+            overflow: hidden;
         }
 }
