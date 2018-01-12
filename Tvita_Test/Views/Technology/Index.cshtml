@@ -3,173 +3,62 @@
     ViewBag.Title = Utilities.Translate("Technology");
 }
 
-<link href="@Url.Content("~/Content/css/news.css")" rel="stylesheet">
+<link href="@Url.Content("~/Content/css/technology.css")" rel="stylesheet">
 
-<div class="container-fluid">
-    <div class="row slide-show-container">
-        <div class="ss-container" id="news-slideshow">
-            <div class="ss-item ss-image">
-                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/agence-producteurs-locaux-damien-kuhn.jpg")">
-                <div class="ss-caption-container">
-                    <div class="container">
-                        <div class="ss-content">
-                            <div class="ss-title">
-                                <label>T.Vita ra mắt rau sạch công nghệ cao</label>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy </p>
-                            <div class="view-more">
-                                <a class="btn-view-more" href="#">Xem thêm</a>
-                            </div>
-                        </div>
+<div class="container">
+    <div class="row">
+        <div class="production-technology col-sx-12 col-sm-6 col-md-6 col-lg-6">
+            @*production_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>@Utilities.Translate("TechTitle1")</span>
+                            <span>@Utilities.Translate("TechTitle2")</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="col-sm-12 col-md-6 tc">
+                        <p>T.Vita chú trọng đầu tư vào các mô hình trồng trọt công nghệ cao với hệ thống Nhà kính của Israel; Hệ thống tưới điều khiển tự động; Bộ giống chất lượng cao có khả năng kháng bệnh và chịu nhiệt từ các thương hiệu nổi tiếng thế giới.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_1.png")" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_2.png")" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_3.png")" />
                     </div>
                 </div>
             </div>
-            <div class="ss-item ss-image">
-                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/Asset-9.png")">
+            @*end-of-production_technology*@
+        </div>
+        <div class="postharvest-technology col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            @*postharvest_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>@Utilities.Translate("TechTitle3")</span>
+                            <span>@Utilities.Translate("TechTitle4")</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="tc col-sm-12 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_4.png")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_5.png")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <p>Các công nghệ sau thu hoạch như bảo quản lạnh, chế biến & đóng gói theo dây chuyền tiên tiến nhất của Châu Âu, giúp tối ưu hóa vòng đời sản phẩm, đảm bảo an toàn vệ sinh thực phẩm và duy trì sự tươi ngon.</p>
+                    </div>
+                </div>
             </div>
-            <div class="ss-item ss-video" data-url="https://youtu.be/MB80ZuIJATI">
-                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/bee.png")">
-            </div>
+            @*end-of-postharvest_technology*@
         </div>
     </div>
 </div>
-<div class="container">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">@(Utilities.Translate("HomePage"))</a></li>
-        <li class="breadcrumb-item active">@(Utilities.Translate("Technology"))</li>
-    </ol>
-    <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
-            <button class="btn btn-default js-load-more">
-                <span>@(Utilities.Translate("LoadMoreNews"))</span>
-            </button>
-        </div>
-    </div>
-</div>
-@section Scripts
-{
-    <script src="@Url.Content("~/Scripts/tvita/news.js")" type="text/javascript"></script>
-}

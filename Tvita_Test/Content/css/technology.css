@@ -1,0 +1,204 @@
+﻿.production-technology .pg-title {
+    background-image: url(../images/icons/tech-title-bg.png);
+    background-repeat: no-repeat;
+    background-position: inherit;
+    display: block;
+    background-size: contain;
+    color: #78ab42;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+.production-technology .c-pg-title {
+    margin-top: 30px;
+}
+
+. production-technology .t-content {
+    margin-bottom: 30px;
+}
+
+    .production-technology .t-content .tc img {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .production-technology .t-content .tc p {
+        color: #78ab42;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+.production-technology .pg-title span {
+    display: block;
+    line-height: 32px;
+}
+
+    .production-technology .pg-title span:first-child {
+        font-weight: 400;
+    }
+    .production-technology .t-content{
+        margin-top: 20px;
+    }
+
+@media (min-width: 1919px) {
+    .production-technology .pg-title {
+        height: 80px;
+    }
+
+    .production-technology .c-pg-title {
+        margin-top: 60px;
+    }
+
+    .production-technology .t-content {
+        margin-bottom: 60px;
+    }
+
+        .production-technology .t-content .tc:first-child {
+            min-height: 395px;
+        }
+
+        .production-technology .t-content .tc:nth-child(2) {
+            /*margin-bottom: 120px;*/
+        }
+
+        .production-technology .t-content .tc:first-child p {
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            position: absolute;
+        }
+}
+
+
+.postharvest-technology .pg-title {
+    background-image: url(../images/icons/tech-title-bg.png);
+    background-repeat: no-repeat;
+    background-position: inherit;
+    display: block;
+    background-size: contain;
+    color: #78ab42;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+.postharvest-technology .c-pg-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+..postharvest-technology t-content {
+    margin-bottom: 30px;
+}
+
+.postharvest-technology .t-content .tc img {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.postharvest-technology .t-content .tc p {
+    color: #78ab42;
+    font-size: 20px;
+    text-align: justify;
+    padding-top: 25px;
+}
+
+.postharvest-technology .pg-title span {
+    display: block;
+    line-height: 32px;
+}
+
+    .postharvest-technology .pg-title span:first-child {
+        font-weight: 400;
+    }
+
+@media (min-width: 1279px) {
+    .postharvest-technology .t-content .tc:nth-child(3) {
+        min-height: 325px;
+    }
+
+    .postharvest-technology .t-content .tc p {
+        top: 45%;
+        transform: translateY(-50%);
+        display: block;
+        position: absolute;
+        padding-right: 15px;
+        padding-top: 40px;
+    }
+    .postharvest-technology .t-content .tc:nth-child(2) img{
+        margin-top: 33px;
+    }
+}
+
+@media (min-width: 1365px) {
+    .postharvest-technology .t-content .tc:nth-child(2) img{
+        margin-top: 40px;
+    }
+    .postharvest-technology .t-content .tc:nth-child(3) {
+        min-height: 275px;
+    }
+
+    .postharvest-technology .t-content .tc p {
+        top: 53%;
+        transform: translateY(-50%);
+        display: block;
+        position: absolute;
+    }
+}
+
+@media (min-width: 1919px) {
+    .postharvest-technology .t-content .tc:nth-child(2) img{
+        margin-top: 6px;
+    }
+    .postharvest-technology .pg-title {
+        height: 80px;
+    }
+
+    .postharvest-technology .c-pg-title {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .postharvest-technology .t-content {
+        margin-bottom: 60px;
+    }
+
+        .postharvest-technology .t-content .tc:nth-child(3) {
+            min-height: 180px;
+        }
+
+        .postharvest-technology .t-content .tc:nth-child(2) {
+            /*margin-bottom: 120px;*/
+        }
+
+        .postharvest-technology .t-content .tc p {
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            position: absolute;
+        }
+
+        .postharvest-technology .t-content .tc:nth-child(0) {
+            margin-bottom: 30px;
+        }
+
+
+        .postharvest-technology .t-content .tc:nth-child(1) {
+            margin-bottom: 30px;
+        }
+
+        .postharvest-technology .t-content .tc img {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .postharvest-technology .t-content .tc p {
+            padding-top: 0;
+        }
+}
