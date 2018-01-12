@@ -73,8 +73,9 @@
 
 .gallery .g-item > img {
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position-y: center;
+    background-repeat: no-repeat;
 }
 
 .gallery {
@@ -331,6 +332,7 @@
 
         .item-info table tr td:first-child {
             border-left: none;
+            width: 40%;
         }
 
         .item-info table tr td:last-child {
@@ -583,11 +585,11 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    /*.slick-slider .slick-list {
+        /*.slick-slider .slick-list {
         padding-bottom: 35px;
         padding-top: 35px;
         }*/
-    /*.product-item {
+        /*.product-item {
         margin-top: 60px;
     }*/
 
