@@ -16,11 +16,13 @@ namespace Tvita_Test.Controllers
         // GET: Product
         public ActionResult Fresh()
         {
+            ViewBag.IDBranch = 1;
             return View();
         }
 
         public ActionResult Processed()
         {
+            ViewBag.IDBranch = 2;
             return View();
         }
 
@@ -71,9 +73,29 @@ namespace Tvita_Test.Controllers
             try
             {
                 var res = productManager.GetProductByID(id);
+                if (res.Product_Picture != null)
+                {
+                    var appearPic = res.Product_Picture.Split(',').FirstOrDefault();
+                    if (appearPic != null)
+                    {
+                        var idPic = Convert.ToInt32(appearPic);
+                        var p = pic.GetPictureById(idPic);
+                        if (p != null)
+                            res.Product_Pic_URL = p.Picture_Name;
+                    }
+                    var lst = new List<string>();
+                    foreach(var item in res.Product_Picture.Split(','))
+                    {
+                        var idPic = Convert.ToInt32(item);
+                        var p = pic.GetPictureById(idPic);
+                        if (p != null)
+                            lst.Add(p.Picture_Name);
+                    }
+                    res.Product_Pic_List = lst;
+                }
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -82,11 +104,25 @@ namespace Tvita_Test.Controllers
 
 
         [HttpGet]
-        public ActionResult GetRelatedProducts(int idGroup)
+        public ActionResult GetRelatedProducts(int idGroup, int idPr)
         {
             try
             {
-                var res = productManager.GetRelatedProducts(idGroup);
+                var res = productManager.GetRelatedProducts(idGroup, idPr);
+                foreach (var item in res)
+                {
+                    if (item.Product_Picture != null)
+                    {
+                        var appearPic = item.Product_Picture.Split(',').FirstOrDefault();
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Product_Pic_URL = p.Picture_Name;
+                        }
+                    }
+                }
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)

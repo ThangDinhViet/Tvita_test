@@ -12,7 +12,7 @@ function getProductDetail(_id) {
         data: dataSend,
         success: function (data) {
             fillDetail(data.data);
-            getRelatedProducts(data.data.ID_GroupProduct);
+            getRelatedProducts(data.data.ID_GroupProduct, data.data.Product_ID);
         },
         error: function (jqXHR, textStatus, errorThrown) {
 
@@ -20,8 +20,8 @@ function getProductDetail(_id) {
     });
 }
 
-function getRelatedProducts(_idGrp) {
-    var dataSend = { idGroup: parseInt(_idGrp) }
+function getRelatedProducts(_idGrp, _idPr) {
+    var dataSend = { idGroup: parseInt(_idGrp), idPr: parseInt(_idPr) }
     $.ajax({
         type: "GET",
         dataType: 'json',
@@ -39,6 +39,22 @@ function getRelatedProducts(_idGrp) {
 
 function fillDetail(data) {
     $('.js-product-name').text(data.Product_Name);
+    $('.js-product-description').text(data.Product_Description);
+    $('.js-product-original').text(data.Product_Original);
+    $('.js-product-pakageStandard').text(data.Product_PakageStandard);
+    $('.js-product-guide').text(data.Product_Guide);
+    $('.js-product-preserve').text(data.Product_Preserve);
+    $('.js-product-bannerPicture').css("background-image", "url('/Content/pictures/" + data.Product_Pic_URL + "')");
+    $.each(data.Product_Pic_List, function (k, v) {
+        var template = '<div class="col-sm-4 col-md-4 col-lg-4">' + 
+                                    '<a href="#">' + 
+                                        '<div class="g-item">' +
+                                            '<img src="../../Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v + '\')">' +
+                                        '</div>' + 
+                                    '</a>' + 
+                                '</div>';
+        $('.gallery').append($(template));
+    })
     $('.js-price').text(data.Product_Price || '---');
 }
 
@@ -53,7 +69,7 @@ function fillRelated(data) {
     $.each(data, function (k, v) {
         var template = '<div class="product-item">' +
                             '<a href="' + Config.AppUrl + '/Product/Detail/' + v.Product_ID + '">' +
-                                '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: url(' + Config.AppUrl + v.Product_Picture + ')"></a>' +
+                                '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')"></a>' +
                                 '<a href="' + Config.AppUrl + '/Product/Detail/' + v.Product_ID + '">' +
                                 '<span class="product-item-caption">' + v.Product_Name + '</span></a>' +
                             '</div>';

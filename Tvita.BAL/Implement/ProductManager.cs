@@ -89,12 +89,12 @@ namespace Tvita.BAL.Implement
             }
             return result;
         }
-        public List<ProductModel> GetRelatedProducts(int idGroup)
+        public List<ProductModel> GetRelatedProducts(int idGroup, int idProduct)
         {
             List<ProductModel> result = new List<ProductModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                result = uOW.ProductRepository.GetWhere(x => x.ID_GroupProduct == idGroup).Select(x => new ProductModel
+                result = uOW.ProductRepository.GetWhere(x => x.ID_GroupProduct == idGroup && x.Product_ID != idProduct).Select(x => new ProductModel
                 {
                     Product_ID = x.Product_ID,
                     ID_GroupProduct = x.ID_GroupProduct,
