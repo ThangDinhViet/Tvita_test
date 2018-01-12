@@ -14,7 +14,30 @@ namespace Tvita_Test.Controllers
         // GET: News
         public ActionResult Index()
         {
-            return View();
+            try
+            {
+                var res = postManager.GetHotNewPost();
+                foreach (var item in res)
+                {
+                    if (item.Post_Picture != null)
+                    {
+                        var appearPic = item.Post_Picture.Split(',').FirstOrDefault();
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Post_Pic_URL = p.Picture_Name;
+                        }
+                    }
+                }
+                ViewBag.ListLastest = res.Take(3);
+                return View(res);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         public ActionResult Details(int id)
@@ -37,7 +60,7 @@ namespace Tvita_Test.Controllers
                         
                 }
             }
-            return View("_detail", news);
+            return View(news);
         }
         [HttpGet]
         public ActionResult GetRelatedNews()
@@ -61,6 +84,34 @@ namespace Tvita_Test.Controllers
 
                 }
 
+                return Json(new { data = res }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        [HttpGet]
+        public ActionResult GetRelatedKitchen(int id)
+        {
+            try
+            {
+                var res = postManager.GetRelatedPost(1, id).Take(3);
+                foreach (var item in res)
+                {
+                    if (item.Post_Picture != null)
+                    {
+                        var appearPic = item.Post_Picture.Split(',').FirstOrDefault();
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Post_Pic_URL = p.Picture_Name;
+                        }
+                    }
+                }
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)

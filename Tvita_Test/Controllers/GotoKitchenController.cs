@@ -14,7 +14,31 @@ namespace Tvita_Test.Controllers
         // GET: GotoKitchen
         public ActionResult Index()
         {
-            return View();
+            try
+            {
+                var res = postManager.GetKitchenNews();
+                foreach (var item in res)
+                {
+                    if (item.Post_Picture != null)
+                    {
+                        var appearPic = item.Post_Picture.Split(',').FirstOrDefault();
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Post_Pic_URL = p.Picture_Name;
+                        }
+                    }
+                }
+                ViewBag.ListLastest = res.Take(3);
+                return View(res);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            
         }
 
         public ActionResult Details(int id)
@@ -44,7 +68,7 @@ namespace Tvita_Test.Controllers
         {
             try
             {
-                var res = postManager.GetRelatedPost(4,id);
+                var res = postManager.GetRelatedPost(4,id).Take(3);
                 foreach (var item in res)
                 {
                     if (item.Post_Picture != null)
