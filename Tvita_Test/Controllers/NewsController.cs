@@ -63,11 +63,11 @@ namespace Tvita_Test.Controllers
             return View(news);
         }
         [HttpGet]
-        public ActionResult GetRelatedNews()
+        public ActionResult GetRelatedNews(int id)
         {
             try
             {
-                var res = postManager.GetKitchenNews();
+                var res = postManager.GetRelatedPost(1, id).Take(3);
                 foreach (var item in res)
                 {
                     if (item.Post_Picture != null)
@@ -84,34 +84,6 @@ namespace Tvita_Test.Controllers
 
                 }
 
-                return Json(new { data = res }, JsonRequestBehavior.AllowGet);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-        [HttpGet]
-        public ActionResult GetRelatedKitchen(int id)
-        {
-            try
-            {
-                var res = postManager.GetRelatedPost(1, id).Take(3);
-                foreach (var item in res)
-                {
-                    if (item.Post_Picture != null)
-                    {
-                        var appearPic = item.Post_Picture.Split(',').FirstOrDefault();
-                        if (appearPic != null)
-                        {
-                            var idPic = Convert.ToInt32(appearPic);
-                            var p = pic.GetPictureById(idPic);
-                            if (p != null)
-                                item.Post_Pic_URL = p.Picture_Name;
-                        }
-                    }
-                }
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)

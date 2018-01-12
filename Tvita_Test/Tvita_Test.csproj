@@ -1086,6 +1086,7 @@
     <Content Include="Views\Technology\ProductionTechnology.cshtml" />
     <Content Include="Views\Technology\PostharvestTechnology.cshtml" />
     <Content Include="Views\GotoKitchen\Details.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
