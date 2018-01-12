@@ -56,7 +56,7 @@ namespace Tvita.BAL.Implement
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                var res = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject && x.Post_ID != idPost).Select(x => new PostModel
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject && x.Post_ID != idPost).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,
@@ -68,10 +68,6 @@ namespace Tvita.BAL.Implement
                     Post_Name = x.Post_Name,
                     IsDelete = x.IsDelete
                 }).ToList();
-                if (res.Any())
-                {
-                    result = res.Take(3).ToList();
-                }
             }
             return result;
         }
@@ -80,7 +76,7 @@ namespace Tvita.BAL.Implement
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                var res = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 1).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 1).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,
@@ -92,10 +88,7 @@ namespace Tvita.BAL.Implement
                     Post_Name = x.Post_Name,
                     IsDelete = x.IsDelete
                 }).ToList();
-                if (res.Any())
-                {
-                    result = res.Take(5).ToList();
-                }
+                
             }
 
             return result;
@@ -105,7 +98,7 @@ namespace Tvita.BAL.Implement
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                var res = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,
@@ -117,10 +110,6 @@ namespace Tvita.BAL.Implement
                     Post_Name = x.Post_Name,
                     IsDelete = x.IsDelete
                 }).ToList();
-                if (res.Any())
-                {
-                    result = res.Take(3).ToList();
-                }
             }
 
             return result;

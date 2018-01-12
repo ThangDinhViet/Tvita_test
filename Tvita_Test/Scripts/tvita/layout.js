@@ -182,7 +182,7 @@ $(document).ready(function () {
             success: function (resp) {
                 if (resp.data.length != 0) {
                     $.each(resp.data, function (k, v) {
-                        var a = $('<a href="' + Config.Url + '/' + v.Post_Url + '" >' + v.Post_Name + '</a>');
+                        var a = $('<a href="' + Config.Url + '/News/Details/' + v.Post_ID + '">' + v.Post_Name + '</a>');
                         $('#hot-news-content').append(a)
                     });
                 } else {

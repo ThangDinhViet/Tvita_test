@@ -44,7 +44,7 @@ namespace Tvita_Test.Controllers
         {
             try
             {
-                var res = postManager.GetHotNewPost();
+                var res = postManager.GetHotNewPost().Take(5);
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)
@@ -59,7 +59,7 @@ namespace Tvita_Test.Controllers
         {
             try
             {
-                var res = postManager.GetKitchenNews();
+                var res = postManager.GetKitchenNews().Take(3);
                 foreach(var item in res)
                 {
                     if(item.Post_Picture != null)
