@@ -1,0 +1,18 @@
+﻿.img-responsive {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+@media (min-width: 1365px) {
+    .img-responsive {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 1919px) {
+    .img-responsive {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}

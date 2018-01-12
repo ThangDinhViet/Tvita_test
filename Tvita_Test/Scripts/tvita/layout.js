@@ -232,7 +232,11 @@ $(document).ready(function () {
             });
     }
     // Make sure the client is loaded before calling this method.
-    gapi.load("client", loadClient);
+    try {
+        gapi.load("client", loadClient);
+    } catch (e) {
+        console.log(e)
+    }
 
     function showResultSearch(result) {
         if (result && result.result && result.result.items) {

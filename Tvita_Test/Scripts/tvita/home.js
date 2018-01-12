@@ -11,11 +11,11 @@
     });
 
 
-    var freshProduct = new productsHome('#fresh',1);
+    var freshProduct = new productsHome('#fresh', 1);
 
     freshProduct.init();
 
-    var processedProduct = new productsHome('#processed',2);
+    var processedProduct = new productsHome('#processed', 2);
 
     processedProduct.init();
 
@@ -86,7 +86,16 @@
         success: function (resp) {
             if (resp.data.length != 0) {
                 $.each(resp.data, function (k, v) {
-                    var div = $('<div class="col-sm-4 col-md-4 col-lg-4"><div class="n-item"><div class="n-cover"><img src="Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Post_Pic_URL + '\')">' + '</div><div class="n-content">' + v.Post_Name + '</div><div class="n-detail-content" data-maxrow="5">' + v.Post_Description + '</div><div class="n-view-more"><a href="' + Config.AppUrl + "/GotoKitchen/Details/" + v.Post_ID + '">' + $.i18n("view_more") + '</a></div></div></div>');
+                    var div = $('<div class="col-sm-4 col-md-4 col-lg-4">' +
+                                    '<div class="n-item">' +
+                                        '<div class="n-cover">' +
+                                            '<img src="Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Post_Pic_URL + '\')">' +
+                                        '</div>' +
+                                        '<div class="n-content">' + v.Post_Name + '</div><div class="n-detail-content" data-maxrow="5">' + v.Post_Description + '</div><div class="n-view-more">' +
+                                            '<a href="' + Config.AppUrl + "/GotoKitchen/Details/" + v.Post_ID + '">' + $.i18n("view_more") + '</a>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>');
                     $('#kitchen').append(div)
                 });
             }

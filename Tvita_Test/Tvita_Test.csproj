@@ -360,8 +360,10 @@
     <Content Include="Content\css\production_technology.css" />
     <Content Include="Content\css\product_detail.css" />
     <Content Include="Content\css\details.css" />
+    <Content Include="Content\css\quality.css" />
     <Content Include="Content\css\tvita_navbar.css" />
     <Content Include="Content\css\value.css" />
+    <Content Include="Content\css\vision_mission.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />

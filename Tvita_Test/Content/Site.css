@@ -582,6 +582,7 @@ body[data-language="en"] .tvita {
     color: #4E9D2D;
     font-size: 25px;
     padding: 10px;
+    text-align: justify;
 }
 
 .n-detail-content {
@@ -681,6 +682,10 @@ body[data-language="en"] .tvita {
     .ttgroup .about {
         padding-left: 66px;
     }
+
+    .list-thumb .n-detail-content {
+        padding: 10px;
+    }
 }
 
 @media (min-width:1919px) {
@@ -705,7 +710,7 @@ body[data-language="en"] .tvita {
 
     .n-content {
         font-size: 32px;
-        padding: 10px 30px;
+        padding: 10px 10px;
     }
 
     .n-detail-content {
@@ -778,14 +783,19 @@ body[data-language="en"] .tvita {
     padding-top: 40px;
 }
 
-@media (max-width: 766px){
-    .farm-tech .rr-item .caption-item{
+#kitchen .n-content {
+    height: 80px;
+    overflow: hidden;
+}
+
+@media (max-width: 766px) {
+    .farm-tech .rr-item .caption-item {
         padding-bottom: 0;
     }
-     .farm-tech .rr-item{
-         margin-bottom: 40px;
-     }
 
+    .farm-tech .rr-item {
+        margin-bottom: 40px;
+    }
 }
 
 @media(min-width: 991px) {
@@ -878,7 +888,7 @@ body[data-language="en"] .tvita {
         margin-top: 70px;
     }
 
-    .list-thumb .c-toggle{
+    .list-thumb .c-toggle {
         padding: 0px 10px;
     }
 }
@@ -903,8 +913,13 @@ body[data-language="en"] .tvita {
     .n-detail-content {
         padding: 10px 30px;
     }
-    .list-thumb .c-toggle{
+
+    .list-thumb .c-toggle {
         padding: 0 30px;
+    }
+
+    #kitchen .list-thumb .c-toggle {
+        padding: 0 10px;
     }
 
     .tvita .menu-list ul a {
@@ -924,6 +939,10 @@ body[data-language="en"] .tvita {
         .tvita .menu-list {
             margin-top: 70px;
         }
+
+    #kitchen .list-thumb .c-toggle {
+        padding: 0 10px;
+    }
 }
 
 @media(min-width: 1919px) {
@@ -965,9 +984,18 @@ body[data-language="en"] .tvita {
         margin-top: 70px;
     }
 
-     .tvita {
+    .tvita {
         background-position-x: 15px;
     }
+
+    #kitchen .list-thumb .c-toggle {
+        padding: 0 30px;
+    }
+
+    #kitchen .n-content {
+    height: 102px;
+    overflow: hidden;
+}
 }
 
 .search-results h2 {
@@ -985,7 +1013,7 @@ body[data-language="en"] .tvita {
     max-height: 120px;
 }
 
-.list-thumb .c-toggle{
+.list-thumb .c-toggle {
     background-color: #f2f2f2;
 }
 
