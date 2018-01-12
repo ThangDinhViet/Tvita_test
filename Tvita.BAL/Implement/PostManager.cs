@@ -114,6 +114,27 @@ namespace Tvita.BAL.Implement
 
             return result;
         }
+        public List<PostModel> GetCommunityNews()
+        {
+            List<PostModel> result = new List<PostModel>();
+            using (IUnitOfWork uOW = new UnitOfWork())
+            {
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 5).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                {
+                    Post_Content = x.Post_Content,
+                    Post_Description = x.Post_Description,
+                    Post_Keyword = x.Post_Keyword,
+                    Post_Picture = x.Post_Picture,
+                    Post_Url = x.Post_Url,
+                    Post_Video = x.Post_Video,
+                    Post_ID = x.Post_ID,
+                    Post_Name = x.Post_Name,
+                    IsDelete = x.IsDelete
+                }).ToList();
+            }
+
+            return result;
+        }
         public bool AddPost(PostModel model)
         {
             try
