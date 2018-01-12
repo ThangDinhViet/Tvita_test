@@ -120,6 +120,12 @@
         outline: none;
     }
 
+.ss-short-content {
+    max-height: 80px;
+    overflow: hidden;
+    display: block;
+}
+
 @media (min-width: 1279px) {
     .ss-content {
         width: 660px;
