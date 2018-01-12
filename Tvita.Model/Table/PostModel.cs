@@ -19,5 +19,8 @@ namespace Tvita.Model.Table
         public string Post_Url { get; set; }
         public Nullable<bool> IsDelete { get; set; }
         public Nullable<System.DateTime> Post_DateCreated { get; set; }
+        public string Post_Pic_URL { get; set; }
+        public string Post_Pic_In_Content { get; set; }
+        public string Post_Pic_In_Content_Des { get; set; }
     }
 }

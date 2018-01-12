@@ -17,7 +17,7 @@
     <AssemblyName>Tvita_Test</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -1040,6 +1040,7 @@
     <Content Include="Scripts\tvita\farm.js" />
     <Content Include="Scripts\tvita\history.js" />
     <Content Include="Scripts\tvita\home.js" />
+    <Content Include="Scripts\tvita\kitchen.js" />
     <Content Include="Scripts\tvita\layout.js" />
     <Content Include="Scripts\tvita\news.js" />
     <Content Include="Scripts\tvita\product.js" />
@@ -1084,6 +1085,7 @@
     <Content Include="Views\Technology\templates\grid_2x2\_part4.cshtml" />
     <Content Include="Views\Technology\ProductionTechnology.cshtml" />
     <Content Include="Views\Technology\PostharvestTechnology.cshtml" />
+    <Content Include="Views\GotoKitchen\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

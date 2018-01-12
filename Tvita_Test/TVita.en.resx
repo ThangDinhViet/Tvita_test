@@ -133,7 +133,7 @@
     <value>Fresh Products</value>
   </data>
   <data name="GotoKitchen" xml:space="preserve">
-    <value>Goto kitchen</value>
+    <value>TVITA Recipe</value>
   </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
@@ -190,7 +190,7 @@
     <value>Vision and mission</value>
   </data>
   <data name="WithTvita" xml:space="preserve">
-    <value>With T.vita</value>
+    <value />
   </data>
   <data name="Find" xml:space="preserve">
     <value>Find</value>

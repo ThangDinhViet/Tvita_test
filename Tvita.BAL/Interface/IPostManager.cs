@@ -11,7 +11,8 @@ namespace Tvita.BAL.Interface
     {
         List<PostModel> GetAllPost();
         PostModel GetPostByID(int id);
-        List<PostModel> GetRelatedPost(int idSubSubject);
-        List<PostModel> GetListNewPost(int idSubSubject);
+        List<PostModel> GetRelatedPost(int idSubSubject, int idPost);
+        List<PostModel> GetKitchenNews();
+        List<PostModel> GetHotNewPost();
     }
 }

@@ -70,7 +70,7 @@ namespace Tvita_Test {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cộng đồng.
+        ///   Looks up a localized string similar to Phát triển.
         /// </summary>
         public static string Community {
             get {
@@ -79,7 +79,7 @@ namespace Tvita_Test {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Phát triển.
+        ///   Looks up a localized string similar to Cộng đồng.
         /// </summary>
         public static string Development {
             get {
