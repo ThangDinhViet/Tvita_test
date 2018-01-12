@@ -19,7 +19,9 @@
                                 <div class="ss-title">
                                     <label>@Html.Raw(item.Post_Name)</label>
                                 </div>
-                                <p>@Html.Raw(item.Post_Description)</p>
+                                <dic class="ss-short-content">
+                                    <p>@Html.Raw(item.Post_Description)</p>
+                                </dic>
                                 <div class="view-more">
                                     <a class="btn-view-more" href="@Url.Action("Details","GotoKitchen",new { id = item.Post_ID })">@(Utilities.Translate("ViewMore"))</a>
                                 </div>
