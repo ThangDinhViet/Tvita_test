@@ -21,7 +21,7 @@
                                 </div>
                                 <p>@Html.Raw(item.Post_Description)</p>
                                 <div class="view-more">
-                                    <a class="btn-view-more" href="#">Xem thêm</a>
+                                    <a class="btn-view-more" href="@Url.Action("Details","GotoKitchen",new { id = item.Post_ID })">@(Utilities.Translate("ViewMore"))</a>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                         @Html.Raw(item.Post_Name)
                     </div>
                     <div class="n-view-more">
-                        <a href="@Url.Action("Details","GotoKitchen",new { id = item.Post_ID })">Xem thêm</a>
+                        <a href="@Url.Action("Details","GotoKitchen",new { id = item.Post_ID })">@(Utilities.Translate("ViewMore"))</a>
                     </div>
                 </div>
             </div>
