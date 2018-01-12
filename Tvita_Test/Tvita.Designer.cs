@@ -214,11 +214,38 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sau thu hoạch.
+        /// </summary>
+        public static string Postharvest {
+            get {
+                return ResourceManager.GetString("Postharvest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Công nghệ sau thu hoạch.
+        /// </summary>
+        public static string PostharvestTechnology {
+            get {
+                return ResourceManager.GetString("PostharvestTechnology", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sản phẩm chế biến.
         /// </summary>
         public static string ProcessedProducts {
             get {
                 return ResourceManager.GetString("ProcessedProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Công nghệ sản xuất.
+        /// </summary>
+        public static string ProductionTechnology {
+            get {
+                return ResourceManager.GetString("ProductionTechnology", resourceCulture);
             }
         }
         
@@ -255,6 +282,42 @@ namespace Tvita_Test {
         public static string Technology {
             get {
                 return ResourceManager.GetString("Technology", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Công nghệ.
+        /// </summary>
+        public static string TechTitle1 {
+            get {
+                return ResourceManager.GetString("TechTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sản xuất.
+        /// </summary>
+        public static string TechTitle2 {
+            get {
+                return ResourceManager.GetString("TechTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Công nghệ.
+        /// </summary>
+        public static string TechTitle3 {
+            get {
+                return ResourceManager.GetString("TechTitle3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sau thu hoạch.
+        /// </summary>
+        public static string TechTitle4 {
+            get {
+                return ResourceManager.GetString("TechTitle4", resourceCulture);
             }
         }
         

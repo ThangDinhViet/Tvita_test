@@ -778,6 +778,16 @@ body[data-language="en"] .tvita {
     padding-top: 40px;
 }
 
+@media (max-width: 766px){
+    .farm-tech .rr-item .caption-item{
+        padding-bottom: 0;
+    }
+     .farm-tech .rr-item{
+         margin-bottom: 40px;
+     }
+
+}
+
 @media(min-width: 991px) {
     .gap-group {
         display: table;
@@ -953,6 +963,10 @@ body[data-language="en"] .tvita {
 
     .tvita .menu-list {
         margin-top: 70px;
+    }
+
+     .tvita {
+        background-position-x: 15px;
     }
 }
 
