@@ -51,12 +51,12 @@ namespace Tvita.BAL.Implement
             }
             return result;
         }
-        public List<PostModel> GetRelatedPost(int idSubSubject)
+        public List<PostModel> GetRelatedPost(int idSubSubject, int idPost)
         {
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject).Select(x => new PostModel
+                var res = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject && x.Post_ID != idPost).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,
@@ -68,37 +68,19 @@ namespace Tvita.BAL.Implement
                     Post_Name = x.Post_Name,
                     IsDelete = x.IsDelete
                 }).ToList();
+                if (res.Any())
+                {
+                    result = res.Take(3).ToList();
+                }
             }
             return result;
         }
-
-        public List<PostModel> GetListNewPost(int idSubSubject)
-        {
-            List<PostModel> result = new List<PostModel>();
-            using (IUnitOfWork uOW = new UnitOfWork())
-            {
-                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
-                {
-                    Post_Content = x.Post_Content,
-                    Post_Description = x.Post_Description,
-                    Post_Keyword = x.Post_Keyword,
-                    Post_Picture = x.Post_Picture,
-                    Post_Url = x.Post_Url,
-                    Post_Video = x.Post_Video,
-                    Post_ID = x.Post_ID,
-                    Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
-                }).ToList();
-            }
-            return result.GetRange(0,5);
-        }
-
         public List<PostModel> GetHotNewPost()
         {
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                var res = uOW.PostRepository.GetAll().OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                var res = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 1).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,
@@ -118,7 +100,31 @@ namespace Tvita.BAL.Implement
 
             return result;
         }
+        public List<PostModel> GetKitchenNews()
+        {
+            List<PostModel> result = new List<PostModel>();
+            using (IUnitOfWork uOW = new UnitOfWork())
+            {
+                var res = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                {
+                    Post_Content = x.Post_Content,
+                    Post_Description = x.Post_Description,
+                    Post_Keyword = x.Post_Keyword,
+                    Post_Picture = x.Post_Picture,
+                    Post_Url = x.Post_Url,
+                    Post_Video = x.Post_Video,
+                    Post_ID = x.Post_ID,
+                    Post_Name = x.Post_Name,
+                    IsDelete = x.IsDelete
+                }).ToList();
+                if (res.Any())
+                {
+                    result = res.Take(3).ToList();
+                }
+            }
 
+            return result;
+        }
         public bool AddPost(PostModel model)
         {
             try

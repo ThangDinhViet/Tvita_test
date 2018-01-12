@@ -638,3 +638,5 @@ packages/Newtonsoft.Json.6.0.4/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft
 packages/
 Tvita_Test/bin/
 Tvita_Test/Content/images/pictures/
+Tvita_Test/obj/
+Tvita_Test/Content/pictures/

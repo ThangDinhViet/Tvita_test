@@ -74,14 +74,14 @@
                                 </ul>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="separate row"></div>
-    <div id="relatedNews" class="row">
-        
+    <div id="relatedKitchen" class="row">
+
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
@@ -91,3 +91,8 @@
         </div>
     </div>
 </div>
+<input hidden id="idKitchen" value="@Model.Post_ID"/>
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/tvita/kitchen.js")" type="text/javascript"></script>
+}

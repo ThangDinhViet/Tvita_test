@@ -1,5 +1,5 @@
 ﻿Config = {
-    AppUrl: '/Tvita_Test'
+    AppUrl: ''
 }
 
 $(document).ready(function () {
@@ -176,7 +176,7 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             dataType: 'json',
-            url: Config.AppUrl + "/Home/getHotNews/",
+            url: Config.AppUrl + "/Home/GetHotNews/",
             contentType: 'application/json',
             data: {},
             success: function (resp) {
