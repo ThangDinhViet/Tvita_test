@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = Utilities.Translate("Development") + " " + Utilities.Translate("Community");
+    ViewBag.Title = @Utilities.Translate("Community") + " " + @Utilities.Translate("Development");
     ViewBag.HotNew = true;
 }
 
@@ -9,158 +9,68 @@
 <div class="container-fluid">
     <div class="row slide-show-container">
         <div class="ss-container" id="news-slideshow">
+            @*@foreach (var item in Model)
+            {
+                <div class="ss-item ss-image">
+                    <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/transparent-1280x594.png")" style="background-image: url(@Url.Content("\"../../Content/pictures/" + @item.Post_Pic_URL + '"'))">
+                    <div class="ss-caption-container">
+                        <div class="container">
+                            <div class="ss-content">
+                                <div class="ss-title">
+                                    <label>@Html.Raw(item.Post_Name)</label>
+                                </div>
+                                <p>@Html.Raw(item.Post_Description)</p>
+                                <div class="view-more">
+                                    <a class="btn-view-more" href="@Url.Action("Details","CommunityDevelopment",new { id = item.Post_ID })">@(Utilities.Translate("ViewMore"))</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }*@
             <div class="ss-item ss-image">
-                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/agence-producteurs-locaux-damien-kuhn.jpg")">
+                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/transparent-1280x594.png")" style="background-image: url(@Url.Content("~/Content/pictures/imghotrophattriencongdong.png")">
                 <div class="ss-caption-container">
                     <div class="container">
                         <div class="ss-content">
                             <div class="ss-title">
-                                <label>T.Vita ra mắt rau sạch công nghệ cao</label>
+                                <label>Phát triển cộng đồng</label>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy </p>
+                            <p>Phát triển cộng đồng tại Việt Nam rất gần gũi với các chủ trương chính sách của nhà nước như chương.</p>
                             <div class="view-more">
-                                <a class="btn-view-more" href="#">Xem thêm</a>
+                                <a class="btn-view-more" href="@Url.Action("Index","CommunityDevelopment")">@(Utilities.Translate("ViewMore"))</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="ss-item ss-image">
-                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/Asset-9.png")">
-            </div>
-            <div class="ss-item ss-video" data-url="https://youtu.be/MB80ZuIJATI">
-                <img class="ss-item-cover" src="@Url.Content("~/Content/images/photos/bee.png")">
-            </div>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container news-page">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">@(Utilities.Translate("HomePage"))</a></li>
-        <li class="breadcrumb-item active">@(Utilities.Translate("Development")) @(Utilities.Translate("Community"))</li>
+        <li class="breadcrumb-item active">@(Utilities.Translate("Community")) @(Utilities.Translate("Development"))</li>
     </ol>
     <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="n-item">
+                    <div class="n-cover">
+                        <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("\"../../Content/pictures/" + @item.Post_Pic_URL + '"'))">
+                    </div>
+                    <div class="n-content">
+                        @Html.Raw(item.Post_Name)
+                    </div>
+                    <div class="n-view-more">
+                        <a href="@Url.Action("Details","CommunityDevelopment",new { id = item.Post_ID })">@(Utilities.Translate("ViewMore"))</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-6.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="n-item">
-                <div class="n-cover">
-                    <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-8.png"))">
-                </div>
-                <div class="n-content">
-                    Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                </div>
-                <div class="n-view-more">
-                    <a href="#">Xem thêm</a>
-                </div>
-            </div>
-        </div>
+        }
+
+
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
@@ -172,5 +82,12 @@
 </div>
 @section Scripts
 {
-    <script src="@Url.Content("~/Scripts/tvita/news.js")" type="text/javascript"></script>
+    <script>
+        $('#news-slideshow').slideShow({
+            auto: false,
+            interval: 10000,
+            parent: '.slide-show-container',
+            containerDimension: { width: 1920, height: 594 }
+        })
+    </script>
 }

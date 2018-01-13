@@ -428,6 +428,7 @@
     <Content Include="Content\pictures\1-QPAoQlJEfKJFB1Qea3Bvng.jpeg" />
     <Content Include="Content\pictures\150330213951_1_900x600.jpg" />
     <Content Include="Content\pictures\170505coach_vegetables.jpg" />
+    <Content Include="Content\pictures\201403-xl-healthy-chicken-kale-salad.jpg" />
     <Content Include="Content\pictures\Baby mix 1.jpg" />
     <Content Include="Content\pictures\Baby mix 2.jpg" />
     <Content Include="Content\pictures\Baby mix 3.jpg" />
@@ -658,6 +659,8 @@
     <Content Include="Content\pictures\Hẹ lá 2.jpg" />
     <Content Include="Content\pictures\Hẹ lá 3.jpg" />
     <Content Include="Content\pictures\Hẹ lá 4.png" />
+    <Content Include="Content\pictures\imghotrophattriencongdong.png" />
+    <Content Include="Content\pictures\IMG_0895.jpg" />
     <Content Include="Content\pictures\It’s-time-to-“Eat-Real”.jpg" />
     <Content Include="Content\pictures\juicer-comparison-breville-800jekl-vs-omega-j8006-story.jpg" />
     <Content Include="Content\pictures\Khoai lang Nhật 1.jpg" />
@@ -725,6 +728,7 @@
     <Content Include="Content\pictures\Quả vải 5.jpg" />
     <Content Include="Content\pictures\Quả vải 6.jpg" />
     <Content Include="Content\pictures\Quả vải 7.jpg" />
+    <Content Include="Content\pictures\rainbow_chard_01.jpg" />
     <Content Include="Content\pictures\Rau mix cắt ngắn 1.jpg" />
     <Content Include="Content\pictures\Rau mix cắt ngắn 2.jpg" />
     <Content Include="Content\pictures\Rau mix cắt ngắn 3.jpg" />
@@ -743,12 +747,14 @@
     <Content Include="Content\pictures\Rau muống 2.jpg" />
     <Content Include="Content\pictures\Rau muống 3.jpg" />
     <Content Include="Content\pictures\Rau muống 4.jpg" />
+    <Content Include="Content\pictures\salade-du-chef-au-poulet.jpg" />
     <Content Include="Content\pictures\Su hào 1.jpg" />
     <Content Include="Content\pictures\Su hào 2.jpg" />
     <Content Include="Content\pictures\Su hào 3.jpg" />
     <Content Include="Content\pictures\Su hào 4.jpg" />
     <Content Include="Content\pictures\Su hào 5.jpg" />
     <Content Include="Content\pictures\Su hào 6.jpg" />
+    <Content Include="Content\pictures\Sweet-Potato-White-Bean-Hash-1.jpg" />
     <Content Include="Content\pictures\Súp lơ san hô 1.jpg" />
     <Content Include="Content\pictures\Súp lơ san hô 2.jpg" />
     <Content Include="Content\pictures\Súp lơ san hô 3.jpg" />
@@ -773,6 +779,7 @@
     <Content Include="Content\pictures\Thanh long đỏ 1.jpg" />
     <Content Include="Content\pictures\Thanh long đỏ 2.png" />
     <Content Include="Content\pictures\Thanh long đỏ 3.jpg" />
+    <Content Include="Content\pictures\tuscan-chicken-white-beans-kale.jpg" />
     <Content Include="Content\pictures\Vegetable-Free-Download-PNG.png" />
     <Content Include="Content\pictures\vegetables-variety.jpg" />
     <Content Include="Content\pictures\Vegetables4.jpg" />
@@ -1089,6 +1096,7 @@
     <Content Include="Views\Technology\PostharvestTechnology.cshtml" />
     <Content Include="Views\GotoKitchen\Details.cshtml" />
     <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\CommunityDevelopment\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
