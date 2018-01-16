@@ -7,6 +7,7 @@ using Tvita.BAL.Implement;
 using Tvita_Test.Models;
 using Tvita.Model.Table;
 
+
 namespace Tvita_Test.Controllers
 {
     public class GotoKitchenController : TvitaController
@@ -100,6 +101,20 @@ namespace Tvita_Test.Controllers
             try
             {
                 var res = postManager.GetKitchenItems(_param);
+                foreach (var item in (dynamic)res.data)
+                {
+                    if (item.Post_Picture != null)
+                    {
+                        var appearPic = item.Post_Picture.Split(',')[0];
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Post_Pic_URL = p.Picture_Name;
+                        }
+                    }
+                }
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)

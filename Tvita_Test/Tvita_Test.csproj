@@ -361,6 +361,7 @@
     <Content Include="Content\css\product_detail.css" />
     <Content Include="Content\css\details.css" />
     <Content Include="Content\css\quality.css" />
+    <Content Include="Content\css\technology.css" />
     <Content Include="Content\css\tvita_navbar.css" />
     <Content Include="Content\css\value.css" />
     <Content Include="Content\css\vision_mission.css" />
@@ -389,6 +390,7 @@
     <Content Include="Content\images\icons\plus-circle-small.png" />
     <Content Include="Content\images\icons\plus-circle.png" />
     <Content Include="Content\images\icons\prev-slide.png" />
+    <Content Include="Content\images\icons\tech-title-bg.png" />
     <Content Include="Content\images\icons\video-mark.png" />
     <Content Include="Content\images\logos\logo_green_en.png" />
     <Content Include="Content\images\logos\logo_green_vi.png" />
@@ -412,9 +414,15 @@
     <Content Include="Content\images\photos\history-cover-bg.png" />
     <Content Include="Content\images\photos\map.png" />
     <Content Include="Content\images\photos\planes.png" />
+    <Content Include="Content\images\photos\Quality.png" />
     <Content Include="Content\images\photos\tech-bg.png" />
     <Content Include="Content\images\photos\tech-cover-bg.png" />
     <Content Include="Content\images\photos\tech.png" />
+    <Content Include="Content\images\photos\tech_1.png" />
+    <Content Include="Content\images\photos\tech_2.png" />
+    <Content Include="Content\images\photos\tech_3.png" />
+    <Content Include="Content\images\photos\tech_4.png" />
+    <Content Include="Content\images\photos\tech_5.png" />
     <Content Include="Content\images\photos\thomas-martinsen-105809.jpg" />
     <Content Include="Content\images\photos\transparent-1280x594.png" />
     <Content Include="Content\images\photos\transparent-1919x594.png" />
@@ -425,6 +433,7 @@
     <Content Include="Content\images\photos\transparent-44.png" />
     <Content Include="Content\images\photos\value.png" />
     <Content Include="Content\images\photos\value_page.png" />
+    <Content Include="Content\images\photos\VisionAndMission.png" />
     <Content Include="Content\pictures\1-QPAoQlJEfKJFB1Qea3Bvng.jpeg" />
     <Content Include="Content\pictures\150330213951_1_900x600.jpg" />
     <Content Include="Content\pictures\170505coach_vegetables.jpg" />
