@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Tvita_Test.Models
+namespace Tvita.Model.Common
 {
     public class LoadMoreParam
     {
@@ -15,7 +16,7 @@ namespace Tvita_Test.Models
 
     public class RespondResult
     {
-        public LoadMoreParam pageInfo {get; set;}
+        public LoadMoreParam pageInfo { get; set; }
         public Object data { get; set; }
     }
 }

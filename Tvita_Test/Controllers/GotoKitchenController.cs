@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Tvita.BAL.Implement;
 using Tvita_Test.Models;
 using Tvita.Model.Table;
-
+using Tvita.Model.Common;
 
 namespace Tvita_Test.Controllers
 {

@@ -52,7 +52,7 @@
         <li class="breadcrumb-item"><a href="#">@(Utilities.Translate("HomePage"))</a></li>
         <li class="breadcrumb-item active">@(Utilities.Translate("Community")) @(Utilities.Translate("Development"))</li>
     </ol>
-    <div class="row">
+    @*<div class="row">
         @foreach (var item in Model)
         {
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -70,6 +70,9 @@
             </div>
         }
 
+
+    </div>*@
+    <div class="list">
 
     </div>
     <div class="row">
@@ -89,5 +92,67 @@
             parent: '.slide-show-container',
             containerDimension: { width: 1920, height: 594 }
         })
+
+        var paramPage = {
+            total: 0,
+            recordsInPage: 3,
+            recordsDisplayed: 0
+        }
+
+        function getItems(callback) {
+            $.ajax({
+                type: "GET",
+                dataType: 'json',
+                url: Config.AppUrl + "/CommunityDevelopment/GetItems/",
+                contentType: 'application/json',
+                data: paramPage,
+                success: function (data) {
+                    var listContainer = $('.list')
+                    var indexCol = 0;
+                    var row;
+                    paramPage.total = data.pageInfo.total;
+                    paramPage.recordsDisplayed = data.pageInfo.recordsDisplayed;
+
+                    if (data.pageInfo.recordsDisplayed == data.pageInfo.total) {
+                        $('.js-load-more').prop('disabled', true);
+                        self.displayedAllItem = true;
+                    }
+
+                    $.each(data.data, function (k, v) {
+                        if (indexCol % 3 == 0) {
+                            row = $('<div></div>').addClass('row');
+                            listContainer.append(row)
+                        }
+                        var item_container = $('<div class="col-sm-4 col-md-4 col-lg-4"></div>');
+                        var link = $('<div class="n-item">' +
+                                        '<div class="n-cover">' +
+                                            '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Post_Pic_URL + '\')">' +
+                                        '</div>' +
+                                        '<div class="n-content">' +
+                                            v.Post_Name +
+                                        '</div>' +
+                                        '<div class="n-view-more">' +
+                                            '<a href="' + Config.AppUrl + '/GotoKitchen/Details/' + v.Post_ID + '">' + $.i18n("view_more") + '</a>' +
+                                        '</div>' +
+                                    '</div>');
+                        item_container.append(link);
+                        row.append(item_container);
+                        indexCol++;
+                    })
+                    if (callback) callback();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                }
+            });
+        }
+
+        $('.js-load-more').unbind().bind('click', function () {
+            getItems(function () {
+                checkChatInView();
+            });
+        })
+
+        getItems();
     </script>
 }

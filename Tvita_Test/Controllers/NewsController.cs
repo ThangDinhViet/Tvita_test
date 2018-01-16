@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Tvita.BAL.Implement;
+using Tvita.Model.Common;
 
 namespace Tvita_Test.Controllers
 {
@@ -85,6 +86,36 @@ namespace Tvita_Test.Controllers
                 }
 
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        [HttpGet]
+        public ActionResult GetItems(LoadMoreParam _param)
+        {
+            try
+            {
+                var res = postManager.GetNewsItems(_param);
+                foreach (var item in (dynamic)res.data)
+                {
+                    if (item.Post_Picture != null)
+                    {
+                        var appearPic = item.Post_Picture.Split(',')[0];
+                        if (appearPic != null)
+                        {
+                            var idPic = Convert.ToInt32(appearPic);
+                            var p = pic.GetPictureById(idPic);
+                            if (p != null)
+                                item.Post_Pic_URL = p.Picture_Name;
+                        }
+                    }
+                }
+                return Json(res, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)
             {
