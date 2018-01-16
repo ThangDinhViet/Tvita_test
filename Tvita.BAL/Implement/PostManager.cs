@@ -157,5 +157,46 @@ namespace Tvita.BAL.Implement
                 return false;
             }
         }
+
+        public RespondResult GetKitchenItems(LoadMoreParam _param)
+        {
+            var res = new RespondResult();
+            res.pageInfo = new LoadMoreParam();
+            List<PostModel> result = new List<PostModel>();
+            using (IUnitOfWork uOW = new UnitOfWork())
+            {
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                {
+                    Post_Content = x.Post_Content,
+                    Post_Description = x.Post_Description,
+                    Post_Keyword = x.Post_Keyword,
+                    Post_Picture = x.Post_Picture,
+                    Post_Url = x.Post_Url,
+                    Post_Video = x.Post_Video,
+                    Post_ID = x.Post_ID,
+                    Post_Name = x.Post_Name,
+                    IsDelete = x.IsDelete
+                }).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
+                res.pageInfo.total = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).Count();
+            }
+            int displayed = _param.recordsDisplayed + result.Count();
+            res.data = result;
+            res.pageInfo.recordsDisplayed = displayed;
+            res.pageInfo.recordsInPage = _param.recordsInPage;
+            return res;
+        }
     }
+}
+public class LoadMoreParam
+{
+    public int total { get; set; }
+    public int recordsInPage { get; set; }
+    public int recordsDisplayed { get; set; }
+    public int idBranch { get; set; }
+}
+
+public class RespondResult
+{
+    public LoadMoreParam pageInfo { get; set; }
+    public Object data { get; set; }
 }

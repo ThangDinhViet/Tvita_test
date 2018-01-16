@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Tvita.BAL.Implement;
+using Tvita_Test.Models;
+using Tvita.Model.Table;
 
 namespace Tvita_Test.Controllers
 {
@@ -84,6 +86,21 @@ namespace Tvita_Test.Controllers
                     }
                 }
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public ActionResult GetItems(LoadMoreParam _param)
+        {
+            try
+            {
+                var res = postManager.GetKitchenItems(_param);
+                return Json(res, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)
             {

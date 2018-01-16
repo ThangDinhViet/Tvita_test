@@ -30,6 +30,7 @@
     top: 50%;
     transform: translateY(-50%);
     display: block;
+    margin-top: 8px;
 }
 
 .article-created-date {
