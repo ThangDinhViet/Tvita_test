@@ -229,7 +229,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Common.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\LoadMoreParam.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="TvitaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
