@@ -308,6 +308,28 @@ namespace Tvita.DAL.Common
             }
         }
 
+        private IPURepository _iPURepository;
+        public IPURepository IPURepository
+        {
+            get
+            {
+                if (this._iPURepository == null)
+                    this._iPURepository = new PURepository(_context);
+                return _iPURepository;
+            }
+        }
+
+        private IRepository<PU, int> _PURepository;
+        public IRepository<PU, int> PURepository
+        {
+            get
+            {
+                if (this._PURepository == null)
+                    this._PURepository = new PURepository(_context);
+                return _PURepository;
+            }
+        }
+
         public void SaveChanges()
         {
             try

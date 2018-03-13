@@ -36,6 +36,8 @@ namespace Tvita.DAL.Common
         ISubSubjectRepository ISubSubjectRepository { get; }
         IRepository<tbl_Post, int> PostRepository { get; }
         IPostRepository IPostRepository { get; }
+        IRepository<PU, int> PURepository { get; }
+        IPURepository IPURepository { get; }
         void SaveChanges();
     }
 }

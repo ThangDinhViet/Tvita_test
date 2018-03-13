@@ -7,7 +7,7 @@
         auto: true,
         interval: 5000,
         parent: '.slide-show-container',
-        autoPlayVideo: true
+        autoPlayVideo: false
     });
 
 

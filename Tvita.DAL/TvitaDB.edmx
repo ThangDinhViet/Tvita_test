@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Tvita_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PU">
+          <Key>
+            <PropertyRef Name="PU_ID" />
+          </Key>
+          <Property Name="PU_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PU_Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="PU_Content" Type="nvarchar(max)" />
+          <Property Name="PU_Image" Type="nvarchar" MaxLength="50" />
+          <Property Name="PU_Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="PU_Areas" Type="nvarchar" MaxLength="500" />
+          <Property Name="PU_CodeVietGap" Type="nvarchar" MaxLength="500" />
+          <Property Name="PU_Og" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="tbl_Branch">
           <Key>
             <PropertyRef Name="Branch_ID" />
@@ -271,6 +284,7 @@
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityContainer Name="Tvita_TestModelStoreContainer">
+          <EntitySet Name="PU" EntityType="Self.PU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Branch" EntityType="Self.tbl_Branch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Card" EntityType="Self.tbl_Card" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_CardDetails" EntityType="Self.tbl_CardDetails" Schema="dbo" store:Type="Tables" />
@@ -559,6 +573,7 @@
           <EntitySet Name="tbl_ProductsInFarm" EntityType="Tvita_TestModel.tbl_ProductsInFarm" />
           <EntitySet Name="tbl_LanguageDescription" EntityType="Tvita_TestModel.tbl_LanguageDescription" />
           <EntitySet Name="tbl_LanguageTable" EntityType="Tvita_TestModel.tbl_LanguageTable" />
+          <EntitySet Name="PUs" EntityType="Tvita_TestModel.PU" />
         </EntityContainer>
         <EntityType Name="tbl_ProductsInFarm">
           <Key>
@@ -586,6 +601,19 @@
           <Property Name="LT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LT_TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LT_IdItem" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PU">
+          <Key>
+            <PropertyRef Name="PU_ID" />
+          </Key>
+          <Property Name="PU_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PU_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PU_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PU_Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PU_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PU_Areas" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PU_CodeVietGap" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PU_Og" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -877,6 +905,20 @@
                 <ScalarProperty Name="LT_IdItem" ColumnName="LT_IdItem" />
                 <ScalarProperty Name="LT_TableName" ColumnName="LT_TableName" />
                 <ScalarProperty Name="LT_ID" ColumnName="LT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUs">
+            <EntityTypeMapping TypeName="Tvita_TestModel.PU">
+              <MappingFragment StoreEntitySet="PU">
+                <ScalarProperty Name="PU_Og" ColumnName="PU_Og" />
+                <ScalarProperty Name="PU_CodeVietGap" ColumnName="PU_CodeVietGap" />
+                <ScalarProperty Name="PU_Areas" ColumnName="PU_Areas" />
+                <ScalarProperty Name="PU_Address" ColumnName="PU_Address" />
+                <ScalarProperty Name="PU_Image" ColumnName="PU_Image" />
+                <ScalarProperty Name="PU_Content" ColumnName="PU_Content" />
+                <ScalarProperty Name="PU_Name" ColumnName="PU_Name" />
+                <ScalarProperty Name="PU_ID" ColumnName="PU_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

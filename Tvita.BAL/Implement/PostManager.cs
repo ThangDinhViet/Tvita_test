@@ -23,6 +23,8 @@ namespace Tvita.BAL.Implement
                     Post_Description = x.Post_Description,
                     Post_Keyword = x.Post_Keyword,
                     Post_Picture = x.Post_Picture,
+
+
                     Post_Url = x.Post_Url,
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
@@ -57,7 +59,7 @@ namespace Tvita.BAL.Implement
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject && x.Post_ID != idPost).Select(x => new PostModel
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == idSubSubject && x.Post_ID != idPost).OrderBy(x => Guid.NewGuid()).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,
@@ -166,7 +168,7 @@ namespace Tvita.BAL.Implement
             List<PostModel> result = new List<PostModel>();
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).OrderBy(x => x.Post_DateCreated).Select(x => new PostModel
+                result = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).OrderBy(x => x.Post_ID).Select(x => new PostModel
                 {
                     Post_Content = x.Post_Content,
                     Post_Description = x.Post_Description,

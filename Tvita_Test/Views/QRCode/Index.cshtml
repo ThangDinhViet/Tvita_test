@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = Utilities.Translate("Technology");
+}
+
+<link href="@Url.Content("~/Content/css/technology.css")" rel="stylesheet">
+<link href="@Url.Content("~/Content/css/product_detail.css")" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="production-technology col-sx-12 col-sm-6 col-md-6 col-lg-6">
+            @*production_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>HTX THIỆN THANH</span>
+                            <span>Đồng hành cùng T.Vita</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="col-sm-12 col-md-6 tc">
+                        <p>HTX Thiện Thanh được thành lập 01.2016 với diện tích 52,1 ha. Áp dụng hệ thống kiểm soát chất lượng theo chuẩn VietGAP, nông dân tham gia HTX thường xuyên được đào tạo một cách bài bản và nâng cao kiến thức HTX Thiện Thanh đang là một trong những HTX hàng đầu trong lĩnh vực nông nghiệp. Với hệ thống canh tác áp dụng công nghệ cao như nhà lưới, hệ thống tưới nhỏ giọt hiệu quả, HTX Thiện Thanh đang là tạo được sự khác biệt trong nông nghiệp.
+</p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/htx1.jpg")" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/htx3.jpg")" />
+                    </div>
+                </div>
+            </div>
+            @*end-of-production_technology*@
+        </div>
+        <div class="postharvest-technology col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            @*postharvest_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>Thông tin</span>
+                            <span>Chi tiết</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="tc col-sm-12 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
+                        <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/htx4.jpg")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/htx5.jpg")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/htx6.png")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <div class="info-price" style="margin-top: 20px; margin-bottom: 20px">
+                            <div class="container-ip">
+                                <div class="info-title">
+                                    <span>Thông tin liên hệ</span>
+                                </div>
+                                <div class="price-container" hidden>
+                                    <span class="keep-inline"><span class="price js-price"></span><span class="unit">VND/Kg</span></span>
+                                </div>
+                                <div class="separate"></div>
+                                <div class="item-info">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Địa chỉ
+                                                </td>
+                                                <td class="js-product-pakageStandard" style="color: #78ab42;font-size: 20px;">Đạ Ròn, Đơn Dương, Lâm Đồng</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Tổng diện tích (ha)
+                                                </td>
+                                                <td class="js-product-original" style="color: #78ab42;font-size: 20px;">52,1</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Mã số VietGAP
+                                                </td>
+                                                <td class="js-product-guide" style="color: #78ab42;font-size: 20px;">VietGAP-TT-14-04-68-0064</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Tổ chức chứng nhận
+                                                </td>
+                                                <td class="js-product-preserve" style="color: #78ab42;font-size: 20px;">Viện Nghiên cứu hạt nhân</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button style="display:none" class="btn btn-order">Đặt hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*end-of-postharvest_technology*@
+        </div>
+    </div>
+</div>

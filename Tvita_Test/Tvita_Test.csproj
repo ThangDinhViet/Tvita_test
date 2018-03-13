@@ -213,6 +213,7 @@
     <Compile Include="Areas\Admin\Controllers\FarmController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CommunityDevelopmentController.cs" />
     <Compile Include="ChatHub.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\QRCodeController.cs" />
     <Compile Include="Controllers\TechnologyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -367,6 +369,12 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\htx_pic\htx1.JPG" />
+    <Content Include="Content\htx_pic\htx2.JPG" />
+    <Content Include="Content\htx_pic\htx3.JPG" />
+    <Content Include="Content\htx_pic\htx4.JPG" />
+    <Content Include="Content\htx_pic\htx5.JPG" />
+    <Content Include="Content\htx_pic\htx6.png" />
     <Content Include="Content\images\certificate\FOODSAFE.png" />
     <Content Include="Content\images\certificate\GLOBALGAP.png" />
     <Content Include="Content\images\certificate\GMP.png" />
@@ -1030,6 +1038,7 @@
     <Content Include="Scripts\i18n\src\languages\sl.js" />
     <Content Include="Scripts\i18n\src\languages\uk.js" />
     <Content Include="Scripts\tvita\getContent.js" />
+    <Content Include="Areas\Admin\Views\Profile\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Tvita_Test.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\iframe_api.js" />
@@ -1105,6 +1114,8 @@
     <Content Include="Views\GotoKitchen\Details.cshtml" />
     <Content Include="Views\News\Details.cshtml" />
     <Content Include="Views\CommunityDevelopment\Details.cshtml" />
+    <Content Include="Views\QRCode\Index.cshtml" />
+    <Content Include="Views\QRCode\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

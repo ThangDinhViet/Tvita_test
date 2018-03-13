@@ -50,7 +50,6 @@
                             <th>Giá hiện tại (VNĐ)</th>
                             <th>Giá bình quân (VNĐ)</th>
                             <th>Đơn vị</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -61,7 +60,6 @@
                             <th>Hộ sản xuất</th>
                             <th>Farm sản xuất</th>
                             <th>Ngày nhập</th>
-                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -80,13 +78,11 @@
                                     <td>@item.ProductionUnit_Name</td>
                                     <td>@item.Farm_Name</td>
                                     <td>@item.ProductHistory_Date.ToString("dd/MM/yyyy")</td>
-                                    <td>@item.ProductionUnit_PreviousPrice</td>
-                                    <td>@item.ProductHistory_Price</td>
-                                    <td>@item.ProductsInFarm_AveragePrice</td>
+                                    <td>@Math.Round(@item.ProductionUnit_PreviousPrice)</td>
+                                    <td>@Math.Round(@item.ProductHistory_Price,3)</td>
+                                    <td>@Math.Round(item.ProductsInFarm_AveragePrice,2)</td>
                                     <td>@item.ProductionUnit_Unit</td>
-                                    <td>
-                                        <button class="btn btn-danger btn-edit" data-id="@item.ID">Đặt hàng</button>
-                                    </td>
+                                    
                                 </tr>
                             }
                         }

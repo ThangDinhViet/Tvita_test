@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = Utilities.Translate("Technology");
+}
+
+<link href="@Url.Content("~/Content/css/technology.css")" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="production-technology col-sx-12 col-sm-6 col-md-6 col-lg-6">
+            @*production_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>@Utilities.Translate("TechTitle1")</span>
+                            <span>@Utilities.Translate("TechTitle2")</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="col-sm-12 col-md-6 tc">
+                        <p>T.Vita chú trọng đầu tư vào các mô hình trồng trọt công nghệ cao với hệ thống Nhà kính của Israel; Hệ thống tưới điều khiển tự động; Bộ giống chất lượng cao có khả năng kháng bệnh và chịu nhiệt từ các thương hiệu nổi tiếng thế giới.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_1.png")" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_2.png")" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_3.png")" />
+                    </div>
+                </div>
+            </div>
+            @*end-of-production_technology*@
+        </div>
+        <div class="postharvest-technology col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            @*postharvest_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>@Utilities.Translate("TechTitle3")</span>
+                            <span>@Utilities.Translate("TechTitle4")</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="tc col-sm-12 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_4.png")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/tech_5.png")" />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <p>Các công nghệ sau thu hoạch như bảo quản lạnh, chế biến & đóng gói theo dây chuyền tiên tiến nhất của Châu Âu, giúp tối ưu hóa vòng đời sản phẩm, đảm bảo an toàn vệ sinh thực phẩm và duy trì sự tươi ngon.</p>
+                    </div>
+                </div>
+            </div>
+            @*end-of-postharvest_technology*@
+        </div>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = Utilities.Translate("Technology");
+}
+
+<link href="@Url.Content("~/Content/css/technology.css")" rel="stylesheet">
+<link href="@Url.Content("~/Content/css/product_detail.css")" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="production-technology col-sx-12 col-sm-6 col-md-6 col-lg-6">
+            @*production_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>@Model.PU_Name</span>
+                            <span>Đồng hành cùng T.Vita</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    <div class="col-sm-12 col-md-6 tc">
+                        <p>
+                            @Model.PU_Content
+                        </p>
+                    </div>
+                    @if (ViewBag.Post_Pic_URL_1 != null && ViewBag.Post_Pic_URL_1 != "")
+                    {
+                        <div class="col-sm-6 col-md-6 tc">
+                            <img class="img-responsive" src="@Url.Content(@"~/Content/htx_pic/" + ViewBag.Post_Pic_URL_1)" />
+                        </div>
+                    }
+                    @if (ViewBag.Post_Pic_URL_2 != null && ViewBag.Post_Pic_URL_2 != "")
+                    {
+                        <div class="col-sm-6 col-md-6 tc">
+                            <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/"  + ViewBag.Post_Pic_URL_2)" />
+                        </div>
+                    }
+                </div>
+            </div>
+            @*end-of-production_technology*@
+        </div>
+        <div class="postharvest-technology col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            @*postharvest_technology*@
+            <div class="">
+                <div class="row c-pg-title">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label class="pg-title">
+                            <span>Thông tin</span>
+                            <span>Chi tiết</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row t-content">
+                    @if (ViewBag.Post_Pic_URL_3 != null && ViewBag.Post_Pic_URL_3 != "")
+                    {
+                        <div class="tc col-sm-12 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
+                            <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/" + ViewBag.Post_Pic_URL_3)" />
+                        </div>
+                    }
+                    @if (ViewBag.Post_Pic_URL_4 != null && ViewBag.Post_Pic_URL_4 != "")
+                    {
+                        <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                            <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/" + ViewBag.Post_Pic_URL_4)" />
+                        </div>
+                    }
+                    @if (ViewBag.Post_Pic_URL_5 != null && ViewBag.Post_Pic_URL_5 != "")
+                    {
+                        <div class="col-sm-12 col-md-6 tc">
+                            <img class="img-responsive" src="@Url.Content("~/Content/htx_pic/" + ViewBag.Post_Pic_URL_5)" />
+                        </div>
+                    }
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 tc">
+                        <div class="info-price" style="margin-top: 20px; margin-bottom: 20px">
+                            <div class="container-ip">
+                                <div class="info-title">
+                                    <span>Thông tin liên hệ</span>
+                                </div>
+                                <div class="price-container" hidden>
+                                    <span class="keep-inline"><span class="price js-price"></span><span class="unit">VND/Kg</span></span>
+                                </div>
+                                <div class="separate"></div>
+                                <div class="item-info">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Địa chỉ
+                                                </td>
+                                                <td class="js-product-pakageStandard" style="color: #78ab42;font-size: 20px;">@Model.PU_Address</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Tổng diện tích (ha)
+                                                </td>
+                                                <td class="js-product-original" style="color: #78ab42;font-size: 20px;">@Model.PU_Areas</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Mã số VietGAP
+                                                </td>
+                                                <td class="js-product-guide" style="color: #78ab42;font-size: 20px;">@Model.PU_CodeVietGap</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #78ab42;font-size: 20px;">
+                                                    Tổ chức chứng nhận
+                                                </td>
+                                                <td class="js-product-preserve" style="color: #78ab42;font-size: 20px;">@Model.PU_Og</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button style="display:none" class="btn btn-order">Đặt hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*end-of-postharvest_technology*@
+        </div>
+    </div>
+</div>

@@ -63,6 +63,7 @@
     <Compile Include="Implement\ProductionUnitManager.cs" />
     <Compile Include="Implement\ProductManager.cs" />
     <Compile Include="Implement\ProductsInFarmManager.cs" />
+    <Compile Include="Implement\PUManager.cs" />
     <Compile Include="Implement\SubjectManager.cs" />
     <Compile Include="Implement\SubSubjectManager.cs" />
     <Compile Include="Interface\IBranchManager.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Interface\IProductionUnitManager.cs" />
     <Compile Include="Interface\IProductManager.cs" />
     <Compile Include="Interface\IProductsInFarmManager.cs" />
+    <Compile Include="Interface\IPUManager.cs" />
     <Compile Include="Interface\ISubjectManager.cs" />
     <Compile Include="Interface\ISubSubjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

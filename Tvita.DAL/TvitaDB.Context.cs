@@ -47,5 +47,6 @@ namespace Tvita.DAL
         public virtual DbSet<tbl_ProductsInFarm> tbl_ProductsInFarm { get; set; }
         public virtual DbSet<tbl_LanguageDescription> tbl_LanguageDescription { get; set; }
         public virtual DbSet<tbl_LanguageTable> tbl_LanguageTable { get; set; }
+        public virtual DbSet<PU> PUs { get; set; }
     }
 }
