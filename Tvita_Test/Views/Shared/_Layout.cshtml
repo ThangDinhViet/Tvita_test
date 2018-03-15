@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="~/Content/images/logos/fav.png" />
     <title>@ViewBag.Title - T.Vita</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -46,7 +47,7 @@
                     <li class="@(Utilities.menuIsActive("News", "Index") ? "active" : "")">@Html.ActionLink(Utilities.Translate("News"), "Index", "News")</li>
                     <li class="@(Utilities.menuIsActive("Technology", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "Technology"))">@(Utilities.Translate("Technology"))</a></li>
                     <li class="@(Utilities.menuIsActive("GotoKitchen", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "GotoKitchen"))"><span>@(Utilities.Translate("GotoKitchen"))</span> <span class="nav-subtitle">@Utilities.Translate("WithTvita")</span></a></li>
-                    <li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "CommunityDevelopment"))"><span>@(Utilities.Translate("Community"))</span> <span class="nav-subtitle">@(Utilities.Translate("Development"))</span></a></li>
+                    @*<li class="@(Utilities.menuIsActive("CommunityDevelopment", "Index") ? "active" : "")"><a href="@(Url.Action("Index", "CommunityDevelopment"))"><span>@(Utilities.Translate("Community"))</span> <span class="nav-subtitle">@(Utilities.Translate("Development"))</span></a></li>*@
                 </ul>
 
                 <div class="navbar-form navbar-right">
@@ -202,7 +203,7 @@
             </div>
         </div>
     </div>
-    <div class="talk-with-me">
+    @*<div class="talk-with-me">
         <div class="twm-title">
             @(Utilities.Translate("TalkWithMe"))
         </div>
@@ -223,7 +224,7 @@
                 </span>
             </div>
         </div>
-    </div>
+    </div>*@
     <div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="container">
             <div class="row">

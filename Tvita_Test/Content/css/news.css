@@ -163,7 +163,7 @@
         display: inline-block;
         max-width: 100%;
         margin-bottom: 5px;
-        font-weight: initial;
+        font-weight: bold;
         margin-left: -30px;
         text-align: left;
         height: 110px;
@@ -203,7 +203,7 @@
         display: inline-block;
         max-width: 100%;
         margin-bottom: 5px;
-        font-weight: initial;
+        font-weight: bold;
         margin-left: -30px;
         text-align: left;
         height: 110px;
@@ -243,7 +243,7 @@
             display: inline-block;
             max-width: 100%;
             margin-bottom: 5px;
-            font-weight: initial;
+            font-weight: bold;
             margin-left: -30px;
             text-align: left;
             height: 110px;

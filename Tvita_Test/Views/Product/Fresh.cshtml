@@ -59,8 +59,8 @@
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau ăn củ</a></li>
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau ăn quả</a></li>
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Trái cây</a></li>
-                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau gia vị</a></li>
-                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau baby</a></li>
+                                    @*<li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau gia vị</a></li>*@
+                                    @*<li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau baby</a></li>*@
                                 </ul>
                             </div>
                         </div>
@@ -69,17 +69,18 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse2"> <i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @Utilities.Translate("ProcessedProducts")</a>
+                                    @*<a data-toggle="collapse" href="#collapse2"> <i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @Utilities.Translate("ProcessedProducts")</a>*@
+                                    <a data-toggle="collapse" href="@Url.Action("Processed", "Product")"> <i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @Utilities.Translate("ProcessedProducts")</a>
                                 </h4>
                             </div>
-                            <div id="collapse2" class="panel-collapse collapse in">
+                            @*<div id="collapse2" class="panel-collapse collapse in">
                                 <ul class="list-group">
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Salad</a></li>
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Nước ép</a></li>
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Sấy khô</a></li>
                                     <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Đông lạnh</a></li>
                                 </ul>
-                            </div>
+                            </div>*@
                         </div>
                     </div>
                 </div>
