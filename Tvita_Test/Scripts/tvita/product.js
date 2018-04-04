@@ -5,7 +5,8 @@
         total: 0,
         recordsInPage: 6,
         recordsDisplayed: 0,
-        idBranch : 1
+        idBranch: 1,
+        idGroup: 0,
     }
 
     var listContainer = $('.list-product');
@@ -13,12 +14,19 @@
     self.init = function () {
         listContainer.empty();
         if ($('#idBranch').val() != null)
+        {
             paramPage.idBranch = $('#idBranch').val()
+            paramPage.idGroup = window.location.href.split('/')[5]
+        } 
         self.getMore();
 
         $('.js-load-more').unbind().bind('click', function () {
             if ($('#idBranch').val() != null)
+            {
                 paramPage.idBranch = $('#idBranch').val()
+                paramPage.idGroup = window.location.href.split('/')[5]
+            }
+                
             self.getMore();
         })
     }

@@ -10,7 +10,7 @@ namespace Tvita.DAL.Repository
     public interface IProductRepository
     {
         bool AddProduct(ProductModel model);
-        List<ProductModel> GetProductByBranch(int branchID);
+        List<ProductModel> GetProductByBranch(int branchID, int? groupID);
     }
 }
 

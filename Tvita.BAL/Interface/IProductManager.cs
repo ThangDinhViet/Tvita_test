@@ -13,6 +13,6 @@ namespace Tvita.BAL.Interface
         ProductModel GetProductByCode(string code);
         ProductModel GetProductByID(int id);
         List<ProductModel> GetRelatedProducts(int idGroup, int idProduct);
-        List<ProductModel> GetProductByBranch(int branchID);
+        List<ProductModel> GetProductByBranch(int branchID, int? groupID);
     }
 }

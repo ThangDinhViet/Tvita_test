@@ -12,6 +12,7 @@ namespace Tvita.Model.Common
         public int recordsInPage { get; set; }
         public int recordsDisplayed { get; set; }
         public int idBranch { get; set; }
+        public int idGroup { get; set; }
     }
 
     public class RespondResult

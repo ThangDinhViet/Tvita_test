@@ -123,12 +123,15 @@ var productsHome = function (container, _type) {
     var listContainer = $(container);
 
     self.init = function () {
-        listContainer.empty();
-        self.getMore();
-
-        $('.js-load-more').unbind().bind('click', function () {
+        if (_type == 1)
+        {
+            listContainer.empty();
             self.getMore();
-        })
+
+            $('.js-load-more').unbind().bind('click', function () {
+                self.getMore();
+            })
+        }
     }
 
     self.getMore = function () {

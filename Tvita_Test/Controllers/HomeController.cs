@@ -44,7 +44,7 @@ namespace Tvita_Test.Controllers
         {
             try
             {
-                var res = postManager.GetHotNewPost().Take(5);
+                var res = postManager.GetHotNewPost().Take(3);
                 return Json(new { data = res }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception)

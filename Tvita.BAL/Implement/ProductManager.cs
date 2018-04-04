@@ -135,13 +135,13 @@ namespace Tvita.BAL.Implement
                 return false;
             }
         }
-        public List<ProductModel> GetProductByBranch(int branchID)
+        public List<ProductModel> GetProductByBranch(int branchID, int? groupID)
         {
             List<ProductModel> result = new List<ProductModel>();
             
             using (IUnitOfWork uOW = new UnitOfWork())
             {
-                result = uOW.IProductRepository.GetProductByBranch(branchID);
+                result = uOW.IProductRepository.GetProductByBranch(branchID, groupID);
             }
             return result;
         }

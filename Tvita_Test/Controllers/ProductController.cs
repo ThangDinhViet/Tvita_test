@@ -15,13 +15,13 @@ namespace Tvita_Test.Controllers
         ProductManager productManager = new ProductManager();
         PictureManager pic = new PictureManager();
         // GET: Product
-        public ActionResult Fresh()
+        public ActionResult Fresh(int? id)
         {
             ViewBag.IDBranch = 1;
             return View();
         }
 
-        public ActionResult Processed()
+        public ActionResult Processed(int? idGroup)
         {
             ViewBag.IDBranch = 2;
             return View();
@@ -39,8 +39,8 @@ namespace Tvita_Test.Controllers
             try
             {
                 List<ProductModel> result = new List<ProductModel>();
-                int count = productManager.GetProductByBranch(_param.idBranch).Count();
-                result = productManager.GetProductByBranch(_param.idBranch).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
+                int count = productManager.GetProductByBranch(_param.idBranch, _param.idGroup).Count();
+                result = productManager.GetProductByBranch(_param.idBranch, _param.idGroup).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
                 foreach(var item in result)
                 {
                     if(item.Product_Picture != null)

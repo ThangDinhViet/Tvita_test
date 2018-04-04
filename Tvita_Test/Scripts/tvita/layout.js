@@ -3,7 +3,12 @@
 }
 
 $(document).ready(function () {
-
+    $('#Goto-Kitchen').on("click", function (e) {
+        window.location.href = "/GotoKitchen"
+    });
+    $('#Goto-Fresh').on("click", function (e) {
+        window.location.href = "/Product/Fresh"
+    });
     $('#slide-nav').after($('<div class="inverse" id="navbar-height-col"></div>'));
 
     // Enter your ids or classes

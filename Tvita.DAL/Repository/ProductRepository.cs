@@ -50,12 +50,12 @@ namespace Tvita.DAL.Repository
                 return false;
             }
         }
-        public List<ProductModel> GetProductByBranch(int branchID)
+        public List<ProductModel> GetProductByBranch(int branchID, int? groupID)
         {
             var result = new List<ProductModel>();
             var query = from p in _dbContext.tbl_Product
                         join gr in _dbContext.tbl_GroupProduct on p.ID_GroupProduct equals gr.GroupProduct_ID
-                        where gr.ID_Branch == branchID
+                        where gr.ID_Branch == branchID && (p.ID_GroupProduct == groupID || groupID == 0)
                         select new ProductModel
                         {
                             Product_ID = p.Product_ID,
@@ -75,7 +75,7 @@ namespace Tvita.DAL.Repository
                             Product_Preserve = p.Product_Preserve
                         };
 
-            result = query.ToList();
+            result = query.OrderByDescending(x => x.Product_ID).ToList();
             return result;
         }
     }

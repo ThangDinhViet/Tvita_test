@@ -993,9 +993,9 @@ body[data-language="en"] .tvita {
     }
 
     #kitchen .n-content {
-    height: 102px;
-    overflow: hidden;
-}
+        height: 102px;
+        overflow: hidden;
+    }
 }
 
 .search-results h2 {
@@ -1019,4 +1019,8 @@ body[data-language="en"] .tvita {
 
 .p-view-more {
     text-align: right;
+}
+
+.ss-title {
+    text-shadow: 3px 3px 1px #4d8f1f;
 }

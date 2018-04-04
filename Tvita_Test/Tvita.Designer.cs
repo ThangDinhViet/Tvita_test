@@ -250,7 +250,7 @@ namespace Tvita_Test {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sản phẩm.
+        ///   Looks up a localized string similar to SẢN PHẨM.
         /// </summary>
         public static string Products {
             get {
