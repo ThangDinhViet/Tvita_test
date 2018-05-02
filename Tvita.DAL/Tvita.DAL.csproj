@@ -67,6 +67,9 @@
     <Compile Include="Common\IUnitOfWork.cs" />
     <Compile Include="Common\Repository.cs" />
     <Compile Include="Common\UnitOfWork.cs" />
+    <Compile Include="PO.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PU.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
@@ -99,6 +102,15 @@
     <Compile Include="Repository\PURepository.cs" />
     <Compile Include="Repository\SubjectRepository.cs" />
     <Compile Include="Repository\SubSubjectRepository.cs" />
+    <Compile Include="SO.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Branch.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>

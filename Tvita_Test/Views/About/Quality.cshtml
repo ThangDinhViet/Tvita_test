@@ -5,6 +5,13 @@
 <link href="@Url.Content("~/Content/css/quality.css")" rel="stylesheet">
 <div class="container">
     <div class="row">
-        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/Quality.png")" />
+        @if (Utilities.languageIsActive().ToUpper() == "VI")
+        {
+            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/Quality.png")" />
+        }
+        else
+        {
+            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/QualityEN.png")" />
+        }
     </div>
 </div>

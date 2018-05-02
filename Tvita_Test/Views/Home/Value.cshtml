@@ -7,7 +7,15 @@
 
 <div class="container">
     <div class="row">
-        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/value_page.png")"/>
+        @if (Utilities.languageIsActive().ToUpper() == "VI")
+        {
+            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/value_page.png")" />
+        }
+        else
+        {
+            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/value_pageEN.png")" />
+        }
+        
     </div>
 </div>
 

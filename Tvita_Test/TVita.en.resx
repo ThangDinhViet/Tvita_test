@@ -127,13 +127,13 @@
     <value>Development</value>
   </data>
   <data name="Farms" xml:space="preserve">
-    <value>Farms</value>
+    <value>GROWING REGIONS</value>
   </data>
   <data name="FreshProducts" xml:space="preserve">
     <value>Fresh Products</value>
   </data>
   <data name="GotoKitchen" xml:space="preserve">
-    <value>TVITA Recipe</value>
+    <value>T.VITA’S RECIPE</value>
   </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
@@ -169,7 +169,7 @@
     <value>Products</value>
   </data>
   <data name="Quality" xml:space="preserve">
-    <value>Quality</value>
+    <value>Certifications</value>
   </data>
   <data name="TalkWithMe" xml:space="preserve">
     <value>Talk with me</value>
@@ -181,13 +181,13 @@
     <value>T&amp;T Group</value>
   </data>
   <data name="Value" xml:space="preserve">
-    <value>Value</value>
+    <value>Value chain</value>
   </data>
   <data name="ViewMore" xml:space="preserve">
     <value>View more</value>
   </data>
   <data name="VisionAndMission" xml:space="preserve">
-    <value>Vision and mission</value>
+    <value>Vision - Mission</value>
   </data>
   <data name="WithTvita" xml:space="preserve">
     <value />
@@ -199,13 +199,13 @@
     <value>Distribution</value>
   </data>
   <data name="PostharvestTechnology" xml:space="preserve">
-    <value>Postharvest technology</value>
+    <value>Post-harvest technology</value>
   </data>
   <data name="ProductionTechnology" xml:space="preserve">
     <value>Production technology</value>
   </data>
   <data name="Postharvest" xml:space="preserve">
-    <value>Postharvest</value>
+    <value>Post-harvest</value>
   </data>
   <data name="TechTitle1" xml:space="preserve">
     <value>Production</value>
@@ -218,5 +218,53 @@
   </data>
   <data name="TechTitle4" xml:space="preserve">
     <value>Technology</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address: 3rd floor, Artex Building, No 172 Ngoc Khanh, Ba Dinh Dist., Hanoi | Tel: 024.3 244 4691</value>
+  </data>
+  <data name="Contactus" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright by T.Vita</value>
+  </data>
+  <data name="Domestic" xml:space="preserve">
+    <value>Domestic</value>
+  </data>
+  <data name="Fruits" xml:space="preserve">
+    <value>Fruits</value>
+  </data>
+  <data name="FruitVegetables" xml:space="preserve">
+    <value>Fruit Vegetables</value>
+  </data>
+  <data name="Howtopreserve" xml:space="preserve">
+    <value>How to preserve</value>
+  </data>
+  <data name="Howtouse" xml:space="preserve">
+    <value>How to use</value>
+  </data>
+  <data name="LeafyVegetables" xml:space="preserve">
+    <value>Leafy Vegetables</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Overseas" xml:space="preserve">
+    <value>Overseas</value>
+  </data>
+  <data name="Packingspecification" xml:space="preserve">
+    <value>Packing specification</value>
+  </data>
+  <data name="ProcessNew" xml:space="preserve">
+    <value>In order to enhance value of Vietnamese-branding agrifoods and bring convenience to every households, T.Vita specially focuses on processed products. By applying European advances in processing technology, including: complete salad processing line, cold chain, freezing and steam-drying. T.Vita provides a wide range of ready-to-eat products, prepacked salads and juices, an indispensable part of your daily meal for its convenience and nutritional values. Let's wait for T.Vita's processed products that will be launched in late 2018.</value>
+  </data>
+  <data name="ProductInfo" xml:space="preserve">
+    <value>Product information</value>
+  </data>
+  <data name="RelatedProduct" xml:space="preserve">
+    <value>Related Product</value>
+  </data>
+  <data name="RootVegetables" xml:space="preserve">
+    <value>Root Vegetables</value>
   </data>
 </root>

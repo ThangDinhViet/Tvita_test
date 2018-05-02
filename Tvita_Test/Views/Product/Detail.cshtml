@@ -75,7 +75,7 @@
                 <div class="info-price">
                     <div class="container-ip">
                         <div class="info-title">
-                            <span>Thông tin sản phẩm</span>
+                            <span>@(Utilities.Translate("ProductInfo"))</span>
                         </div>
                         <div class="price-container" hidden>
                             <span class="keep-inline"><span class="price js-price"></span><span class="unit">VND/Kg</span></span>
@@ -86,28 +86,28 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            Xuất xứ
+                                            @(Utilities.Translate("Origin"))
                                         </td>
                                         <td class="js-product-original">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Quy cách đóng gói
+                                           @(Utilities.Translate("Packing specification"))
                                         </td>
                                         <td class="js-product-pakageStandard">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Hướng dẫn sử dụng
+                                            @(Utilities.Translate("Howtouse"))
                                         </td>
                                         <td class="js-product-guide">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Hướng dẫn bảo quản
+                                            @(Utilities.Translate("Howtopreserve"))
                                         </td>
                                         <td class="js-product-preserve">
                                         </td>
@@ -126,15 +126,15 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sản phẩm tươi</a>
+                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @(Utilities.Translate("FreshProducts"))</a>
                                 </h4>
                             </div>
                             <div id="collapse1" class="panel-collapse collapse">
                                 <ul class="list-group">
-                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/26">Rau ăn lá</a></li>
-                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/27">Rau ăn củ</a></li>
-                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/28">Rau ăn quả</a></li>
-                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/29">Trái cây</a></li>
+                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/26">@(Utilities.Translate("LeafyVegetables"))</a></li>
+                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/27">@(Utilities.Translate("RootVegetables"))</a></li>
+                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/28">@(Utilities.Translate("FruitVegetables"))</a></li>
+                                    <li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="http://www.tvita.com.vn/Product/Fresh/29">@(Utilities.Translate("Fruits"))</a></li>
                                     @*<li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau gia vị</a></li>*@
                                     @*<li class="list-group-item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Rau baby</a></li>*@
                                 </ul>
@@ -169,7 +169,7 @@
     <div class="row">
         <div class="container p-slide">
             <div class="col-sm-12 col-md-12 col-lg-12 p-title">
-                <span>Sản phẩm cùng loại</span>
+                <span>@Utilities.Translate("RelatedProduct")</span>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="row slider responsive">
@@ -189,7 +189,7 @@
                         <img src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/value.png"))">
 
                         <div class="n-cover-title">
-                            <span>Chuỗi giá trị</span>
+                            <span>@Utilities.Translate("Value")</span>
                         </div>
                     </a>
                 </div>
@@ -205,7 +205,7 @@
                     <a href="@Url.Action("Index", "Technology")">
                         <img src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/tech.png"))">
                         <div class="n-cover-title">
-                            <span>Công nghệ</span>
+                            <span>@Utilities.Translate("Technology")</span>
                         </div>
                     </a>
                 </div>
@@ -221,7 +221,7 @@
                     <a href="@Url.Action("Farm", "Home")">
                         <img src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/map.png"))">
                         <div class="n-cover-title">
-                            <span>Nông trường</span>
+                            <span>@Utilities.Translate("Farms")</span>
                         </div>
                     </a>
                 </div>

@@ -70,11 +70,38 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Địa chỉ: Tầng 3, Tòa Artex, Số 172 Ngọc Khánh, Q. Ba Đình, Hà Nội | Điện thoại: 024.3 244 4691.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phát triển.
         /// </summary>
         public static string Community {
             get {
                 return ResourceManager.GetString("Community", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Liên hệ với chúng tôi.
+        /// </summary>
+        public static string Contactus {
+            get {
+                return ResourceManager.GetString("Contactus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bản quyền thuộc T.Vita.
+        /// </summary>
+        public static string Copyright {
+            get {
+                return ResourceManager.GetString("Copyright", resourceCulture);
             }
         }
         
@@ -93,6 +120,15 @@ namespace Tvita_Test {
         public static string Distribution {
             get {
                 return ResourceManager.GetString("Distribution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nội địa.
+        /// </summary>
+        public static string Domestic {
+            get {
+                return ResourceManager.GetString("Domestic", resourceCulture);
             }
         }
         
@@ -120,6 +156,24 @@ namespace Tvita_Test {
         public static string FreshProducts {
             get {
                 return ResourceManager.GetString("FreshProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trái cây.
+        /// </summary>
+        public static string Fruits {
+            get {
+                return ResourceManager.GetString("Fruits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rau ăn quả.
+        /// </summary>
+        public static string FruitVegetables {
+            get {
+                return ResourceManager.GetString("FruitVegetables", resourceCulture);
             }
         }
         
@@ -160,6 +214,24 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hướng dẫn bảo quản.
+        /// </summary>
+        public static string Howtopreserve {
+            get {
+                return ResourceManager.GetString("Howtopreserve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hướng dẫn sử dụng.
+        /// </summary>
+        public static string Howtouse {
+            get {
+                return ResourceManager.GetString("Howtouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nhập tên của bạn.
         /// </summary>
         public static string InputYourName {
@@ -174,6 +246,15 @@ namespace Tvita_Test {
         public static string Introduction {
             get {
                 return ResourceManager.GetString("Introduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rau ăn lá.
+        /// </summary>
+        public static string LeafyVegetables {
+            get {
+                return ResourceManager.GetString("LeafyVegetables", resourceCulture);
             }
         }
         
@@ -214,6 +295,33 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Xuất xứ.
+        /// </summary>
+        public static string Origin {
+            get {
+                return ResourceManager.GetString("Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quốc tế.
+        /// </summary>
+        public static string Overseas {
+            get {
+                return ResourceManager.GetString("Overseas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quy cách đóng gói.
+        /// </summary>
+        public static string Packingspecification {
+            get {
+                return ResourceManager.GetString("Packingspecification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sau thu hoạch.
         /// </summary>
         public static string Postharvest {
@@ -241,6 +349,25 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nhằm góp phần tăng giá trị cho các thương hiệu và sản phẩm nông nghiệp Việt Nam đồng thời mang lại sự tiện lợi và an tâm cho người nội trợ, T.Vita đặc biệt chú trọng phát triển dòng sản phẩm chế biến.
+        ///                    Bằng các công nghệ bảo quản và chế biến tiên tiến nhất của Châu Âu như dây chuyền sơ chế tự động (cắt, gọt, rửa), chuỗi cung ứng lạnh, công nghệ hấp - sấy thăng hoa giúp giữ tối đa các dưỡng chất trong nguyên liệu; các sản phẩm sơ chế và chế biến sẵn của T.Vita như salad rau củ quả, rau củ [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ProcessNew {
+            get {
+                return ResourceManager.GetString("ProcessNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thông tin sản phẩm.
+        /// </summary>
+        public static string ProductInfo {
+            get {
+                return ResourceManager.GetString("ProductInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Công nghệ sản xuất.
         /// </summary>
         public static string ProductionTechnology {
@@ -264,6 +391,24 @@ namespace Tvita_Test {
         public static string Quality {
             get {
                 return ResourceManager.GetString("Quality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sản phẩm cùng loại.
+        /// </summary>
+        public static string RelatedProduct {
+            get {
+                return ResourceManager.GetString("RelatedProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rau ăn củ.
+        /// </summary>
+        public static string RootVegetables {
+            get {
+                return ResourceManager.GetString("RootVegetables", resourceCulture);
             }
         }
         
@@ -358,7 +503,7 @@ namespace Tvita_Test {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cùng T.vita.
+        ///   Looks up a localized string similar to Cùng T.Vita.
         /// </summary>
         public static string WithTvita {
             get {

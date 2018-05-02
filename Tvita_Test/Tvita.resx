@@ -190,7 +190,7 @@
     <value>Tầm nhìn - Sứ mệnh</value>
   </data>
   <data name="WithTvita" xml:space="preserve">
-    <value>Cùng T.vita</value>
+    <value>Cùng T.Vita</value>
   </data>
   <data name="Distribution" xml:space="preserve">
     <value>Phân phối</value>
@@ -218,5 +218,55 @@
   </data>
   <data name="TechTitle4" xml:space="preserve">
     <value>Sau thu hoạch</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Địa chỉ: Tầng 3, Tòa Artex, Số 172 Ngọc Khánh, Q. Ba Đình, Hà Nội | Điện thoại: 024.3 244 4691</value>
+  </data>
+  <data name="Contactus" xml:space="preserve">
+    <value>Liên hệ với chúng tôi</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Bản quyền thuộc T.Vita</value>
+  </data>
+  <data name="Domestic" xml:space="preserve">
+    <value>Nội địa</value>
+  </data>
+  <data name="Fruits" xml:space="preserve">
+    <value>Trái cây</value>
+  </data>
+  <data name="FruitVegetables" xml:space="preserve">
+    <value>Rau ăn quả</value>
+  </data>
+  <data name="Howtopreserve" xml:space="preserve">
+    <value>Hướng dẫn bảo quản</value>
+  </data>
+  <data name="Howtouse" xml:space="preserve">
+    <value>Hướng dẫn sử dụng</value>
+  </data>
+  <data name="LeafyVegetables" xml:space="preserve">
+    <value>Rau ăn lá</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Xuất xứ</value>
+  </data>
+  <data name="Overseas" xml:space="preserve">
+    <value>Quốc tế</value>
+  </data>
+  <data name="Packingspecification" xml:space="preserve">
+    <value>Quy cách đóng gói</value>
+  </data>
+  <data name="ProcessNew" xml:space="preserve">
+    <value>Nhằm góp phần tăng giá trị cho các thương hiệu và sản phẩm nông nghiệp Việt Nam đồng thời mang lại sự tiện lợi và an tâm cho người nội trợ, T.Vita đặc biệt chú trọng phát triển dòng sản phẩm chế biến.
+                    Bằng các công nghệ bảo quản và chế biến tiên tiến nhất của Châu Âu như dây chuyền sơ chế tự động (cắt, gọt, rửa), chuỗi cung ứng lạnh, công nghệ hấp - sấy thăng hoa giúp giữ tối đa các dưỡng chất trong nguyên liệu; các sản phẩm sơ chế và chế biến sẵn của T.Vita như salad rau củ quả, rau củ quả cắt lát - thái sẵn hay nước hoa quả ... sẽ là trợ thủ đắc lực của người nội trợ trong căn bếp, giúp tiết kiệm thời gian nấu nướng mà vẫn có được bữa cơm gia đình tươm tất, đầy dinh dưỡng.
+                    Hãy cùng chào đón các sản phẩm chế biến T.Vita sẽ ra mắt thị trường cuối năm 2018.</value>
+  </data>
+  <data name="ProductInfo" xml:space="preserve">
+    <value>Thông tin sản phẩm</value>
+  </data>
+  <data name="RelatedProduct" xml:space="preserve">
+    <value>Sản phẩm cùng loại</value>
+  </data>
+  <data name="RootVegetables" xml:space="preserve">
+    <value>Rau ăn củ</value>
   </data>
 </root>
