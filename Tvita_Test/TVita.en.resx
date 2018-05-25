@@ -267,4 +267,13 @@
   <data name="RootVegetables" xml:space="preserve">
     <value>Root Vegetables</value>
   </data>
+  <data name="FarmsDes" xml:space="preserve">
+    <value>T.Vita growing regions are located across highlands, midlands and deltas, providing a wide array of specialty fruits and vegetables year-round.</value>
+  </data>
+  <data name="TechnologyDes" xml:space="preserve">
+    <value>T.Vita focuses on advanced production technology, using Israeli Greenhouse system, automatic irrigation, and imported seed varieties with tolerance to harsh weather and resistance to various diseases.</value>
+  </data>
+  <data name="ValueChainDes" xml:space="preserve">
+    <value>T.Vita develops a complete value chain “from farm to fork”, focusing on post-harvest processing technologies in order to optimize product’s shelf life.</value>
+  </data>
 </root>

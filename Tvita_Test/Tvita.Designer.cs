@@ -142,6 +142,15 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Các vùng nguyên liệu và nông trường của T.Vita sẽ được phân bổ tại vùng cao nguyên – trung du và đồng bằng, đảm bảo sự đa dạng các chủng loại sản phẩm quanh năm, đồng thời có khí hậu thổ nhưỡng phù hợp với từng loại cây trồng cho ra đời những sản phẩm có năng xuất chất lượng Các vùng nguyên liệu và nông trường của T.Vita sẽ được phân bổ tại vùng cao nguyên – trung du và đồng bằng, đảm bảo sự đa dạng các chủng loại sản phẩm quanh năm, đồng thời có khí hậu thổ nhưỡng phù hợp với từng loại cây trồng cho ra đời [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string FarmsDes {
+            get {
+                return ResourceManager.GetString("FarmsDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tìm kiếm.
         /// </summary>
         public static string Find {
@@ -431,6 +440,15 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to T.Vita chú trọng đầu tư vào các mô hình trồng trọt công nghệ cao với hệ thống Nhà kính của Israel; Hệ thống tưới điều khiển tự động; Bộ giống chất lượng cao có khả năng kháng bệnh và chịu nhiệt từ các thương hiệu nổi tiếng thế giới..
+        /// </summary>
+        public static string TechnologyDes {
+            get {
+                return ResourceManager.GetString("TechnologyDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Công nghệ.
         /// </summary>
         public static string TechTitle1 {
@@ -481,6 +499,15 @@ namespace Tvita_Test {
         public static string Value {
             get {
                 return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Các sản phẩm T.Vita luôn đám bảo một chuỗi giá trị khép kín theo mô hình “từ trang trại đến bàn ăn”. Từ khi chỉ là hạt giống; cây sẽ được gieo trồng, chăm bón; khi đến mùa thu hoạch sẽ được chuyển đến Nhà máy để chế biến và đóng gói; từ đó các sản phẩm được chuyển đến các siêu thị, cửa hàng tới tay người tiêu dùng..
+        /// </summary>
+        public static string ValueChainDes {
+            get {
+                return ResourceManager.GetString("ValueChainDes", resourceCulture);
             }
         }
         
