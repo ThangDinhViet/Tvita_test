@@ -32,7 +32,13 @@ namespace Tvita.BAL.Implement
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
                     Product_PakageStandard = x.Product_PakageStandard,
-                    Product_Preserve = x.Product_Preserve
+                    Product_Preserve = x.Product_Preserve,
+                    Product_Description_EN = x.Product_Description_EN,
+                    Product_Guide_EN = x.Product_Guide_EN,
+                    Product_Name_EN = x.Product_Name_EN,
+                    Product_Original_EN = x.Product_Original_EN,
+                    Product_PakageStandard_EN = x.Product_PakageStandard_EN,
+                    Product_Preserve_EN = x.Product_Preserve_EN,
                 }).ToList();
             }
             return result;
@@ -58,7 +64,13 @@ namespace Tvita.BAL.Implement
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
                     Product_PakageStandard = x.Product_PakageStandard,
-                    Product_Preserve = x.Product_Preserve
+                    Product_Preserve = x.Product_Preserve,
+                    Product_Description_EN = x.Product_Description_EN,
+                    Product_Guide_EN = x.Product_Guide_EN,
+                    Product_Name_EN = x.Product_Name_EN,
+                    Product_Original_EN = x.Product_Original_EN,
+                    Product_PakageStandard_EN = x.Product_PakageStandard_EN,
+                    Product_Preserve_EN = x.Product_Preserve_EN,
                 }).FirstOrDefault();
             }
             return result;
@@ -84,7 +96,13 @@ namespace Tvita.BAL.Implement
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
                     Product_PakageStandard = x.Product_PakageStandard,
-                    Product_Preserve = x.Product_Preserve
+                    Product_Preserve = x.Product_Preserve,
+                    Product_Description_EN = x.Product_Description_EN,
+                    Product_Guide_EN = x.Product_Guide_EN,
+                    Product_Name_EN = x.Product_Name_EN,
+                    Product_Original_EN = x.Product_Original_EN,
+                    Product_PakageStandard_EN = x.Product_PakageStandard_EN,
+                    Product_Preserve_EN = x.Product_Preserve_EN,
                 }).FirstOrDefault();
             }
             return result;
@@ -110,7 +128,13 @@ namespace Tvita.BAL.Implement
                     Product_Guide = x.Product_Guide,
                     Product_Original = x.Product_Original,
                     Product_PakageStandard = x.Product_PakageStandard,
-                    Product_Preserve = x.Product_Preserve
+                    Product_Preserve = x.Product_Preserve,
+                    Product_Description_EN = x.Product_Description_EN,
+                    Product_Guide_EN = x.Product_Guide_EN,
+                    Product_Name_EN = x.Product_Name_EN,
+                    Product_Original_EN = x.Product_Original_EN,
+                    Product_PakageStandard_EN = x.Product_PakageStandard_EN,
+                    Product_Preserve_EN = x.Product_Preserve_EN,
                 }).ToList();
             }
             return result;

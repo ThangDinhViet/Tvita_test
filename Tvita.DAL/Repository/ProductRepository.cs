@@ -72,7 +72,13 @@ namespace Tvita.DAL.Repository
                             Product_Guide = p.Product_Guide,
                             Product_Original = p.Product_Original,
                             Product_PakageStandard = p.Product_PakageStandard,
-                            Product_Preserve = p.Product_Preserve
+                            Product_Preserve = p.Product_Preserve,
+                            Product_Description_EN = p.Product_Description_EN,
+                            Product_Guide_EN = p.Product_Guide_EN,
+                            Product_Name_EN = p.Product_Name_EN,
+                            Product_Original_EN = p.Product_Original_EN,
+                            Product_PakageStandard_EN = p.Product_PakageStandard_EN,
+                            Product_Preserve_EN = p.Product_Preserve_EN,
                         };
 
             result = query.OrderByDescending(x => x.Product_ID).ToList();

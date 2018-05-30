@@ -22,5 +22,8 @@ namespace Tvita.Model.Table
         public string Post_Pic_URL { get; set; }
         public string Post_Pic_In_Content { get; set; }
         public string Post_Pic_In_Content_Des { get; set; }
+        public string Post_Name_EN { get; set; }
+        public string Post_Description_EN { get; set; }
+        public string Post_Content_EN { get; set; }
     }
 }

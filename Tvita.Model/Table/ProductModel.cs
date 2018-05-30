@@ -25,5 +25,11 @@ namespace Tvita.Model.Table
         public string Product_Preserve { get; set; }
         public string Product_Pic_URL { get; set; }
         public List<string> Product_Pic_List { get; set; }
+        public string Product_Name_EN { get; set; }
+        public string Product_Description_EN { get; set; }
+        public string Product_Original_EN { get; set; }
+        public string Product_PakageStandard_EN { get; set; }
+        public string Product_Guide_EN { get; set; }
+        public string Product_Preserve_EN { get; set; }
     }
 }

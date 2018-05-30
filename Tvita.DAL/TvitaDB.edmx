@@ -182,6 +182,9 @@
           <Property Name="Post_Url" Type="nvarchar" MaxLength="200" />
           <Property Name="IsDelete" Type="bit" />
           <Property Name="Post_DateCreated" Type="datetime" />
+          <Property Name="Post_Name_EN" Type="ntext" />
+          <Property Name="Post_Description_EN" Type="ntext" />
+          <Property Name="Post_Content_EN" Type="ntext" />
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
@@ -202,6 +205,12 @@
           <Property Name="Product_PakageStandard" Type="nvarchar" MaxLength="200" />
           <Property Name="Product_Guide" Type="nvarchar(max)" />
           <Property Name="Product_Preserve" Type="nvarchar(max)" />
+          <Property Name="Product_Description_EN" Type="ntext" />
+          <Property Name="Product_Name_EN" Type="nvarchar" MaxLength="500" />
+          <Property Name="Product_Original_EN" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_PakageStandard_EN" Type="nvarchar" MaxLength="200" />
+          <Property Name="Product_Guide_EN" Type="nvarchar(max)" />
+          <Property Name="Product_Preserve_EN" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="tbl_ProductHistory">
           <Key>
@@ -459,6 +468,9 @@
           <Property Name="Post_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="IsDelete" Type="Boolean" />
           <Property Name="Post_DateCreated" Type="DateTime" Precision="3" />
+          <Property Name="Post_Name_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Description_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Content_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_Product">
           <Key>
@@ -479,6 +491,12 @@
           <Property Name="Product_Guide" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Product_Preserve" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Product_PakageStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Description_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Name_EN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Original_EN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_PakageStandard_EN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Guide_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Preserve_EN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_ProductHistory">
           <Key>
@@ -768,6 +786,9 @@
           <EntitySetMapping Name="tbl_Post">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Post">
               <MappingFragment StoreEntitySet="tbl_Post">
+                <ScalarProperty Name="Post_Content_EN" ColumnName="Post_Content_EN" />
+                <ScalarProperty Name="Post_Description_EN" ColumnName="Post_Description_EN" />
+                <ScalarProperty Name="Post_Name_EN" ColumnName="Post_Name_EN" />
                 <ScalarProperty Name="Post_DateCreated" ColumnName="Post_DateCreated" />
                 <ScalarProperty Name="Post_ID" ColumnName="Post_ID" />
                 <ScalarProperty Name="ID_SubSubject" ColumnName="ID_SubSubject" />
@@ -785,6 +806,12 @@
           <EntitySetMapping Name="tbl_Product">
             <EntityTypeMapping TypeName="Tvita_TestModel.tbl_Product">
               <MappingFragment StoreEntitySet="tbl_Product">
+                <ScalarProperty Name="Product_Preserve_EN" ColumnName="Product_Preserve_EN" />
+                <ScalarProperty Name="Product_Guide_EN" ColumnName="Product_Guide_EN" />
+                <ScalarProperty Name="Product_PakageStandard_EN" ColumnName="Product_PakageStandard_EN" />
+                <ScalarProperty Name="Product_Original_EN" ColumnName="Product_Original_EN" />
+                <ScalarProperty Name="Product_Name_EN" ColumnName="Product_Name_EN" />
+                <ScalarProperty Name="Product_Description_EN" ColumnName="Product_Description_EN" />
                 <ScalarProperty Name="Product_PakageStandard" ColumnName="Product_PakageStandard" />
                 <ScalarProperty Name="Product_Preserve" ColumnName="Product_Preserve" />
                 <ScalarProperty Name="Product_Guide" ColumnName="Product_Guide" />

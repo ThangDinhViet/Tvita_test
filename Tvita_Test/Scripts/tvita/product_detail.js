@@ -64,12 +64,24 @@ function getRelatedProducts(_idGrp, _idPr) {
 }
 
 function fillDetail(data) {
-    $('.js-product-name').text(data.Product_Name);
-    $('.js-product-description').text(data.Product_Description);
-    $('.js-product-original').text(data.Product_Original);
-    $('.js-product-pakageStandard').text(data.Product_PakageStandard);
-    $('.js-product-guide').text(data.Product_Guide);
-    $('.js-product-preserve').text(data.Product_Preserve);
+    if ($('.lan.active').text() == "VI")
+    {
+        $('.js-product-name').text(data.Product_Name);
+        $('.js-product-description').text(data.Product_Description);
+        $('.js-product-original').text(data.Product_Original);
+        $('.js-product-pakageStandard').text(data.Product_PakageStandard);
+        $('.js-product-guide').text(data.Product_Guide);
+        $('.js-product-preserve').text(data.Product_Preserve);
+    }
+    else
+    {
+        $('.js-product-name').text(data.Product_Name_EN);
+        $('.js-product-description').text(data.Product_Description_EN);
+        $('.js-product-original').text(data.Product_Original_EN);
+        $('.js-product-pakageStandard').text(data.Product_PakageStandard_EN);
+        $('.js-product-guide').text(data.Product_Guide_EN);
+        $('.js-product-preserve').text(data.Product_Preserve_EN);
+    }
     $('.js-product-bannerPicture').css("background-image", "url('/Content/pictures/" + data.Product_Pic_URL + "')");
     $.each(data.Product_Pic_List, function (k, v) {
         var template = '<div class="col-sm-4 col-md-4 col-lg-4">' + 
@@ -93,13 +105,26 @@ function fillRelated(data) {
         $('.same-kind-product').show()
     }
     $.each(data, function (k, v) {
-        var template = '<div class="product-item">' +
+        if ($('.lan.active').text() == "VI")
+        {
+            var template = '<div class="product-item">' +
                             '<a href="' + Config.AppUrl + '/Product/Detail/' + v.Product_ID + '">' +
                                 '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')"></a>' +
                                 '<a href="' + Config.AppUrl + '/Product/Detail/' + v.Product_ID + '">' +
                                 '<span class="product-item-caption">' + v.Product_Name + '</span></a>' +
                             '</div>';
-        $('.responsive').append($(template));
+            $('.responsive').append($(template));
+        }
+        else
+        {
+            var template = '<div class="product-item">' +
+                            '<a href="' + Config.AppUrl + '/Product/Detail/' + v.Product_ID + '">' +
+                                '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')"></a>' +
+                                '<a href="' + Config.AppUrl + '/Product/Detail/' + v.Product_ID + '">' +
+                                '<span class="product-item-caption">' + v.Product_Name_EN + '</span></a>' +
+                            '</div>';
+            $('.responsive').append($(template));
+        }
     })
 
     $('.responsive').slick({

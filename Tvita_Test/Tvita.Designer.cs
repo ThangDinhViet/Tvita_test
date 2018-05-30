@@ -494,6 +494,15 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tập đoàn T&amp;T là một trong những tập đoàn kinh tế đa ngành nghề hàng đầu tại Việt Nam hiện nay. Được thành lập từ năm 1993, đến nay Tập đoàn T&amp;T đã có hơn 60 công ty con lớn nhỏ, kinh doanh trên nhiều lĩnh vực, ngành nghề khác nhau..
+        /// </summary>
+        public static string TTGroupDes {
+            get {
+                return ResourceManager.GetString("TTGroupDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chuỗi giá trị.
         /// </summary>
         public static string Value {

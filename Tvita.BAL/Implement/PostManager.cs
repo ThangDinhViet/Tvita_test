@@ -23,8 +23,9 @@ namespace Tvita.BAL.Implement
                     Post_Description = x.Post_Description,
                     Post_Keyword = x.Post_Keyword,
                     Post_Picture = x.Post_Picture,
-
-
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                     Post_Url = x.Post_Url,
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
@@ -49,7 +50,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).FirstOrDefault();
             }
             return result;
@@ -69,7 +73,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).ToList();
             }
             return result;
@@ -89,7 +96,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).ToList();
                 
             }
@@ -111,7 +121,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).ToList();
             }
 
@@ -132,7 +145,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).ToList();
             }
 
@@ -178,7 +194,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
                 res.pageInfo.total = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 4).Count();
             }
@@ -206,7 +225,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
                 res.pageInfo.total = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 1).Count();
             }
@@ -234,7 +256,10 @@ namespace Tvita.BAL.Implement
                     Post_Video = x.Post_Video,
                     Post_ID = x.Post_ID,
                     Post_Name = x.Post_Name,
-                    IsDelete = x.IsDelete
+                    IsDelete = x.IsDelete,
+                    Post_Content_EN = x.Post_Content_EN,
+                    Post_Description_EN = x.Post_Description_EN,
+                    Post_Name_EN = x.Post_Name_EN,
                 }).Skip(_param.recordsDisplayed).Take(_param.recordsInPage).ToList();
                 res.pageInfo.total = uOW.PostRepository.GetWhere(x => x.ID_SubSubject == 5).Count();
             }

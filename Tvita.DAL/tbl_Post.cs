@@ -25,5 +25,8 @@ namespace Tvita.DAL
         public string Post_Url { get; set; }
         public Nullable<bool> IsDelete { get; set; }
         public Nullable<System.DateTime> Post_DateCreated { get; set; }
+        public string Post_Name_EN { get; set; }
+        public string Post_Description_EN { get; set; }
+        public string Post_Content_EN { get; set; }
     }
 }

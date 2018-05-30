@@ -187,7 +187,10 @@ $(document).ready(function () {
             success: function (resp) {
                 if (resp.data.length != 0) {
                     $.each(resp.data, function (k, v) {
-                        var a = $('<a href="' + Config.AppUrl + '/News/Details/' + v.Post_ID + '">' + v.Post_Name + '</a>');
+                        if ($('.lan.active').text() == "VI")
+                            var a = $('<a href="' + Config.AppUrl + '/News/Details/' + v.Post_ID + '">' + v.Post_Name + '</a>');
+                        else
+                            var a = $('<a href="' + Config.AppUrl + '/News/Details/' + v.Post_ID + '">' + v.Post_Name_EN + '</a>');
                         $('#hot-news-content').append(a)
                     });
                 } else {

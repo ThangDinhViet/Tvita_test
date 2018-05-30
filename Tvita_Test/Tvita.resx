@@ -278,4 +278,7 @@
   <data name="ValueChainDes" xml:space="preserve">
     <value>Các sản phẩm T.Vita luôn đám bảo một chuỗi giá trị khép kín theo mô hình “từ trang trại đến bàn ăn”. Từ khi chỉ là hạt giống; cây sẽ được gieo trồng, chăm bón; khi đến mùa thu hoạch sẽ được chuyển đến Nhà máy để chế biến và đóng gói; từ đó các sản phẩm được chuyển đến các siêu thị, cửa hàng tới tay người tiêu dùng.</value>
   </data>
+  <data name="TTGroupDes" xml:space="preserve">
+    <value>Tập đoàn T&amp;T là một trong những tập đoàn kinh tế đa ngành nghề hàng đầu tại Việt Nam hiện nay. Được thành lập từ năm 1993, đến nay Tập đoàn T&amp;T đã có hơn 60 công ty con lớn nhỏ, kinh doanh trên nhiều lĩnh vực, ngành nghề khác nhau.</value>
+  </data>
 </root>

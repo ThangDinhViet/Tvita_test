@@ -54,7 +54,9 @@
                         listContainer.append(row)
                     }
                     var item_container = $('<div class="col-sm-4 col-md-4 col-lg-4"></div>');
-                    var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
+                    if ($('.lan.active').text() == "VI")
+                    {
+                        var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
                                 '<div class="product-item">' +
                                     '<div class="product-item-cover">' +
                                         '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')">' +
@@ -64,7 +66,24 @@
                                     '</div>' +
                                 '</div>' +
                             '</a>');
-                    item_container.append(link);
+                        item_container.append(link);
+                    }
+                    else
+                    {
+                        {
+                            var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
+                                    '<div class="product-item">' +
+                                        '<div class="product-item-cover">' +
+                                            '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')">' +
+                                        '</div>' +
+                                        '<div class="product-item-content">' +
+                                            '<span>' + v.Product_Name_EN + '</span>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</a>');
+                            item_container.append(link);
+                        }
+                    }
                     row.append(item_container);
                     indexCol++;
                 })

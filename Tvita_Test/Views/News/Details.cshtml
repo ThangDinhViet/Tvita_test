@@ -15,24 +15,30 @@
                 <span>28.10.2017</span>
             </div>
             <div class="t-label">
-                <span>@Model.Post_Name</span>
+                @if (Utilities.languageIsActive().ToUpper() == "VI")
+                {
+                    <span>@Model.Post_Name</span>
+                }
+                else
+                {
+                    <span>@Model.Post_Name_EN</span>
+                }
             </div>
         </div>
     </div>
     <div class="row">
         <div class="content-container">
             <div class="content">
-                <span>@Html.Raw(Model.Post_Description)</span>
-                @*@if (Model.Post_Pic_In_Content != null)
+                @if (Utilities.languageIsActive().ToUpper() == "VI")
                 {
-                    <span class="illustration">
-                        <img src="@Url.Content("/Content/pictures/" + Model.Post_Pic_URL )">
-                        <span class="img-tilte">
-                            @Model.Post_Pic_In_Content_Des
-                        </span>
-                    </span>
-                }*@
-                <span>@Html.Raw(Model.Post_Content)</span>
+                    <span>@Html.Raw(Model.Post_Description)</span>
+                    <span>@Html.Raw(Model.Post_Content)</span>
+                }
+                else
+                {
+                    <span>@Html.Raw(Model.Post_Description_EN)</span>
+                    <span>@Html.Raw(Model.Post_Content_EN)</span>
+                }
             </div>
             <div class="related-articles">
                 <div class="list-title">
@@ -43,7 +49,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sản phẩm tươi</a>
+                                    <a data-toggle="collapse" href="#collapse1"><i class="fa fa-angle-double-down" aria-hidden="true"></i><i class="fa fa-angle-double-right" aria-hidden="true"></i> @Utilities.Translate("FreshProducts")</a>
                                 </h4>
                             </div>
                             <div id="collapse1" class="panel-collapse collapse in">
