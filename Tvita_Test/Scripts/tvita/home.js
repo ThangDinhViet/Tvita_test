@@ -85,19 +85,38 @@
         data: {},
         success: function (resp) {
             if (resp.data.length != 0) {
-                $.each(resp.data, function (k, v) {
-                    var div = $('<div class="col-sm-4 col-md-4 col-lg-4">' +
-                                    '<div class="n-item">' +
-                                        '<div class="n-cover">' +
-                                            '<img src="Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Post_Pic_URL + '\')">' +
+                if ($('.lan.active').text() == "VI")
+                {
+                    $.each(resp.data, function (k, v) {
+                        var div = $('<div class="col-sm-4 col-md-4 col-lg-4">' +
+                                        '<div class="n-item">' +
+                                            '<div class="n-cover">' +
+                                                '<img src="Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Post_Pic_URL + '\')">' +
+                                            '</div>' +
+                                            '<div class="n-content">' + v.Post_Name + '</div><div class="n-detail-content" data-maxrow="5">' + v.Post_Description + '</div><div class="n-view-more">' +
+                                                '<a href="' + Config.AppUrl + "/GotoKitchen/Details/" + v.Post_ID + '">' + $.i18n("view_more") + '</a>' +
+                                            '</div>' +
                                         '</div>' +
-                                        '<div class="n-content">' + v.Post_Name + '</div><div class="n-detail-content" data-maxrow="5">' + v.Post_Description + '</div><div class="n-view-more">' +
-                                            '<a href="' + Config.AppUrl + "/GotoKitchen/Details/" + v.Post_ID + '">' + $.i18n("view_more") + '</a>'+
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>');
-                    $('#kitchen').append(div)
-                });
+                                    '</div>');
+                        $('#kitchen').append(div)
+                    });
+                }
+                else
+                {
+                    $.each(resp.data, function (k, v) {
+                        var div = $('<div class="col-sm-4 col-md-4 col-lg-4">' +
+                                        '<div class="n-item">' +
+                                            '<div class="n-cover">' +
+                                                '<img src="Content/images/photos/transparent-388x388.png" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Post_Pic_URL + '\')">' +
+                                            '</div>' +
+                                            '<div class="n-content">' + v.Post_Name_EN + '</div><div class="n-detail-content" data-maxrow="5">' + v.Post_Description_EN + '</div><div class="n-view-more">' +
+                                                '<a href="' + Config.AppUrl + "/GotoKitchen/Details/" + v.Post_ID + '">' + $.i18n("view_more") + '</a>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>');
+                        $('#kitchen').append(div)
+                    });
+                }
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -158,7 +177,9 @@ var productsHome = function (container, _type) {
                         listContainer.append(row)
                     }
                     var item_container = $('<div class="col-sm-4 col-md-4 col-lg-4"></div>');
-                    var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
+                    if ($('.lan.active').text() == "VI")
+                    {
+                        var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
                                 '<div class="product-item">' +
                                     '<div class="product-item-cover">' +
                                             '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')">' +
@@ -168,7 +189,22 @@ var productsHome = function (container, _type) {
                                     '</div>' +
                                 '</div>' +
                             '</a>');
-                    item_container.append(link);
+                        item_container.append(link);
+                    }
+                    else
+                    {
+                        var link = $('<a href="' + Config.AppUrl + "/Product/Detail/" + v.Product_ID + '">' +
+                                '<div class="product-item">' +
+                                    '<div class="product-item-cover">' +
+                                            '<img src="' + Config.AppUrl + '/Content/images/photos/transparent-282-product.png")" style="background-image: Url(\'' + Config.AppUrl + '/Content/pictures/' + v.Product_Pic_URL + '\')">' +
+                                    '</div>' +
+                                    '<div class="product-item-content">' +
+                                        '<span>' + v.Product_Name_EN + '</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</a>');
+                        item_container.append(link);
+                    }
                     row.append(item_container);
                     indexCol++;
                 })

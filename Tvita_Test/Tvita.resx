@@ -281,4 +281,13 @@
   <data name="TTGroupDes" xml:space="preserve">
     <value>Tập đoàn T&amp;T là một trong những tập đoàn kinh tế đa ngành nghề hàng đầu tại Việt Nam hiện nay. Được thành lập từ năm 1993, đến nay Tập đoàn T&amp;T đã có hơn 60 công ty con lớn nhỏ, kinh doanh trên nhiều lĩnh vực, ngành nghề khác nhau.</value>
   </data>
+  <data name="BacGiang" xml:space="preserve">
+    <value>Bắc Giang</value>
+  </data>
+  <data name="HungYen" xml:space="preserve">
+    <value>Hưng Yên</value>
+  </data>
+  <data name="TayNguyen" xml:space="preserve">
+    <value>Tây Nguyên</value>
+  </data>
 </root>

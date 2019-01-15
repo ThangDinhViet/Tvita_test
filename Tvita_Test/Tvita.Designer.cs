@@ -79,6 +79,15 @@ namespace Tvita_Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bắc Giang.
+        /// </summary>
+        public static string BacGiang {
+            get {
+                return ResourceManager.GetString("BacGiang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phát triển.
         /// </summary>
         public static string Community {
@@ -237,6 +246,15 @@ namespace Tvita_Test {
         public static string Howtouse {
             get {
                 return ResourceManager.GetString("Howtouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hưng Yên.
+        /// </summary>
+        public static string HungYen {
+            get {
+                return ResourceManager.GetString("HungYen", resourceCulture);
             }
         }
         
@@ -427,6 +445,15 @@ namespace Tvita_Test {
         public static string TalkWithMe {
             get {
                 return ResourceManager.GetString("TalkWithMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tây Nguyên.
+        /// </summary>
+        public static string TayNguyen {
+            get {
+                return ResourceManager.GetString("TayNguyen", resourceCulture);
             }
         }
         
