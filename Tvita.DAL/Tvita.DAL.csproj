@@ -81,6 +81,7 @@
     <Compile Include="Repository\IEmployeeRepository.cs" />
     <Compile Include="Repository\IFarmRepository.cs" />
     <Compile Include="Repository\IGroupProductRepository.cs" />
+    <Compile Include="Repository\IOrderLandingPageRepository.cs" />
     <Compile Include="Repository\IPictureRepository.cs" />
     <Compile Include="Repository\IPostRepository.cs" />
     <Compile Include="Repository\IProductHistoryRepository.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Repository\IPURepository.cs" />
     <Compile Include="Repository\ISubjectRepository.cs" />
     <Compile Include="Repository\ISubSubjectRepository.cs" />
+    <Compile Include="Repository\OrderLandingPageRepository.cs" />
     <Compile Include="Repository\PictureRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\ProductHistoryRepository.cs" />
@@ -133,6 +135,9 @@
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Order.cs">
+      <DependentUpon>TvitaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_OrderLandingPage.cs">
       <DependentUpon>TvitaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Payments.cs">

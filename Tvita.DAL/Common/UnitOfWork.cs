@@ -330,6 +330,29 @@ namespace Tvita.DAL.Common
             }
         }
 
+
+        private IOrderLandingPageRepository _iOrderLandingPageRepository;
+        public IOrderLandingPageRepository IOrderLandingPageRepository
+        {
+            get
+            {
+                if (this._iOrderLandingPageRepository == null)
+                    this._iOrderLandingPageRepository = new OrderLandingPageRepository(_context);
+                return _iOrderLandingPageRepository;
+            }
+        }
+
+        private IRepository<tbl_OrderLandingPage, int> _OrderLandingPageRepository;
+        public IRepository<tbl_OrderLandingPage, int> OrderLandingPageRepository
+        {
+            get
+            {
+                if (this._OrderLandingPageRepository == null)
+                    this._OrderLandingPageRepository = new OrderLandingPageRepository(_context);
+                return _OrderLandingPageRepository;
+            }
+        }
+
         public void SaveChanges()
         {
             try

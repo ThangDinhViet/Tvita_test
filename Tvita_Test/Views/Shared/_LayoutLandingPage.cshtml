@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="~/Content/images/logos/fav.png" />
+    <title>@ViewBag.Title - T.Vita</title>
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/bootstrap.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/font-awesome.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/site.css")">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '320417962013602');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1"
+             src="https://www.facebook.com/tr?id=320417962013602&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2276786809225634');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=2276786809225634&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133182570-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-133182570-1');
+    </script>
+
+
+</head>
+<body data-language="@Utilities.languageIsActive()">
+
+
+    @{
+        if (ViewBag.HotNew == true)
+        {
+            <div class="hot-news">
+                <marquee id="hot-news-content" onmouseover="this.stop();" onmouseout="this.start();"></marquee>
+            </div>
+        }
+    }
+
+    <div class="container-fluid body-content">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+
+    @{
+        if (ViewBag.showCertificate == true)
+        {
+            <div class="container-fluid gap-group">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="container gap-group">
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/VIETGAP.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/USDA.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/ISO22000.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/GMP.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/GLOBALGAP.png")" />
+                            </div>
+                            <div class="block">
+                                <img src="@Url.Content("~/Content/images/certificate/FOODSAFE.png")" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer-top col-lg-12">
+                <div class="row f-row">
+                    <div class="col-xs-6 col-md-6 col-lg-3 ttgroup">
+                        <div class="about">
+                            <h6 class="about-title">@(Utilities.Translate("TTGroup"))</h6>
+                            <label class="short-content">
+                                @(Utilities.Translate("TTGroupDes"))
+                            </label>
+                            <a href="http://ttgroup.com.vn" class="btn-more-info">@(Utilities.Translate("ViewMore"))</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 col-lg-9 tvita">
+                        <div class="menu-list row">
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">@(Utilities.Translate("AboutTVita"))</h6>
+                                    <ul>
+                                        @*<li><a href="@(Url.Action("History", "About"))">@(Utilities.Translate("History"))</a></li>*@
+                                        <li><a href="@(Url.Action("VisionAndMission", "About"))">@(Utilities.Translate("VisionAndMission"))</a></li>
+                                        <li><a href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
+                                        <li><a href="@(Url.Action("Quality", "About"))">@(Utilities.Translate("Quality"))</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">@(Utilities.Translate("Farms"))</h6>
+                                    <ul>
+                                        <li><a href="@Url.Action("Farm", "Home")">@(Utilities.Translate("HungYen"))</a></li>
+                                        <li><a href="@Url.Action("Farm", "Home")">@(Utilities.Translate("BacGiang"))</a></li>
+                                        <li><a href="@Url.Action("Farm", "Home")">@(Utilities.Translate("TayNguyen"))</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">@(Utilities.Translate("Technology"))</h6>
+                                    <ul>
+                                        <li><a href="@Url.Action("Index", "Technology")">@Utilities.Translate("ProductionTechnology")</a></li>
+                                        <li><a href="@Url.Action("Index", "Technology")">@Utilities.Translate("PostharvestTechnology")</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">@(Utilities.Translate("Products"))</h6>
+                                    <ul>
+                                        <li><a href="@Url.Action("Fresh", "Product")">@(Utilities.Translate("FreshProducts"))</a></li>
+                                        <li><a href="@Url.Action("Processed", "Product")">@(Utilities.Translate("ProcessedProducts"))</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-20">
+                                <div class="list-mnu">
+                                    <h6 class="about-title">@Utilities.Translate("Distribution")</h6>
+                                    <ul>
+                                        <li><a href="@Url.Action("Index", "Distribution")">@(Utilities.Translate("Domestic"))</a></li>
+                                        <li><a href="@Url.Action("Index", "Distribution")">@(Utilities.Translate("Overseas"))</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="talk-with-me">
+            <div class="twm-title">
+                @(Utilities.Translate("TalkWithMe"))
+            </div>
+            <div class="twm-content">
+                <ul id="discussion"></ul>
+            </div>
+            <div class="twm-input">
+                <div class="input-group message-input" style="display: none">
+                    <input type="text" class="form-control" id="message" placeholder="">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary handle-send" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                    </span>
+                </div>
+                <div class="input-group name-input">
+                    <input id="myName" type="text" class="form-control" placeholder="@Utilities.Translate("InputYourName")">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary handle-name" type="button">OK</button>
+                    </span>
+                </div>
+            </div>
+        </div>*@
+    <div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+                    <br><br>
+                    <div class="remote-modal-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="remoteModalDialog" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Trạng thái đặt hàng</h4>
+                </div>
+                <div class="modal-body remote-modal-content">
+                    <p id="status"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+    <script src="@Url.Content("~/Scripts/landingpage/jquery.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/landingpage/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/landingpage/form-helper.js")" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="@Url.Content("~/Scripts/tvita/landingpage.js")" type="text/javascript"></script>
+    <script>
+        var showHotNew = '@ViewBag.HotNew';
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLandingPage.cshtml";
+}
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="@Url.Content("~/Content/css/landingpage.css")">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+<div class="container-fluid p-0">
+    <header class="header">
+        <div class="container">
+            <div class="d-flex align-items-center top-header">
+                <a href="/">
+                    <img src="@Url.Content("~/Content/images/landingpage/logo.png")" alt="logo">
+                </a>
+                <a href="" class="ml-auto">
+                    <img src="@Url.Content("~/Content/images/landingpage/hotline.png")" alt="hotline">
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-href" href="#abouts">Giới thiệu <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-href" href="#xuanankhang">Hộp quà Xuân An Khang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-href" href="#phuquy">Hộp quà Phú Quý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-href" href="#phucloc">Hộp quà Phúc Lộc</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-href" href="#orderform">Đặt hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-href" href="#contact">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section style="background: #24652c">
+        <div class="banner">
+            <img src="@Url.Content("~/Content/images/landingpage/banner-top.png")" alt="banner">
+            <div class="absolute-banner">
+                <img src="@Url.Content("~/Content/images/landingpage/banner-top-2.png")" alt="banner">
+            </div>
+            <div class="box-content-banner page-section" id="abouts">
+                <div class="container d-flex">
+                    <div class="text-banner">
+                        <div class="h5 bold">KHÔNG GÌ BẰNG MÓN QUÀ SỨC KHỎE GỬI TỚI NHỮNG NGƯỜI THÂN YÊU</div>
+                        <p class="text-justify">
+                            T.Vita tự hào mang đến cho bạn bộ Quà Tết dành riêng cho xuân Kỷ Hợi, gồm những các loại rau củ quả tươi ngon bổ dưỡng và trái cây đặc sản, được canh tác theo quy trình chuẩn VietGAP, sạch từ trang trại tới bàn ăn.<br>
+                            Lựa chọn Quà Tết nông sản sạch vừa độc đáo trang trọng, vừa thấm đượm thân tình gửi tới gia đình và bè bạn để đón một năm mới an vui trọn vẹn.<br>
+                            Hãy trở thành những khách hàng đầu tiên đăng ký Hộp Quà Tết của T.Vita để nhận được những món quà chất lượng với ưu đãi đặc biệt nhất!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="midd-content">
+            <div class="position-relative text-center mx-auto page-section" style="max-width: 1230px;" id="xuanankhang">
+                <img src="@Url.Content("~/Content/images/landingpage/image1.png")" alt="" class="img-gift">
+                <a class="nav-href" href="#orderform">	<img src="@Url.Content("~/Content/images/landingpage/250k.png")" alt="" class="img-250k" style="position: absolute;bottom: 17%;right: 14%;width: 24.4%;"></a>
+            </div>
+            <div class="position-relative mx-auto page-section" style="max-width: 1413px;" id="phuquy">
+                <img src="@Url.Content("~/Content/images/landingpage/image2.png")" alt="" class="img-gift">
+                <a class="nav-href" href="#orderform">	<img src="@Url.Content("~/Content/images/landingpage/299k.png")" alt="" class="img-299k" style="position: absolute;bottom: 13%;left: 9%;width: 22.4%;"></a>
+            </div>
+            <div class="position-relative mx-auto page-section" style="max-width: 1315px;" id="phucloc">
+                <img src="@Url.Content("~/Content/images/landingpage/image3.png")" alt="" class="img-gift">
+                <a class="nav-href" href="#orderform">
+                    <img src="@Url.Content("~/Content/images/landingpage/229k.png")" alt="" class="img-229k" style="position: absolute;bottom: 28%;right: 9%;width: 22.4%;">
+                </a>
+            </div>
+            <div class="bottom-mid-content">
+                <img src="@Url.Content("~/Content/images/landingpage/img-midd.png")" alt="" class="img-gift">
+            </div>
+        </div>
+        <div class="contact-box">
+            <div class="bottom-mid-content">
+                <img src="@Url.Content("~/Content/images/landingpage/bg-contac.png")" alt="" class="img-gift">
+            </div>
+            <div class="container d-flex">
+                <div class="order-forms">
+                    <div class="title-contact">
+                        <div class="h4 text-center">các hình thức đặt hàng</div>
+                    </div>
+                    <div class="row page-section" id="contact">
+                        <div class="col-sm-4">
+                            <figure class="other-icon">
+                                <img src="@Url.Content("~/Content/images/landingpage/icon-tel.png")" alt="">
+                                <figcaption>
+                                    <div class="h5">Hotline</div>
+                                    <p>097.579.4785</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-4">
+                            <figure class="other-icon">
+                                <img src="@Url.Content("~/Content/images/landingpage/icon-comment.png")" alt="">
+                                <figcaption>
+                                    <p>
+                                        Inbox/ Comment<br>
+                                        Facebook Fanpage T.Vita
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-4">
+                            <figure class="other-icon">
+                                <img src="@Url.Content("~/Content/images/landingpage/icon-market.png")" alt="">
+                                <figcaption>
+                                    <p>
+                                        Mua tại hệ thống bán lẻ:<br>
+                                        QMart, CoopMart, 3Sạch ...
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex">
+                            <div class="label-contact text-uppercase">
+                                Liên hệ để được Tư vấn<br>
+                                về Sản phẩm và các Chương trình Ưu đãi
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-5 page-section" id="orderform">
+                            <div id="myform">
+                                <div class="form-contact">
+                                    <div class="header-form-contact">thông tin đặt hàng</div>
+                                    <div class="body-form-contact">
+                                        <div class="row">
+                                            <div class="col-md-4 text-center">
+                                                <img src="@Url.Content("~/Content/images/landingpage/image-5.png")" alt="" class="min-height">
+                                                <div class="w-100">
+                                                    <div class="label-price">299.000<sup>Đ</sup></div>
+                                                </div>
+                                                <div class="check-order">
+                                                    <label>
+                                                        <input type="checkbox" id="check1" name="check1" checked>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <div class="input-group number-price">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="num1"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                        </span>
+                                                        <input id="num1" type="text" name="num1" class="form-control input-number" value="1">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="num1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <img src="@Url.Content("~/Content/images/landingpage/image-6.png")" alt="" class="min-height">
+                                                <div class="w-100">
+                                                    <div class="label-price">250.000<sup>Đ</sup></div>
+                                                </div>
+                                                <div class="check-order">
+                                                    <label>
+                                                        <input id="check2" name="check2" type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <div class="input-group number-price">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="num2"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                        </span>
+                                                        <input id="num2" type="text" name="num2" class="form-control input-number" value="1">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="num2"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <img src="@Url.Content("~/Content/images/landingpage/image-7.png")" alt="" class="min-height">
+                                                <div class="w-100">
+                                                    <div class="label-price">229.000<sup>Đ</sup></div>
+                                                </div>
+                                                <div class="check-order">
+                                                    <label>
+                                                        <input id="check3" name="check3" type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <div class="input-group number-price">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="num3"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                        </span>
+                                                        <input id="num3" type="text" name="num3" class="form-control input-number" value="1">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="num3"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 d-flex mb-4">
+                                                <button id="totalprice" class="bnt btn-total-order ml-auto mr-auto">TỔNG ĐƠN hàng</button>
+                                            </div>
+                                            <div class="col-md-12 d-flex mb-4">
+                                                <label id="price" class="ml-auto mr-auto" name="price">299.000 ₫</label>
+                                                <input id="priceInput" hidden class="ml-auto mr-auto" value="299000" name="price" />
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input id="name" required name="name" type="text" class="form-control input-form-1 font14 validateInput" placeholder="Họ và tên (*)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input id="phone" required name="phone" type="text" class="form-control input-form-1 font14 validateInput" placeholder="Số điện thoại (*)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input id="address" required name="address" type="text" class="form-control input-form-1 font14 validateInput" placeholder="Địa chỉ (*)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input id="email" required type="text" name="email" class="form-control input-form-1 font14 validateInput" placeholder="Email (*)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    @*<input id="datedeli" required type="date" name="datedeli" class="form-control input-form-1 font14" placeholder="Ngày nhận hàng (*)">*@
+                                                    <input id="datedeli" required name="datedeli" type="date" data-date-format="DD/MM/YYYY" class="form-control input-form-1 font14 inputDate validateInput" placeholder="Ngày nhận hàng (*)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input id="note" type="text" name="note" class="form-control input-form-1 font14" placeholder="Ghi chú">
+                                                </div>
+                                            </div>
+                                            <div class="text-xs-center">
+                                                <div class="g-recaptcha" data-sitekey="6Lfew4oUAAAAADCQ2-SleeJswUkO0yftal4v-KGK"></div>
+                                                @*<div class="g-recaptcha" data-sitekey="6Lfew4oUAAAAADCQ2-SleeJswUkO0yftal4v-KGK"></div>*@
+                                            </div>
+                                            @*<div class="g-recaptcha col-md-12 d-flex mb-4" data-sitekey="6Lfew4oUAAAAADCQ2-SleeJswUkO0yftal4v-KGK"></div>*@
+                                            <div class="col-md-12 d-flex mb-4">
+                                                <button id="btn1" class="bnt btn-order ml-auto mr-auto bold">đặt hàng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @*<footer>
+            <img src="@Url.Content("~/Content/images/landingpage/footer.png")" alt="">
+        </footer>*@
+</div>
+
+@*<div class="container">
+        <div class="row">
+            <input type="checkbox" name="pro1" value="pro1" checked> Hộp quà xuân an khang <br>
+            <form>
+                <div class="value-button" id="decrease1" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" id="number" value="0" />
+                <div class="value-button" id="increase1" onclick="increaseValue()" value="Increase Value">+</div>
+            </form>
+        </div>
+        <div class="row">
+            <input type="checkbox" name="pro2" value="pro2"> Hộp quà phú quý<br>
+            <form>
+                <div class="value-button" id="decrease2" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" id="number" value="0" />
+                <div class="value-button" id="increase2" onclick="increaseValue()" value="Increase Value">+</div>
+            </form>
+        </div>
+        <div class="row">
+            <input type="checkbox" name="pro3" value="pro3"> Hộp quà phúc lộc<br>
+            <form>
+                <div class="value-button" id="decrease3" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" id="number" value="0" />
+                <div class="value-button" id="increase3" onclick="increaseValue()" value="Increase Value">+</div>
+            </form>
+        </div>
+
+        <form id="myform" action="LandingPage/AddOrder" method="post">
+
+            Họ tên <input type="text" id="name" name="UserName" /><br />
+            Số điện thoại  <input type="text" id="phone" name="Phone" /><br />
+            Địa chỉ  <input type="text" id="address" name="address" /><br />
+            Email  <input type="text" id="email" name="Email" /><br />
+            Ngày nhận hàng  <input type="date" id="datedeli" name="DateDali" /><br />
+            Ghi chú  <input type="text" id="note" name="Note" /><br />
+            <div class="g-recaptcha" data-sitekey="6LcUMIoUAAAAAOrLfPybGDvEsf7ttTvXyWAcKVWM"></div>
+            <input type="submit" id="btn1" value="send" />
+        </form>
+    </div>*@
+<!--Modal-->
+<div class="modal fade" id="resultModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content panel panel-primary">
+            <div class="modal-header panel-heading">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Trạng thái đặt hàng</h4>
+            </div>
+            <div class="modal-body panel-body">
+                <div class="form-group">
+                    Đặt hàng thành công
+                </div>
+            </div>
+            <div class="modal-footer panel-footer">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts
+{
+
+}

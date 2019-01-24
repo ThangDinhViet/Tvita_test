@@ -1,4 +1,10 @@
 ﻿$(function () {
+    $('.hot-news').css('opacity', '0.5');
+    $('.allhome').css('opacity', '0.5');
+    $('.gap-group').css('opacity', '0.5');
+    $('.footer-top').css('opacity', '0.5');
+    $('.footer-bottom').css('opacity', '0.5');
+
     $('.tab-control').on('click', 'a[data-toggle="tab"]', function (evt) {
         $(this).parents('.tab-control').find('li.active').removeClass('active');
     })
@@ -215,3 +221,20 @@ var productsHome = function (container, _type) {
         });
     }
 }
+
+//$("#thover").click(function () {
+//    $(this).fadeOut();
+//    $("#tpopup").fadeOut();
+//});
+
+
+$("#tclose").click(function () {
+    $("#thover").fadeOut();
+    $("#tpopup").fadeOut();
+    $('.hot-news').css('opacity', '');
+    $('.allhome').css('opacity', '');
+    $('.gap-group').css('opacity', '');
+    $('.footer-top').css('opacity', '');
+    $('.footer-bottom').css('opacity', '');
+
+});

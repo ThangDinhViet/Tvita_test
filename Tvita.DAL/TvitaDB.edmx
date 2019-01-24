@@ -148,6 +148,27 @@
           <Property Name="Customer_Note" Type="nvarchar" MaxLength="200" />
           <Property Name="IsDelete" Type="nchar" MaxLength="10" />
         </EntityType>
+        <EntityType Name="tbl_OrderLandingPage">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Customer_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer_PhoneNum" Type="nvarchar" MaxLength="11" />
+          <Property Name="Customer_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer_Note" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product1" Type="int" />
+          <Property Name="Product2" Type="int" />
+          <Property Name="Product3" Type="int" />
+          <Property Name="QuantityPro1" Type="int" />
+          <Property Name="QuantityPro2" Type="int" />
+          <Property Name="QuantityPro3" Type="int" />
+          <Property Name="Date_Created" Type="datetime" />
+          <Property Name="Time_Delivery" Type="datetime" />
+          <Property Name="Is_Confirmed" Type="bit" />
+          <Property Name="TotalPrice" Type="int" />
+          <Property Name="Customer_Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="tbl_Payments">
           <Key>
             <PropertyRef Name="Payment_ID" />
@@ -306,6 +327,7 @@
           <EntitySet Name="tbl_LanguageTable" EntityType="Self.tbl_LanguageTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_OrderLandingPage" EntityType="Self.tbl_OrderLandingPage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Payments" EntityType="Self.tbl_Payments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Picture" EntityType="Self.tbl_Picture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Post" EntityType="Self.tbl_Post" Schema="dbo" store:Type="Tables" />
@@ -592,6 +614,7 @@
           <EntitySet Name="tbl_LanguageDescription" EntityType="Tvita_TestModel.tbl_LanguageDescription" />
           <EntitySet Name="tbl_LanguageTable" EntityType="Tvita_TestModel.tbl_LanguageTable" />
           <EntitySet Name="PUs" EntityType="Tvita_TestModel.PU" />
+          <EntitySet Name="tbl_OrderLandingPage" EntityType="Tvita_TestModel.tbl_OrderLandingPage" />
         </EntityContainer>
         <EntityType Name="tbl_ProductsInFarm">
           <Key>
@@ -632,6 +655,27 @@
           <Property Name="PU_Areas" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PU_CodeVietGap" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PU_Og" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_OrderLandingPage">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_PhoneNum" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product1" Type="Int32" />
+          <Property Name="Product2" Type="Int32" />
+          <Property Name="Product3" Type="Int32" />
+          <Property Name="QuantityPro1" Type="Int32" />
+          <Property Name="QuantityPro2" Type="Int32" />
+          <Property Name="QuantityPro3" Type="Int32" />
+          <Property Name="Date_Created" Type="DateTime" Precision="3" />
+          <Property Name="Time_Delivery" Type="DateTime" Precision="3" />
+          <Property Name="Is_Confirmed" Type="Boolean" />
+          <Property Name="TotalPrice" Type="Int32" />
+          <Property Name="Customer_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -946,6 +990,28 @@
                 <ScalarProperty Name="PU_Content" ColumnName="PU_Content" />
                 <ScalarProperty Name="PU_Name" ColumnName="PU_Name" />
                 <ScalarProperty Name="PU_ID" ColumnName="PU_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_OrderLandingPage">
+            <EntityTypeMapping TypeName="Tvita_TestModel.tbl_OrderLandingPage">
+              <MappingFragment StoreEntitySet="tbl_OrderLandingPage">
+                <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="Is_Confirmed" ColumnName="Is_Confirmed" />
+                <ScalarProperty Name="Time_Delivery" ColumnName="Time_Delivery" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="QuantityPro3" ColumnName="QuantityPro3" />
+                <ScalarProperty Name="QuantityPro2" ColumnName="QuantityPro2" />
+                <ScalarProperty Name="QuantityPro1" ColumnName="QuantityPro1" />
+                <ScalarProperty Name="Product3" ColumnName="Product3" />
+                <ScalarProperty Name="Product2" ColumnName="Product2" />
+                <ScalarProperty Name="Product1" ColumnName="Product1" />
+                <ScalarProperty Name="Customer_Note" ColumnName="Customer_Note" />
+                <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
+                <ScalarProperty Name="Customer_PhoneNum" ColumnName="Customer_PhoneNum" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

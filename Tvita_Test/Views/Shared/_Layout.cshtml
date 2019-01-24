@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="~/Content/images/logos/fav.png" />
     <title>@ViewBag.Title - T.Vita</title>
+    <!-- End Facebook Pixel Code -->
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body data-language="@Utilities.languageIsActive()">
     @RenderPage("~/Views/Shared/_slidePanel.cshtml")
@@ -28,7 +28,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(Utilities.Translate("Introduction"))</a>
                         <ul class="dropdown-menu">
                             @*<li><a href="@(Url.Action("History", "About"))" class="@(Utilities.menuIsActive("About", "History") ? "active" : "")">@(Utilities.Translate("History"))</a></li>
-                            <li class="divider"></li>*@
+                                <li class="divider"></li>*@
                             <li><a href="@(Url.Action("VisionAndMission", "About"))" class="@(Utilities.menuIsActive("About", "VisionAndMission") ? "active" : "")">@(Utilities.Translate("VisionAndMission"))</a></li>
                             <li class="divider"></li>
                             <li><a class="@(Utilities.menuIsActive("Home", "Value") ? "active" : "")" href="@Url.Action("Value", "Home")">@(Utilities.Translate("Value"))</a></li>
@@ -204,27 +204,27 @@
         </div>
     </div>
     @*<div class="talk-with-me">
-        <div class="twm-title">
-            @(Utilities.Translate("TalkWithMe"))
-        </div>
-        <div class="twm-content">
-            <ul id="discussion"></ul>
-        </div>
-        <div class="twm-input">
-            <div class="input-group message-input" style="display: none">
-                <input type="text" class="form-control" id="message" placeholder="">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary handle-send" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-                </span>
+            <div class="twm-title">
+                @(Utilities.Translate("TalkWithMe"))
             </div>
-            <div class="input-group name-input">
-                <input id="myName" type="text" class="form-control" placeholder="@Utilities.Translate("InputYourName")">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary handle-name" type="button">OK</button>
-                </span>
+            <div class="twm-content">
+                <ul id="discussion"></ul>
             </div>
-        </div>
-    </div>*@
+            <div class="twm-input">
+                <div class="input-group message-input" style="display: none">
+                    <input type="text" class="form-control" id="message" placeholder="">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary handle-send" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                    </span>
+                </div>
+                <div class="input-group name-input">
+                    <input id="myName" type="text" class="form-control" placeholder="@Utilities.Translate("InputYourName")">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary handle-name" type="button">OK</button>
+                    </span>
+                </div>
+            </div>
+        </div>*@
     <div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="container">
             <div class="row">

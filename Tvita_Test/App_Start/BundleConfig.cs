@@ -44,6 +44,10 @@ namespace Tvita_Test
                       "~/Content/site.css",
                       "~/Content/css/tvita_navbar.css",
                       "~/Content/slideshow/slideshow.css"));
+            bundles.Add(new StyleBundle("~/Content/csslandingpage").Include(
+                     "~/Content/font-awesome.css",
+                     "~/Content/css/tvita_navbar.css"));
+
         }
     }
 }

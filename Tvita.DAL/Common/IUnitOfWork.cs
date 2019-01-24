@@ -38,6 +38,8 @@ namespace Tvita.DAL.Common
         IPostRepository IPostRepository { get; }
         IRepository<PU, int> PURepository { get; }
         IPURepository IPURepository { get; }
+        IRepository<tbl_OrderLandingPage, int> OrderLandingPageRepository { get; }
+        IOrderLandingPageRepository IOrderLandingPageRepository { get; }
         void SaveChanges();
     }
 }

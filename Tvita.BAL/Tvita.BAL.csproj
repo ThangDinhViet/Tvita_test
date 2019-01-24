@@ -57,6 +57,7 @@
     <Compile Include="Implement\EmployeeManager.cs" />
     <Compile Include="Implement\FarmManager.cs" />
     <Compile Include="Implement\GroupProductManager.cs" />
+    <Compile Include="Implement\OrderLandingPageManager.cs" />
     <Compile Include="Implement\PictureManager.cs" />
     <Compile Include="Implement\PostManager.cs" />
     <Compile Include="Implement\ProductHistoryManager.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Interface\IEmployeeManager.cs" />
     <Compile Include="Interface\IFarmManager.cs" />
     <Compile Include="Interface\IGroupProductManager.cs" />
+    <Compile Include="Interface\IOrderLandingPageManager.cs" />
     <Compile Include="Interface\IPictureManager.cs" />
     <Compile Include="Interface\IPostManager.cs" />
     <Compile Include="Interface\IProductHistoryManager.cs" />

@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;">
+ <head> 
+ 
+</head> 
+ <body style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;"> 
+  <div class="es-wrapper-color" style="background-color:#EFEFEF;"> 
+   <!--[if gte mso 9]>
+			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+				<v:fill type="tile" color="#efefef"></v:fill>
+			</v:background>
+		<![endif]--> 
+   <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;"> 
+     <tr style="border-collapse:collapse;"> 
+      <td valign="top" style="padding:0;Margin:0;"> 
+       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"> 
+         <tr style="border-collapse:collapse;"> 
+          <td class="es-adaptive" align="center" style="padding:0;Margin:0;"> 
+           <table class="es-content-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#EFEFEF;" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="270" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-infoblock es-m-txt-c" align="left" style="padding:0;Margin:0;line-height:14px;font-size:12px;color:#CCCCCC;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:14px;color:#CCCCCC;">Put your preheader text here</p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]--> 
+               <table class="es-right" cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="270" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-infoblock es-m-txt-c" align="right" style="padding:0;Margin:0;line-height:14px;font-size:12px;color:#CCCCCC;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:14px;color:#CCCCCC;"><a href="http://#" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:12px;text-decoration:underline;color:#CCCCCC;">View in browser</a></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> 
+       <table class="es-header" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top;"> 
+         <tr style="border-collapse:collapse;"> 
+          <td align="center" style="padding:0;Margin:0;"> 
+           <table class="es-header-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FEF5E4;"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:15px;padding-right:15px;"> 
+               <!--[if mso]><table width="570" cellpadding="0" cellspacing="0"><tr><td width="180" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p0r" width="180" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-p0l es-m-txt-c" align="left" style="padding:0;Margin:0;padding-left:15px;"> <a href="https://viewstripo.email/" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#999999;"><img src="cid:{10}" alt="Tvita Logo" title="Tvita logo" width="118" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></a> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="370" valign="top"><![endif]--> 
+               <table cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="370" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td style="padding:0;Margin:0;"> 
+                       <table class="es-menu" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                         <tr class="links" style="border-collapse:collapse;"> 
+                          <td align="center" valign="top" width="100.00%" style="Margin:0;padding-left:5px;padding-right:5px;padding-top:20px;padding-bottom:10px;border:0;" id="esd-menu-id-4" bgcolor="transparent"> <a target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;text-decoration:none;display:block;color:#333333;" href="https://viewstripo.email/">Xác nhận đơn hàng từ T.Vita !!!</a> </td> 
+                         </tr> 
+                       </table> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> 
+       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"> 
+         <tr style="border-collapse:collapse;"> 
+          <td align="center" style="padding:0;Margin:0;"> 
+           <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:0px;" width="100%" cellspacing="0" cellpadding="0"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:15px;"> <h1 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:'trebuchet ms', helvetica, sans-serif;font-size:30px;font-style:normal;font-weight:normal;color:#333333;">Cảm ơn bạn đã đặt hàng</h1> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:40px;padding-right:40px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">Chúng tôi sẽ liên lạc với bạn sớm nhất. <br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">Xin vui lòng liên hệ lại hotline: 0243-2444-691 nếu đơn hàng có sai sót. <br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">Xin cảm ơn!!!&nbsp;</p> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;padding-top:15px;"> <span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:none 0% 0% repeat scroll #D48344;border-width:0px;display:inline-block;border-radius:5px;width:auto;border-top-width:0px;border-bottom-width:0px;"> <a href="https://tvita.com.vn/" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:underline;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#FFFFFF;border-style:solid;border-color:#D48344;border-width:10px 20px 10px 20px;display:inline-block;background:#D48344 none repeat scroll 0% 0%;border-radius:5px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;border-top-width:10px;border-bottom-width:10px;">Đi đến website TMĐT T.Vita</a> </span> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> 
+       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"> 
+         <tr style="border-collapse:collapse;"> 
+          <td align="center" style="padding:0;Margin:0;"> 
+           <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:30px;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="280" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p20b" width="280" align="left" style="padding:0;Margin:0;"> 
+                   <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FEF9EF;border-color:#EFEFEF;border-width:1px 0px 1px 1px;border-style:solid;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#fef9ef"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="Margin:0;padding-bottom:10px;padding-top:20px;padding-left:20px;padding-right:20px;"> <h4 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:'trebuchet ms', helvetica, sans-serif;">Đơn hàng:</h4> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;padding-bottom:20px;padding-left:20px;padding-right:20px;"> 
+                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;" class="cke_show_border" cellspacing="1" cellpadding="1" border="0" align="left"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:14px;line-height:21px;">Số #:</span></td> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:14px;line-height:21px;">{9}</span></td> 
+                         </tr> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:14px;line-height:21px;">Ngày giao hàng:</span></td> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:14px;line-height:21px;">{3}</span></td> 
+                         </tr> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:14px;line-height:21px;">Tổng tiền:</span></td> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:14px;line-height:21px;">{5}</span></td> 
+                         </tr> 
+                       </table><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="0"></td><td width="280" valign="top"><![endif]--> 
+               <table class="es-right" cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="280" align="left" style="padding:0;Margin:0;"> 
+                   <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FEF9EF;border-width:1px;border-style:solid;border-color:#EFEFEF;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#fef9ef"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="Margin:0;padding-bottom:10px;padding-top:20px;padding-left:20px;padding-right:20px;"> <h4 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:'trebuchet ms', helvetica, sans-serif;">Thông tin liên hệ:</h4> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;padding-bottom:20px;padding-left:20px;padding-right:20px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">{0}</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">{1}</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">{2}</p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> 
+       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"> 
+         <tr style="border-collapse:collapse;"> 
+          <td align="center" style="padding:0;Margin:0;"> 
+           <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p0r es-m-p20b" width="270" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;padding-left:20px;"> <h4 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:'trebuchet ms', helvetica, sans-serif;">Sản phẩm</h4> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]--> 
+               <table cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="270" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;"> 
+                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;" class="cke_show_border" cellspacing="1" cellpadding="1" border="0"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;"><span style="font-size:13px;">Tên</span></td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="60"><span style="font-size:13px;">Số lượng</span></td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="100"><span style="font-size:13px;">Đơn giá</span></td> 
+                         </tr> 
+                       </table> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;"> 
+                       <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0px;border-bottom:1px solid #EFEFEF;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0%;height:1px;width:100%;margin:0px;"></td> 
+                         </tr> 
+                       </table> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-bottom:10px;padding-left:20px;padding-right:20px;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="178" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p0r es-m-p20b" width="178" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;"> <img src="cid:{11}" alt="Xuân An Khang" class="adapt-img" title="Xuân An Khang" width="125" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="362" valign="top"><![endif]--> 
+               <table cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="362" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> 
+                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;" class="cke_show_border" cellspacing="1" cellpadding="1" border="0"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;">Hộp quà Xuân An Khang</td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="60">{6}</td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="100">250,000₫</td> 
+                         </tr> 
+                       </table><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;"> 
+                       <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0px;border-bottom:1px solid #EFEFEF;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0%;height:1px;width:100%;margin:0px;"></td> 
+                         </tr> 
+                       </table> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-bottom:10px;padding-left:20px;padding-right:20px;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="178" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p0r es-m-p20b" width="178" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;"> <img src="cid:{12}" alt="Phú Quý" class="adapt-img" title="Phú Quý" width="125" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="362" valign="top"><![endif]--> 
+               <table cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="362" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> 
+                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;" class="cke_show_border" cellspacing="1" cellpadding="1" border="0"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;">Hộp quà Phú Quý</td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="60">{7}</td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="100">299,000₫</td> 
+                         </tr> 
+                       </table><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;"> 
+                       <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0px;border-bottom:1px solid #EFEFEF;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0%;height:1px;width:100%;margin:0px;"></td> 
+                         </tr> 
+                       </table> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-bottom:10px;padding-left:20px;padding-right:20px;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="178" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p0r es-m-p20b" width="178" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;"> <img src="cid:{13}" alt="Phúc Lộc" class="adapt-img" title="Phúc Lộc" width="95" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="362" valign="top"><![endif]--> 
+               <table cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="362" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="left" style="padding:0;Margin:0;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> 
+                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;" class="cke_show_border" cellspacing="1" cellpadding="1" border="0"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;">Hộp quà Phúc Lộc</td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="60">{8}</td> 
+                          <td style="padding:0;Margin:0;text-align:center;" width="100">229,000₫</td> 
+                         </tr> 
+                       </table><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;"> 
+                       <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0px;border-bottom:1px solid #EFEFEF;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0%;height:1px;width:100%;margin:0px;"></td> 
+                         </tr> 
+                       </table> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-left:20px;padding-bottom:30px;padding-right:40px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="540" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="right" style="padding:0;Margin:0;"> 
+                       <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:500px;" class="cke_show_border" cellspacing="1" cellpadding="1" border="0" align="right"> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;">Tổng đơn hàng:</td> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;">{5}₫</td> 
+                         </tr> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;">Shipping:</td> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;color:#D48344;"><strong>FREE</strong></td> 
+                         </tr> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;">Giảm giá:</td> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;">0</td> 
+                         </tr> 
+                         <tr style="border-collapse:collapse;"> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;"><strong>Thành tiền:</strong></td> 
+                          <td style="padding:0;Margin:0;text-align:right;font-size:18px;line-height:27px;color:#D48344;"><strong>{5}₫</strong></td> 
+                         </tr> 
+                       </table><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;"><br></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> 
+       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"> 
+         <tr style="border-collapse:collapse;"> 
+         </tr> 
+         <tr style="border-collapse:collapse;"> 
+          <td align="center" style="padding:0;Margin:0;"> 
+           <table class="es-footer-body" width="600" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FEF5E4;"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="padding:20px;Margin:0;"> 
+               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="178" valign="top"><![endif]--> 
+               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td class="es-m-p0r es-m-p20b" width="178" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-p0l es-m-txt-c" align="left" style="padding:0;Margin:0;"> <img src="cid:{10}" alt="Tvita logo" title="Tvita logo" width="108" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;padding-bottom:5px;padding-top:10px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">Website: www.tvita.com.vn<br></p> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;padding-top:5px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">SĐT:&nbsp;<a target="_blank" href="tel:+80012345678" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#333333;">0</a>243-2444-691<br>Email:&nbsp;<a target="_blank" href="mailto:tvitad2c@gmail.com" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#333333;">t</a>vitad2c@gmail.com</p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td><td width="20"></td><td width="362" valign="top"><![endif]--> 
+               <table cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="362" align="left" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:20px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:27px;color:#333333;"><strong>Công ty TNHH phát triển nông nghiệp cuộc sống xanh T&amp;T</strong></p> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">Cơ sở 1: Tầng 3, tòa nhà Artex, 172 Ngọc Khánh, Ba Đình, Hà Nội</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;">Cơ sở 2: 107 ngõ 360 Xã Đàn, Hà Nội</p> </td> 
+                     </tr> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;padding-top:10px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;color:#333333;"><br></p> </td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> 
+       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"> 
+         <tr style="border-collapse:collapse;"> 
+          <td align="center" style="padding:0;Margin:0;"> 
+           <table class="es-content-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;" width="600" cellspacing="0" cellpadding="0" align="center"> 
+             <tr style="border-collapse:collapse;"> 
+              <td align="left" style="Margin:0;padding-left:20px;padding-right:20px;padding-top:30px;padding-bottom:30px;"> 
+               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                 <tr style="border-collapse:collapse;"> 
+                  <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
+                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
+                     <tr style="border-collapse:collapse;"> 
+                      <td align="center" style="padding:0;Margin:0;display:none;"></td> 
+                     </tr> 
+                   </table> </td> 
+                 </tr> 
+               </table> </td> 
+             </tr> 
+           </table> </td> 
+         </tr> 
+       </table> </td> 
+     </tr> 
+   </table> 
+  </div>  
+ </body>
+</html>
+

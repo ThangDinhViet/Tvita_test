@@ -4,130 +4,144 @@
     ViewBag.showCertificate = true;
 }
 <link href="@Url.Content("~/Content/css/home.css")" rel="stylesheet">
-<div class="container-fluid">
-    <div class="row slide-show-container">
-        <div class="ss-container" id="home-slideshow">
-            <div class="ss-item ss-video" data-url="https://youtu.be/nzime8ik4Ao">
-                <img class="ss-item-cover" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-9.png"))" src="@Url.Content("~/Content/images/photos/transparent-1919x899.png")">
-            </div>
-            <div class="ss-item ss-video" data-url="https://youtu.be/nzime8ik4Ao">
-                <img class="ss-item-cover" style="background-image: url(@Url.Content("~/Content/images/photos/bee.png"))" src="@Url.Content("~/Content/images/photos/transparent-1919x899.png")">
-            </div>
-        </div>
-    </div>
+
+@*<div id="thover"></div>*@
+
+<div id="tpopup">
+    <a href="http://www.tvita.com.vn/landingpage">
+        <img src="@Url.Content("~/Content/images/landingpage/popup.png")">
+    </a>
+
+    <div id="tclose">X</div>
 </div>
 
-<div class="container">
-    <div class="row farm-tech">
-        <div class="col-sm-4 col-md-4 col-lg-4 r-item">
-            <div class="rr-item">
-                <a href="@Url.Action("Farm", "Home")" class="item-container col-sm-12 col-md-12 col-lg-12">
-                    <div class="item">
-                        <div class="over-grey"></div>
-                        <div class="over-green"></div>
-                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/map.png"))">
-                        <div class="title-item">@(Utilities.Translate("Farms"))</div>
-                    </div>
-                </a>
-                <p class="caption-item" data-maxrow="3">@(Utilities.Translate("FarmsDes"))</p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 r-item">
-            <div class="rr-item">
-                <a href="@Url.Action("Index", "Technology")" class="item-container col-sm-12 col-md-12 col-lg-12">
-                    <div class="item">
-                        <div class="over-grey"></div>
-                        <div class="over-green"></div>
-                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/tech.png"))">
-                        <div class="title-item">@(Utilities.Translate("Technology"))</div>
-                    </div>
-                </a>
-                <p class="caption-item" data-maxrow="3">@(Utilities.Translate("TechnologyDes"))</p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 r-item">
-            <div class="rr-item">
-                <a href="@Url.Action("Value", "Home")" class="item-container col-sm-12 col-md-12 col-lg-12">
-                    <div class="item">
-                        <div class="over-grey"></div>
-                        <div class="over-green"></div>
-                        <img class="img-responsive" src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/value.png"))">
-                        <div class="title-item">@(Utilities.Translate("Value"))</div>
-                    </div>
-                </a>
-                <p class="caption-item" data-maxrow="3">@(Utilities.Translate("ValueChainDes"))</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid product" id="Goto-Fresh">
-    <div class="product-gradient"></div>
-    <div class="product-title">@(Utilities.Translate("Products"))</div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <ul class="tab-control">
-            <li class="active"><a data-toggle="tab" href="#fresh">@(Utilities.Translate("FreshProducts"))</a></li>|
-            <li><a data-toggle="tab" href="#processed">@(Utilities.Translate("ProcessedProducts"))</a></li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="tab-content">
-            <div id="fresh" class="tab-pane fade in active container">
-
-            </div>
-            <div id="processed" class="tab-pane fade container">
-                <div class="row">
-                    <div>
-                        <hr />
-                        <span style="text-align:justify;font-size: 20px;">
-                            Nhằm góp phần tăng giá trị cho các thương hiệu và sản phẩm nông nghiệp Việt Nam đồng thời mang lại sự tiện lợi và an tâm cho người nội trợ, T.Vita đặc biệt chú trọng phát triển dòng sản phẩm chế biến.
-                            Bằng các công nghệ bảo quản và chế biến tiên tiến nhất của Châu Âu như dây chuyền sơ chế tự động (cắt, gọt, rửa), chuỗi cung ứng lạnh, công nghệ hấp - sấy thăng hoa giúp giữ tối đa các dưỡng chất trong nguyên liệu; các sản phẩm sơ chế và chế biến sẵn của T.Vita như salad rau củ quả, rau củ quả cắt lát - thái sẵn hay nước hoa quả ... sẽ là trợ thủ đắc lực của người nội trợ trong căn bếp, giúp tiết kiệm thời gian nấu nướng mà vẫn có được bữa cơm gia đình tươm tất, đầy dinh dưỡng.
-                            Hãy cùng chào đón các sản phẩm chế biến T.Vita sẽ ra mắt thị trường cuối năm 2018.
-                        </span>
-                    </div>
+<div class="allhome">
+    <div class="container-fluid">
+        <div class="row slide-show-container">
+            <div class="ss-container" id="home-slideshow">
+                <div class="ss-item ss-video" data-url="https://youtu.be/nzime8ik4Ao">
+                    <img class="ss-item-cover" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-9.png"))" src="@Url.Content("~/Content/images/photos/transparent-1919x899.png")">
+                </div>
+                <div class="ss-item ss-video" data-url="https://youtu.be/nzime8ik4Ao">
+                    <img class="ss-item-cover" style="background-image: url(@Url.Content("~/Content/images/photos/bee.png"))" src="@Url.Content("~/Content/images/photos/transparent-1919x899.png")">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
-            <button class="btn btn-default js-load-more">
-                <span>@(Utilities.Translate("LoadMoreProduct"))</span>
-            </button>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid gt-kitchen" id="Goto-Kitchen">
-    <div class="kitchen-gradient"></div>
-    <div class="kitchen-title">@(Utilities.Translate("GotoKitchen")) @(Utilities.Translate("WithTvita"))</div>
-</div>
-
-<div class="list-thumb">
     <div class="container">
-        <div id="kitchen" class="row">
-            @*<div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="n-item">
-                    <div class="n-cover">
-                        <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
-                    </div>
-                    <div class="n-content">
-                        Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
-                    </div>
-                    <div class="n-detail-content" data-maxrow="5">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    </div>
-                    <div class="n-view-more">
-                        <a href="@(Url.Action("Details", "News"))"> @Utilities.Translate("ViewMore")</a>
+        <div class="row farm-tech">
+            <div class="col-sm-4 col-md-4 col-lg-4 r-item">
+                <div class="rr-item">
+                    <a href="@Url.Action("Farm", "Home")" class="item-container col-sm-12 col-md-12 col-lg-12">
+                        <div class="item">
+                            <div class="over-grey"></div>
+                            <div class="over-green"></div>
+                            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/map.png"))">
+                            <div class="title-item">@(Utilities.Translate("Farms"))</div>
+                        </div>
+                    </a>
+                    <p class="caption-item" data-maxrow="3">@(Utilities.Translate("FarmsDes"))</p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 r-item">
+                <div class="rr-item">
+                    <a href="@Url.Action("Index", "Technology")" class="item-container col-sm-12 col-md-12 col-lg-12">
+                        <div class="item">
+                            <div class="over-grey"></div>
+                            <div class="over-green"></div>
+                            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/tech.png"))">
+                            <div class="title-item">@(Utilities.Translate("Technology"))</div>
+                        </div>
+                    </a>
+                    <p class="caption-item" data-maxrow="3">@(Utilities.Translate("TechnologyDes"))</p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 r-item">
+                <div class="rr-item">
+                    <a href="@Url.Action("Value", "Home")" class="item-container col-sm-12 col-md-12 col-lg-12">
+                        <div class="item">
+                            <div class="over-grey"></div>
+                            <div class="over-green"></div>
+                            <img class="img-responsive" src="@Url.Content("~/Content/images/photos/transparent-388x274.png")" style="background-image: url(@Url.Content("~/Content/images/photos/value.png"))">
+                            <div class="title-item">@(Utilities.Translate("Value"))</div>
+                        </div>
+                    </a>
+                    <p class="caption-item" data-maxrow="3">@(Utilities.Translate("ValueChainDes"))</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid product" id="Goto-Fresh">
+        <div class="product-gradient"></div>
+        <div class="product-title">@(Utilities.Translate("Products"))</div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <ul class="tab-control">
+                <li class="active"><a data-toggle="tab" href="#fresh">@(Utilities.Translate("FreshProducts"))</a></li>|
+                <li><a data-toggle="tab" href="#processed">@(Utilities.Translate("ProcessedProducts"))</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="tab-content">
+                <div id="fresh" class="tab-pane fade in active container">
+
+                </div>
+                <div id="processed" class="tab-pane fade container">
+                    <div class="row">
+                        <div>
+                            <hr />
+                            <span style="text-align:justify;font-size: 20px;">
+                                Nhằm góp phần tăng giá trị cho các thương hiệu và sản phẩm nông nghiệp Việt Nam đồng thời mang lại sự tiện lợi và an tâm cho người nội trợ, T.Vita đặc biệt chú trọng phát triển dòng sản phẩm chế biến.
+                                Bằng các công nghệ bảo quản và chế biến tiên tiến nhất của Châu Âu như dây chuyền sơ chế tự động (cắt, gọt, rửa), chuỗi cung ứng lạnh, công nghệ hấp - sấy thăng hoa giúp giữ tối đa các dưỡng chất trong nguyên liệu; các sản phẩm sơ chế và chế biến sẵn của T.Vita như salad rau củ quả, rau củ quả cắt lát - thái sẵn hay nước hoa quả ... sẽ là trợ thủ đắc lực của người nội trợ trong căn bếp, giúp tiết kiệm thời gian nấu nướng mà vẫn có được bữa cơm gia đình tươm tất, đầy dinh dưỡng.
+                                Hãy cùng chào đón các sản phẩm chế biến T.Vita sẽ ra mắt thị trường cuối năm 2018.
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>*@
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 load-more-container">
+                <button class="btn btn-default js-load-more">
+                    <span>@(Utilities.Translate("LoadMoreProduct"))</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid gt-kitchen" id="Goto-Kitchen">
+        <div class="kitchen-gradient"></div>
+        <div class="kitchen-title">@(Utilities.Translate("GotoKitchen")) @(Utilities.Translate("WithTvita"))</div>
+    </div>
+
+    <div class="list-thumb">
+        <div class="container">
+            <div id="kitchen" class="row">
+                @*<div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="n-item">
+                            <div class="n-cover">
+                                <img src="@Url.Content("~/Content/images/photos/transparent-388x388.png")" style="background-image: url(@Url.Content("~/Content/images/photos/Asset-5.png"))">
+                            </div>
+                            <div class="n-content">
+                                Lorem ipsumsit amet, consectetuer elit, diam nonummy nibh
+                            </div>
+                            <div class="n-detail-content" data-maxrow="5">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                            </div>
+                            <div class="n-view-more">
+                                <a href="@(Url.Action("Details", "News"))"> @Utilities.Translate("ViewMore")</a>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
         </div>
     </div>
 </div>
+
 
 @section Scripts
 {

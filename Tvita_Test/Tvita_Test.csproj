@@ -89,6 +89,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="reCAPTCHA.MVC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\reCAPTCH.MVC.1.0.1\lib\net45\reCAPTCHA.MVC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -212,6 +216,7 @@
     <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Admin\Controllers\FarmController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LandingPageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
@@ -220,6 +225,7 @@
     <Compile Include="Controllers\DistributionController.cs" />
     <Compile Include="Controllers\GotoKitchenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LandingPageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\QRCodeController.cs" />
@@ -245,6 +251,7 @@
     <Compile Include="Utility\WebUltility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Templates.txt" />
     <Content Include="Areas\Admin\Content\css\AdminSite.css" />
     <Content Include="Areas\Admin\Content\js\admin.js" />
     <Content Include="Areas\Admin\Content\js\productAdmin.js" />
@@ -356,6 +363,7 @@
     <Content Include="Content\css\history.css" />
     <Content Include="Content\css\home.css" />
     <Content Include="Content\css\iframe.css" />
+    <Content Include="Content\css\landingpage.css" />
     <Content Include="Content\css\news.css" />
     <Content Include="Content\css\postharvest_technology.css" />
     <Content Include="Content\css\product.css" />
@@ -407,7 +415,47 @@
     <Content Include="Content\images\icons\prev-slide.png" />
     <Content Include="Content\images\icons\tech-title-bg.png" />
     <Content Include="Content\images\icons\video-mark.png" />
+    <Content Include="Content\images\landingpage\1.jpg" />
+    <Content Include="Content\images\landingpage\1.png" />
+    <Content Include="Content\images\landingpage\2.jpg" />
+    <Content Include="Content\images\landingpage\229k.png" />
+    <Content Include="Content\images\landingpage\250k.png" />
+    <Content Include="Content\images\landingpage\299k.png" />
+    <Content Include="Content\images\landingpage\3.jpg" />
+    <Content Include="Content\images\landingpage\5f1c73bf3f3cdc62852d.jpg" />
+    <Content Include="Content\images\landingpage\8995242968aa8bf4d2bb.jpg" />
+    <Content Include="Content\images\landingpage\a1.png" />
+    <Content Include="Content\images\landingpage\b0a61e1a5299b1c7e888.jpg" />
+    <Content Include="Content\images\landingpage\banner-top-2.jpg" />
+    <Content Include="Content\images\landingpage\banner-top-2.png" />
+    <Content Include="Content\images\landingpage\banner-top.png" />
+    <Content Include="Content\images\landingpage\bg-contac.jpg" />
+    <Content Include="Content\images\landingpage\bg-contac.png" />
+    <Content Include="Content\images\landingpage\bg-midd-content.jpg" />
+    <Content Include="Content\images\landingpage\bg-midd-content.png" />
+    <Content Include="Content\images\landingpage\footer.png" />
+    <Content Include="Content\images\landingpage\gift-1.jpg" />
+    <Content Include="Content\images\landingpage\gift-image-2.png" />
+    <Content Include="Content\images\landingpage\hotline.png" />
+    <Content Include="Content\images\landingpage\icon-comment.png" />
+    <Content Include="Content\images\landingpage\icon-market.png" />
+    <Content Include="Content\images\landingpage\icon-tel.png" />
+    <Content Include="Content\images\landingpage\image-5.png" />
+    <Content Include="Content\images\landingpage\image-6.png" />
+    <Content Include="Content\images\landingpage\image-7.png" />
+    <Content Include="Content\images\landingpage\image1.png" />
+    <Content Include="Content\images\landingpage\image2.png" />
+    <Content Include="Content\images\landingpage\image3.png" />
+    <Content Include="Content\images\landingpage\image4.jpg" />
+    <Content Include="Content\images\landingpage\image4.png" />
+    <Content Include="Content\images\landingpage\images2.jpg" />
+    <Content Include="Content\images\landingpage\images2.png" />
+    <Content Include="Content\images\landingpage\img-midd.png" />
+    <Content Include="Content\images\landingpage\logo.png" />
+    <Content Include="Content\images\landingpage\pl-image.png" />
+    <Content Include="Content\images\landingpage\xak-image.png" />
     <Content Include="Content\images\logos\fav.png" />
+    <Content Include="Content\images\logos\log.png" />
     <Content Include="Content\images\logos\logo_green_en.png" />
     <Content Include="Content\images\logos\logo_green_vi.png" />
     <Content Include="Content\images\logos\logo_white_en.png" />
@@ -1046,8 +1094,12 @@
     <Content Include="Scripts\i18n\src\languages\ru.js" />
     <Content Include="Scripts\i18n\src\languages\sl.js" />
     <Content Include="Scripts\i18n\src\languages\uk.js" />
+    <Content Include="Scripts\landingpage\bootstrap.min.js" />
+    <Content Include="Scripts\landingpage\form-helper.js" />
+    <Content Include="Scripts\landingpage\jquery.min.js" />
     <Content Include="Scripts\tvita\getContent.js" />
     <Content Include="Areas\Admin\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LandingPage\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Tvita_Test.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\iframe_api.js" />
@@ -1076,6 +1128,7 @@
     <Content Include="Scripts\tvita\history.js" />
     <Content Include="Scripts\tvita\home.js" />
     <Content Include="Scripts\tvita\kitchen.js" />
+    <Content Include="Scripts\tvita\landingpage.js" />
     <Content Include="Scripts\tvita\layout.js" />
     <Content Include="Scripts\tvita\news.js" />
     <Content Include="Scripts\tvita\product.js" />
@@ -1084,7 +1137,9 @@
     <Content Include="Scripts\tvita\technology.js" />
     <Content Include="Scripts\tvita\value.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1127,9 +1182,11 @@
     <Content Include="Views\CommunityDevelopment\Details.cshtml" />
     <Content Include="Views\QRCode\Index.cshtml" />
     <Content Include="Views\QRCode\Details.cshtml" />
+    <Content Include="Views\LandingPage\Index.cshtml" />
+    <Content Include="Views\LandingPage\AddOrder.cshtml" />
+    <Content Include="Views\Shared\_LayoutLandingPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\AdminUltility\" />
     <Folder Include="Areas\Admin\Content\picture\" />
     <Folder Include="Areas\Admin\Models\" />
